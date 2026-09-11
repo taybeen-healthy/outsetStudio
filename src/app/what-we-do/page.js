@@ -85,7 +85,7 @@ export default function WhatWeDoPage() {
             </div>
 
             {/* Right: Image 15 with asymmetric rounded corners */}
-            <div className="relative w-full max-w-[520px] mx-auto lg:mx-0 aspect-[4/5] overflow-hidden rounded-tl-3xl rounded-br-3xl">
+            <div className="relative w-full max-w-[520px] mx-auto lg:mx-0 aspect-[4/5] overflow-hidden rounded-tl-[40px] rounded-br-[40px]">
               <Image
                 src="/Image 15.svg"
                 alt="Modern cafe interior with marble floor"
