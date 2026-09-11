@@ -125,6 +125,50 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        {/* Designed With Purpose Section */}
+        <section className="w-full bg-[#f5f5f5] py-20 sm:py-28 lg:py-32">
+          <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-14">
+            {/* Heading */}
+            <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-[1.15] tracking-tight mb-14 sm:mb-20">
+              Designed With Purpose.
+              <br />
+              Built for Impact.
+            </h2>
+
+            {/* 4 Columns */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+              <div>
+                <span className="font-serif text-[#bf572b] text-2xl sm:text-3xl font-light">01</span>
+                <h3 className="font-serif text-[#1a1a1a] text-lg sm:text-xl mt-3 mb-3">Strategic Thinking</h3>
+                <p className="text-sm text-[#2c2c2c] font-light leading-relaxed">
+                  We understand the business before we begin designing the space.
+                </p>
+              </div>
+              <div>
+                <span className="font-serif text-[#bf572b] text-2xl sm:text-3xl font-light">02</span>
+                <h3 className="font-serif text-[#1a1a1a] text-lg sm:text-xl mt-3 mb-3">Thoughtful Design</h3>
+                <p className="text-sm text-[#2c2c2c] font-light leading-relaxed">
+                  We create environments that reflect your brand and connect with your customers.
+                </p>
+              </div>
+              <div>
+                <span className="font-serif text-[#bf572b] text-2xl sm:text-3xl font-light">03</span>
+                <h3 className="font-serif text-[#1a1a1a] text-lg sm:text-xl mt-3 mb-3">Practical Execution</h3>
+                <p className="text-sm text-[#2c2c2c] font-light leading-relaxed">
+                  Every idea is developed with functionality, quality, and real-world delivery in mind.
+                </p>
+              </div>
+              <div>
+                <span className="font-serif text-[#bf572b] text-2xl sm:text-3xl font-light">04</span>
+                <h3 className="font-serif text-[#1a1a1a] text-lg sm:text-xl mt-3 mb-3">Long-Term Value</h3>
+                <p className="text-sm text-[#2c2c2c] font-light leading-relaxed">
+                  We create spaces designed to support your business today and as it grows.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
