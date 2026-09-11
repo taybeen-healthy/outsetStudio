@@ -118,7 +118,7 @@ export default function WhatWeDoPage() {
               {/* Left: Image 14 */}
               <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[560/500] overflow-hidden">
                 <Image
-                  src="/image 14).svg"
+                  src="/Image 16.svg"
                   alt="Coffee shop bakery display"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
