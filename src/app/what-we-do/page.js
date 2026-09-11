@@ -47,7 +47,7 @@ export default function WhatWeDoPage() {
               </h1>
 
               {/* Subtitle Description */}
-              <p className="mt-6 sm:mt-8 text-sm sm:text-base md:text-[17px] lg:text-[18px] text-white/95 font-normal max-w-3xl lg:max-w-4xl mx-auto leading-relaxed sm:leading-[1.7] tracking-normal font-sans">
+              <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl lg:text-[22px] text-white font-normal max-w-4xl mx-auto leading-relaxed sm:leading-[1.7] tracking-normal font-sans">
                 We bring together design, planning, execution, and long-term thinking
                 to create commercial spaces built around your business.
               </p>
