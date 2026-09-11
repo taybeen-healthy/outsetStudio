@@ -62,17 +62,17 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             {/* Left: Text Content */}
             <div className="max-w-xl">
-              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-[1.15] tracking-tight mb-8">
+              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-[1.15] tracking-tight mb-8">
                 More Than Just
                 <br />
                 Design.
               </h2>
-              <p className="text-sm sm:text-base text-[#2c2c2c] font-light leading-relaxed sm:leading-[1.7] mb-5">
+              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7] mb-5">
                 We believe a successful space should do more than look
                 good. It should support the people who use it, strengthen the
                 brand behind it, and help the business grow.
               </p>
-              <p className="text-sm sm:text-base text-[#2c2c2c] font-light leading-relaxed sm:leading-[1.7]">
+              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7]">
                 From the first idea to the final execution, we bring strategy,
                 design, and functionality together to create spaces with
                 lasting value.
@@ -108,17 +108,17 @@ export default function AboutPage() {
 
             {/* Right: Text Content */}
             <div className="max-w-xl order-1 lg:order-2">
-              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-[1.15] tracking-tight mb-8">
+              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-[1.15] tracking-tight mb-8">
                 Every Great Space Starts
                 <br />
                 With Understanding.
               </h2>
-              <p className="text-sm sm:text-base text-[#2c2c2c] font-light leading-relaxed sm:leading-[1.7] mb-5">
+              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7] mb-5">
                 No two businesses are the same. That&apos;s why we begin by
                 understanding your goals, customers, operations, and vision
                 before creating the right solution for your space.
               </p>
-              <p className="text-sm sm:text-base text-[#2c2c2c] font-light leading-relaxed sm:leading-[1.7]">
+              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7]">
                 Our work is built around one simple idea: design should have
                 a purpose.
               </p>
