@@ -62,7 +62,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             {/* Left: Text Content */}
             <div className="max-w-xl">
-              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-[1.15] tracking-tight mb-8">
+              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight mb-8">
                 More Than Just
                 <br />
                 Design.
@@ -108,7 +108,7 @@ export default function AboutPage() {
 
             {/* Right: Text Content */}
             <div className="max-w-xl order-1 lg:order-2">
-              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-[1.15] tracking-tight mb-8">
+              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight mb-8">
                 Every Great Space Starts
                 <br />
                 With Understanding.
@@ -130,7 +130,7 @@ export default function AboutPage() {
         <section className="w-full bg-[#f5f5f5] py-20 sm:py-28 lg:py-32">
           <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-14">
             {/* Heading */}
-            <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-[1.15] tracking-tight mb-14 sm:mb-20">
+            <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight mb-14 sm:mb-20">
               Designed With Purpose.
               <br />
               Built for Impact.
