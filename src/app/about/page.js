@@ -56,6 +56,41 @@ export default function AboutPage() {
             </div>
           </section>
         </div>
+
+        {/* More Than Just Design Section */}
+        <section className="w-full bg-white py-16 sm:py-24">
+          <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* Left: Text Content */}
+            <div>
+              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-[1.15] tracking-tight mb-6">
+                More Than Just
+                <br />
+                Design.
+              </h2>
+              <p className="text-sm sm:text-base text-[#2c2c2c] font-light leading-relaxed sm:leading-[1.7] mb-4 max-w-lg">
+                We believe a successful space should do more than look
+                good. It should support the people who use it, strengthen the
+                brand behind it, and help the business grow.
+              </p>
+              <p className="text-sm sm:text-base text-[#2c2c2c] font-light leading-relaxed sm:leading-[1.7] max-w-lg">
+                From the first idea to the final execution, we bring strategy,
+                design, and functionality together to create spaces with
+                lasting value.
+              </p>
+            </div>
+
+            {/* Right: Image */}
+            <div className="relative w-full aspect-[1440/650] overflow-hidden">
+              <Image
+                src="/Image (12).svg"
+                alt="Cafe interior with chairs and table"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center"
+              />
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
