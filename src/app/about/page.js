@@ -91,6 +91,40 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        {/* Every Great Space Starts With Understanding Section */}
+        <section className="w-full bg-white py-20 sm:py-28 lg:py-32">
+          <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+            {/* Left: Image */}
+            <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[560/385] overflow-hidden order-2 lg:order-1">
+              <Image
+                src="/Image13.svg"
+                alt="Outdoor garden cafe with seating"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center"
+              />
+            </div>
+
+            {/* Right: Text Content */}
+            <div className="max-w-xl order-1 lg:order-2">
+              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-[1.15] tracking-tight mb-8">
+                Every Great Space Starts
+                <br />
+                With Understanding.
+              </h2>
+              <p className="text-sm sm:text-base text-[#2c2c2c] font-light leading-relaxed sm:leading-[1.7] mb-5">
+                No two businesses are the same. That&apos;s why we begin by
+                understanding your goals, customers, operations, and vision
+                before creating the right solution for your space.
+              </p>
+              <p className="text-sm sm:text-base text-[#2c2c2c] font-light leading-relaxed sm:leading-[1.7]">
+                Our work is built around one simple idea: design should have
+                a purpose.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
