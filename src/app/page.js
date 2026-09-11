@@ -16,7 +16,7 @@ export default function Home() {
       <div className="relative min-h-screen flex flex-col pb-16 sm:pb-20">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image
-            src="/Image.svg"
+            src="/Image (10).svg"
             alt="Luxury modern interior by Outset Studio"
             fill
             priority
