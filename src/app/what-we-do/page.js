@@ -129,32 +129,40 @@ export default function WhatWeDoPage() {
               {/* Right: 4 Numbered Steps */}
               <div className="flex flex-col gap-10 lg:gap-12">
                 <div>
-                  <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">01</span>
-                  <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold mt-3 mb-3">Discover</h3>
+                  <div className="flex items-baseline gap-4 mb-3">
+                    <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">01</span>
+                    <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold">Discover</h3>
+                  </div>
                   <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
                     Understand your brand, space, customers, and goals before a
                     single line is drawn.
                   </p>
                 </div>
                 <div>
-                  <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">02</span>
-                  <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold mt-3 mb-3">Design</h3>
+                  <div className="flex items-baseline gap-4 mb-3">
+                    <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">02</span>
+                    <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold">Design</h3>
+                  </div>
                   <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
                     Create the concept, layout, identity, and experience that
                     define the room.
                   </p>
                 </div>
                 <div>
-                  <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">03</span>
-                  <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold mt-3 mb-3">Build</h3>
+                  <div className="flex items-baseline gap-4 mb-3">
+                    <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">03</span>
+                    <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold">Build</h3>
+                  </div>
                   <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
                     Manage fabrication, execution, signage, and delivery — on site,
                     on time.
                   </p>
                 </div>
                 <div>
-                  <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">04</span>
-                  <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold mt-3 mb-3">Launch &amp; Grow</h3>
+                  <div className="flex items-baseline gap-4 mb-3">
+                    <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">04</span>
+                    <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold">Launch &amp; Grow</h3>
+                  </div>
                   <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
                     Launch, strengthen, and grow your outlet long after the ribbon
                     is cut.
