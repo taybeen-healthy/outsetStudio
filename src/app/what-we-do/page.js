@@ -100,23 +100,23 @@ export default function WhatWeDoPage() {
         {/* Four Pillars of Purposeful Spaces Section */}
         <section className="w-full bg-white py-20 sm:py-28 lg:py-32">
           <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-14">
-            {/* Heading + Description */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 mb-14">
-              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight">
+            {/* Heading row: heading left, description right */}
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 lg:gap-16 mb-14 lg:mb-20">
+              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight max-w-lg">
                 Four Pillars of Purposeful
                 <br />
                 Spaces
               </h2>
-              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7] self-end max-w-lg">
+              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7] max-w-md lg:text-right">
                 Each phase seamlessly transitioning into the next for flawless
                 commercial delivery.
               </p>
             </div>
 
-            {/* Image + 4 Steps */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
-              {/* Left: Image 14 */}
-              <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[560/500] overflow-hidden">
+            {/* Image left + 4 Steps right */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+              {/* Left: Image 16 - narrower portrait shape */}
+              <div className="relative w-full max-w-[480px] mx-auto lg:mx-0 aspect-[3/4] overflow-hidden">
                 <Image
                   src="/Image 16.svg"
                   alt="Coffee shop bakery display"
@@ -127,7 +127,7 @@ export default function WhatWeDoPage() {
               </div>
 
               {/* Right: 4 Numbered Steps */}
-              <div className="flex flex-col gap-10">
+              <div className="flex flex-col gap-10 lg:gap-12">
                 <div>
                   <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">01</span>
                   <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold mt-3 mb-3">Discover</h3>
