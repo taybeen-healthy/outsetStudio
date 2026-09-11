@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Hero({ onOpenModal }) {
+export default function Hero() {
   return (
     <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-7 sm:px-10 lg:px-14 py-16 sm:py-24 text-center">
       <div className="max-w-[365px] sm:max-w-5xl mx-auto flex flex-col items-center">
@@ -28,13 +28,12 @@ export default function Hero({ onOpenModal }) {
         {/* Call to Action Buttons */}
         <div className="mt-9 sm:mt-11 flex flex-row items-center justify-center gap-3 sm:gap-7 w-full max-w-none">
           {/* Primary Action Button */}
-          <button
-            type="button"
-            onClick={onOpenModal}
-            className="w-auto h-11 sm:h-[48px] px-5 sm:px-9 flex items-center justify-center text-center bg-transparent hover:bg-white hover:text-black text-white font-sans font-medium text-[15px] sm:text-[17px] whitespace-nowrap tracking-normal rounded-none border border-white transition-all duration-300 cursor-pointer shadow-sm"
+          <a
+            href="mailto:hello@outsetstudio.com"
+            className="w-auto h-11 sm:h-[48px] px-5 sm:px-9 flex items-center justify-center text-center bg-transparent hover:bg-white hover:text-black text-white font-sans font-medium text-[15px] sm:text-[17px] whitespace-nowrap tracking-normal rounded-none border border-white transition-all duration-300 shadow-sm"
           >
             Start a Project
-          </button>
+          </a>
 
           {/* Secondary Link Action with diagonal arrow */}
           <Link

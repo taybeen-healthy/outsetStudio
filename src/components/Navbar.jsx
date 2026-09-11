@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-export default function Navbar({ onOpenModal }) {
+export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -61,13 +61,12 @@ export default function Navbar({ onOpenModal }) {
 
         {/* Desktop Contact Action Button */}
         <div className="hidden lg:block">
-          <button
-            type="button"
-            onClick={onOpenModal}
-            className="inline-block text-sm sm:text-[15px] font-normal text-white border border-white/80 hover:border-white px-7 py-2 bg-transparent hover:bg-white hover:text-black transition-all duration-300 cursor-pointer rounded-none"
+          <a
+            href="mailto:hello@outsetstudio.com"
+            className="inline-block text-sm sm:text-[15px] font-normal text-white border border-white/80 hover:border-white px-7 py-2 bg-transparent hover:bg-white hover:text-black transition-all duration-300 rounded-none"
           >
             Contact
-          </button>
+          </a>
         </div>
 
         {/* Mobile Hamburger Toggle */}
@@ -117,16 +116,13 @@ export default function Navbar({ onOpenModal }) {
                 {link.name}
               </Link>
             ))}
-            <button
-              type="button"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenModal();
-              }}
-              className="text-center text-sm font-normal text-white border border-white/80 hover:bg-white hover:text-black px-6 py-2.5 mt-4 transition-all cursor-pointer rounded-none"
-            >
-              Contact
-            </button>
+              <a
+                href="mailto:hello@outsetstudio.com"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-center text-sm font-normal text-white border border-white/80 hover:bg-white hover:text-black px-6 py-2.5 mt-4 transition-all rounded-none"
+              >
+                Contact
+              </a>
           </nav>
         </div>
       )}

@@ -1,4 +1,4 @@
-export default function CTABanner({ onOpenModal }) {
+export default function CTABanner() {
   return (
     <section aria-label="Call to action" className="relative w-full overflow-hidden">
       {/* Absolute split background: Top 54% white, Bottom 46% black matching Figma */}
@@ -27,13 +27,12 @@ export default function CTABanner({ onOpenModal }) {
 
           {/* Buttons matching Figma */}
           <div className="relative z-10 flex flex-row items-center gap-2 sm:gap-5 mt-2">
-            <button
-              type="button"
-              onClick={onOpenModal}
-              className="h-12 px-5 sm:px-7 flex items-center justify-center text-[15px] sm:text-sm whitespace-nowrap font-normal text-white border border-white/80 bg-transparent hover:bg-white hover:text-[#bf572b] transition-all duration-300 cursor-pointer rounded-none"
+            <a
+              href="mailto:hello@outsetstudio.com"
+              className="h-12 px-5 sm:px-7 flex items-center justify-center text-[15px] sm:text-sm whitespace-nowrap font-normal text-white border border-white/80 bg-transparent hover:bg-white hover:text-[#bf572b] transition-all duration-300 rounded-none"
             >
               Start a Project
-            </button>
+            </a>
             <a
               href="#our-work"
               className="h-12 px-1 sm:px-4 flex items-center justify-center gap-2 text-[15px] sm:text-sm whitespace-nowrap font-normal text-white hover:text-white/80 transition-colors duration-300 group"
