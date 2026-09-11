@@ -33,11 +33,6 @@ export default function AboutPage() {
           {/* About Hero Content */}
           <section className="relative z-10 flex-1 flex flex-col items-start justify-center px-7 sm:px-10 lg:px-14 py-16 sm:py-24">
             <div className="max-w-4xl mx-auto w-full">
-              {/* Page Label */}
-              <span className="text-xs tracking-[0.25em] text-white/70 uppercase font-medium">
-                About
-              </span>
-
               {/* Main Headline */}
               <h1 className="font-serif font-bold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[60px] xl:text-[68px] leading-[1.16] tracking-tight drop-shadow-md mt-4 mb-6">
                 We Design Spaces That<br />
