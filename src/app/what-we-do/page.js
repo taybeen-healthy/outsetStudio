@@ -101,13 +101,13 @@ export default function WhatWeDoPage() {
         <section className="w-full bg-white py-20 sm:py-28 lg:py-32">
           <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-14">
             {/* Heading row: heading left, description right */}
-            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 lg:gap-16 mb-14 lg:mb-20">
-              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight max-w-lg">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-12 mb-14 lg:mb-20">
+              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium leading-[1.15] tracking-tight max-w-xl">
                 Four Pillars of Purposeful
                 <br />
                 Spaces
               </h2>
-              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7] max-w-md lg:text-right">
+              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7] max-w-sm lg:pt-2">
                 Each phase seamlessly transitioning into the next for flawless
                 commercial delivery.
               </p>
