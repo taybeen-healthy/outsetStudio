@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
+import Footer from "@/components/Footer";
+
 export const metadata = {
   title: "What We Do",
   description:
@@ -64,7 +66,107 @@ export default function WhatWeDoPage() {
             </div>
           </section>
         </div>
+
+        {/* Everything Your Space Needs to Perform Section */}
+        <section className="w-full bg-[#f5f5f5] py-20 sm:py-28 lg:py-32">
+          <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+            {/* Left: Text Content */}
+            <div className="max-w-xl">
+              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight mb-8">
+                Everything Your Space
+                <br />
+                Needs to Perform.
+              </h2>
+              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7]">
+                Our approach connects every stage of the journey—from
+                understanding your business to designing, building,
+                launching, and supporting your growth.
+              </p>
+            </div>
+
+            {/* Right: Image 15 with rounded corners */}
+            <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[560/385] overflow-hidden rounded-3xl">
+              <Image
+                src="/Image 15.svg"
+                alt="Modern cafe interior with marble floor"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Four Pillars of Purposeful Spaces Section */}
+        <section className="w-full bg-white py-20 sm:py-28 lg:py-32">
+          <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-14">
+            {/* Heading + Description */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 mb-14">
+              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight">
+                Four Pillars of Purposeful
+                <br />
+                Spaces
+              </h2>
+              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7] self-end max-w-lg">
+                Each phase seamlessly transitioning into the next for flawless
+                commercial delivery.
+              </p>
+            </div>
+
+            {/* Image + 4 Steps */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
+              {/* Left: Image 14 */}
+              <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[560/500] overflow-hidden">
+                <Image
+                  src="/image 14).svg"
+                  alt="Coffee shop bakery display"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover object-center"
+                />
+              </div>
+
+              {/* Right: 4 Numbered Steps */}
+              <div className="flex flex-col gap-10">
+                <div>
+                  <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">01</span>
+                  <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold mt-3 mb-3">Discover</h3>
+                  <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
+                    Understand your brand, space, customers, and goals before a
+                    single line is drawn.
+                  </p>
+                </div>
+                <div>
+                  <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">02</span>
+                  <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold mt-3 mb-3">Design</h3>
+                  <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
+                    Create the concept, layout, identity, and experience that
+                    define the room.
+                  </p>
+                </div>
+                <div>
+                  <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">03</span>
+                  <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold mt-3 mb-3">Build</h3>
+                  <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
+                    Manage fabrication, execution, signage, and delivery — on site,
+                    on time.
+                  </p>
+                </div>
+                <div>
+                  <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">04</span>
+                  <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold mt-3 mb-3">Launch &amp; Grow</h3>
+                  <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
+                    Launch, strengthen, and grow your outlet long after the ribbon
+                    is cut.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+
+      <Footer />
     </div>
   );
 }
