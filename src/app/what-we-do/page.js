@@ -68,11 +68,11 @@ export default function WhatWeDoPage() {
         </div>
 
         {/* Everything Your Space Needs to Perform Section */}
-        <section className="w-full bg-[#f5f5f5] py-20 sm:py-28 lg:py-32">
-          <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+        <section className="w-full bg-white py-20 sm:py-28 lg:py-32">
+          <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left: Text Content */}
-            <div className="max-w-xl">
-              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight mb-8">
+            <div className="max-w-lg">
+              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-semibold leading-[1.15] tracking-tight mb-6">
                 Everything Your Space
                 <br />
                 Needs to Perform.
@@ -84,8 +84,8 @@ export default function WhatWeDoPage() {
               </p>
             </div>
 
-            {/* Right: Image 15 with rounded corners */}
-            <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[560/385] overflow-hidden rounded-3xl">
+            {/* Right: Image 15 with asymmetric rounded corners */}
+            <div className="relative w-full max-w-[520px] mx-auto lg:mx-0 aspect-[4/5] overflow-hidden rounded-tl-3xl rounded-br-3xl">
               <Image
                 src="/Image 15.svg"
                 alt="Modern cafe interior with marble floor"
