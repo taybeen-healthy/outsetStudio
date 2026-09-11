@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import CTABanner from "@/components/CTABanner";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "About",
@@ -236,6 +238,12 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
+
+      {/* CTA Banner */}
+      <CTABanner />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
