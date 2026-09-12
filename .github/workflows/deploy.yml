@@ -39,8 +39,8 @@ jobs:
           password: ${{ secrets.VPS_PASSWORD }}
           port: 22
           command_timeout: 10m
-          script_stop: false
           script: |
+            set +e
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:$PATH
@@ -64,7 +64,12 @@ jobs:
             chmod -R 755 /var/www/outsetStudio
             
             echo "Restarting PM2 process..."
-            pm2 restart outset-studio || pm2 start npm --name "outset-studio" -- start -- -p 3004
-            pm2 save || true
+            if pm2 pid outset-studio >/dev/null 2>&1; then
+              pm2 restart outset-studio
+            else
+              pm2 start npm --name "outset-studio" -- start -- -p 3004
+            fi
+            
+            pm2 save
             
             echo "=== Deploy Complete! ==="
