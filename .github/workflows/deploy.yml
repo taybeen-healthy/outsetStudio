@@ -46,6 +46,12 @@ jobs:
             echo "NEXT_PUBLIC_BASE_URL=http://localhost:3004" > .env.production
             
             npm ci --production=false
+            
+            # Clean old build cache for fresh deploy
+            rm -rf .next
+            
             npm run build
             pm2 restart outset-studio
+            sleep 3
+            pm2 status outset-studio
             echo "=== Deploy Complete! ==="
