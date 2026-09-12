@@ -1,13 +1,23 @@
 import Image from "next/image";
 
-const bullets = [
-  "Brand-focused spaces that connect with customers.",
-  "From concept to complete execution.",
-  "Functional spaces built to perform.",
-  "Systems designed to scale.",
-];
+/**
+ * About Component
+ * Props se data receive karta hai — /api/about se data aata hai.
+ * @param {Object} data - aboutData from /api/about
+ */
+export default function About({ data }) {
+  const bullets = data?.bullets ?? [
+    "Brand-focused spaces that connect with customers.",
+    "From concept to complete execution.",
+    "Functional spaces built to perform.",
+    "Systems designed to scale.",
+  ];
+  const title = data?.title ?? "More Than Design. Spaces That Perform.";
+  const description = data?.description ?? "";
+  const mainImage = data?.mainImage ?? "/Image (1).svg";
+  const secondaryImage = data?.secondaryImage ?? "/Image (2).svg";
 
-export default function About() {
+
   return (
     <section
       id="about"
@@ -18,14 +28,16 @@ export default function About() {
       <div className="lg:hidden">
         <div className="px-6 pt-5 pb-7">
           <h2 className="font-serif font-medium text-[#1a1a1a] text-[29px] leading-[1.2] tracking-tight">
-            More Than Design.Spaces<br />That Perform.
+            {title.split(".").map((part, i, arr) =>
+              i < arr.length - 1 ? <span key={i}>{part}.<br /></span> : part
+            )}
           </h2>
           <p className="font-sans text-[15px] text-[#222] leading-[1.48] mt-5">
-            Outset Studio transforms physical spaces into distinctive, efficient, and high-performing outlets that elevate every customer experience.
+            {description}
           </p>
         </div>
         <div className="relative w-full h-[396px] overflow-hidden">
-          <Image src="/Image (1).svg" alt="Outset Studio space design" fill sizes="100vw" className="object-cover" />
+          <Image src={mainImage} alt="Outset Studio space design" fill sizes="100vw" className="object-cover" />
         </div>
         <ul className="w-full px-6 py-8 space-y-6">
           {bullets.map((b) => (
@@ -46,7 +58,7 @@ export default function About() {
             {/* Main large image — Image (1).svg (510x496 squarish aspect ratio) */}
             <div className="relative w-full aspect-[510/496] max-w-[490px] overflow-hidden shadow-sm">
               <Image
-                src="/Image (1).svg"
+                src={mainImage}
                 alt="Outset Studio space design"
                 fill
                 priority
@@ -59,7 +71,7 @@ export default function About() {
             <div className="absolute -bottom-6 sm:-bottom-10 lg:-bottom-12 -right-2 sm:-right-6 lg:-right-8 w-[190px] h-[210px] sm:w-[230px] sm:h-[254px] lg:w-[250px] lg:h-[276px] bg-white p-1.5 sm:p-2 shadow-[0_20px_48px_rgba(0,0,0,0.22)] z-10">
               <div className="relative w-full h-full overflow-hidden">
                 <Image
-                  src="/Image (2).svg"
+                  src={secondaryImage}
                   alt="Outset Studio interior execution"
                   fill
                   sizes="(max-width: 640px) 190px, (max-width: 1024px) 230px, 250px"
@@ -79,9 +91,7 @@ export default function About() {
 
             {/* Description Paragraph */}
             <p className="font-sans text-base sm:text-[17px] text-[#222222] font-normal leading-[1.7] max-w-xl">
-              Outset Studio transforms physical spaces into distinctive,
-              efficient, and high-performing outlets that elevate every customer
-              experience.
+              {description}
             </p>
 
             {/* Thin horizontal divider line matching screenshot */}

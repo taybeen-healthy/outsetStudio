@@ -1,44 +1,8 @@
 import Image from "next/image";
 
-const industries = [
-  {
-    name: "QSRs",
-    description:
-      "Manage orders, inventory and operations while keeping service fast and efficient.",
-    image: "/Image (4).svg",
-  },
-  {
-    name: "Interiors",
-    description:
-      "Smart interior spaces designed to better flow, experience, and impact.",
-    image: "/Image (6).svg",
-  },
-  {
-    name: "Cafes",
-    description:
-      "Simplify orders, inventory and sales for smoother daily operations.",
-    image: "/Image (5).svg",
-  },
-  {
-    name: "Exteriors",
-    description:
-      "Outdoor spaces designed to elevate your brand and attract customers.",
-    image: "/Image.png",
-  },
-  {
-    name: "Furniture",
-    description:
-      "Custom furniture designed to complement your space and brand.",
-    image: "/Image (7).svg",
-  },
-  {
-    name: "Salons",
-    description:
-      "Manage appointments, services and inventory from one place.",
-    image: "/Image (8).svg",
-  },
-];
-
+/**
+ * IndustryCard — individual card component
+ */
 function IndustryCard({ industry }) {
   return (
     <div className="bg-white border border-neutral-200/70 flex flex-col transition-all duration-300 hover:shadow-md">
@@ -66,7 +30,17 @@ function IndustryCard({ industry }) {
   );
 }
 
-export default function Industries() {
+/**
+ * Industries Component
+ * Props se data receive karta hai — /api/industries se data aata hai.
+ * @param {Object} data - industriesData from /api/industries
+ */
+export default function Industries({ data }) {
+  const industries = data?.industries ?? [];
+  const title = data?.title ?? "Built Around Your Business.";
+  const subtitle = data?.subtitle ?? "";
+
+
   return (
     <section
       id="industries"
@@ -78,11 +52,10 @@ export default function Industries() {
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12 sm:mb-16">
           <div className="max-w-xl">
             <h2 className="font-serif font-normal text-[#1a1a1a] text-3xl sm:text-4xl lg:text-[46px] leading-tight tracking-tight">
-              Built Around Your Business.
+              {title}
             </h2>
             <p className="font-sans text-sm sm:text-[15px] text-neutral-500 font-normal mt-3 leading-relaxed">
-              We create distinctive spaces that align your brand, customer experience,
-              and business goals to help every outlet grow.
+              {subtitle}
             </p>
           </div>
 

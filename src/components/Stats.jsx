@@ -1,5 +1,10 @@
-export default function Stats() {
-  const stats = [
+/**
+ * Stats Component
+ * Props se data receive karta hai — /api/stats se data aata hai.
+ * @param {Array} data - statsData array from /api/stats
+ */
+export default function Stats({ data }) {
+  const stats = data ?? [
     { value: "90+", label: "TOTAL VENDORS", highlight: true },
     { value: "30+", label: "EXPERIENCED VENDORS", highlight: false },
     { value: "15+", label: "SPECIALIZED CATEGORIES", highlight: false },
@@ -7,10 +12,7 @@ export default function Stats() {
   ];
 
   return (
-    <div
-      aria-label="Key statistics"
-      className="w-full bg-white shadow-2xl"
-    >
+    <div aria-label="Key statistics" className="w-full bg-white shadow-2xl">
       <div className="grid grid-cols-2 lg:grid-cols-4 divide-y divide-neutral-200 sm:divide-y-0 sm:divide-x divide-neutral-200">
         {stats.map((stat, i) => (
           <div
@@ -35,3 +37,4 @@ export default function Stats() {
     </div>
   );
 }
+

@@ -1,33 +1,41 @@
 import Image from "next/image";
 
-const steps = [
-  {
-    number: "01",
-    title: "Discover",
-    description:
-      "Understand your brand, space, customers, and goals before a single line is drawn.",
-  },
-  {
-    number: "02",
-    title: "Design",
-    description:
-      "Create the concept, layout, identity, and experience that define the room.",
-  },
-  {
-    number: "03",
-    title: "Build",
-    description:
-      "Manage fabrication, execution, signage, and delivery — on rate, on time.",
-  },
-  {
-    number: "04",
-    title: "Launch & Grow",
-    description:
-      "Launch, strengthen, and grow your outlet long after the ribbon is cut.",
-  },
-];
+/**
+ * HowWeWork Component
+ * Props se data receive karta hai — /api/how-we-work se data aata hai.
+ * @param {Object} data - howWeWorkData from /api/how-we-work
+ */
+export default function HowWeWork({ data }) {
+  const steps = data?.steps ?? [
+    {
+      number: "01",
+      title: "Discover",
+      description:
+        "Understand your brand, space, customers, and goals before a single line is drawn.",
+    },
+    {
+      number: "02",
+      title: "Design",
+      description:
+        "Create the concept, layout, identity, and experience that define the room.",
+    },
+    {
+      number: "03",
+      title: "Build",
+      description:
+        "Manage fabrication, execution, signage, and delivery — on rate, on time.",
+    },
+    {
+      number: "04",
+      title: "Launch & Grow",
+      description:
+        "Launch, strengthen, and grow your outlet long after the ribbon is cut.",
+    },
+  ];
+  const title = data?.title ?? "How We Work";
+  const blueprintImage = data?.blueprintImage ?? "/Image (3).svg";
 
-export default function HowWeWork() {
+
   return (
     <section
       id="process"
@@ -38,7 +46,7 @@ export default function HowWeWork() {
         {/* Centered Heading matching Screenshot 4 */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h2 className="font-serif font-normal text-[#1a1a1a] text-3xl sm:text-4xl lg:text-[46px] leading-tight tracking-tight">
-            How We Work
+            {title}
           </h2>
         </div>
 
@@ -47,7 +55,7 @@ export default function HowWeWork() {
           {/* Left — Architectural blueprint on wooden desk */}
           <div className="lg:col-span-6 relative w-full h-[400px] sm:h-[500px] lg:h-[560px] overflow-hidden shadow-sm">
             <Image
-              src="/Image (3).svg"
+              src={blueprintImage}
               alt="Architectural space planning and blueprints by Outset Studio"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
