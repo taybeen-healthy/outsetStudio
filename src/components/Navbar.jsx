@@ -32,14 +32,14 @@ export default function Navbar() {
         {/* Brand Logo */}
         <Link
           href="/"
-          className="group flex items-baseline gap-1.5 focus:outline-none"
+          className="group flex items-baseline gap-2 focus:outline-none"
           aria-label="Outset Studio Homepage"
         >
-          <span className="font-serif text-2xl sm:text-[26px] tracking-wide text-[#bf572b] font-normal transition-colors duration-300 group-hover:text-[#d96838]">
-            Outset
+          <span className="font-serif text-xl sm:text-2xl tracking-[0.18em] text-[#B84E29] font-normal uppercase transition-colors duration-300">
+            OUTSET
           </span>
-          <span className="font-serif text-2xl sm:text-[26px] tracking-wide text-white font-normal">
-            Studio
+          <span className="font-serif text-xl sm:text-2xl tracking-[0.18em] text-white font-normal uppercase">
+            STUDIO
           </span>
         </Link>
 
@@ -52,7 +52,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm sm:text-[15px] font-normal text-white hover:text-white/80 transition-colors duration-200 py-1"
+              className="text-xs tracking-[0.18em] uppercase font-medium text-white/90 hover:text-white transition-colors duration-200 py-1"
             >
               {link.name}
             </Link>
@@ -62,10 +62,10 @@ export default function Navbar() {
         {/* Desktop Contact Action Button */}
         <div className="hidden lg:block">
           <a
-            href="mailto:hello@outsetstudio.com"
-            className="inline-block text-sm sm:text-[15px] font-normal text-white border border-white/80 hover:border-white px-7 py-2 bg-transparent hover:bg-white hover:text-black transition-all duration-300 rounded-none"
+            href="mailto:outsetstudio@gmail.com"
+            className="inline-block text-xs tracking-[0.18em] uppercase font-medium text-white border border-white/40 hover:border-white px-7 py-2.5 bg-black/20 hover:bg-white hover:text-black transition-all duration-300 rounded-none"
           >
-            Contact
+            CONTACT
           </a>
         </div>
 
