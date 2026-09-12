@@ -50,7 +50,7 @@ export const aboutData = {
 
 export const howWeWorkData = {
   title: "How We Work",
-  blueprintImage: "/image7.png",
+  blueprintImage: "/image7.jpg",
   steps: [
     {
       number: "01",
@@ -58,7 +58,7 @@ export const howWeWorkData = {
       title: "Discover",
       description:
         "Understand your brand identity, spatial constraints, target customer psychology, and financial goals before a single line is drawn.",
-      image: "/image7.png",
+      image: "/image7.jpg",
     },
     {
       number: "02",
@@ -149,7 +149,7 @@ export const ourWorkData = {
       title: "Sardar Ji Baksh Cafe",
       subtitle:
         "A thoughtfully crafted café experience where distinctive interiors, warm atmospheres, and memorable moments come together to create a space people want to return to.",
-      image: "/image4.png",
+      image: "/image4.jpg",
       location: "GURUGRAM",
     },
     {
@@ -157,7 +157,7 @@ export const ourWorkData = {
       title: "Rigo Cafe",
       subtitle:
         "More than a place to dine, Rigo Cafe brings together thoughtful design, inviting spaces, and memorable experiences that keep people coming back.",
-      image: "/image5.png",
+      image: "/image5.jpg",
       location: "GURUGRAM",
     },
     {
@@ -165,7 +165,7 @@ export const ourWorkData = {
       title: "Sardar Ji Baksh Cafe",
       subtitle:
         "A thoughtfully crafted café experience where distinctive interiors, warm atmospheres, and memorable moments come together to create a space people want to return to.",
-      image: "/image6.png",
+      image: "/image6.jpg",
       location: "GURUGRAM",
     },
     {
@@ -173,7 +173,7 @@ export const ourWorkData = {
       title: "Blue Tokai Coffee",
       subtitle:
         "Modern roastery & cafe designed for community and fast-paced commercial footfall.",
-      image: "/image4.png",
+      image: "/image4.jpg",
       location: "DELHI",
     },
     {
@@ -181,7 +181,7 @@ export const ourWorkData = {
       title: "The House of Coffee",
       subtitle:
         "Artisanal interior architecture crafted to maximize customer flow and dining ambiance.",
-      image: "/image5.png",
+      image: "/image5.jpg",
       location: "RAJASTHAN",
     },
   ],

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { howWeWorkData } from "@/lib/data";
 
 const defaultStepImages = [
-  "/image7.png",
+  "/image7.jpg",
   "/image8.jpg",
   "/image9.jpg",
   "/image10.jpg",
@@ -21,7 +21,7 @@ export default function HowWeWork({ data }) {
   const activeImage =
     steps[activeStepIndex]?.image ??
     defaultStepImages[activeStepIndex] ??
-    "/image7.png";
+    "/image7.jpg";
 
   return (
     <section
