@@ -22,7 +22,7 @@ export default function Stats({ data }) {
             {/* Number — Cormorant Garamond */}
             <span
               className={`font-serif text-4xl sm:text-5xl lg:text-[56px] font-light leading-none tracking-tight ${
-                stat.highlight ? "text-[#B84E29]" : "text-[#1a1a1a]"
+                stat.highlight ? "text-[#C0532C]" : "text-[#1a1a1a]"
               }`}
             >
               {stat.value}

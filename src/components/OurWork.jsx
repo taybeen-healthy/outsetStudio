@@ -1,232 +1,186 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
+import { ourWorkData } from "@/lib/data";
 
-const filters = ["Delhi", "Gurugram", "Rajasthan", "View All"];
+export default function OurWork({ data }) {
+  const content = data ?? ourWorkData;
+  const filters = content.filters ?? ["ALL", "DELHI", "GURUGRAM", "RAJASTHAN"];
+  const projects = content.projects ?? [];
 
-const projectList = [
-  {
-    id: 1,
-    title: "Sardar Ji Baksh Cafe",
-    subtitle: "A refined space with a character of its own.",
-    image: "/Image (5).svg",
-    location: "Delhi",
-  },
-  {
-    id: 2,
-    title: "Rigo Cafe",
-    subtitle: "A warm, thoughtfully designed cafe experience.",
-    image: "/image 9.svg",
-    location: "Gurugram",
-  },
-  {
-    id: 3,
-    title: "Sardar Ji Baksh",
-    subtitle: "A refined space with a character of its own.",
-    image: "/Image (5).svg",
-    location: "Rajasthan",
-  },
-  {
-    id: 4,
-    title: "Blue Tokai Coffee",
-    subtitle: "Modern roastery & cafe designed for community.",
-    image: "/image 9.svg",
-    location: "Gurugram",
-  },
-];
+  const [activeFilter, setActiveFilter] = useState("GURUGRAM");
+  const scrollContainerRef = useRef(null);
 
-export default function OurWork() {
-  const [activeFilter, setActiveFilter] = useState("Gurugram");
-  const [currentIndex, setCurrentIndex] = useState(1); // Default to Rigo Cafe in center
+  // Filter projects by active tab
+  const filteredProjects = projects.filter((p) => {
+    if (activeFilter === "ALL") return true;
+    return p.location.toUpperCase() === activeFilter.toUpperCase();
+  });
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : projectList.length - 1));
+  // Animated scroll handlers for the horizontal carousel
+  const handleScrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: -380,
+        behavior: "smooth",
+      });
+    }
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev < projectList.length - 1 ? prev + 1 : 0));
+  const handleScrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: 380,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
     <section
       id="our-work"
       aria-label="Our Work"
-      className="w-full bg-white pt-12 sm:pt-20 lg:pt-24 pb-14 sm:pb-24 overflow-hidden"
+      className="w-full bg-[#F7F6F2] py-16 sm:py-24 lg:py-28 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
-        {/* Header row matching Figma */}
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5 mb-7 sm:mb-14 text-center lg:text-left">
-          <div className="mx-auto lg:mx-0">
-            <h2 className="font-serif font-medium sm:font-semibold text-[#1a1a1a] text-[29px] sm:text-4xl lg:text-[46px] leading-[1.12] tracking-tight">
+        {/* Header row matching screenshot */}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12 sm:mb-16">
+          {/* Left Title & Subtitle */}
+          <div>
+            <h2 className="font-serif font-normal text-[#1a1a1a] text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] leading-[1.15] tracking-tight">
               One Studio from<br />
               Concept to Growth.
             </h2>
+            <p className="font-sans text-sm sm:text-[15px] text-neutral-500 font-normal leading-relaxed max-w-lg mt-4">
+              From concept to growth, Outset Studio creates distinctive, high-performing outlets.
+            </p>
           </div>
 
-          <div className="flex flex-col gap-6 lg:items-start items-center">
-            <p className="text-[15px] sm:text-[17px] text-[#1a1a1a] font-normal leading-relaxed max-w-sm text-center lg:text-left">
-              From concept to growth, Outset Studio creates distinctive,
-              high-performing outlets.
-            </p>
-
-            {/* Filter buttons matching Figma */}
-            <div className="flex flex-nowrap gap-2">
-              {filters.map((f) => {
-                const isActive = activeFilter === f;
-                return (
-                  <button
-                    key={f}
-                    onClick={() => setActiveFilter(f)}
-                    className={`px-3 sm:px-5 py-2 text-[13px] sm:text-sm whitespace-nowrap font-normal border transition-colors cursor-pointer rounded-none ${
-                      isActive
-                        ? "bg-[#111111] border-[#111111] text-white"
-                        : "bg-white border-[#111111] text-[#111111] hover:bg-neutral-100"
-                    }`}
-                  >
-                    {f}
-                  </button>
-                );
-              })}
-            </div>
+          {/* Right Category Tabs (ALL, DELHI, GURUGRAM, RAJASTHAN) */}
+          <div className="flex flex-wrap items-center gap-2.5 lg:pb-1">
+            {filters.map((f) => {
+              const isActive = activeFilter.toUpperCase() === f.toUpperCase();
+              return (
+                <button
+                  key={f}
+                  onClick={() => setActiveFilter(f)}
+                  className={`px-5 py-2.5 text-xs tracking-[0.18em] uppercase font-medium transition-all duration-300 cursor-pointer rounded-none ${
+                    isActive
+                      ? "bg-[#1a1a1a] text-white shadow-sm"
+                      : "bg-white text-[#1a1a1a] border border-neutral-200/80 hover:border-[#1a1a1a] hover:bg-neutral-50"
+                  }`}
+                >
+                  {f}
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
 
-      {/* Carousel Container */}
-      <div className="w-full relative px-0 sm:px-6">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-center gap-4 sm:gap-6">
-          {/* Left card peek */}
-          {(() => {
-            const leftIdx =
-              (currentIndex - 1 + projectList.length) % projectList.length;
-            const leftProject = projectList[leftIdx];
-            return (
-              <div
-                onClick={() => setCurrentIndex(leftIdx)}
-                className="hidden md:block relative w-[260px] lg:w-[320px] xl:w-[340px] h-[340px] sm:h-[380px] lg:h-[400px] overflow-hidden flex-shrink-0 cursor-pointer opacity-90 hover:opacity-100 transition-opacity"
-              >
+      {/* Horizontal Scrollable Cards Carousel */}
+      <div className="w-full relative px-6 sm:px-10 lg:px-14 max-w-7xl mx-auto">
+        <div
+          ref={scrollContainerRef}
+          className="flex gap-6 sm:gap-8 overflow-x-auto scroll-smooth scrollbar-none pb-6 pt-2 snap-x snap-mandatory"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {filteredProjects.map((project, i) => (
+            <div
+              key={project.id ?? i}
+              className="group flex-shrink-0 w-[310px] sm:w-[360px] lg:w-[380px] bg-white shadow-sm border border-neutral-200/60 transition-all duration-300 hover:shadow-lg snap-start flex flex-col justify-between"
+            >
+              {/* Card Image Container */}
+              <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
+                {/* Location Badge (e.g. GURUGRAM) */}
+                <span className="absolute top-3.5 left-3.5 z-10 bg-black/90 text-white font-sans text-[10px] tracking-[0.2em] uppercase px-3 py-1 font-medium rounded-none">
+                  {project.location}
+                </span>
                 <Image
-                  src={leftProject.image}
-                  alt={leftProject.title}
+                  src={project.image}
+                  alt={project.title}
                   fill
-                  sizes="340px"
-                  className="object-cover"
+                  sizes="(max-width: 640px) 310px, 380px"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black/25 pointer-events-none" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-5 sm:p-6">
-                  <h3 className="font-serif text-white text-xl sm:text-2xl font-normal leading-tight">
-                    {leftProject.title}
+              </div>
+
+              {/* Card Body */}
+              <div className="p-6 sm:p-7 flex flex-col justify-between flex-1">
+                <div>
+                  <h3 className="font-serif font-normal text-[#1a1a1a] text-2xl sm:text-[26px] leading-tight mb-3">
+                    {project.title}
                   </h3>
-                  <p className="font-sans text-white/80 text-xs sm:text-[13px] font-light mt-1 leading-snug">
-                    {leftProject.subtitle}
+                  <p className="font-sans text-xs sm:text-[13px] text-neutral-500 font-normal leading-[1.65] mb-6">
+                    {project.subtitle}
                   </p>
                 </div>
-              </div>
-            );
-          })()}
 
-          {/* Center active wide card (Rigo Cafe with image 9.svg) */}
-          {(() => {
-            const activeProject = projectList[currentIndex];
-            return (
-              <div className="relative w-full md:w-[620px] lg:w-[740px] xl:w-[792px] h-[320px] sm:h-[380px] lg:h-[400px] overflow-hidden flex-shrink-0 shadow-sm">
-                <Image
-                  src={activeProject.image}
-                  alt={activeProject.title}
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, 792px"
-                  className="object-cover"
-                />
-                {/* Subtle dark overlay */}
-                <div className="absolute inset-0 bg-black/20 pointer-events-none sm:block hidden" />
-                {/* Bottom text & CTA overlay */}
-                <div className="hidden sm:flex absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex-col justify-end p-6 sm:p-8">
-                  <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-                    <div>
-                      <h3 className="font-serif text-white text-2xl sm:text-3xl lg:text-[32px] font-normal leading-tight">
-                        {activeProject.title}
-                      </h3>
-                      <p className="font-sans text-white/90 text-xs sm:text-sm font-light mt-1.5 max-w-md leading-relaxed">
-                        {activeProject.subtitle}
-                      </p>
-                    </div>
-
-
-                  </div>
+                {/* Card Footer */}
+                <div className="pt-4 border-t border-neutral-100 flex items-center justify-between">
+                  <span className="font-sans text-[11px] font-semibold tracking-[0.18em] uppercase text-[#1a1a1a]">
+                    VIEW CASE
+                  </span>
+                  <svg
+                    className="w-4 h-4 text-[#1a1a1a] group-hover:translate-x-1 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                    />
+                  </svg>
                 </div>
               </div>
-            );
-          })()}
-
-          {/* Right card peek */}
-          {(() => {
-            const rightIdx = (currentIndex + 1) % projectList.length;
-            const rightProject = projectList[rightIdx];
-            return (
-              <div
-                onClick={() => setCurrentIndex(rightIdx)}
-                className="hidden md:block relative w-[260px] lg:w-[320px] xl:w-[340px] h-[340px] sm:h-[380px] lg:h-[400px] overflow-hidden flex-shrink-0 cursor-pointer opacity-90 hover:opacity-100 transition-opacity"
-              >
-                <Image
-                  src={rightProject.image}
-                  alt={rightProject.title}
-                  fill
-                  sizes="340px"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black/25 pointer-events-none" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent flex flex-col justify-end p-5 sm:p-6">
-                  <h3 className="font-serif text-white text-xl sm:text-2xl font-normal leading-tight">
-                    {rightProject.title}
-                  </h3>
-                  <p className="font-sans text-white/80 text-xs sm:text-[13px] font-light mt-1 leading-snug">
-                    {rightProject.subtitle}
-                  </p>
-                </div>
-              </div>
-            );
-          })()}
+            </div>
+          ))}
         </div>
 
-        {/* Navigation arrows matching Figma (two circular black buttons) */}
-        <div className="flex items-center justify-center gap-2 mt-5 sm:mt-10">
+        {/* Carousel Navigation Buttons at Bottom Center */}
+        <div className="flex items-center justify-center gap-3 mt-8 sm:mt-12">
+          {/* Left Arrow Button (White) */}
           <button
-            onClick={handlePrev}
-            aria-label="Previous project"
-            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#1a1a1a] hover:bg-black text-white flex items-center justify-center transition-all cursor-pointer shadow-md"
+            onClick={handleScrollLeft}
+            aria-label="Scroll Left"
+            className="w-11 h-11 bg-white border border-neutral-300 hover:bg-neutral-100 text-[#1a1a1a] flex items-center justify-center transition-all cursor-pointer shadow-sm rounded-none"
           >
             <svg
-              className="w-4 h-4 text-white"
+              className="w-4 h-4 text-[#1a1a1a]"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2.2"
+              strokeWidth="2"
               viewBox="0 0 24 24"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M15 19l-7-7 7-7"
+                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
               />
             </svg>
           </button>
+
+          {/* Right Arrow Button (Black) */}
           <button
-            onClick={handleNext}
-            aria-label="Next project"
-            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#1a1a1a] hover:bg-black text-white flex items-center justify-center transition-all cursor-pointer shadow-md"
+            onClick={handleScrollRight}
+            aria-label="Scroll Right"
+            className="w-11 h-11 bg-[#1a1a1a] hover:bg-black text-white flex items-center justify-center transition-all cursor-pointer shadow-md rounded-none"
           >
             <svg
               className="w-4 h-4 text-white"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2.2"
+              strokeWidth="2"
               viewBox="0 0 24 24"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M9 5l7 7-7 7"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
               />
             </svg>
           </button>

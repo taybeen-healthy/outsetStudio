@@ -19,3 +19,18 @@ body {
 .font-sans {
   font-family: var(--font-sans);
 }
+
+@keyframes fadeScale {
+  0% {
+    opacity: 0.3;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-scale {
+  animation: fadeScale 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

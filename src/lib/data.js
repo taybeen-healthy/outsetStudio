@@ -24,7 +24,7 @@ export const heroData = {
       variant: "outline",
     },
   ],
-  backgroundImage: "/Image (10).svg",
+  backgroundImage: "/image1.jpg",
 };
 
 export const statsData = [
@@ -44,37 +44,45 @@ export const aboutData = {
     "Functional spaces built to perform.",
     "Systems designed to scale.",
   ],
-  mainImage: "/Image (1).svg",
-  secondaryImage: "/Image (2).svg",
+  mainImage: "/image2.jpg",
+  secondaryImage: "/image3.jpg",
 };
 
 export const howWeWorkData = {
   title: "How We Work",
-  blueprintImage: "/Image (3).svg",
+  blueprintImage: "/image7.png",
   steps: [
     {
       number: "01",
+      phase: "PHASE ONE",
       title: "Discover",
       description:
-        "Understand your brand, space, customers, and goals before a single line is drawn.",
+        "Understand your brand identity, spatial constraints, target customer psychology, and financial goals before a single line is drawn.",
+      image: "/image7.png",
     },
     {
       number: "02",
+      phase: "PHASE TWO",
       title: "Design",
       description:
-        "Create the concept, layout, identity, and experience that define the room.",
+        "Author the spatial narrative, architectural drawings, lighting schemes, tactile material selection, and 3D sensory experience that define the space.",
+      image: "/image8.jpg",
     },
     {
       number: "03",
+      phase: "PHASE THREE",
       title: "Build",
       description:
-        "Manage fabrication, execution, signage, and delivery — on rate, on time.",
+        "Oversee general contracting, precision carpentry, custom fixture fabrication, MEP coordination, and site delivery — on rate and on time.",
+      image: "/image9.jpg",
     },
     {
       number: "04",
+      phase: "PHASE FOUR",
       title: "Launch & Grow",
       description:
-        "Launch, strengthen, and grow your outlet long after the ribbon is cut.",
+        "Coordinate grand openings, digital presence rollouts, and ongoing operational spatial refinement to scale your outlet sustainably.",
+      image: "/image10.jpg",
     },
   ],
 };
@@ -90,78 +98,91 @@ export const industriesData = {
       name: "QSRs",
       description:
         "Manage orders, inventory and operations while keeping service fast and efficient.",
-      image: "/Image (4).svg",
+      image: "/image8.jpg",
     },
     {
       id: "interiors",
       name: "Interiors",
       description:
         "Smart interior spaces designed to better flow, experience, and impact.",
-      image: "/Image (6).svg",
+      image: "/image9.jpg",
     },
     {
       id: "cafes",
       name: "Cafes",
       description:
         "Simplify orders, inventory and sales for smoother daily operations.",
-      image: "/Image (5).svg",
+      image: "/image10.jpg",
     },
     {
       id: "exteriors",
       name: "Exteriors",
       description:
         "Outdoor spaces designed to elevate your brand and attract customers.",
-      image: "/Image.png",
+      image: "/image11.jpg",
     },
     {
       id: "furniture",
       name: "Furniture",
       description:
         "Custom furniture designed to complement your space and brand.",
-      image: "/Image (7).svg",
+      image: "/image12.jpg",
     },
     {
       id: "salons",
       name: "Salons",
       description:
         "Manage appointments, services and inventory from one place.",
-      image: "/Image (8).svg",
+      image: "/image13.jpg",
     },
   ],
 };
 
 export const ourWorkData = {
-  title: "Our Work",
-  subtitle: "Spaces designed for commercial success across key regions.",
-  filters: ["Delhi", "Gurugram", "Rajasthan", "View All"],
+  title: "One Studio from Concept to Growth.",
+  subtitle:
+    "From concept to growth, Outset Studio creates distinctive, high-performing outlets.",
+  filters: ["ALL", "DELHI", "GURUGRAM", "RAJASTHAN"],
   projects: [
     {
       id: 1,
       title: "Sardar Ji Baksh Cafe",
-      subtitle: "A refined space with a character of its own.",
-      image: "/Image (5).svg",
-      location: "Delhi",
+      subtitle:
+        "A thoughtfully crafted café experience where distinctive interiors, warm atmospheres, and memorable moments come together to create a space people want to return to.",
+      image: "/image4.png",
+      location: "GURUGRAM",
     },
     {
       id: 2,
       title: "Rigo Cafe",
-      subtitle: "A warm, thoughtfully designed cafe experience.",
-      image: "/image 9.svg",
-      location: "Gurugram",
+      subtitle:
+        "More than a place to dine, Rigo Cafe brings together thoughtful design, inviting spaces, and memorable experiences that keep people coming back.",
+      image: "/image5.png",
+      location: "GURUGRAM",
     },
     {
       id: 3,
-      title: "Sardar Ji Baksh",
-      subtitle: "A refined space with a character of its own.",
-      image: "/Image (5).svg",
-      location: "Rajasthan",
+      title: "Sardar Ji Baksh Cafe",
+      subtitle:
+        "A thoughtfully crafted café experience where distinctive interiors, warm atmospheres, and memorable moments come together to create a space people want to return to.",
+      image: "/image6.png",
+      location: "GURUGRAM",
     },
     {
       id: 4,
       title: "Blue Tokai Coffee",
-      subtitle: "Modern roastery & cafe designed for community.",
-      image: "/image 9.svg",
-      location: "Gurugram",
+      subtitle:
+        "Modern roastery & cafe designed for community and fast-paced commercial footfall.",
+      image: "/image4.png",
+      location: "DELHI",
+    },
+    {
+      id: 5,
+      title: "The House of Coffee",
+      subtitle:
+        "Artisanal interior architecture crafted to maximize customer flow and dining ambiance.",
+      image: "/image5.png",
+      location: "RAJASTHAN",
     },
   ],
 };
@@ -176,8 +197,8 @@ export const testimonialsData = {
       rating: 5,
       quote:
         "Outset Studio delivers thoughtful design, seamless execution, and strategic growth solutions that transform spaces into memorable, customer-focused experiences.",
-      avatar: "/image 8 (1).png",
-      image: "/image 9.svg",
+      avatar: "/image14.jpg",
+      image: "/image10.jpg",
     },
     {
       id: 2,
@@ -186,8 +207,8 @@ export const testimonialsData = {
       rating: 5,
       quote:
         "Working with Outset Studio was a game changer for our outlet launch. Their attention to detail and commercial focus set them apart from traditional studios.",
-      avatar: "/image 8 (1).png",
-      image: "/image 9.svg",
+      avatar: "/image14.jpg",
+      image: "/image11.jpg",
     },
   ],
 };

@@ -10,8 +10,8 @@ const testimonials = [
     rating: 5,
     quote:
       "Outset Studio delivers thoughtful design, seamless execution, and strategic growth solutions that transform spaces into memorable, customer-focused experiences.",
-    avatar: "/image 8 (1).png",
-    image: "/image 9.svg",
+    avatar: "/image8.jpg",
+    image: "/image14.jpg",
   },
   {
     name: "Ananya Patel",
@@ -19,8 +19,8 @@ const testimonials = [
     rating: 5,
     quote:
       "Working with Outset Studio was a game changer for our outlet launch. Their attention to detail and commercial focus set them apart from traditional studios.",
-    avatar: "/image 8 (1).png",
-    image: "/image 9.svg",
+    avatar: "/image9.jpg",
+    image: "/image14.jpg",
   },
 ];
 

@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import ContactModal from "./ContactModal";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,21 +26,20 @@ export default function Navbar() {
 
   return (
     <header
-      className={`relative z-30 w-full border-b border-white/10 transition-all duration-300 ${
-        scrolled ? "bg-black/85 backdrop-blur-md shadow-lg" : "bg-transparent"
-      }`}
+      className={`relative z-30 w-full border-b border-white/10 transition-all duration-300 ${scrolled ? "bg-black/85 backdrop-blur-md shadow-lg" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 flex items-center justify-between py-5 sm:py-6">
         {/* Brand Logo matching Screenshot */}
         <Link
           href="/"
-          className="group flex items-baseline gap-2 focus:outline-none"
+          className="group flex items-baseline tracking-[0.16em] focus:outline-none"
           aria-label="Outset Studio Homepage"
         >
-          <span className="font-serif text-xl sm:text-[22px] tracking-[0.16em] text-[#B84E29] font-normal uppercase">
+          <span className="font-serif text-xl sm:text-[22px] tracking-[0.16em] text-white font-normal uppercase">
             OUTSET
           </span>
-          <span className="font-serif text-xl sm:text-[22px] tracking-[0.16em] text-white font-normal uppercase">
+          <span className="font-serif text-xl sm:text-[22px] tracking-[0.16em] text-[#C0532C] font-normal uppercase">
             STUDIO
           </span>
         </Link>
@@ -61,12 +62,12 @@ export default function Navbar() {
 
         {/* Desktop Contact Action Button */}
         <div className="hidden lg:block">
-          <a
-            href="mailto:outsetstudio@gmail.com"
-            className="inline-block text-xs tracking-[0.2em] uppercase font-normal text-neutral-200 border border-neutral-600/80 hover:border-white hover:text-white px-7 py-2.5 bg-black/20 hover:bg-white hover:text-black transition-all duration-300 rounded-none font-sans"
+          <button
+            onClick={() => setShowContact(true)}
+            className="inline-block text-xs tracking-[0.2em] uppercase font-normal text-neutral-200 border border-neutral-600/80 hover:border-white hover:bg-white hover:text-black px-7 py-2.5 bg-black/20 transition-all duration-300 rounded-none font-sans cursor-pointer"
           >
             CONTACT
-          </a>
+          </button>
         </div>
 
         {/* Mobile Hamburger Toggle */}
@@ -116,16 +117,19 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <a
-              href="mailto:outsetstudio@gmail.com"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-center text-xs tracking-[0.2em] uppercase font-normal text-white border border-white/40 hover:bg-white hover:text-black px-6 py-2.5 mt-4 transition-all rounded-none"
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setShowContact(true);
+              }}
+              className="text-center text-xs tracking-[0.2em] uppercase font-normal text-white border border-white/40 hover:bg-white hover:text-black px-6 py-2.5 mt-4 transition-all rounded-none cursor-pointer"
             >
               CONTACT
-            </a>
+            </button>
           </nav>
         </div>
       )}
+    {showContact && <ContactModal onClose={() => setShowContact(false)} />}
     </header>
   );
 }

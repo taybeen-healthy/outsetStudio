@@ -13,111 +13,85 @@ export default function About({ data }) {
     "Systems designed to scale.",
   ];
   const title = data?.title ?? "More Than Design. Spaces That Perform.";
-  const description = data?.description ?? "";
-  const mainImage = data?.mainImage ?? "/Image (1).svg";
-  const secondaryImage = data?.secondaryImage ?? "/Image (2).svg";
-
+  const description =
+    data?.description ??
+    "Outset Studio transforms physical spaces into distinctive, efficient, and highly-performing outlets that elevate every customer experience.";
+  const mainImage = data?.mainImage ?? "/image2.jpg";
+  const secondaryImage = data?.secondaryImage ?? "/image3.jpg";
 
   return (
     <section
       id="about"
       aria-label="About Outset Studio"
-      className="w-full bg-white pt-0 sm:pt-16 lg:pt-20 pb-16 sm:pb-28 lg:pb-32"
+      className="w-full bg-white pt-16 sm:pt-24 lg:pt-28 pb-16 sm:pb-28 lg:pb-32 overflow-hidden"
     >
-      {/* Phone layout follows the editorial sequence in the supplied designs. */}
-      <div className="lg:hidden">
-        <div className="px-6 pt-5 pb-7">
-          <h2 className="font-serif font-medium text-[#1a1a1a] text-[29px] leading-[1.2] tracking-tight">
-            {title.split(".").map((part, i, arr) =>
-              i < arr.length - 1 ? <span key={i}>{part}.<br /></span> : part
-            )}
-          </h2>
-          <p className="font-sans text-[15px] text-[#222] leading-[1.48] mt-5">
-            {description}
-          </p>
-        </div>
-        <div className="relative w-full h-[396px] overflow-hidden">
-          <Image src={mainImage} alt="Outset Studio space design" fill sizes="100vw" className="object-cover" />
-        </div>
-        <ul className="w-full px-6 py-8 space-y-6">
-          {bullets.map((b) => (
-            <li key={b} className="grid grid-cols-[28px_minmax(0,1fr)] items-center gap-5 min-w-0">
-              <span className="flex-shrink-0 w-7 h-7 rounded-full border-[1.5px] border-[#1a1a1a] text-[#1a1a1a] flex items-center justify-center">
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-              </span>
-              <span className="min-w-0 break-words font-sans text-[15px] text-[#1a1a1a] leading-[1.5]">{b}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="hidden lg:block max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          {/* Left — Two overlapping images matching Figma */}
-          <div className="lg:col-span-7 relative max-w-[540px] mx-auto lg:mx-0 pb-12 sm:pb-16 lg:pb-0 pr-6 sm:pr-10 order-2 lg:order-1">
-            {/* Main large image — Image (1).svg (510x496 squarish aspect ratio) */}
-            <div className="relative w-full aspect-[510/496] max-w-[490px] overflow-hidden shadow-sm">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Left — Two overlapping images matching screenshot */}
+          <div className="lg:col-span-7 relative max-w-[520px] lg:max-w-none mx-auto lg:mx-0 pb-10 sm:pb-14 lg:pb-0 pr-4 sm:pr-8">
+            {/* Main large image — image2.jpg */}
+            <div className="relative w-full aspect-[5/4] max-w-[500px] overflow-hidden shadow-md">
               <Image
                 src={mainImage}
-                alt="Outset Studio space design"
+                alt="Outset Studio architecture space"
                 fill
                 priority
-                sizes="(max-width: 1024px) 100vw, 490px"
-                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 500px"
+                className="object-cover object-center"
               />
             </div>
 
-            {/* Overlapping secondary image — Image (2).svg with prominent white border frame & overhang */}
-            <div className="absolute -bottom-6 sm:-bottom-10 lg:-bottom-12 -right-2 sm:-right-6 lg:-right-8 w-[190px] h-[210px] sm:w-[230px] sm:h-[254px] lg:w-[250px] lg:h-[276px] bg-white p-1.5 sm:p-2 shadow-[0_20px_48px_rgba(0,0,0,0.22)] z-10">
+            {/* Overlapping secondary image — image3.jpg with white border frame */}
+            <div className="absolute -bottom-6 sm:-bottom-10 -right-2 sm:-right-4 lg:right-4 w-[210px] h-[155px] sm:w-[260px] sm:h-[190px] lg:w-[280px] lg:h-[205px] bg-white p-2 shadow-[0_20px_50px_rgba(0,0,0,0.18)] z-10">
               <div className="relative w-full h-full overflow-hidden">
                 <Image
                   src={secondaryImage}
-                  alt="Outset Studio interior execution"
+                  alt="Outset Studio interior living space"
                   fill
-                  sizes="(max-width: 640px) 190px, (max-width: 1024px) 230px, 250px"
-                  className="object-cover"
+                  sizes="(max-width: 640px) 210px, (max-width: 1024px) 260px, 280px"
+                  className="object-cover object-center"
                 />
               </div>
             </div>
           </div>
 
-          {/* Right — Text content matching screenshot exactly */}
-          <div className="lg:col-span-5 flex flex-col justify-center lg:pl-4 order-1 lg:order-2">
+          {/* Right — Text content matching screenshot */}
+          <div className="lg:col-span-5 flex flex-col justify-center">
             {/* Heading */}
-            <h2 className="font-serif font-medium sm:font-semibold text-[#1a1a1a] text-4xl sm:text-5xl lg:text-[48px] xl:text-[54px] leading-[1.12] tracking-tight mb-6 sm:mb-7">
+            <h2 className="font-serif font-normal text-[#1a1a1a] text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] leading-[1.18] tracking-tight mb-5">
               More Than Design.<br />
               Spaces That Perform.
             </h2>
 
             {/* Description Paragraph */}
-            <p className="font-sans text-base sm:text-[17px] text-[#222222] font-normal leading-[1.7] max-w-xl">
+            <p className="font-sans text-sm sm:text-[15px] text-neutral-500 font-normal leading-[1.65] max-w-lg mb-7">
               {description}
             </p>
 
-            {/* Thin horizontal divider line matching screenshot */}
-            <div className="w-full border-t border-neutral-200 my-8 sm:my-10" />
+            {/* Thin horizontal line */}
+            <div className="w-full border-t border-neutral-200/80 mb-7" />
 
-            {/* Bullet Points */}
-            <ul className="space-y-6 sm:space-y-7">
+            {/* Bullet Points with terracotta checkmark boxes */}
+            <ul className="space-y-4 sm:space-y-5">
               {bullets.map((b, i) => (
-                <li key={i} className="flex items-center gap-4">
-                  {/* Round circle with checkmark */}
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full border border-[#1a1a1a] text-[#1a1a1a] flex items-center justify-center">
+                <li key={i} className="flex items-center gap-3.5">
+                  {/* Terracotta orange check box */}
+                  <span className="flex-shrink-0 w-5 h-5 rounded-[3px] border border-[#C0532C] bg-white flex items-center justify-center">
                     <svg
-                      className="w-3 h-3 text-[#1a1a1a]"
+                      className="w-3 h-3 text-[#C0532C]"
                       fill="none"
                       stroke="currentColor"
-                      strokeWidth="2"
+                      strokeWidth="2.2"
                       viewBox="0 0 24 24"
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        d="M5 13l4 4L19 7"
+                        d="M4.5 12.75l6 6 9-13.5"
                       />
                     </svg>
                   </span>
-                  <span className="font-sans text-base sm:text-[17px] text-[#1a1a1a] font-normal leading-snug">
+                  <span className="font-sans text-sm sm:text-[15px] text-[#1a1a1a] font-medium leading-snug">
                     {b}
                   </span>
                 </li>

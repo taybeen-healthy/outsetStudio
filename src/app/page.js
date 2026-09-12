@@ -14,7 +14,7 @@ async function fetchData(endpoint) {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
     const res = await fetch(`${baseUrl}/api/${endpoint}`, {
-      next: { revalidate: 60 },
+      cache: "no-store",
     });
     if (!res.ok) return null;
     const json = await res.json();
@@ -39,14 +39,20 @@ export default async function Home() {
       <div className="relative min-h-screen flex flex-col justify-between">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image
-            src={heroData?.backgroundImage ?? "/Image (10).svg"}
+            src={heroData?.backgroundImage ?? "/image1.jpg"}
             alt="Luxury modern interior by Outset Studio"
             fill
             priority
             sizes="100vw"
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/75 pointer-events-none" />
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.85) 75%, rgba(0,0,0,0.95) 100%), linear-gradient(to bottom, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.95) 100%)",
+            }}
+          />
         </div>
 
         <Navbar />
