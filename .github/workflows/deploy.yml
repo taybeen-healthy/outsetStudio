@@ -1,0 +1,57 @@
+name: 🚀 Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main  # Sirf main branch push hone par deploy hoga
+
+jobs:
+  deploy:
+    name: Deploy to Hostinger VPS
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Code checkout
+      - name: 📦 Checkout Code
+        uses: actions/checkout@v4
+
+      # Step 2: Node.js setup
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # Step 3: Dependencies install
+      - name: 📥 Install Dependencies
+        run: npm ci
+
+      # Step 4: Build check
+      - name: 🔨 Build Project
+        run: npm run build
+
+      # Step 5: SSH karke VPS pe deploy karo
+      - name: 🚀 Deploy to VPS via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          password: ${{ secrets.VPS_PASSWORD }}
+          port: 22
+          script: |
+            echo "=== Deploying Outset Studio ==="
+            cd /var/www/outsetStudio
+            
+            # Latest code pull karo
+            git pull origin main
+            
+            # Dependencies install karo
+            npm ci --production=false
+            
+            # Production build banao
+            npm run build
+            
+            # PM2 se restart karo
+            pm2 restart outset-studio
+            
+            echo "=== Deploy Complete! ==="

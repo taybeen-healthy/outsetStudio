@@ -16,43 +16,43 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "About", href: "/about" },
-    { name: "What We Do", href: "/what-we-do" },
-    { name: "Our Work", href: "#our-work" },
-    { name: "Industries", href: "#industries" },
+    { name: "ABOUT", href: "/about" },
+    { name: "WHAT WE DO", href: "/what-we-do" },
+    { name: "OUR WORK", href: "#our-work" },
+    { name: "INDUSTRIES", href: "#industries" },
   ];
 
   return (
     <header
-      className={`relative z-30 w-full transition-all duration-300 ${
-        scrolled ? "bg-black/85 backdrop-blur-md py-4 shadow-lg" : "py-5 sm:py-8"
+      className={`relative z-30 w-full border-b border-white/10 transition-all duration-300 ${
+        scrolled ? "bg-black/85 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-7 sm:px-10 lg:px-14 flex items-center justify-between">
-        {/* Brand Logo */}
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 flex items-center justify-between py-5 sm:py-6">
+        {/* Brand Logo matching Screenshot */}
         <Link
           href="/"
           className="group flex items-baseline gap-2 focus:outline-none"
           aria-label="Outset Studio Homepage"
         >
-          <span className="font-serif text-xl sm:text-2xl tracking-[0.18em] text-[#B84E29] font-normal uppercase transition-colors duration-300">
+          <span className="font-serif text-xl sm:text-[22px] tracking-[0.16em] text-[#B84E29] font-normal uppercase">
             OUTSET
           </span>
-          <span className="font-serif text-xl sm:text-2xl tracking-[0.18em] text-white font-normal uppercase">
+          <span className="font-serif text-xl sm:text-[22px] tracking-[0.16em] text-white font-normal uppercase">
             STUDIO
           </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav
-          className="hidden lg:flex items-center space-x-9 xl:space-x-12"
+          className="hidden lg:flex items-center space-x-10 xl:space-x-14"
           aria-label="Main Navigation"
         >
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-xs tracking-[0.18em] uppercase font-medium text-white/90 hover:text-white transition-colors duration-200 py-1"
+              className="text-xs tracking-[0.2em] uppercase font-normal text-neutral-300 hover:text-white transition-colors duration-200 py-1 font-sans"
             >
               {link.name}
             </Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
         <div className="hidden lg:block">
           <a
             href="mailto:outsetstudio@gmail.com"
-            className="inline-block text-xs tracking-[0.18em] uppercase font-medium text-white border border-white/40 hover:border-white px-7 py-2.5 bg-black/20 hover:bg-white hover:text-black transition-all duration-300 rounded-none"
+            className="inline-block text-xs tracking-[0.2em] uppercase font-normal text-neutral-200 border border-neutral-600/80 hover:border-white hover:text-white px-7 py-2.5 bg-black/20 hover:bg-white hover:text-black transition-all duration-300 rounded-none font-sans"
           >
             CONTACT
           </a>
@@ -111,18 +111,18 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-sm font-normal text-white hover:text-white/80 transition-colors duration-200 py-2 border-b border-white/5"
+                className="text-xs tracking-[0.2em] uppercase font-normal text-neutral-300 hover:text-white transition-colors duration-200 py-2 border-b border-white/5"
               >
                 {link.name}
               </Link>
             ))}
-              <a
-                href="mailto:hello@outsetstudio.com"
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-center text-sm font-normal text-white border border-white/80 hover:bg-white hover:text-black px-6 py-2.5 mt-4 transition-all rounded-none"
-              >
-                Contact
-              </a>
+            <a
+              href="mailto:outsetstudio@gmail.com"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-center text-xs tracking-[0.2em] uppercase font-normal text-white border border-white/40 hover:bg-white hover:text-black px-6 py-2.5 mt-4 transition-all rounded-none"
+            >
+              CONTACT
+            </a>
           </nav>
         </div>
       )}

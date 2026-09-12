@@ -13,7 +13,9 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className="relative w-full bg-white overflow-x-hidden font-sans select-none">
-      <div className="relative min-h-screen flex flex-col pb-16 sm:pb-20">
+      {/* Hero Viewport matching exact Screenshot */}
+      <div className="relative min-h-screen flex flex-col justify-between">
+        {/* Background Image with Cinematic Dark Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image
             src="/Image (10).svg"
@@ -23,15 +25,22 @@ export default function Home() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/50 pointer-events-none" />
+          <div className="absolute inset-0 bg-black/75 pointer-events-none" />
         </div>
+
+        {/* Top Navbar with Divider Line */}
         <Navbar />
+
+        {/* Main Hero Headline, Subtitle, and CTAs */}
         <Hero />
-        <div className="absolute bottom-0 left-0 w-full px-6 sm:px-10 lg:px-14 translate-y-1/2 z-10">
+
+        {/* Stats Bar flush at bottom inside container */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 pb-0">
           <Stats />
         </div>
       </div>
-      <div className="h-[105px] sm:h-[95px] lg:h-[100px] bg-white" />
+
+      {/* Remaining Sections */}
       <About />
       <OurWork />
       <HowWeWork />

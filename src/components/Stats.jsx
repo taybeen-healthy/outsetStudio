@@ -9,24 +9,24 @@ export default function Stats() {
   return (
     <div
       aria-label="Key statistics"
-      className="w-full max-w-6xl mx-auto bg-white shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-neutral-100"
+      className="w-full bg-white shadow-2xl"
     >
-      <div className="grid grid-cols-2 lg:grid-cols-4 divide-y divide-neutral-200 sm:divide-y-0 sm:divide-x">
+      <div className="grid grid-cols-2 lg:grid-cols-4 divide-y divide-neutral-200 sm:divide-y-0 sm:divide-x divide-neutral-200">
         {stats.map((stat, i) => (
           <div
             key={i}
-            className="flex flex-col justify-center p-6 sm:p-8 lg:p-10 text-left transition-colors hover:bg-neutral-50/50"
+            className="flex flex-col justify-center p-6 sm:p-9 lg:p-10 text-left bg-white transition-colors"
           >
-            {/* Number — Cormorant Garamond / Serif */}
+            {/* Number — Cormorant Garamond */}
             <span
-              className={`font-serif text-4xl sm:text-5xl lg:text-[54px] font-normal leading-none tracking-tight ${
+              className={`font-serif text-4xl sm:text-5xl lg:text-[56px] font-light leading-none tracking-tight ${
                 stat.highlight ? "text-[#B84E29]" : "text-[#1a1a1a]"
               }`}
             >
               {stat.value}
             </span>
             {/* Label — Uppercase with wide letter spacing */}
-            <span className="font-sans text-[11px] sm:text-xs tracking-[0.18em] uppercase text-neutral-500 font-medium mt-3 sm:mt-4">
+            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.22em] uppercase text-neutral-500 font-medium mt-3 sm:mt-4">
               {stat.label}
             </span>
           </div>
