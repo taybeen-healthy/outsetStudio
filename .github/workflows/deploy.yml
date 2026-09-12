@@ -63,10 +63,14 @@ jobs:
             echo "Building project..."
             npm run build
             
+            # Fix permissions for Nginx / Web server static file access
+            echo "Fixing permissions..."
+            chmod -R 755 /var/www/outsetStudio
+            
             # PM2 restart or start
             echo "Restarting PM2 process..."
             if pm2 describe outset-studio > /dev/null 2>&1; then
-              pm2 restart outset-studio
+              pm2 restart outset-studio --update-env
             else
               pm2 start npm --name "outset-studio" -- start -- -p 3004
             fi
