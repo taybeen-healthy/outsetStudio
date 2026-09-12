@@ -9,30 +9,16 @@ import Industries from "@/components/Industries";
 import Testimonials from "@/components/Testimonials";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
+import {
+  heroData,
+  statsData,
+  aboutData,
+  howWeWorkData,
+  industriesData,
+} from "@/lib/data";
 
-async function fetchData(endpoint) {
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const res = await fetch(`${baseUrl}/api/${endpoint}`, {
-      cache: "no-store",
-    });
-    if (!res.ok) return null;
-    const json = await res.json();
-    return json.success ? json.data : null;
-  } catch {
-    return null;
-  }
-}
+export default function Home() {
 
-export default async function Home() {
-  const [heroData, statsData, aboutData, howWeWorkData, industriesData] =
-    await Promise.all([
-      fetchData("hero"),
-      fetchData("stats"),
-      fetchData("about"),
-      fetchData("how-we-work"),
-      fetchData("industries"),
-    ]);
 
   return (
     <div className="relative w-full bg-white overflow-x-hidden font-sans select-none">
