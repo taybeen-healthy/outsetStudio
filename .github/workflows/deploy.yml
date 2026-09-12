@@ -45,59 +45,23 @@ jobs:
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:$PATH
             
-            echo "=== Listing /var/www Folders ==="
-            ls -la /var/www/
-            
-            echo "=== Listing PM2 Logs ==="
-            ls ~/.pm2/logs/
-            
-            echo "=== Auto-Recovering All Services from PM2 Backup ==="
-            node -e '
-            const fs = require("fs");
-            const path = require("path");
-            const { execSync } = require("child_process");
-            
-            const pm2Dir = path.join(process.env.HOME, ".pm2");
-            ["dump.pm2.bak", "dump.pm2"].forEach(file => {
-              const p = path.join(pm2Dir, file);
-              if (fs.existsSync(p)) {
-                try {
-                  const list = JSON.parse(fs.readFileSync(p, "utf8"));
-                  console.log(`\nChecking ${file}: found ${list.length} apps`);
-                  list.forEach(app => {
-                    console.log(`Found App: "${app.name}" in "${app.pm_cwd}"`);
-                    if (app.name && app.name !== "outset-studio" && app.pm_cwd && fs.existsSync(app.pm_cwd)) {
-                      console.log(`--> Reviving "${app.name}" in "${app.pm_cwd}"...`);
-                      try {
-                        const script = app.pm_exec_path || "npm";
-                        const args = Array.isArray(app.args) ? app.args.join(" ") : (app.args || "start");
-                        execSync(`pm2 start "${script}" --name "${app.name}" --cwd "${app.pm_cwd}" ${args ? "-- " + args : ""}`, { stdio: "inherit" });
-                      } catch(err) {
-                        console.log(`Could not start ${app.name}: ${err.message}`);
-                      }
-                    }
-                  });
-                } catch(e) {
-                  console.log(`Error reading ${file}: ${e.message}`);
-                }
-              }
-            });
-            '
-            
-            echo "=== Ensuring outset-studio is running on port 3004 ==="
+            echo "=== Starting Outset Studio Deploy ==="
             cd /var/www/outsetStudio
             git fetch origin main
             git reset --hard origin/main
+            
             echo "NEXT_PUBLIC_BASE_URL=http://localhost:3004" > .env.production
             echo "PORT=3004" >> .env.production
+            
+            npm ci --production=false
+            rm -rf .next
+            npm run build
             chmod -R 755 /var/www/outsetStudio
             
+            # Restart ONLY outset-studio process without touching other services
             pm2 delete outset-studio 2>/dev/null || true
             pm2 start node_modules/next/dist/bin/next --name "outset-studio" -- start -p 3004
-            
             pm2 save || true
-            sleep 3
             
-            echo "=== Final Active PM2 Services ==="
             pm2 status
-
+            echo "=== Outset Studio Deploy Complete ==="
