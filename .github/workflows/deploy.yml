@@ -40,47 +40,37 @@ jobs:
           port: 22
           command_timeout: 10m
           script: |
-            set -e
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            export PATH=$PATH:/usr/local/bin:/usr/bin:/bin
             
             echo "=== Starting Deploy ==="
             cd /var/www/outsetStudio
             
-            # Check Node version
-            echo "Node: $(node -v)"
-            echo "NPM: $(npm -v)"
+            # Fetch & reset to main branch cleanly
+            echo "Pulling latest code..."
+            git fetch origin main
+            git reset --hard origin/main
             
-            # Pull latest code
-            git pull origin main
-            
-            # Production env set karo (VPS port 3004)
+            # Set production env
             echo "NEXT_PUBLIC_BASE_URL=http://localhost:3004" > .env.production
             
             # Install dependencies
+            echo "Installing dependencies..."
             npm ci --production=false
             
-            # Backup old build in case new build fails
-            if [ -d ".next" ]; then
-              echo "Backing up old .next build..."
-              rm -rf .next.bak
-              mv .next .next.bak
-            fi
+            # Build project
+            echo "Building project..."
+            npm run build
             
-            # Build
-            echo "Building..."
-            if npm run build; then
-              echo "Build succeeded! Removing backup."
-              rm -rf .next.bak
+            # PM2 restart or start
+            echo "Restarting PM2 process..."
+            if pm2 describe outset-studio > /dev/null 2>&1; then
+              pm2 restart outset-studio
             else
-              echo "BUILD FAILED! Restoring backup..."
-              if [ -d ".next.bak" ]; then
-                mv .next.bak .next
-              fi
-              exit 1
+              pm2 start npm --name "outset-studio" -- start -- -p 3004
             fi
             
-            # Restart PM2
-            pm2 restart outset-studio || pm2 start npm --name "outset-studio" -- start -- -p 3004
-            sleep 3
-            pm2 status
-            
+            pm2 save || true
             echo "=== Deploy Complete! ==="
+
