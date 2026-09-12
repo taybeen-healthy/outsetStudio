@@ -22,7 +22,20 @@
 
 # misc
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 *.pem
+
+# editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
 # debug
 npm-debug.log*
@@ -40,3 +53,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .serena/
+
