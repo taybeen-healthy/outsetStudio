@@ -66,9 +66,9 @@ jobs:
             echo "5. Setting file permissions..."
             chmod -R 755 /var/www/outsetStudio
             
-            echo "6. Stopping old PM2 processes completely..."
-            pm2 delete all 2>/dev/null || true
-            sleep 2
+            echo "6. Stopping old outset-studio PM2 process..."
+            pm2 delete outset-studio 2>/dev/null || true
+            sleep 1
             
             echo "7. Starting Next.js on port 3004 via PM2..."
             pm2 start node_modules/next/dist/bin/next --name "outset-studio" -- start -p 3004
