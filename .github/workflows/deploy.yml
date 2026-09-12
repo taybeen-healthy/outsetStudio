@@ -48,25 +48,32 @@ jobs:
             echo "=== Starting Deploy ==="
             cd /var/www/outsetStudio
             
-            echo "Pulling latest code..."
+            echo "1. Pulling latest code..."
             git fetch origin main
             git reset --hard origin/main
             
+            echo "2. Setting production env..."
             echo "NEXT_PUBLIC_BASE_URL=http://localhost:3004" > .env.production
+            echo "PORT=3004" >> .env.production
             
-            echo "Installing dependencies..."
+            echo "3. Installing dependencies..."
             npm ci --production=false
             
-            echo "Cleaning & building Next.js project..."
+            echo "4. Cleaning & building Next.js project..."
             rm -rf .next
             npm run build
             
-            echo "Setting permissions..."
+            echo "5. Setting file permissions..."
             chmod -R 755 /var/www/outsetStudio
             
-            echo "Restarting PM2 process freshly..."
-            pm2 delete outset-studio 2>/dev/null || true
-            pm2 start npm --name "outset-studio" -- start -- -p 3004
+            echo "6. Stopping old PM2 processes completely..."
+            pm2 delete all 2>/dev/null || true
+            sleep 2
+            
+            echo "7. Starting Next.js on port 3004 via PM2..."
+            pm2 start node_modules/next/dist/bin/next --name "outset-studio" -- start -p 3004
             pm2 save 2>/dev/null || true
+            sleep 3
+            pm2 status
             
             echo "=== Deploy Complete! ==="
