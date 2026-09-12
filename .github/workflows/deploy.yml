@@ -44,37 +44,46 @@ jobs:
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             export PATH=$PATH:/usr/local/bin:/usr/bin:/bin
             
-            echo "=== Starting Deploy ==="
+            echo "=== Starting Clean Deploy ==="
             cd /var/www/outsetStudio
             
-            # Fetch & reset to main branch cleanly
+            # 1. Fetch & reset git
             echo "Pulling latest code..."
             git fetch origin main
             git reset --hard origin/main
             
-            # Set production env
+            # 2. Set production env
             echo "NEXT_PUBLIC_BASE_URL=http://localhost:3004" > .env.production
             
-            # Install dependencies
+            # 3. Stop old server process & free port 3004 completely
+            echo "Stopping old PM2 process and freeing port 3004..."
+            pm2 delete outset-studio || true
+            fuser -k 3004/tcp || true
+            pkill -f "next-server" || true
+            sleep 2
+            
+            # 4. Install dependencies
             echo "Installing dependencies..."
             npm ci --production=false
             
-            # Build project
-            echo "Building project..."
+            # 5. Clean build
+            echo "Cleaning old build artifacts..."
+            rm -rf .next
+            
+            echo "Building Next.js project..."
             npm run build
             
-            # Fix permissions for Nginx / Web server static file access
-            echo "Fixing permissions..."
+            # 6. Fix file permissions
+            echo "Setting directory permissions..."
             chmod -R 755 /var/www/outsetStudio
             
-            # PM2 restart or start
-            echo "Restarting PM2 process..."
-            if pm2 describe outset-studio > /dev/null 2>&1; then
-              pm2 restart outset-studio --update-env
-            else
-              pm2 start npm --name "outset-studio" -- start -- -p 3004
-            fi
+            # 7. Start fresh PM2 process
+            echo "Starting fresh Next.js instance on port 3004..."
+            pm2 start npm --name "outset-studio" -- start -- -p 3004
             
             pm2 save || true
+            sleep 3
+            pm2 status
+            
             echo "=== Deploy Complete! ==="
 
