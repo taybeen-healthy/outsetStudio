@@ -53,21 +53,6 @@ export default function Hero({ data, stats }) {
                   className="group w-full lg:w-auto h-12 lg:h-[46px] px-6 lg:px-7 flex items-center justify-center gap-2.5 text-center border border-[#C9C4BC] lg:border-neutral-700 bg-white lg:bg-[#0e0f11]/80 hover:border-[#1a1a1a] lg:hover:border-white lg:hover:bg-white lg:hover:text-black text-[#1a1a1a] lg:text-white font-sans font-medium text-[11px] lg:text-xs tracking-[0.2em] uppercase whitespace-nowrap rounded-none transition-all duration-300"
                 >
                   <span>{action.label}</span>
-                  <span className="hidden lg:inline-flex items-center justify-center w-3.5 h-3.5 rounded-[2px] bg-white/10 group-hover:bg-black/10 transition-colors">
-                    <svg
-                      className="w-2.5 h-2.5 text-neutral-300 group-hover:text-black transition-colors"
-                      viewBox="0 0 10 10"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.6"
-                    >
-                      <path
-                        d="M2 8L8 2M8 2H3.5M8 2V6.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </span>
                 </Link>
               )
             )}

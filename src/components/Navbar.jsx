@@ -25,6 +25,7 @@ export default function Navbar() {
     { name: "WHAT WE DO", href: "/what-we-do" },
     { name: "OUR WORK", href: "#our-work" },
     { name: "INDUSTRIES", href: "#industries" },
+    { name: "REGISTER VENDORS", href: "/register-vendors" },
   ];
 
   return (
