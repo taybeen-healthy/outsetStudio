@@ -98,42 +98,42 @@ export const industriesData = {
       name: "QSRs",
       description:
         "Manage orders, inventory and operations while keeping service fast and efficient.",
-      image: "/image8.jpg",
+      image: "/image15.jpg",
     },
     {
       id: "interiors",
       name: "Interiors",
       description:
         "Smart interior spaces designed to better flow, experience, and impact.",
-      image: "/image9.jpg",
+      image: "/image16.jpg",
     },
     {
       id: "cafes",
       name: "Cafes",
       description:
         "Simplify orders, inventory and sales for smoother daily operations.",
-      image: "/image10.jpg",
+      image: "/image17.jpg",
     },
     {
       id: "exteriors",
       name: "Exteriors",
       description:
         "Outdoor spaces designed to elevate your brand and attract customers.",
-      image: "/image11.jpg",
+      image: "/image18.jpg",
     },
     {
       id: "furniture",
       name: "Furniture",
       description:
         "Custom furniture designed to complement your space and brand.",
-      image: "/image12.jpg",
+      image: "/image19.jpg",
     },
     {
       id: "salons",
       name: "Salons",
       description:
         "Manage appointments, services and inventory from one place.",
-      image: "/image13.jpg",
+      image: "/image20.jpg",
     },
   ],
 };
