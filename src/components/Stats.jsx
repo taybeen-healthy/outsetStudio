@@ -12,47 +12,63 @@ function formatNumber(num, original) {
   return `${num}${suffix}`;
 }
 
+function easeOutExpo(t) {
+  return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+}
+
 function CountUp({ value, inView }) {
   const target = parseNumber(value);
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (!inView || target === 0) return;
-    let start = 0;
-    const duration = 1500;
-    const increment = target / (duration / 16);
-    let raf;
+    const duration = 2000;
+    const startTime = performance.now();
 
-    const animate = () => {
-      start += increment;
-      if (start >= target) {
-        setCount(target);
-        return;
-      }
-      setCount(Math.floor(start));
-      raf = requestAnimationFrame(animate);
+    const animate = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeOutExpo(progress);
+      setCount(Math.floor(eased * target));
+      if (progress < 1) requestAnimationFrame(animate);
     };
 
-    raf = requestAnimationFrame(animate);
+    const raf = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(raf);
   }, [inView, target]);
 
   return <>{inView ? formatNumber(count, value) : formatNumber(0, value)}</>;
 }
 
-function StatItem({ stat, inView }) {
+function StatItem({ stat, inView, index }) {
   return (
-    <div className="flex flex-col justify-center p-6 sm:p-9 lg:p-10 text-left bg-white transition-colors">
+    <div
+      className="flex flex-col justify-center p-6 sm:p-9 lg:p-10 text-left bg-white transition-all duration-700"
+      style={{
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0) scale(1)" : "translateY(20px) scale(0.95)",
+        transitionDelay: `${index * 120}ms`,
+      }}
+    >
       <span
-        className={`font-serif text-4xl sm:text-5xl lg:text-[56px] font-light leading-none tracking-tight ${
+        className={`font-serif text-4xl sm:text-5xl lg:text-[56px] font-light leading-none tracking-tight transition-colors duration-500 ${
           stat.highlight ? "text-[#C0532C]" : "text-[#1a1a1a]"
         }`}
       >
         <CountUp value={stat.value} inView={inView} />
       </span>
-      <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.22em] uppercase text-neutral-500 font-medium mt-3 sm:mt-4">
-        {stat.label}
-      </span>
+      <div className="mt-3 sm:mt-4">
+        <div
+          className="h-px bg-neutral-200 transition-all duration-1000 ease-out"
+          style={{
+            width: inView ? "100%" : "0%",
+            transitionDelay: `${index * 120 + 400}ms`,
+          }}
+        />
+        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.22em] uppercase text-neutral-500 font-medium mt-3 sm:mt-4 block">
+          {stat.label}
+        </span>
+      </div>
     </div>
   );
 }
@@ -89,7 +105,12 @@ export default function Stats({ data, variant = "desktop" }) {
         {stats.map((stat, i) => (
           <div
             key={i}
-            className="flex flex-col justify-between bg-white border border-neutral-200/90 px-4 pt-5 pb-4 min-h-[118px] shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
+            className="flex flex-col justify-between bg-white border border-neutral-200/90 px-4 pt-5 pb-4 min-h-[118px] shadow-[0_8px_24px_rgba(0,0,0,0.06)] transition-all duration-600"
+            style={{
+              opacity: inView ? 1 : 0,
+              transform: inView ? "translateY(0)" : "translateY(15px)",
+              transitionDelay: `${i * 100}ms`,
+            }}
           >
             <span
               className={`font-serif text-[32px] font-normal leading-none tracking-tight ${
@@ -114,7 +135,7 @@ export default function Stats({ data, variant = "desktop" }) {
     <div ref={ref} aria-label="Key statistics" className="w-full bg-white shadow-2xl">
       <div className="grid grid-cols-2 lg:grid-cols-4 divide-y divide-neutral-200 sm:divide-y-0 sm:divide-x divide-neutral-200">
         {stats.map((stat, i) => (
-          <StatItem key={i} stat={stat} inView={inView} />
+          <StatItem key={i} stat={stat} inView={inView} index={i} />
         ))}
       </div>
     </div>
