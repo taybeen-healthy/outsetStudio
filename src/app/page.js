@@ -41,10 +41,10 @@ export default function Home() {
 
         <Navbar />
         <Hero data={heroData} stats={statsData} />
+      </div>
 
-        <div className="hidden lg:block relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 pb-0">
-          <Stats data={statsData} />
-        </div>
+      <div className="hidden lg:block relative z-20 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 -mt-16">
+        <Stats data={statsData} />
       </div>
 
       <About data={aboutData} />
