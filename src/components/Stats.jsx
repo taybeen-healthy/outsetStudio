@@ -58,14 +58,7 @@ function StatItem({ stat, inView, index }) {
         <CountUp value={stat.value} inView={inView} />
       </span>
       <div className="mt-3 sm:mt-4">
-        <div
-          className="h-px bg-neutral-200 transition-all duration-1000 ease-out"
-          style={{
-            width: inView ? "100%" : "0%",
-            transitionDelay: `${index * 120 + 400}ms`,
-          }}
-        />
-        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.22em] uppercase text-neutral-500 font-medium mt-3 sm:mt-4 block">
+        <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.22em] uppercase text-neutral-500 font-medium block">
           {stat.label}
         </span>
       </div>
