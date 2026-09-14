@@ -66,7 +66,7 @@ export const howWeWorkData = {
       title: "Design",
       description:
         "Author the spatial narrative, architectural drawings, lighting schemes, tactile material selection, and 3D sensory experience that define the space.",
-      image: "/image36.png",
+      image: "/image35.png",
     },
     {
       number: "03",
@@ -74,7 +74,7 @@ export const howWeWorkData = {
       title: "Build",
       description:
         "Oversee general contracting, precision carpentry, custom fixture fabrication, MEP coordination, and site delivery — on rate and on time.",
-      image: "/image35.png",
+      image: "/image36.png",
     },
     {
       number: "04",
