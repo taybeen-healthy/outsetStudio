@@ -9,7 +9,7 @@ export default function OurWork({ data }) {
   const filters = content.filters ?? ["ALL", "DELHI", "GURUGRAM", "RAJASTHAN"];
   const projects = content.projects ?? [];
 
-  const [activeFilter, setActiveFilter] = useState("GURUGRAM");
+  const [activeFilter, setActiveFilter] = useState("ALL");
   const [paused, setPaused] = useState(false);
 
   const filteredProjects = projects.filter((p) => {
@@ -145,9 +145,9 @@ export default function OurWork({ data }) {
         </div>
       ) : (
         <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
-          <div className="flex flex-wrap justify-center sm:justify-start gap-5 sm:gap-6 lg:gap-8 pt-2 pb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 pt-2 pb-6">
             {filteredProjects.map((project, i) =>
-              renderCard(project, i, "w-full sm:w-[340px] lg:w-[380px]")
+              renderCard(project, i, "w-full")
             )}
             {filteredProjects.length === 0 && (
               <p className="w-full text-center font-sans text-sm text-neutral-500 py-16">
