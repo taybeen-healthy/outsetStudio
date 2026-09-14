@@ -51,7 +51,7 @@ function StatItem({ stat, inView, index }) {
       }}
     >
       <span
-        className={`font-serif text-4xl sm:text-5xl lg:text-[56px] font-light leading-none tracking-tight transition-colors duration-500 ${
+        className={`font-sans text-4xl sm:text-5xl lg:text-[56px] font-light leading-none tracking-tight tabular-nums transition-colors duration-500 ${
           stat.highlight ? "text-[#C0532C]" : "text-[#1a1a1a]"
         }`}
       >
@@ -106,7 +106,7 @@ export default function Stats({ data, variant = "desktop" }) {
             }}
           >
             <span
-              className={`font-serif text-[32px] font-normal leading-none tracking-tight ${
+              className={`font-sans text-[32px] font-normal leading-none tracking-tight tabular-nums ${
                 stat.highlight ? "text-[#C0532C]" : "text-[#1a1a1a]"
               }`}
             >
