@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import CTAButtons from "@/components/CTAButtons";
+import CTABanner from "@/components/CTABanner";
 
 export const metadata = {
   title: "About",
@@ -19,7 +19,7 @@ export default function AboutPage() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <Image
-              src="/image 11.svg"
+              src="/image11.jpg"
               alt="Outset Studio about hero"
               fill
               priority
@@ -84,12 +84,12 @@ export default function AboutPage() {
             {/* Right: Image */}
             <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[560/385] overflow-hidden">
               <Image
-                src="/Image (12).svg"
-                alt="Cafe interior with chairs and table"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-center"
-              />
+              src="/image12.jpg"
+              alt="Cafe interior with chairs and table"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center"
+            />
             </div>
           </div>
         </section>
@@ -100,7 +100,7 @@ export default function AboutPage() {
             {/* Left: Image */}
             <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[560/385] overflow-hidden order-2 lg:order-1">
               <Image
-                src="/Image13.svg"
+                src="/image13.jpg"
                 alt="Outdoor garden cafe with seating"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -228,40 +228,19 @@ export default function AboutPage() {
             {/* Right: Image (same as section 2) */}
             <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[560/385] overflow-hidden">
               <Image
-                src="/Image (12).svg"
-                alt="Cafe interior with chairs and table"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-center"
-              />
+              src="/image12.jpg"
+              alt="Cafe interior with chairs and table"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center"
+            />
             </div>
           </div>
         </section>
       </main>
 
       {/* CTA Banner */}
-      <section aria-label="Call to action" className="relative w-full overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute top-0 left-0 right-0 h-[54%] bg-white" />
-          <div className="absolute bottom-0 left-0 right-0 h-[46%] bg-black" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-1 sm:px-10 lg:px-14 py-14 sm:py-12">
-          <div className="relative w-full bg-[#bf572b] py-24 sm:py-16 lg:py-20 px-6 sm:px-12 text-center flex flex-col items-center gap-5 sm:gap-6 overflow-hidden shadow-2xl">
-            <div className="absolute top-0 right-0 w-28 sm:w-40 h-24 sm:h-32 bg-[#c96234] pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-28 sm:w-40 h-24 sm:h-32 bg-[#c96234] pointer-events-none" />
-            <h2 className="relative z-10 font-serif font-medium sm:font-semibold text-white text-[29px] sm:text-4xl lg:text-[46px] xl:text-[50px] leading-tight tracking-tight max-w-[280px] sm:max-w-none">
-              Let&apos;s Create Your Space.
-            </h2>
-            <p className="relative z-10 font-sans text-[15px] sm:text-[15px] text-white/90 font-normal sm:font-light max-w-[350px] sm:max-w-xl leading-[1.5] sm:leading-relaxed">
-              Whether you&apos;re launching something new or transforming an existing
-              space, we&apos;re ready to bring your vision to life.
-            </p>
-            <div className="relative z-10 flex flex-row items-center gap-2 sm:gap-5 mt-2">
-              <CTAButtons />
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTABanner />
 
       {/* Footer */}
       <Footer />

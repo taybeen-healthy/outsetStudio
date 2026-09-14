@@ -23,7 +23,7 @@ export default function Footer() {
             className="flex items-baseline tracking-[0.22em] w-fit focus:outline-none"
             aria-label="Outset Studio Homepage"
           >
-            <span className="font-serif text-[18px] tracking-[0.22em] text-white font-normal uppercase">
+            <span className="font-serif text-[18px] tracking-[0.22em] text-[#B84E29] font-normal uppercase">
               OUTSET
             </span>
             <span className="font-serif text-[18px] tracking-[0.22em] text-white font-normal uppercase">
@@ -176,7 +176,7 @@ export default function Footer() {
 
           <div className="border-t border-neutral-800/80 mt-16 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <p className="font-sans text-xs text-neutral-500 font-light">
-              &copy; 2024 Outset Studio. All rights reserved.
+              &copy; 2026 Outset Studio. All rights reserved.
             </p>
             <div className="flex items-center gap-2.5 text-xs text-neutral-500 font-light">
               <a href="#" className="hover:text-neutral-300 transition-colors">

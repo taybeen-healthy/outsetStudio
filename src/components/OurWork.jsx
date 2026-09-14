@@ -17,8 +17,10 @@ export default function OurWork({ data }) {
     return p.location.toUpperCase() === activeFilter.toUpperCase();
   });
 
-  const isMarquee = activeFilter.toUpperCase() === "ALL";
-  const marqueeProjects = [...filteredProjects, ...filteredProjects];
+  // Repeat the filtered list so half the row always out-widths the viewport,
+  // keeping the -50% marquee loop seamless even for single-project filters.
+  const repeats = Math.max(2, Math.ceil(8 / Math.max(filteredProjects.length, 1)));
+  const marqueeProjects = Array.from({ length: repeats }, () => filteredProjects).flat();
   const marqueeDuration = Math.max(20, filteredProjects.length * 8);
 
   const handleFilter = (f) => {
@@ -114,9 +116,16 @@ export default function OurWork({ data }) {
         </div>
       </div>
 
-      {isMarquee ? (
+      {filteredProjects.length === 0 ? (
+        <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
+          <p className="w-full text-center font-sans text-sm text-neutral-500 py-16">
+            No projects found for this filter.
+          </p>
+        </div>
+      ) : (
         <div className="w-full relative px-5 sm:px-10 lg:px-14 max-w-7xl mx-auto overflow-hidden">
           <div
+            key={activeFilter}
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
             className="flex w-max pt-2 pb-6 will-change-transform"
@@ -127,19 +136,6 @@ export default function OurWork({ data }) {
           >
             {marqueeProjects.map((project, i) =>
               renderCard(project, i, "w-[85vw] sm:w-[360px] lg:w-[420px] pr-4 sm:pr-6 lg:pr-8")
-            )}
-          </div>
-        </div>
-      ) : (
-        <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 pt-2 pb-6">
-            {filteredProjects.map((project, i) =>
-              renderCard(project, i, "w-full")
-            )}
-            {filteredProjects.length === 0 && (
-              <p className="w-full text-center font-sans text-sm text-neutral-500 py-16">
-                No projects found for this filter.
-              </p>
             )}
           </div>
         </div>

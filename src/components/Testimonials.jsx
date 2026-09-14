@@ -2,27 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-
-const testimonials = [
-  {
-    name: "Rahul Sharma",
-    company: "WORKSPACE STUDIO",
-    rating: 5,
-    quote:
-      "Outset Studio delivers thoughtful design, seamless execution, and strategic growth solutions that transform spaces into memorable, customer-focused experiences.",
-    avatar: "/image8.jpg",
-    image: "/image14.jpg",
-  },
-  {
-    name: "Ananya Patel",
-    company: "ARTISAN CAFE",
-    rating: 5,
-    quote:
-      "Working with Outset Studio was a game changer for our outlet launch. Their attention to detail and commercial focus set them apart from traditional studios.",
-    avatar: "/image9.jpg",
-    image: "/image14.jpg",
-  },
-];
+import { testimonialsData } from "@/lib/data";
 
 function StarRating({ count }) {
   return (
@@ -41,6 +21,7 @@ function StarRating({ count }) {
 }
 
 export default function Testimonials() {
+  const testimonials = testimonialsData.testimonials ?? [];
   const [current, setCurrent] = useState(0);
   const t = testimonials[current];
 

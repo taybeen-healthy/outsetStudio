@@ -3,7 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
 import Footer from "@/components/Footer";
-import CTAButtons from "@/components/CTAButtons";
+import CTABanner from "@/components/CTABanner";
 
 export const metadata = {
   title: "What We Do",
@@ -20,7 +20,7 @@ export default function WhatWeDoPage() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <Image
-              src="/image 14).svg"
+              src="/image14.jpg"
               alt="What We Do hero - coffee shop interior"
               fill
               priority
@@ -88,7 +88,7 @@ export default function WhatWeDoPage() {
             {/* Right: Image 15 with asymmetric rounded corners */}
             <div className="relative w-full max-w-[520px] mx-auto lg:mx-0 aspect-[4/5] overflow-hidden rounded-tl-[40px] rounded-br-[40px]">
               <Image
-                src="/Image 15.svg"
+                src="/image15.png"
                 alt="Modern cafe interior with marble floor"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -119,7 +119,7 @@ export default function WhatWeDoPage() {
               {/* Left: Image 16 - narrower portrait shape */}
               <div className="relative w-full max-w-[480px] mx-auto lg:mx-0 aspect-[3/4] overflow-hidden">
                 <Image
-                  src="/Image 16.svg"
+                  src="/image16.png"
                   alt="Coffee shop bakery display"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -176,28 +176,7 @@ export default function WhatWeDoPage() {
       </main>
 
       {/* CTA Banner */}
-      <section aria-label="Call to action" className="relative w-full overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute top-0 left-0 right-0 h-[54%] bg-white" />
-          <div className="absolute bottom-0 left-0 right-0 h-[46%] bg-black" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-1 sm:px-10 lg:px-14 py-14 sm:py-12">
-          <div className="relative w-full bg-[#bf572b] py-24 sm:py-16 lg:py-20 px-6 sm:px-12 text-center flex flex-col items-center gap-5 sm:gap-6 overflow-hidden shadow-2xl">
-            <div className="absolute top-0 right-0 w-28 sm:w-40 h-24 sm:h-32 bg-[#c96234] pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-28 sm:w-40 h-24 sm:h-32 bg-[#c96234] pointer-events-none" />
-            <h2 className="relative z-10 font-serif font-medium sm:font-semibold text-white text-[29px] sm:text-4xl lg:text-[46px] xl:text-[50px] leading-tight tracking-tight max-w-[280px] sm:max-w-none">
-              Your Space. Our Expertise.
-            </h2>
-            <p className="relative z-10 font-sans text-[15px] sm:text-[15px] text-white/90 font-normal sm:font-light max-w-[350px] sm:max-w-xl leading-[1.5] sm:leading-relaxed">
-              From strategy and design to build and launch, we bring every part of
-              your outlet together under one partner.
-            </p>
-            <div className="relative z-10 flex flex-row items-center gap-2 sm:gap-5 mt-2">
-              <CTAButtons />
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTABanner />
 
       <Footer />
     </div>
