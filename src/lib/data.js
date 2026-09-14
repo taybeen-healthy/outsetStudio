@@ -191,7 +191,7 @@ export const ourWorkData = {
       title: "Sardar Ji Baksh Cafe",
       subtitle:
         "A thoughtfully crafted café experience where distinctive interiors, warm atmospheres, and memorable moments come together to create a space people want to return to.",
-      image: "/image27.png",
+      image: "/image31.png",
       location: "GURUGRAM",
     },
     {
@@ -199,7 +199,7 @@ export const ourWorkData = {
       title: "Rigo Cafe",
       subtitle:
         "More than a place to dine, Rigo Cafe brings together thoughtful design, inviting spaces, and memorable experiences that keep people coming back.",
-      image: "/image28.png",
+      image: "/image32.png",
       location: "GURUGRAM",
     },
     {
@@ -207,7 +207,7 @@ export const ourWorkData = {
       title: "Patna Bihar Sardar Ji Baksh",
       subtitle:
         "A vibrant coffee destination offering freshly brewed beverages, delicious bites, and a welcoming atmosphere. Sardar-Ji-Bakhsh Coffee brings together great coffee, comforting flavours, and a relaxed space to unwind, catch up, or enjoy a quick break.",
-      image: "/image29.png",
+      image: "/image31.png",
       location: "PATNA BIHAR",
     },
     {
