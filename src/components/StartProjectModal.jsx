@@ -103,34 +103,34 @@ export default function StartProjectModal({ onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="relative w-full sm:max-w-[800px] max-h-[100dvh] sm:max-h-[90vh] overflow-y-auto bg-white shadow-2xl flex flex-col sm:rounded-none rounded-t-2xl">
-        {/* Close */}
-        <button
-          onClick={onClose}
-          aria-label="Close"
-          className="absolute top-4 right-4 z-10 w-9 h-9 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 rounded transition-all"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-
+      <div className="relative w-full sm:max-w-[800px] max-h-[100dvh] sm:max-h-[90vh] overflow-y-auto bg-white shadow-2xl flex flex-col">
         {/* Dark Header */}
         <div className="bg-[#1a1a1a] px-5 sm:px-8 pt-4 sm:pt-5 pb-3 sm:pb-4">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 bg-[#C0532C]" />
-            <span className="font-sans text-[11px] sm:text-xs tracking-[0.2em] uppercase text-white font-medium">
-              OUTSET STUDIO
-            </span>
-            {step === 1 && (
-              <>
-                <span className="w-1 h-1 bg-white/40 rounded-full mx-1 hidden sm:block" />
-                <span className="font-sans text-[11px] sm:text-xs text-white/50 hidden sm:block">Start a Project</span>
-              </>
-            )}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 bg-[#C0532C]" />
+              <span className="font-sans text-[11px] sm:text-xs tracking-[0.2em] uppercase text-white font-medium">
+                OUTSET STUDIO
+              </span>
+              {step === 1 && (
+                <>
+                  <span className="w-1 h-1 bg-white/40 rounded-full mx-1 hidden sm:block" />
+                  <span className="font-sans text-[11px] sm:text-xs text-white/50 hidden sm:block">Start a Project</span>
+                </>
+              )}
+            </div>
+            <button
+              onClick={onClose}
+              aria-label="Close"
+              className="w-8 h-8 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all flex-shrink-0"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
 
