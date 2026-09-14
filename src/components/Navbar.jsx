@@ -2,12 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import ContactModal from "./ContactModal";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showContact, setShowContact] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,25 +29,36 @@ export default function Navbar() {
 
   return (
     <header
-      className={`relative z-30 w-full border-b border-white/10 transition-all duration-300 ${scrolled ? "bg-black/85 backdrop-blur-md shadow-lg" : "bg-transparent"
-        }`}
+      className={`relative z-30 w-full transition-all duration-300 ${
+        isHome
+          ? `border-b border-transparent lg:border-white/10 ${
+              scrolled
+                ? "bg-[#FAF7F2]/95 lg:bg-black/85 backdrop-blur-md shadow-sm lg:shadow-lg"
+                : "bg-[#FAF7F2] lg:bg-transparent"
+            }`
+          : `border-b border-white/10 ${
+              scrolled ? "bg-black/85 backdrop-blur-md shadow-lg" : "bg-transparent"
+            }`
+      }`}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 flex items-center justify-between py-5 sm:py-6">
-        {/* Brand Logo matching Screenshot */}
+      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 flex items-center justify-between py-5 sm:py-6">
         <Link
           href="/"
-          className="group flex items-baseline tracking-[0.16em] focus:outline-none"
+          className="group flex items-baseline tracking-[0.18em] focus:outline-none"
           aria-label="Outset Studio Homepage"
         >
-          <span className="font-serif text-xl sm:text-[22px] tracking-[0.16em] text-white font-normal uppercase">
+          <span
+            className={`font-serif text-[17px] sm:text-[22px] tracking-[0.18em] font-normal uppercase ${
+              isHome ? "text-[#1a1a1a] lg:text-white" : "text-white"
+            }`}
+          >
             OUTSET
           </span>
-          <span className="font-serif text-xl sm:text-[22px] tracking-[0.16em] text-[#C0532C] font-normal uppercase">
+          <span className="font-serif text-[17px] sm:text-[22px] tracking-[0.18em] text-[#C0532C] font-normal uppercase">
             STUDIO
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
         <nav
           className="hidden lg:flex items-center space-x-10 xl:space-x-14"
           aria-label="Main Navigation"
@@ -60,7 +74,6 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Desktop Contact Action Button */}
         <div className="hidden lg:block">
           <button
             onClick={() => setShowContact(true)}
@@ -70,20 +83,16 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Hamburger Toggle */}
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-1 text-white focus:outline-none cursor-pointer"
+          className={`lg:hidden p-1 focus:outline-none cursor-pointer ${
+            isHome ? "text-[#1a1a1a]" : "text-white"
+          }`}
           aria-label="Toggle navigation menu"
           aria-expanded={mobileMenuOpen}
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {mobileMenuOpen ? (
               <path
                 strokeLinecap="round"
@@ -95,24 +104,33 @@ export default function Navbar() {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="1.5"
-                d="M4 6h16M4 12h16M4 18h16"
+                strokeWidth="1.6"
+                d="M4 7h16M4 12h16M4 17h16"
               />
             )}
           </svg>
         </button>
       </div>
 
-      {/* Mobile Slide-down Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/10 px-6 py-6 transition-all duration-300 shadow-2xl">
+        <div
+          className={`lg:hidden absolute top-full left-0 w-full px-5 py-6 transition-all duration-300 shadow-2xl ${
+            isHome
+              ? "bg-[#FAF7F2] border-b border-neutral-200"
+              : "bg-black/95 backdrop-blur-xl border-b border-white/10"
+          }`}
+        >
           <nav className="flex flex-col space-y-4" aria-label="Mobile Navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-xs tracking-[0.2em] uppercase font-normal text-neutral-300 hover:text-white transition-colors duration-200 py-2 border-b border-white/5"
+                className={`text-xs tracking-[0.2em] uppercase font-normal py-2 ${
+                  isHome
+                    ? "text-[#1a1a1a] border-b border-neutral-200"
+                    : "text-neutral-300 hover:text-white border-b border-white/5"
+                }`}
               >
                 {link.name}
               </Link>
@@ -122,14 +140,18 @@ export default function Navbar() {
                 setMobileMenuOpen(false);
                 setShowContact(true);
               }}
-              className="text-center text-xs tracking-[0.2em] uppercase font-normal text-white border border-white/40 hover:bg-white hover:text-black px-6 py-2.5 mt-4 transition-all rounded-none cursor-pointer"
+              className={`text-center text-xs tracking-[0.2em] uppercase font-normal px-6 py-2.5 mt-4 transition-all rounded-none cursor-pointer ${
+                isHome
+                  ? "text-[#1a1a1a] border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white"
+                  : "text-white border border-white/40 hover:bg-white hover:text-black"
+              }`}
             >
               CONTACT
             </button>
           </nav>
         </div>
       )}
-    {showContact && <ContactModal onClose={() => setShowContact(false)} />}
+      {showContact && <ContactModal onClose={() => setShowContact(false)} />}
     </header>
   );
 }

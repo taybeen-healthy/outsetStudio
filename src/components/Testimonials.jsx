@@ -56,22 +56,64 @@ export default function Testimonials() {
     <section
       id="testimonials"
       aria-label="Customer testimonials"
-      className="w-full bg-[#FAF9F7] pt-16 sm:pt-24 lg:pt-28 pb-16 sm:pb-28"
+      className="w-full bg-[#FAF7F2] lg:bg-[#FAF9F7] pt-10 sm:pt-24 lg:pt-28 pb-10 sm:pb-28"
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
-        {/* Centered Heading matching Screenshot 2 */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="font-serif font-normal text-[#1a1a1a] text-3xl sm:text-4xl lg:text-[46px] leading-tight tracking-tight">
+      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
+        <div className="text-left lg:text-center mb-5 sm:mb-16">
+          <h2 className="font-serif font-normal text-[#1a1a1a] text-[28px] sm:text-4xl lg:text-[46px] leading-tight tracking-tight">
             What Our Customer&apos;s say
           </h2>
         </div>
 
-        {/* Unified 50/50 Card Container matching Screenshot 2 */}
-        <div className="max-w-5xl mx-auto bg-white shadow-[0_20px_50px_rgba(0,0,0,0.07)] border border-neutral-100 overflow-hidden grid grid-cols-1 lg:grid-cols-2">
-          {/* Left Column: Testimonial Details */}
+        <div className="lg:hidden">
+          <div className="bg-white border border-neutral-100 shadow-sm p-5">
+            <StarRating count={t.rating} />
+            <p className="font-serif italic text-[#2c2c2c] text-[17px] leading-[1.55] mt-4">
+              &ldquo;{t.quote}&rdquo;
+            </p>
+            <div className="mt-6 pt-4 border-t border-neutral-100 flex items-end justify-between gap-3">
+              <div>
+                <p className="font-serif text-[20px] text-[#C0532C] leading-tight">{t.name}</p>
+                <p className="font-sans text-[10px] uppercase tracking-[0.16em] text-neutral-400 font-medium mt-1.5">
+                  {t.company}
+                </p>
+              </div>
+              <div className="flex items-center gap-2 flex-shrink-0">
+                <button
+                  onClick={handlePrev}
+                  aria-label="Previous testimonial"
+                  className="w-8 h-8 border border-neutral-200 bg-white flex items-center justify-center text-neutral-500 cursor-pointer"
+                >
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button
+                  onClick={handleNext}
+                  aria-label="Next testimonial"
+                  className="w-8 h-8 border border-neutral-200 bg-white flex items-center justify-center text-neutral-500 cursor-pointer"
+                >
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="relative w-full aspect-[16/11] overflow-hidden mt-3">
+            <Image
+              src={t.image}
+              alt="Outset Studio restaurant interior execution"
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+          </div>
+        </div>
+
+        <div className="hidden lg:grid max-w-5xl mx-auto bg-white shadow-[0_20px_50px_rgba(0,0,0,0.07)] border border-neutral-100 overflow-hidden grid-cols-1 lg:grid-cols-2">
           <div className="p-8 sm:p-12 lg:p-14 flex flex-col justify-between">
             <div>
-              {/* Profile Row with Giant Quote Mark on Right */}
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3.5">
                   <div className="relative w-12 h-12 bg-neutral-100 overflow-hidden flex-shrink-0 shadow-sm">
@@ -92,25 +134,20 @@ export default function Testimonials() {
                     </p>
                   </div>
                 </div>
-
-                {/* Giant peach quotation mark */}
                 <span className="font-serif text-[#F0DDD6] text-6xl leading-none select-none font-bold -mt-2">
                   &ldquo;
                 </span>
               </div>
 
-              {/* 5 Terracotta Stars */}
               <div className="mt-5">
                 <StarRating count={t.rating} />
               </div>
 
-              {/* Italic Serif Quote Text */}
               <p className="font-serif italic text-neutral-700 text-base sm:text-[17px] leading-relaxed mt-5">
                 &ldquo;{t.quote}&rdquo;
               </p>
             </div>
 
-            {/* Bottom Controls */}
             <div className="pt-8">
               <div className="w-full border-b border-neutral-100 mb-6" />
               <div className="flex items-center gap-3">
@@ -119,18 +156,8 @@ export default function Testimonials() {
                   aria-label="Previous testimonial"
                   className="w-10 h-10 border border-neutral-200 bg-white hover:border-neutral-400 flex items-center justify-center text-neutral-600 transition-colors cursor-pointer rounded-none"
                 >
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15 19l-7-7 7-7"
-                    />
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                   </svg>
                 </button>
                 <button
@@ -138,25 +165,14 @@ export default function Testimonials() {
                   aria-label="Next testimonial"
                   className="w-10 h-10 bg-[#B84E29] hover:bg-[#A34320] flex items-center justify-center text-white transition-colors cursor-pointer rounded-none shadow-sm"
                 >
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 5l7 7-7 7"
-                    />
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Warm Restaurant Interior Image */}
           <div className="relative min-h-[320px] lg:min-h-[460px] w-full h-full overflow-hidden">
             <Image
               src={t.image}

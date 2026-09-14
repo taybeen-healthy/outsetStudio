@@ -37,7 +37,7 @@ export const statsData = [
 export const aboutData = {
   title: "More Than Design. Spaces That Perform.",
   description:
-    "Outset Studio transforms physical spaces into distinctive, efficient, and high-performing outlets that elevate every customer experience.",
+    "Outset Studio transforms physical spaces into distinctive, efficient, and highly-performing outlets that elevate every customer experience.",
   bullets: [
     "Brand-focused spaces that connect with customers.",
     "From concept to complete execution.",

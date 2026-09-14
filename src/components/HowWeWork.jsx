@@ -27,20 +27,17 @@ export default function HowWeWork({ data }) {
     <section
       id="process"
       aria-label="How We Work"
-      className="w-full bg-[#F7F6F2] py-16 sm:py-24 lg:py-28 overflow-hidden"
+      className="w-full bg-[#FAF7F2] lg:bg-[#F7F6F2] py-10 sm:py-24 lg:py-28 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
-        {/* Centered Heading */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="font-serif font-normal text-[#1a1a1a] text-3xl sm:text-4xl lg:text-[46px] leading-tight tracking-tight">
+      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
+        <div className="text-left lg:text-center mb-6 sm:mb-16 lg:mb-20">
+          <h2 className="font-serif font-normal text-[#1a1a1a] text-[32px] sm:text-4xl lg:text-[46px] leading-tight tracking-tight">
             {title}
           </h2>
         </div>
 
-        {/* Layout: Left vertical image (changes on step click), Right 2x2 Phase Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch max-w-7xl mx-auto">
-          {/* Left — Dynamic Image Container */}
-          <div className="lg:col-span-5 relative w-full min-h-[420px] sm:min-h-[500px] lg:min-h-full overflow-hidden shadow-md bg-neutral-200 group">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-12 items-stretch max-w-7xl mx-auto">
+          <div className="lg:col-span-5 relative w-full aspect-[16/11] lg:aspect-auto lg:min-h-[500px] overflow-hidden shadow-none lg:shadow-md bg-neutral-200 group">
             <Image
               key={activeImage}
               src={activeImage}
@@ -50,27 +47,25 @@ export default function HowWeWork({ data }) {
               sizes="(max-width: 1024px) 100vw, 40vw"
               className="object-cover object-center animate-fade-scale transition-all duration-500"
             />
-            {/* Subtle overlay */}
-            <div className="absolute inset-0 bg-black/10 pointer-events-none" />
+            <div className="hidden lg:block absolute inset-0 bg-black/10 pointer-events-none" />
           </div>
 
-          {/* Right — 2x2 Grid of 4 Interactive Phase Cards */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
+          <div className="lg:col-span-7 grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-6">
             {steps.map((step, idx) => {
               const isActive = activeStepIndex === idx;
+              const phaseLabel = `PHASE ${String(idx + 1).padStart(2, "0")}`;
               return (
                 <div
                   key={step.number}
                   onClick={() => setActiveStepIndex(idx)}
-                  className={`bg-white p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 cursor-pointer border rounded-none ${
+                  className={`bg-white p-5 lg:p-8 flex flex-col justify-between transition-all duration-300 cursor-pointer border rounded-none ${
                     isActive
-                      ? "border-[#C0532C] shadow-md ring-1 ring-[#C0532C]/30"
-                      : "border-neutral-200/80 hover:border-neutral-300 shadow-sm hover:shadow-md"
+                      ? "border-[#E8C9BB] lg:border-[#C0532C] shadow-none lg:shadow-md lg:ring-1 lg:ring-[#C0532C]/30"
+                      : "border-[#E8C9BB] lg:border-neutral-200/80 hover:border-neutral-300 shadow-none lg:shadow-sm lg:hover:shadow-md"
                   }`}
                 >
                   <div>
-                    {/* Top Row: Number & Phase Badge */}
-                    <div className="flex items-center justify-between mb-4">
+                    <div className="hidden lg:flex items-center justify-between mb-4">
                       <span className="font-serif text-2xl sm:text-3xl text-[#C0532C] font-normal leading-none">
                         {step.number}
                       </span>
@@ -79,13 +74,15 @@ export default function HowWeWork({ data }) {
                       </span>
                     </div>
 
-                    {/* Step Title */}
-                    <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-[22px] font-normal leading-tight mb-3">
+                    <p className="lg:hidden font-sans text-[10px] tracking-[0.2em] uppercase font-medium text-[#C0532C] mb-2">
+                      {phaseLabel}
+                    </p>
+
+                    <h3 className="font-serif text-[#1a1a1a] text-[22px] sm:text-[22px] font-normal leading-tight mb-2 lg:mb-3">
                       {step.title}
                     </h3>
 
-                    {/* Step Description */}
-                    <p className="font-sans text-xs sm:text-[13px] text-neutral-500 font-normal leading-[1.65]">
+                    <p className="font-sans text-[13px] sm:text-[13px] text-neutral-500 font-normal leading-[1.65]">
                       {step.description}
                     </p>
                   </div>
