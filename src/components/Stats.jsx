@@ -43,7 +43,7 @@ function CountUp({ value, inView }) {
 function StatItem({ stat, inView, index }) {
   return (
     <div
-      className="flex flex-col justify-center p-6 sm:p-9 lg:p-10 text-left bg-white transition-all duration-700"
+      className="flex flex-col justify-center px-8 py-10 sm:px-12 sm:py-12 lg:px-16 lg:py-14 text-left bg-white transition-all duration-700"
       style={{
         opacity: inView ? 1 : 0,
         transform: inView ? "translateY(0) scale(1)" : "translateY(20px) scale(0.95)",
