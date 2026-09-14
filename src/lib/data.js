@@ -30,7 +30,7 @@ export const heroData = {
 export const statsData = [
   { id: 1, value: "10+", label: "TOTAL VENDORS", highlight: true },
   { id: 2, value: "10+", label: "EXPERIENCED VENDORS", highlight: false },
-  { id: 3, value: "15+", label: "SPECIALIZED CATEGORIES", highlight: false },
+  { id: 3, value: "15+", label: "TOTAL NUMBER OF PROJECTS", highlight: false },
   { id: 4, value: "07+", label: "YEARS OF EXPERIENCE", highlight: false },
 ];
 
