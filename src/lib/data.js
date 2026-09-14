@@ -248,7 +248,7 @@ export const testimonialsData = {
       quote:
         "Outset Studio delivers thoughtful design, seamless execution, and strategic growth solutions that transform spaces into memorable, customer-focused experiences.",
       avatar: "/image14.jpg",
-      image: "/image34.png",
+      image: "/image38.png",
     },
     {
       id: 2,
@@ -258,7 +258,7 @@ export const testimonialsData = {
       quote:
         "Working with Outset Studio was a game changer for our outlet launch. Their attention to detail and commercial focus set them apart from traditional studios.",
       avatar: "/image14.jpg",
-      image: "/image34.png",
+      image: "/image38.png",
     },
   ],
 };
