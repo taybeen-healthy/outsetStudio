@@ -172,14 +172,14 @@ export default function StartProjectModal({ onClose }) {
                       key={t.id}
                       type="button"
                       onClick={() => setForm((f) => ({ ...f, spaceType: t.id }))}
-                      className={`relative text-left p-3.5 sm:p-5 border transition-all rounded-lg ${
+                      className={`relative text-left p-3.5 sm:p-5 border transition-all rounded-none ${
                         active
                           ? "border-[#C0532C] bg-[#fdf8f5]"
                           : "border-neutral-200 bg-white hover:border-neutral-300 hover:bg-neutral-50"
                       }`}
                     >
                       <div className="flex items-center gap-3 sm:gap-4">
-                        <div className="w-9 h-9 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center bg-neutral-100 rounded-lg">
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center bg-neutral-100 rounded-none">
                           <SpaceIcon type={t.icon} />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -222,7 +222,7 @@ export default function StartProjectModal({ onClose }) {
                         key={s.value}
                         type="button"
                         onClick={() => setForm((f) => ({ ...f, size: s.value }))}
-                        className={`relative text-center p-4 border transition-all rounded-lg ${
+                        className={`relative text-center p-4 border transition-all rounded-none ${
                           active
                             ? "border-[#C0532C] bg-[#fdf8f5]"
                             : "border-neutral-200 bg-white hover:border-neutral-300 hover:bg-neutral-50"
@@ -255,7 +255,7 @@ export default function StartProjectModal({ onClose }) {
                         key={b.value}
                         type="button"
                         onClick={() => setForm((f) => ({ ...f, budget: b.value }))}
-                        className={`relative text-center p-4 border transition-all rounded-lg ${
+                        className={`relative text-center p-4 border transition-all rounded-none ${
                           active
                             ? "border-[#C0532C] bg-[#fdf8f5]"
                             : "border-neutral-200 bg-white hover:border-neutral-300 hover:bg-neutral-50"
@@ -297,7 +297,7 @@ export default function StartProjectModal({ onClose }) {
                     value={form.name}
                     onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                     placeholder="Aarav Mehta"
-                    className="w-full h-11 sm:h-12 border border-neutral-200 px-3 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none focus:border-[#C0532C] transition-colors rounded-lg"
+                    className="w-full h-11 sm:h-12 border border-neutral-200 px-3 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none focus:border-[#C0532C] transition-colors rounded-none"
                   />
                 </div>
                 <div>
@@ -325,7 +325,7 @@ export default function StartProjectModal({ onClose }) {
                     <select
                       value={form.city}
                       onChange={(e) => setForm((f) => ({ ...f, city: e.target.value }))}
-                      className="w-full h-11 sm:h-12 border border-neutral-200 px-3 pr-8 text-sm text-neutral-700 font-sans bg-white focus:outline-none focus:border-[#C0532C] appearance-none transition-colors rounded-lg cursor-pointer"
+                      className="w-full h-11 sm:h-12 border border-neutral-200 px-3 pr-8 text-sm text-neutral-700 font-sans bg-white focus:outline-none focus:border-[#C0532C] appearance-none transition-colors rounded-none cursor-pointer"
                     >
                       {cityOptions.map((c) => (
                         <option key={c} value={c}>{c}</option>
@@ -345,7 +345,7 @@ export default function StartProjectModal({ onClose }) {
                     value={form.email}
                     onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                     placeholder="name@brand.com"
-                    className="w-full h-11 sm:h-12 border border-neutral-200 px-3 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none focus:border-[#C0532C] transition-colors rounded-lg"
+                    className="w-full h-11 sm:h-12 border border-neutral-200 px-3 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none focus:border-[#C0532C] transition-colors rounded-none"
                   />
                 </div>
               </div>
@@ -367,7 +367,7 @@ export default function StartProjectModal({ onClose }) {
               else onClose();
             }}
             disabled={!canNext}
-            className={`h-10 sm:h-12 px-6 sm:px-10 font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold transition-all rounded-lg ${
+            className={`h-10 sm:h-12 px-6 sm:px-10 font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold transition-all rounded-none ${
               "bg-[#C0532C] text-white hover:bg-[#a34320]"
             } ${!canNext ? "opacity-40 cursor-not-allowed" : "cursor-pointer"}`}
           >
