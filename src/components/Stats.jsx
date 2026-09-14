@@ -1,9 +1,9 @@
 export default function Stats({ data, variant = "desktop" }) {
   const stats = data ?? [
-    { value: "90+", label: "TOTAL VENDORS", highlight: true },
-    { value: "30+", label: "EXPERIENCED VENDORS", highlight: false },
+    { value: "10+", label: "TOTAL VENDORS", highlight: true },
+    { value: "10+", label: "EXPERIENCED VENDORS", highlight: false },
     { value: "15+", label: "SPECIALIZED CATEGORIES", highlight: false },
-    { value: "50+", label: "YEARS OF EXPERIENCE", highlight: false },
+    { value: "07+", label: "YEARS OF EXPERIENCE", highlight: false },
   ];
 
   if (variant === "mobile") {

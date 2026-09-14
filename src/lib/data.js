@@ -109,7 +109,7 @@ export const industriesData = {
     },
     {
       id: "cafes",
-      name: "Cafes",
+      name: "Cafés",
       description:
         "Simplify orders, inventory and sales for smoother daily operations.",
       image: "/image10.jpg",
@@ -135,6 +135,48 @@ export const industriesData = {
         "Manage appointments, services and inventory from one place.",
       image: "/image13.jpg",
     },
+    {
+      id: "retail",
+      name: "Retail Stores",
+      description:
+        "Outdoor spaces designed to elevate your brand and attract customers.",
+      image: "/image15.png",
+    },
+    {
+      id: "pharmacies",
+      name: "Pharmacies",
+      description:
+        "Manage orders, inventory and operations while keeping service fast and efficient.",
+      image: "/image16.png",
+    },
+    {
+      id: "clinics",
+      name: "Clinics & Healthcare",
+      description:
+        "Calm, functional environments designed for patient comfort, accessibility.",
+      image: "/image17.png",
+    },
+    {
+      id: "hospitality",
+      name: "Hospitality & Hotels",
+      description:
+        "Manage appointments, services and inventory from one place.",
+      image: "/image18.png",
+    },
+    {
+      id: "fitness",
+      name: "Fitness & Wellness",
+      description:
+        "Purposeful environments designed to create energy and motivation.",
+      image: "/image19.png",
+    },
+    {
+      id: "offices",
+      name: "Offices & Workspaces",
+      description:
+        "Calm, functional environments designed around patient comfort, and accessibility.",
+      image: "/image20.png",
+    },
   ],
 };
 
@@ -142,7 +184,7 @@ export const ourWorkData = {
   title: "One Studio from Concept to Growth.",
   subtitle:
     "From concept to growth, Outset Studio creates distinctive, high-performing outlets.",
-  filters: ["ALL", "DELHI", "GURUGRAM", "RAJASTHAN"],
+  filters: ["ALL", "DELHI", "GURUGRAM", "PATNA BIHAR", "RAJASTHAN"],
   projects: [
     {
       id: 1,
@@ -162,27 +204,27 @@ export const ourWorkData = {
     },
     {
       id: 3,
-      title: "Sardar Ji Baksh Cafe",
+      title: "Patna Bihar Sardar Ji Baksh",
       subtitle:
-        "A thoughtfully crafted café experience where distinctive interiors, warm atmospheres, and memorable moments come together to create a space people want to return to.",
+        "A vibrant coffee destination offering freshly brewed beverages, delicious bites, and a welcoming atmosphere. Sardar-Ji-Bakhsh Coffee brings together great coffee, comforting flavours, and a relaxed space to unwind, catch up, or enjoy a quick break.",
       image: "/image29.png",
-      location: "GURUGRAM",
+      location: "PATNA BIHAR",
     },
     {
       id: 4,
-      title: "Blue Tokai Coffee",
+      title: "Minerals The Garden Cafe",
       subtitle:
-        "Modern roastery & cafe designed for community and fast-paced commercial footfall.",
+        "A refreshing garden café that brings together great food, a relaxed atmosphere, and a beautiful outdoor setting. Minerals The Garden Cafe offers a comfortable space to enjoy delicious meals, refreshing beverages, and quality time with friends and family.",
       image: "/image4.jpg",
       location: "DELHI",
     },
     {
       id: 5,
-      title: "The House of Coffee",
+      title: "Punjabi Bagh Sardar ji Baksh",
       subtitle:
-        "Artisanal interior architecture crafted to maximize customer flow and dining ambiance.",
+        "A vibrant coffee destination offering freshly brewed beverages, delicious bites, and a welcoming atmosphere. Sardar-Ji-Bakhsh Coffee brings together great coffee, comforting flavours, and a relaxed space to unwind, catch up, or enjoy a quick break.",
       image: "/image5.jpg",
-      location: "RAJASTHAN",
+      location: "DELHI",
     },
   ],
 };

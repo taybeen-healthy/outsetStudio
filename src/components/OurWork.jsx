@@ -6,7 +6,7 @@ import { ourWorkData } from "@/lib/data";
 
 export default function OurWork({ data }) {
   const content = data ?? ourWorkData;
-  const filters = content.filters ?? ["ALL", "DELHI", "GURUGRAM", "RAJASTHAN"];
+  const filters = content.filters ?? ["ALL", "DELHI", "GURUGRAM", "PATNA BIHAR", "RAJASTHAN"];
   const projects = content.projects ?? [];
 
   const [activeFilter, setActiveFilter] = useState("ALL");
