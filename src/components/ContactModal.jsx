@@ -18,7 +18,7 @@ export default function ContactModal({ onClose }) {
         <button
           onClick={onClose}
           aria-label="Close"
-          className="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center text-neutral-400 hover:text-neutral-700 transition-colors"
+          className="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center text-neutral-400 hover:text-neutral-700 hover:bg-neutral-100 rounded transition-all"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />

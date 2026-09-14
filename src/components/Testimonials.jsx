@@ -63,7 +63,7 @@ export default function Testimonials() {
                 <button
                   onClick={handlePrev}
                   aria-label="Previous testimonial"
-                  className="w-8 h-8 border border-neutral-200 bg-white flex items-center justify-center text-neutral-500 cursor-pointer"
+                  className="w-8 h-8 border border-neutral-200 bg-white hover:border-neutral-400 hover:bg-neutral-50 flex items-center justify-center text-neutral-500 cursor-pointer transition-all"
                 >
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -72,7 +72,7 @@ export default function Testimonials() {
                 <button
                   onClick={handleNext}
                   aria-label="Next testimonial"
-                  className="w-8 h-8 border border-neutral-200 bg-white flex items-center justify-center text-neutral-500 cursor-pointer"
+                  className="w-8 h-8 border border-neutral-200 bg-white hover:border-neutral-400 hover:bg-neutral-50 flex items-center justify-center text-neutral-500 cursor-pointer transition-all"
                 >
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />

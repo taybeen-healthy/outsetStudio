@@ -45,7 +45,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 flex items-center justify-between py-5 sm:py-6">
         <Link
           href="/"
-          className="group flex items-baseline tracking-[0.18em] focus:outline-none"
+          className="group flex items-baseline tracking-[0.18em] focus:outline-none hover:opacity-70 transition-opacity"
           aria-label="Outset Studio Homepage"
         >
           <span
@@ -87,7 +87,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className={`lg:hidden p-1 focus:outline-none cursor-pointer ${
+          className={`lg:hidden p-1 focus:outline-none cursor-pointer transition-colors hover:opacity-70 ${
             isHome ? "text-[#1a1a1a]" : "text-white"
           }`}
           aria-label="Toggle navigation menu"
@@ -127,9 +127,9 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-xs tracking-[0.2em] uppercase font-normal py-2 ${
+                className={`text-xs tracking-[0.2em] uppercase font-normal py-2 transition-colors ${
                   isHome
-                    ? "text-[#1a1a1a] border-b border-neutral-200"
+                    ? "text-[#1a1a1a] hover:text-[#C0532C] border-b border-neutral-200"
                     : "text-neutral-300 hover:text-white border-b border-white/5"
                 }`}
               >

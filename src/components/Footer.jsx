@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="lg:hidden">
           <Link
             href="/"
-            className="flex items-baseline tracking-[0.22em] w-fit focus:outline-none"
+            className="flex items-baseline tracking-[0.22em] w-fit focus:outline-none hover:opacity-70 transition-opacity"
             aria-label="Outset Studio Homepage"
           >
             <span className="font-serif text-[18px] tracking-[0.22em] text-[#B84E29] font-normal uppercase">
@@ -34,8 +34,8 @@ export default function Footer() {
             Spatial design and architecture practice engaging permanence, volume, and material truth.
           </p>
           <div className="flex flex-col gap-2 mt-6 font-sans text-[13px] text-neutral-300 font-light">
-            <a href="tel:9898844855">Tel: 9898844855</a>
-            <a href="mailto:outsetstudio@gmail.com">Email: outsetstudio@gmail.com</a>
+            <a href="tel:9898844855" className="hover:text-white transition-colors">Tel: 9898844855</a>
+            <a href="mailto:outsetstudio@gmail.com" className="hover:text-white transition-colors">Email: outsetstudio@gmail.com</a>
           </div>
           <div className="grid grid-cols-2 gap-8 mt-8">
             <div>
@@ -80,7 +80,7 @@ export default function Footer() {
             <div className="md:col-span-6 lg:col-span-6 flex flex-col">
               <Link
                 href="/"
-                className="flex items-baseline w-fit focus:outline-none group"
+                className="flex items-baseline w-fit focus:outline-none group hover:opacity-70 transition-opacity"
                 aria-label="Outset Studio Homepage"
               >
                 <span className="font-serif text-xl sm:text-2xl tracking-[0.16em] text-[#B84E29] font-normal uppercase">
