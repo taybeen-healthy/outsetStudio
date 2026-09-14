@@ -62,19 +62,6 @@ export default function OurWork({ data }) {
               <span className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.18em] uppercase text-[#1a1a1a] border-b border-transparent group-hover/case:border-[#1a1a1a] transition-colors duration-200">
                 VIEW CASE
               </span>
-              <svg
-                className="w-4 h-4 text-[#1a1a1a] group-hover/case:translate-x-1 group-hover/case:text-[#B8860B] transition-all duration-200"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                />
-              </svg>
             </button>
           </div>
         </div>
