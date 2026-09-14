@@ -33,10 +33,15 @@ export default function Navbar() {
         {/* Brand Logo matching Screenshot */}
         <Link
           href="/"
-          className="group inline-flex items-baseline tracking-[0.16em] focus:outline-none"
+          className="group flex items-baseline tracking-[0.16em] focus:outline-none"
           aria-label="Outset Studio Homepage"
         >
-          <span className="font-serif text-xl sm:text-[22px] tracking-[0.16em] text-white font-normal uppercase">OUTSET</span><span className="font-serif text-xl sm:text-[22px] tracking-[0.16em] text-[#C0532C] font-normal uppercase">STUDIO</span>
+          <span className="font-serif text-xl sm:text-[22px] tracking-[0.16em] text-white font-normal uppercase">
+            OUTSET
+          </span>
+          <span className="font-serif text-xl sm:text-[22px] tracking-[0.16em] text-[#C0532C] font-normal uppercase">
+            STUDIO
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

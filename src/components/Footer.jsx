@@ -24,10 +24,15 @@ export default function Footer() {
             {/* Logo */}
             <Link
               href="/"
-              className="inline-flex items-baseline w-fit focus:outline-none group tracking-[0.16em]"
+              className="flex items-baseline gap-2 w-fit focus:outline-none group"
               aria-label="Outset Studio Homepage"
             >
-              <span className="font-serif text-xl sm:text-2xl tracking-[0.16em] text-[#B84E29] font-normal uppercase">OUTSET</span><span className="font-serif text-xl sm:text-2xl tracking-[0.16em] text-white font-normal uppercase">STUDIO</span>
+              <span className="font-serif text-xl sm:text-2xl tracking-[0.16em] text-[#B84E29] font-normal uppercase">
+                OUTSET
+              </span>
+              <span className="font-serif text-xl sm:text-2xl tracking-[0.16em] text-white font-normal uppercase">
+                STUDIO
+              </span>
             </Link>
 
             {/* Description */}

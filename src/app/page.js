@@ -18,10 +18,11 @@ import {
 } from "@/lib/data";
 
 export default function Home() {
+
+
   return (
     <div className="relative w-full bg-white overflow-x-hidden font-sans select-none">
-      {/* Desktop: Hero with background image */}
-      <div className="hidden sm:block relative min-h-screen flex flex-col justify-between">
+      <div className="relative min-h-screen flex flex-col justify-between">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image
             src={heroData?.backgroundImage ?? "/image1.jpg"}
@@ -43,28 +44,7 @@ export default function Home() {
         <Navbar />
         <Hero data={heroData} />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-10 lg:px-14 pb-0">
-          <Stats data={statsData} />
-        </div>
-      </div>
-
-      {/* Mobile: White hero + image + stats */}
-      <div className="sm:hidden">
-        <Navbar />
-        <Hero data={heroData} />
-
-        <div className="relative w-full aspect-[4/5]">
-          <Image
-            src={heroData?.backgroundImage ?? "/image1.jpg"}
-            alt="Luxury modern interior by Outset Studio"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-        </div>
-
-        <div className="w-full px-6">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 pb-0">
           <Stats data={statsData} />
         </div>
       </div>
