@@ -149,7 +149,7 @@ export const ourWorkData = {
       title: "Sardar Ji Baksh Cafe",
       subtitle:
         "A thoughtfully crafted café experience where distinctive interiors, warm atmospheres, and memorable moments come together to create a space people want to return to.",
-      image: "/image4.jpg",
+      image: "/image27.png",
       location: "GURUGRAM",
     },
     {
@@ -157,7 +157,7 @@ export const ourWorkData = {
       title: "Rigo Cafe",
       subtitle:
         "More than a place to dine, Rigo Cafe brings together thoughtful design, inviting spaces, and memorable experiences that keep people coming back.",
-      image: "/image5.jpg",
+      image: "/image28.png",
       location: "GURUGRAM",
     },
     {
@@ -165,7 +165,7 @@ export const ourWorkData = {
       title: "Sardar Ji Baksh Cafe",
       subtitle:
         "A thoughtfully crafted café experience where distinctive interiors, warm atmospheres, and memorable moments come together to create a space people want to return to.",
-      image: "/image6.jpg",
+      image: "/image29.png",
       location: "GURUGRAM",
     },
     {
