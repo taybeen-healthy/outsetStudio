@@ -226,6 +226,14 @@ export const ourWorkData = {
       image: "/image5.jpg",
       location: "DELHI",
     },
+    {
+      id: 6,
+      title: "Bakery House",
+      subtitle:
+        "A thoughtfully designed bakery offering freshly baked breads, pastries, and handcrafted treats in a warm and inviting setting. With a focus on quality, freshness, and a welcoming experience, it creates a space where great food and everyday moments come together.",
+      image: "/image33.png",
+      location: "RAJASTHAN",
+    },
   ],
 };
 
