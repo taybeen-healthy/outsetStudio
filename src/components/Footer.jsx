@@ -3,9 +3,9 @@ import Link from "next/link";
 const quickLinks = [
   { name: "About", href: "/about" },
   { name: "What We Do", href: "/what-we-do" },
-  { name: "Our Work", href: "#our-work" },
-  { name: "Process", href: "#process" },
-  { name: "Industries", href: "#industries" },
+  { name: "Our Work", href: "/#our-work" },
+  { name: "Process", href: "/#process" },
+  { name: "Industries", href: "/#industries" },
 ];
 
 const services = ["Outlet", "Build", "Growth", "Scale"];
@@ -34,7 +34,7 @@ export default function Footer() {
             Spatial design and architecture practice engaging permanence, volume, and material truth.
           </p>
           <div className="flex flex-col gap-2 mt-6 font-sans text-[13px] text-neutral-300 font-light">
-            <a href="tel:9898844855" className="hover:text-white transition-colors">Tel: 9898844855</a>
+            <a href="tel:9958544930" className="hover:text-white transition-colors">Tel: 9958544930</a>
             <a href="mailto:outsetstudio@gmail.com" className="hover:text-white transition-colors">Email: outsetstudio@gmail.com</a>
           </div>
           <div className="grid grid-cols-2 gap-8 mt-8">
@@ -119,7 +119,7 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="tel:9898844855"
+                  href="tel:9958544930"
                   className="font-sans text-xs sm:text-sm text-neutral-300 hover:text-white transition-colors font-light flex items-center gap-3"
                 >
                   <svg
@@ -135,7 +135,7 @@ export default function Footer() {
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                     />
                   </svg>
-                  9898844855
+                  9958544930
                 </a>
               </div>
             </div>

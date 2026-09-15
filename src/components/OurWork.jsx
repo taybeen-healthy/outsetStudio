@@ -102,11 +102,10 @@ export default function OurWork({ data }) {
                 <button
                   key={f}
                   onClick={() => handleFilter(f)}
-                  className={`px-3.5 lg:px-5 py-2 lg:py-2.5 text-[10px] lg:text-xs tracking-[0.16em] uppercase font-medium transition-all duration-300 cursor-pointer rounded-none ${
-                    isActive
+                  className={`px-3.5 lg:px-5 py-2 lg:py-2.5 text-[10px] lg:text-xs tracking-[0.16em] uppercase font-medium transition-all duration-300 cursor-pointer rounded-none ${isActive
                       ? "bg-[#1a1a1a] text-white shadow-sm"
                       : "bg-transparent lg:bg-white text-[#1a1a1a] border-0 lg:border lg:border-neutral-200/80 hover:border-[#1a1a1a] hover:bg-neutral-50"
-                  }`}
+                    }`}
                 >
                   {f}
                 </button>

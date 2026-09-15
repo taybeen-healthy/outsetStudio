@@ -271,7 +271,7 @@ export const footerData = {
   },
   contacts: {
     email: "outsetstudio@gmail.com",
-    phone: "9898844855",
+    phone: "9958544930",
   },
   quickLinks: [
     { name: "About", href: "/about" },

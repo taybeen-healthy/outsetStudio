@@ -49,13 +49,13 @@ export default function ContactModal({ onClose }) {
               outsetstudio@gmail.com
             </a>
             <a
-              href="tel:+919898844855"
+              href="tel:+919958544930"
               className="flex items-center gap-2 font-sans text-sm text-neutral-600 hover:text-[#B84E29] transition-colors"
             >
               <svg className="w-4 h-4 text-[#B84E29] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              +91 98988 44855
+              +91 99585 44930
             </a>
           </div>
 
@@ -87,7 +87,7 @@ export default function ContactModal({ onClose }) {
                 name="contact"
                 value={form.contact}
                 onChange={handleChange}
-                placeholder="siddharth@venture.in or +9198988..."
+                placeholder="siddharth@venture.in or +9199585..."
                 className="w-full h-12 border border-neutral-200 bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none focus:border-[#B84E29] transition-colors rounded-none"
               />
             </div>
