@@ -94,10 +94,10 @@ export default function StartProjectModal({ onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="relative w-full sm:max-w-[520px] max-h-[100dvh] sm:max-h-[92vh] bg-[#FAF9F7] shadow-2xl flex flex-col sm:rounded-none rounded-t-2xl overflow-hidden">
+      <div className="relative w-full sm:max-w-[520px] max-h-[100dvh] sm:max-h-[92vh] bg-[#FAF9F7] shadow-2xl flex flex-col sm:rounded-none rounded-none overflow-hidden">
         {/* Dark Header */}
         <div className="bg-[#1a1a1a] px-5 sm:px-6 pt-4 sm:pt-5 pb-3 sm:pb-4 flex-shrink-0">
           <div className="flex items-center justify-between">
@@ -114,7 +114,7 @@ export default function StartProjectModal({ onClose }) {
             <button
               onClick={onClose}
               aria-label="Close"
-              className="w-8 h-8 flex items-center justify-center text-white/50 hover:text-white transition-colors flex-shrink-0"
+              className="w-8 h-8 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all flex-shrink-0"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -129,7 +129,7 @@ export default function StartProjectModal({ onClose }) {
             {Array.from({ length: totalSteps }).map((_, i) => (
               <div
                 key={i}
-                className={`h-[3px] flex-1 rounded-sm transition-colors duration-500 ${
+                className={`h-[3px] flex-1 rounded-none transition-colors duration-500 ${
                   step > i ? "bg-[#bf572b]" : "bg-neutral-200"
                 }`}
               />
@@ -157,14 +157,14 @@ export default function StartProjectModal({ onClose }) {
                       key={t.id}
                       type="button"
                       onClick={() => setForm((f) => ({ ...f, spaceType: t.id }))}
-                      className={`relative text-left p-4 sm:p-5 border transition-all rounded-sm ${
+                      className={`relative text-left p-4 sm:p-5 border transition-all rounded-none ${
                         active
                           ? "border-[#bf572b] border-l-[3px] bg-white"
                           : "border-neutral-200 bg-white hover:border-neutral-300"
                       }`}
                     >
                       <div className="flex items-start gap-3.5 sm:gap-4">
-                        <div className="w-10 h-10 sm:w-11 sm:h-11 flex-shrink-0 flex items-center justify-center bg-[#f0ebe5] rounded-sm mt-0.5">
+                        <div className="w-10 h-10 sm:w-11 sm:h-11 flex-shrink-0 flex items-center justify-center bg-[#f0ebe5] rounded-none mt-0.5">
                           <SpaceIcon type={t.icon} />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -173,7 +173,7 @@ export default function StartProjectModal({ onClose }) {
                               {t.title}
                             </span>
                             {active && (
-                              <span className="inline-flex items-center px-2 py-0.5 bg-[#bf572b] text-white text-[9px] sm:text-[10px] font-sans font-semibold tracking-[0.08em] uppercase rounded-sm">
+                              <span className="inline-flex items-center px-2 py-0.5 bg-[#bf572b] text-white text-[9px] sm:text-[10px] font-sans font-semibold tracking-[0.08em] uppercase rounded-none">
                                 ACTIVE
                               </span>
                             )}
@@ -184,7 +184,7 @@ export default function StartProjectModal({ onClose }) {
                         </div>
                         <div className="flex-shrink-0 mt-1">
                           <span
-                            className={`w-5 h-5 flex items-center justify-center border rounded-[3px] transition-colors ${
+                            className={`w-5 h-5 flex items-center justify-center border rounded-none transition-colors ${
                               active ? "bg-[#bf572b] border-[#bf572b]" : "border-neutral-300 bg-white"
                             }`}
                           >
@@ -226,7 +226,7 @@ export default function StartProjectModal({ onClose }) {
                         key={s.value}
                         type="button"
                         onClick={() => setForm((f) => ({ ...f, size: s.value }))}
-                        className={`relative text-left p-4 border transition-all rounded-sm ${
+                        className={`relative text-left p-4 border transition-all rounded-none ${
                           active
                             ? "border-[#bf572b] bg-white"
                             : "border-neutral-200 bg-white hover:border-neutral-300"
@@ -242,12 +242,12 @@ export default function StartProjectModal({ onClose }) {
                             </span>
                           </div>
                           <span
-                            className={`w-5 h-5 flex-shrink-0 flex items-center justify-center border rounded-[3px] transition-colors mt-0.5 ${
+                            className={`w-5 h-5 flex-shrink-0 flex items-center justify-center border rounded-none transition-colors mt-0.5 ${
                               active ? "bg-[#bf572b] border-[#bf572b]" : "border-neutral-300 bg-white"
                             }`}
                           >
                             {active && (
-                              <span className="w-2 h-2 bg-white rounded-[1px]" />
+                              <span className="w-2 h-2 bg-white rounded-none" />
                             )}
                           </span>
                         </div>
@@ -270,7 +270,7 @@ export default function StartProjectModal({ onClose }) {
                         key={b.value}
                         type="button"
                         onClick={() => setForm((f) => ({ ...f, budget: b.value }))}
-                        className={`relative text-left p-4 border transition-all rounded-sm ${
+                        className={`relative text-left p-4 border transition-all rounded-none ${
                           active
                             ? "border-[#bf572b] bg-white"
                             : "border-neutral-200 bg-white hover:border-neutral-300"
@@ -286,12 +286,12 @@ export default function StartProjectModal({ onClose }) {
                             </span>
                           </div>
                           <span
-                            className={`w-5 h-5 flex-shrink-0 flex items-center justify-center border rounded-[3px] transition-colors mt-0.5 ${
+                            className={`w-5 h-5 flex-shrink-0 flex items-center justify-center border rounded-none transition-colors mt-0.5 ${
                               active ? "bg-[#bf572b] border-[#bf572b]" : "border-neutral-300 bg-white"
                             }`}
                           >
                             {active && (
-                              <span className="w-2 h-2 bg-white rounded-[1px]" />
+                              <span className="w-2 h-2 bg-white rounded-none" />
                             )}
                           </span>
                         </div>
@@ -389,7 +389,7 @@ export default function StartProjectModal({ onClose }) {
 
               <div className="space-y-4">
                 {/* Space Type */}
-                <div className="bg-white border border-neutral-200 rounded-sm p-4">
+                <div className="bg-white border border-neutral-200 rounded-none p-4">
                   <span className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.12em] text-neutral-400 uppercase block mb-1.5">
                     Space Type
                   </span>
@@ -400,7 +400,7 @@ export default function StartProjectModal({ onClose }) {
 
                 {/* Size & Budget */}
                 <div className="grid grid-cols-2 gap-2.5">
-                  <div className="bg-white border border-neutral-200 rounded-sm p-4">
+                  <div className="bg-white border border-neutral-200 rounded-none p-4">
                     <span className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.12em] text-neutral-400 uppercase block mb-1.5">
                       Size
                     </span>
@@ -408,7 +408,7 @@ export default function StartProjectModal({ onClose }) {
                       {form.size || "—"}
                     </span>
                   </div>
-                  <div className="bg-white border border-neutral-200 rounded-sm p-4">
+                  <div className="bg-white border border-neutral-200 rounded-none p-4">
                     <span className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.12em] text-neutral-400 uppercase block mb-1.5">
                       Budget
                     </span>
@@ -419,7 +419,7 @@ export default function StartProjectModal({ onClose }) {
                 </div>
 
                 {/* Contact */}
-                <div className="bg-white border border-neutral-200 rounded-sm p-4 space-y-2.5">
+                <div className="bg-white border border-neutral-200 rounded-none p-4 space-y-2.5">
                   <div>
                     <span className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.12em] text-neutral-400 uppercase block">
                       Name
@@ -466,7 +466,7 @@ export default function StartProjectModal({ onClose }) {
               else onClose();
             }}
             disabled={!canNext}
-            className={`h-11 sm:h-12 px-6 sm:px-10 flex items-center gap-2 font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold transition-all rounded-sm ${
+            className={`h-11 sm:h-12 px-6 sm:px-10 flex items-center gap-2 font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold transition-all rounded-none ${
               step === totalSteps
                 ? "bg-[#bf572b] text-white hover:bg-[#a34320]"
                 : "bg-[#bf572b] text-white hover:bg-[#a34320]"
