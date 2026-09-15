@@ -38,7 +38,39 @@ export default function FAQ() {
           Everything you need to know about commissioning, timelines, architectural scope, and turnkey execution with Outset Studio.
         </p>
 
-        <div className="border-t border-neutral-200">
+        {/* Mobile: cards */}
+        <div className="sm:hidden space-y-3">
+          {faqs.map((faq, i) => {
+            const isOpen = open === i;
+            return (
+              <div key={i} className="border border-neutral-200 bg-white">
+                <button
+                  onClick={() => setOpen(isOpen ? -1 : i)}
+                  className="w-full flex items-start justify-between p-5 text-left gap-4"
+                >
+                  <span className="font-serif text-[#1a1a1a] text-[17px] leading-snug">
+                    {faq.q}
+                  </span>
+                  <span className="flex-shrink-0 w-5 h-5 mt-0.5 flex items-center justify-center text-[#C0532C] text-lg font-light">
+                    {isOpen ? "−" : "+"}
+                  </span>
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    isOpen ? "max-h-60 px-5 pb-5" : "max-h-0"
+                  }`}
+                >
+                  <p className="font-sans text-[13px] text-neutral-500 leading-[1.7]">
+                    {faq.a}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Desktop: line separators */}
+        <div className="hidden sm:block border-t border-neutral-200">
           {faqs.map((faq, i) => {
             const isOpen = open === i;
             return (
@@ -47,7 +79,7 @@ export default function FAQ() {
                   onClick={() => setOpen(isOpen ? -1 : i)}
                   className="w-full flex items-center justify-between py-5 sm:py-6 text-left gap-4 group"
                 >
-                  <span className="font-serif text-[#1a1a1a] text-lg sm:text-xl lg:text-[22px] leading-snug group-hover:text-[#C0532C] transition-colors">
+                  <span className="font-serif text-[#1a1a1a] text-xl lg:text-[22px] leading-snug group-hover:text-[#C0532C] transition-colors">
                     {faq.q}
                   </span>
                   <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center text-[#C0532C] text-xl font-light">
