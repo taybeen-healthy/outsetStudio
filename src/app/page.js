@@ -7,6 +7,7 @@ import OurWork from "@/components/OurWork";
 import HowWeWork from "@/components/HowWeWork";
 import Industries from "@/components/Industries";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 import {
@@ -52,6 +53,7 @@ export default function Home() {
       <HowWeWork data={howWeWorkData} />
       <Industries data={industriesData} />
       <Testimonials />
+      <FAQ />
       <CTABanner />
       <Footer />
     </div>
