@@ -54,7 +54,7 @@ export default function RegisterVendorsPage() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 px-5 sm:px-8 py-6 sm:py-10">
+      <div className="flex-1 px-5 sm:px-8 py-6 sm:py-10 pb-16 sm:pb-10">
         <div className="max-w-[720px] mx-auto">
           <h1 className="font-serif text-[#1a1a1a] text-[28px] sm:text-[36px] font-normal leading-tight mb-2">
             Vendor Registration
@@ -63,7 +63,7 @@ export default function RegisterVendorsPage() {
             Partner with Outset Studio for commercial and outlet projects.
           </p>
 
-          <div className="space-y-5">
+          <div className="space-y-5 sm:space-y-6">
             <div>
               <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-2">
                 NAME OF THE VENDOR <span className="text-[#C0532C]">*</span>
@@ -118,22 +118,22 @@ export default function RegisterVendorsPage() {
       </div>
 
       {/* Footer */}
-      <div className="border-t border-neutral-100 px-5 sm:px-8 py-4 sm:py-5">
-        <div className="max-w-[720px] mx-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-          <Link
-            href="/"
-            className="h-11 sm:h-12 px-6 border border-neutral-300 font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold text-neutral-700 hover:bg-neutral-100 transition-all rounded-none flex items-center justify-center text-center"
-          >
-            CANCEL
-          </Link>
+      <div className="border-t border-neutral-100 px-5 sm:px-8 py-4 sm:py-5 mt-auto">
+        <div className="max-w-[720px] mx-auto flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <button
             disabled={!canSubmit}
-            className={`h-11 sm:h-12 px-8 font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold transition-all rounded-none ${
-              "bg-[#C0532C] text-white hover:bg-[#a34320]"
+            className={`order-1 sm:order-2 h-12 sm:h-12 px-8 w-full sm:w-auto font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold transition-all ${
+              "bg-[#bf572b] text-white hover:bg-[#a34320]"
             } ${!canSubmit ? "opacity-40 cursor-not-allowed" : "cursor-pointer"}`}
           >
             SUBMIT VENDOR REGISTRATION
           </button>
+          <Link
+            href="/"
+            className="order-2 sm:order-1 h-12 sm:h-12 px-6 w-full sm:w-auto border border-neutral-300 font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold text-neutral-700 hover:bg-neutral-100 transition-all flex items-center justify-center text-center"
+          >
+            CANCEL
+          </Link>
         </div>
       </div>
     </div>
