@@ -25,6 +25,7 @@ export default function VendorModal({ onClose }) {
   });
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState({});
   const [dropdownPos, setDropdownPos] = useState({ top: 0, left: 0, width: 0 });
   const btnRef = useRef(null);
 
@@ -52,21 +53,42 @@ export default function VendorModal({ onClose }) {
     };
   }, [dropdownOpen, updatePos]);
 
-  const handleChange = (e) =>
+  const handleChange = (e) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
+    setErrors((f) => ({ ...f, [e.target.name]: "" }));
+  };
 
-  const toggleService = (svc) =>
+  const toggleService = (svc) => {
     setForm((f) => ({
       ...f,
       services: f.services.includes(svc)
         ? f.services.filter((s) => s !== svc)
         : [...f.services, svc],
     }));
+    setErrors((f) => ({ ...f, services: "" }));
+  };
 
   const removeService = (svc) =>
     setForm((f) => ({ ...f, services: f.services.filter((s) => s !== svc) }));
 
   const canSubmit = form.vendorName && form.gstNumber && form.services.length > 0;
+
+  const validate = () => {
+    const errs = {};
+    if (!form.vendorName.trim()) errs.vendorName = "Vendor name is required";
+    if (!form.gstNumber.trim()) {
+      errs.gstNumber = "GST number is required";
+    } else if (!/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/.test(form.gstNumber.replace(/\s/g, ""))) {
+      errs.gstNumber = "Enter a valid 15-digit GST number";
+    }
+    if (form.services.length === 0) errs.services = "Select at least one service";
+    setErrors(errs);
+    return Object.keys(errs).length === 0;
+  };
+
+  const handleSubmit = () => {
+    if (validate()) setSubmitted(true);
+  };
 
   return (
     <div
@@ -96,25 +118,25 @@ export default function VendorModal({ onClose }) {
         </div>
 
         {submitted ? (
-          <div className="flex-1 flex items-center justify-center px-5 text-center">
+          <div className="flex-1 flex items-center justify-center px-8 sm:px-12 py-10 text-center">
             <div>
-              <div className="w-14 h-14 mx-auto flex items-center justify-center bg-[#C0532C] rounded-full">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <div className="w-16 h-16 mx-auto flex items-center justify-center bg-[#F5EDE8] rounded-full">
+                <svg className="w-7 h-7 text-[#C0532C]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h2 className="font-serif italic text-[#1a1a1a] text-[28px] leading-tight mt-6 mb-2">
-                Thank You For Registering
+              <h2 className="font-serif text-[#1a1a1a] text-[32px] sm:text-[38px] leading-tight mt-6 mb-3">
+                Thank you, {form.vendorName || "there"}.
               </h2>
-              <p className="font-sans text-sm text-neutral-500 leading-relaxed max-w-md mx-auto mb-8">
-                Our team will review your details and reach out within 24 hours.
+              <p className="font-sans text-sm sm:text-[15px] text-neutral-500 leading-relaxed max-w-md mx-auto mb-10">
+                We&apos;ve received your project brief and will review your details within 24 hours.
               </p>
-              <button
-                onClick={onClose}
-                className="h-12 px-10 font-sans text-[11px] tracking-[0.14em] uppercase font-semibold bg-[#bf572b] text-white hover:bg-[#a34320] transition-all cursor-pointer"
-              >
-                DONE
-              </button>
+              <p className="font-sans text-xs sm:text-sm tracking-[0.05em] text-neutral-500">
+                NEED URGENT HELP?{" "}
+                <a href="tel:9898844855" className="text-[#C0532C] font-medium hover:underline cursor-pointer">
+                  CALL 9898844855
+                </a>
+              </p>
             </div>
           </div>
         ) : (
@@ -140,8 +162,9 @@ export default function VendorModal({ onClose }) {
                       value={form.vendorName}
                       onChange={handleChange}
                       placeholder="e.g. Apex Woodworks & Fabrication"
-                      className="w-full h-12 border border-neutral-200 bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none focus:border-[#C0532C] transition-colors rounded-none"
+                      className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.vendorName ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
                     />
+                    {errors.vendorName && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.vendorName}</p>}
                   </div>
 
                   <div>
@@ -154,8 +177,9 @@ export default function VendorModal({ onClose }) {
                       value={form.gstNumber}
                       onChange={handleChange}
                       placeholder="E.G. 07AAFCO2481K1Z3"
-                      className="w-full h-12 border border-neutral-200 bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none focus:border-[#C0532C] transition-colors rounded-none uppercase"
+                      className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none uppercase ${errors.gstNumber ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
                     />
+                    {errors.gstNumber && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.gstNumber}</p>}
                   </div>
 
                   <div>
@@ -189,6 +213,8 @@ export default function VendorModal({ onClose }) {
                       </svg>
                     </div>
 
+                    {errors.services && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.services}</p>}
+
                     {form.services.length > 0 && (
                       <div className="flex flex-wrap gap-2 mt-3">
                         {form.services.map((svc) => (
@@ -219,7 +245,7 @@ export default function VendorModal({ onClose }) {
             <div className="border-t border-neutral-200 px-5 sm:px-8 py-4 flex-shrink-0 bg-[#FAF9F7]">
               <div className="max-w-[720px] mx-auto space-y-3">
                 <button
-                  onClick={() => setSubmitted(true)}
+                  onClick={handleSubmit}
                   disabled={!canSubmit}
                   className={`h-12 w-full font-sans text-[11px] tracking-[0.14em] uppercase font-semibold transition-all bg-[#bf572b] text-white ${!canSubmit ? "opacity-40 cursor-not-allowed" : "hover:bg-[#a34320] cursor-pointer"}`}
                 >
