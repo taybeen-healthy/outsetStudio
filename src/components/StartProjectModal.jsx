@@ -128,7 +128,7 @@ export default function StartProjectModal({ onClose }) {
             <button
               onClick={onClose}
               aria-label="Close"
-              className="w-8 h-8 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all flex-shrink-0"
+              className="w-8 h-8 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all flex-shrink-0 cursor-pointer"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -176,7 +176,7 @@ export default function StartProjectModal({ onClose }) {
                       key={t.id}
                       type="button"
                       onClick={() => setForm((f) => ({ ...f, spaceType: t.id }))}
-                      className={`relative text-left p-4 sm:p-5 border transition-all ${
+                      className={`relative text-left p-4 sm:p-5 border transition-all cursor-pointer ${
                         active
                           ? "border-[#bf572b] bg-white"
                           : "border-neutral-200 bg-white hover:border-neutral-300"
@@ -228,7 +228,7 @@ export default function StartProjectModal({ onClose }) {
                         key={s.value}
                         type="button"
                         onClick={() => setForm((f) => ({ ...f, size: s.value }))}
-                        className={`relative text-left p-4 border transition-all ${
+                        className={`relative text-left p-4 border transition-all cursor-pointer ${
                           active
                             ? "border-[#bf572b] bg-white"
                             : "border-neutral-200 bg-white hover:border-neutral-300"
@@ -266,7 +266,7 @@ export default function StartProjectModal({ onClose }) {
                         key={b.value}
                         type="button"
                         onClick={() => setForm((f) => ({ ...f, budget: b.value }))}
-                        className={`relative text-left p-4 border transition-all ${
+                        className={`relative text-left p-4 border transition-all cursor-pointer ${
                           active
                             ? "border-[#bf572b] bg-white"
                             : "border-neutral-200 bg-white hover:border-neutral-300"
@@ -379,7 +379,7 @@ export default function StartProjectModal({ onClose }) {
         <div className="border-t border-neutral-200 px-5 sm:px-8 py-4 sm:py-5 flex items-center justify-between flex-shrink-0 bg-[#FAF9F7]">
           <button
             onClick={step === 1 ? onClose : () => setStep((s) => s - 1)}
-            className="font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold text-neutral-500 hover:text-[#1a1a1a] transition-colors"
+            className="font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold text-neutral-500 hover:text-[#1a1a1a] transition-colors cursor-pointer"
           >
             {step === 1 ? "CANCEL" : "BACK"}
           </button>

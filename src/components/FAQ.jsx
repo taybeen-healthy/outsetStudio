@@ -46,7 +46,7 @@ export default function FAQ() {
               <div key={i} className="border border-neutral-200 bg-white">
                 <button
                   onClick={() => setOpen(isOpen ? -1 : i)}
-                  className="w-full flex items-start justify-between p-5 text-left gap-4"
+                  className="w-full flex items-start justify-between p-5 text-left gap-4 cursor-pointer"
                 >
                   <span className="font-serif text-[#1a1a1a] text-[17px] leading-snug">
                     {faq.q}
@@ -77,7 +77,7 @@ export default function FAQ() {
               <div key={i} className="border-b border-neutral-200">
                 <button
                   onClick={() => setOpen(isOpen ? -1 : i)}
-                  className="w-full flex items-center justify-between py-5 sm:py-6 text-left gap-4 group"
+                  className="w-full flex items-center justify-between py-5 sm:py-6 text-left gap-4 group cursor-pointer"
                 >
                   <span className="font-serif text-[#1a1a1a] text-xl lg:text-[22px] leading-snug group-hover:text-[#C0532C] transition-colors">
                     {faq.q}

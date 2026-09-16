@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ourWorkData } from "@/lib/data";
 
@@ -11,6 +11,14 @@ export default function OurWork({ data }) {
 
   const [activeFilter, setActiveFilter] = useState("ALL");
   const [paused, setPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const filteredProjects = projects.filter((p) => {
     if (activeFilter === "ALL") return true;
@@ -19,7 +27,7 @@ export default function OurWork({ data }) {
 
   // Repeat the filtered list so half the row always out-widths the viewport,
   // keeping the -50% marquee loop seamless even for single-project filters.
-  const repeats = Math.max(2, Math.ceil(8 / Math.max(filteredProjects.length, 1)));
+  const repeats = Math.max(4, Math.ceil(10 / Math.max(filteredProjects.length, 1)));
   const marqueeProjects = Array.from({ length: repeats }, () => filteredProjects).flat();
   const marqueeDuration = Math.max(20, filteredProjects.length * 8);
 
@@ -121,7 +129,7 @@ export default function OurWork({ data }) {
             No projects found for this filter.
           </p>
         </div>
-      ) : filteredProjects.length < 3 ? (
+      ) : (isMobile && filteredProjects.length < 2) || (!isMobile && filteredProjects.length < 3) ? (
         <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {filteredProjects.map((project, i) =>

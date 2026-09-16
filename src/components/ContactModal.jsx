@@ -18,7 +18,7 @@ export default function ContactModal({ onClose }) {
         <button
           onClick={onClose}
           aria-label="Close"
-          className="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center text-neutral-400 hover:text-neutral-700 hover:bg-neutral-100 rounded transition-all"
+          className="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center text-neutral-400 hover:text-neutral-700 hover:bg-neutral-100 rounded transition-all cursor-pointer"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -108,7 +108,7 @@ export default function ContactModal({ onClose }) {
           </div>
 
           {/* Submit */}
-          <button className="w-full h-14 font-sans text-xs tracking-[0.2em] uppercase font-medium text-white bg-[#B84E29] hover:bg-[#a34320] transition-colors rounded-none flex items-center justify-center gap-2.5 mt-2">
+          <button className="w-full h-14 font-sans text-xs tracking-[0.2em] uppercase font-medium text-white bg-[#B84E29] hover:bg-[#a34320] transition-colors rounded-none flex items-center justify-center gap-2.5 mt-2 cursor-pointer">
             Send Inquiry
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
