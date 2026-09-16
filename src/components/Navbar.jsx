@@ -13,6 +13,7 @@ export default function Navbar() {
   const [showVendor, setShowVendor] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const isLightBg = isHome || pathname.startsWith("/work/");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +33,7 @@ export default function Navbar() {
   return (
     <header
       className={`relative z-30 w-full transition-all duration-300 ${
-        isHome
+        isLightBg
           ? `border-b border-transparent lg:border-white/10 ${
               scrolled
                 ? "bg-[#FAF7F2]/95 lg:bg-black/85 backdrop-blur-md shadow-sm lg:shadow-lg"
@@ -50,9 +51,7 @@ export default function Navbar() {
           aria-label="Outset Studio Homepage"
         >
           <span
-            className={`font-serif text-[17px] sm:text-[22px] tracking-[0.18em] font-bold sm:font-normal uppercase ${
-              isHome ? "text-[#1a1a1a] lg:text-white" : "text-white"
-            }`}
+            className="font-serif text-[17px] sm:text-[22px] tracking-[0.18em] font-bold sm:font-normal uppercase text-[#1a1a1a]"
           >
             OUTSET
           </span>
@@ -95,7 +94,7 @@ export default function Navbar() {
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className={`lg:hidden p-1 focus:outline-none cursor-pointer transition-colors hover:opacity-70 ${
-            isHome ? "text-[#1a1a1a]" : "text-white"
+            isLightBg ? "text-[#1a1a1a]" : "text-white"
           }`}
           aria-label="Toggle navigation menu"
           aria-expanded={mobileMenuOpen}
@@ -123,7 +122,7 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div
           className={`lg:hidden absolute top-full left-0 w-full px-5 py-6 transition-all duration-300 shadow-2xl ${
-            isHome
+            isLightBg
               ? "bg-[#FAF7F2] border-b border-neutral-200"
               : "bg-black/95 backdrop-blur-xl border-b border-white/10"
           }`}
@@ -135,7 +134,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`text-xs tracking-[0.2em] uppercase font-normal py-2 transition-colors cursor-pointer ${
-                  isHome
+                  isLightBg
                     ? "text-[#1a1a1a] hover:text-[#C0532C] border-b border-neutral-200"
                     : "text-neutral-300 hover:text-white border-b border-white/5"
                 }`}
@@ -149,7 +148,7 @@ export default function Navbar() {
                 setShowVendor(true);
               }}
               className={`text-center text-xs tracking-[0.2em] uppercase font-normal px-6 py-2.5 mt-4 transition-all rounded-none cursor-pointer ${
-                isHome
+                isLightBg
                   ? "text-[#1a1a1a] border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white"
                   : "text-white border border-white/40 hover:bg-white hover:text-black"
               }`}
@@ -162,7 +161,7 @@ export default function Navbar() {
                 setShowContact(true);
               }}
               className={`text-center text-xs tracking-[0.2em] uppercase font-normal px-6 py-2.5 mt-4 transition-all rounded-none cursor-pointer ${
-                isHome
+                isLightBg
                   ? "text-[#1a1a1a] border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white"
                   : "text-white border border-white/40 hover:bg-white hover:text-black"
               }`}
