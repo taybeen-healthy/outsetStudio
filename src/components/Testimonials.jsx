@@ -39,7 +39,7 @@ export default function Testimonials() {
       aria-label="Customer testimonials"
       className="w-full bg-[#FAF7F2] lg:bg-[#FAF9F7] pt-10 sm:pt-24 lg:pt-28 pb-10 sm:pb-28"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
+      <div className="max-w-7xl mx-auto px-2">
         <div className="text-left lg:text-center mb-5 sm:mb-16">
           <h2 className="font-serif font-normal text-[#1a1a1a] text-[28px] sm:text-4xl lg:text-[46px] leading-tight tracking-tight">
             What Our Customer&apos;s say

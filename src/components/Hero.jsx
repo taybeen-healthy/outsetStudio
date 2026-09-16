@@ -21,9 +21,9 @@ export default function Hero({ data, stats }) {
 
   return (
     <>
-      <main className="relative z-10 flex-1 flex flex-col items-start lg:items-center justify-center px-5 sm:px-10 lg:px-14 pt-6 pb-10 sm:py-24 lg:py-28 text-left lg:text-center">
+      <main className="relative z-10 flex-1 flex flex-col items-start lg:items-center justify-center px-2 pt-8 pb-12 sm:py-24 lg:py-28 text-left lg:text-center">
         <div className="max-w-7xl mx-auto flex flex-col items-start lg:items-center w-full">
-          <h1 className="font-serif text-[#1a1a1a] lg:text-white text-[34px] sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[78px] leading-[1.18] font-normal tracking-tight max-w-5xl">
+          <h1 className="font-serif text-[#1a1a1a] lg:text-white text-[28px] sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[78px] leading-[1.18] font-normal tracking-tight max-w-5xl">
             {headline.prefix}{" "}
             <span className="italic text-[#C0532C] font-normal font-serif">
               {headline.highlight}
@@ -32,11 +32,11 @@ export default function Hero({ data, stats }) {
             {headline.middle} {headline.suffix}
           </h1>
 
-          <p className="mt-5 sm:mt-8 text-[15px] sm:text-[15px] md:text-base text-neutral-500 lg:text-neutral-400 font-normal lg:font-light max-w-2xl leading-[1.7] tracking-normal font-sans">
+          <p className="mt-4 sm:mt-8 text-[14px] sm:text-[15px] md:text-base text-neutral-500 lg:text-neutral-400 font-normal lg:font-light max-w-2xl leading-[1.7] tracking-normal font-sans">
             {subtitle}
           </p>
 
-          <div className="mt-7 sm:mt-10 flex flex-col lg:flex-row items-stretch lg:items-center justify-center gap-3 lg:gap-5 w-full lg:max-w-none">
+          <div className="mt-6 sm:mt-10 flex flex-col lg:flex-row items-stretch lg:items-center justify-center gap-3 lg:gap-5 w-full lg:max-w-none">
             {actions.map((action) =>
               action.variant === "primary" ? (
                 <button
@@ -58,7 +58,7 @@ export default function Hero({ data, stats }) {
             )}
           </div>
 
-          <div className="lg:hidden relative w-full mt-8">
+          <div className="lg:hidden relative w-full mt-6">
             <div className="relative w-full aspect-[5/4] overflow-hidden bg-neutral-200">
               <Image
                 src={heroImage}
@@ -69,7 +69,7 @@ export default function Hero({ data, stats }) {
                 className="object-cover object-center"
               />
             </div>
-            <div className="relative -mt-[22%] z-10 px-0">
+            <div className="relative -mt-[18%] z-10 px-0">
               <Stats data={stats} variant="mobile" />
             </div>
           </div>

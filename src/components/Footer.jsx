@@ -16,7 +16,7 @@ export default function Footer() {
       aria-label="Site footer"
       className="w-full bg-[#2B2B2B] lg:bg-[#111111] text-white pt-12 sm:pt-20 pb-8 sm:pb-10"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
+      <div className="max-w-7xl mx-auto px-2">
         <div className="lg:hidden">
           <Link
             href="/"

@@ -46,7 +46,7 @@ export default function Industries({ data }) {
       aria-label="Industries we serve"
       className="w-full bg-[#F3F1EC] lg:bg-[#F7F6F2] py-10 sm:py-24 lg:py-28 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
+      <div className="max-w-7xl mx-auto px-2">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 lg:gap-6 mb-6 sm:mb-16">
           <div className="max-w-xl">
             <h2 className="font-serif font-normal text-[#1a1a1a] text-[32px] sm:text-4xl lg:text-[46px] leading-[1.15] tracking-tight">

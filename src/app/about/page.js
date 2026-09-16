@@ -33,7 +33,7 @@ export default function AboutPage() {
           <Navbar />
 
           {/* About Hero Content */}
-          <section className="relative z-10 flex-1 flex flex-col items-start justify-center px-5 sm:px-10 lg:px-14 py-16 sm:py-24">
+          <section className="relative z-10 flex-1 flex flex-col items-start justify-center px-2 py-16 sm:py-24">
             <div className="max-w-4xl mx-auto w-full">
               {/* Main Headline */}
               <h1 className="font-serif font-bold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[60px] xl:text-[68px] leading-[1.16] tracking-tight drop-shadow-md mt-4 mb-6">
@@ -61,7 +61,7 @@ export default function AboutPage() {
 
         {/* More Than Just Design Section */}
         <section className="w-full bg-[#f5f5f5] py-20 sm:py-28 lg:py-32">
-          <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+          <div className="max-w-7xl mx-auto px-2 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             {/* Left: Text Content */}
             <div className="max-w-xl">
               <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight mb-8">
@@ -96,7 +96,7 @@ export default function AboutPage() {
 
         {/* Every Great Space Starts With Understanding Section */}
         <section className="w-full bg-white py-20 sm:py-28 lg:py-32">
-          <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+          <div className="max-w-7xl mx-auto px-2 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             {/* Left: Image */}
             <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[560/385] overflow-hidden order-2 lg:order-1">
               <Image
@@ -130,7 +130,7 @@ export default function AboutPage() {
 
         {/* Designed With Purpose Section */}
         <section className="w-full bg-[#f5f5f5] py-20 sm:py-28 lg:py-32">
-          <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
+          <div className="max-w-7xl mx-auto px-2">
             {/* Heading */}
             <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight mb-14 sm:mb-20">
               Designed With Purpose.
@@ -174,7 +174,7 @@ export default function AboutPage() {
 
         {/* One Studio. One Connected Journey Section */}
         <section className="w-full bg-white py-20 sm:py-28 lg:py-32">
-          <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+          <div className="max-w-7xl mx-auto px-2 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             {/* Left: Text Content */}
             <div className="max-w-xl">
               <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight mb-6">

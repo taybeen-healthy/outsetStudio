@@ -19,7 +19,7 @@ export default function About({ data }) {
       aria-label="About Outset Studio"
       className="w-full bg-[#FAF7F2] lg:bg-white pt-8 sm:pt-24 lg:pt-28 pb-14 sm:pb-28 lg:pb-32 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
+      <div className="max-w-7xl mx-auto px-2">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           <div className="hidden lg:block lg:col-span-7 relative max-w-[520px] lg:max-w-none mx-auto lg:mx-0 pb-10 sm:pb-14 lg:pb-0 pr-4 sm:pr-8">
             <div className="relative w-full aspect-[5/4] max-w-[500px] overflow-hidden shadow-md">

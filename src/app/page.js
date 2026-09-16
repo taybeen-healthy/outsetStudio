@@ -44,7 +44,7 @@ export default function Home() {
         <Hero data={heroData} stats={statsData} />
       </div>
 
-      <div className="hidden lg:block relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 -mt-16">
+      <div className="hidden lg:block relative z-20 w-full max-w-7xl mx-auto px-2 -mt-16">
         <Stats data={statsData} />
       </div>
 
