@@ -51,7 +51,7 @@ export default function Navbar() {
           aria-label="Outset Studio Homepage"
         >
           <span
-            className="font-serif text-[17px] sm:text-[22px] tracking-[0.18em] font-bold sm:font-normal uppercase text-[#1a1a1a]"
+            className="font-serif text-[17px] sm:text-[22px] tracking-[0.18em] font-bold sm:font-normal uppercase text-white"
           >
             OUTSET
           </span>
@@ -80,7 +80,7 @@ export default function Navbar() {
             onClick={() => setShowVendor(true)}
             className="text-[10px] xl:text-xs tracking-[0.2em] uppercase font-normal text-neutral-200 border border-neutral-600/80 hover:border-white hover:bg-white hover:text-black px-5 xl:px-7 py-2.5 bg-black/20 transition-all duration-300 rounded-none font-sans cursor-pointer whitespace-nowrap"
           >
-            REGISTER VENDORS
+            REGISTER VENDOR
           </button>
           <button
             onClick={() => setShowContact(true)}
@@ -153,7 +153,7 @@ export default function Navbar() {
                   : "text-white border border-white/40 hover:bg-white hover:text-black"
               }`}
             >
-              REGISTER VENDORS
+              REGISTER VENDOR
             </button>
             <button
               onClick={() => {
