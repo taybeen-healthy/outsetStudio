@@ -49,13 +49,13 @@ export default function Navbar() {
           aria-label="Outset Studio Homepage"
         >
           <span
-            className={`font-serif text-[17px] sm:text-[22px] tracking-[0.18em] font-normal uppercase ${
+            className={`font-serif text-[17px] sm:text-[22px] tracking-[0.18em] font-bold sm:font-normal uppercase ${
               isHome ? "text-[#1a1a1a] lg:text-white" : "text-white"
             }`}
           >
             OUTSET
           </span>
-          <span className="font-serif text-[17px] sm:text-[22px] tracking-[0.18em] text-[#C0532C] font-normal uppercase">
+          <span className="font-serif text-[17px] sm:text-[22px] tracking-[0.18em] text-[#C0532C] font-bold sm:font-normal uppercase">
             STUDIO
           </span>
         </Link>

@@ -23,26 +23,26 @@ export default function Footer() {
             className="flex items-baseline tracking-[0.22em] w-fit focus:outline-none hover:opacity-70 transition-opacity cursor-pointer"
             aria-label="Outset Studio Homepage"
           >
-            <span className="font-serif text-[18px] tracking-[0.22em] text-[#B84E29] font-normal uppercase">
+            <span className="font-serif text-[18px] tracking-[0.22em] text-[#B84E29] font-bold uppercase">
               OUTSET
             </span>
-            <span className="font-serif text-[18px] tracking-[0.22em] text-white font-normal uppercase">
+            <span className="font-serif text-[18px] tracking-[0.22em] text-white font-bold uppercase">
               STUDIO
             </span>
           </Link>
-          <p className="font-sans text-[13px] text-neutral-400 font-light leading-relaxed mt-4 max-w-sm">
+          <p className="font-sans text-[13px] text-neutral-400 font-light leading-[1.8] mt-5 max-w-sm">
             Spatial design and architecture practice engaging permanence, volume, and material truth.
           </p>
-          <div className="flex flex-col gap-2 mt-6 font-sans text-[13px] text-neutral-300 font-light">
+          <div className="flex flex-col gap-3 mt-8 font-sans text-[13px] text-neutral-300 font-light">
             <a href="tel:9958544930" className="hover:text-white transition-colors">Tel: 9958544930</a>
             <a href="mailto:outsetstudio@gmail.com" className="hover:text-white transition-colors">Email: outsetstudio@gmail.com</a>
           </div>
-          <div className="grid grid-cols-2 gap-8 mt-8">
+          <div className="grid grid-cols-2 gap-8 mt-10">
             <div>
-              <h3 className="font-sans text-[11px] uppercase tracking-[0.18em] text-white font-medium mb-4">
+              <h3 className="font-sans text-[11px] uppercase tracking-[0.18em] text-white font-semibold mb-5">
                 QUICK LINKS
               </h3>
-              <nav className="flex flex-col space-y-2.5" aria-label="Footer navigation">
+              <nav className="flex flex-col space-y-3" aria-label="Footer navigation">
                 {quickLinks.map((link) => (
                   <Link
                     key={link.name}
@@ -55,10 +55,10 @@ export default function Footer() {
               </nav>
             </div>
             <div>
-              <h3 className="font-sans text-[11px] uppercase tracking-[0.18em] text-white font-medium mb-4">
+              <h3 className="font-sans text-[11px] uppercase tracking-[0.18em] text-white font-semibold mb-5">
                 SERVICES
               </h3>
-              <ul className="flex flex-col space-y-2.5">
+              <ul className="flex flex-col space-y-3">
                 {services.map((service) => (
                   <li
                     key={service}
@@ -70,8 +70,8 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <p className="font-sans text-[10px] tracking-[0.12em] uppercase text-neutral-500 font-light mt-10">
-            © 2026 Outset Studio. All rights reserved.
+          <p className="font-sans text-[10px] tracking-[0.12em] uppercase text-neutral-500 font-light mt-12">
+            © 2026 OUTSET STUDIO. ALL RIGHTS RESERVED.
           </p>
         </div>
 
