@@ -107,7 +107,7 @@ export default function StartProjectModal({ onClose }) {
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="relative w-full max-w-[860px] max-h-[100dvh] sm:max-h-[90vh] bg-[#FAF9F7] shadow-2xl flex flex-col overflow-hidden" style={{ scrollbarWidth: "none" }}>
+      <div className="relative w-full max-w-[860px] max-h-[100dvh] sm:max-h-[90vh] bg-[#FAF9F7] shadow-2xl flex flex-col overflow-hidden">
         {/* Dark Header */}
         <div className="bg-[#1a1a1a] px-5 sm:px-8 pt-4 sm:pt-5 pb-3 sm:pb-4 flex-shrink-0">
           <div className="flex items-center justify-between">
@@ -138,7 +138,7 @@ export default function StartProjectModal({ onClose }) {
         </div>
 
         {/* Progress Bar */}
-        <div className="px-5 sm:px-8 pt-4 sm:pt-5 pb-0 flex-shrink-0">
+        <div className="px-5 sm:px-8 pt-3 sm:pt-4 pb-0 flex-shrink-0">
           <div className="flex items-center gap-3 sm:gap-4">
             <div className="flex-1 flex gap-2">
               {Array.from({ length: totalSteps }).map((_, i) => (
@@ -157,18 +157,18 @@ export default function StartProjectModal({ onClose }) {
         </div>
 
         {/* Step Content */}
-        <div className="flex-1 overflow-y-auto overflow-x-hidden px-5 sm:px-8 py-5 sm:py-8 modal-scroll">
+        <div className="flex-1 px-5 sm:px-8 py-4 sm:py-6">
           {/* Step 1: Space Type */}
           {step === 1 && (
             <div>
-              <h2 className="font-serif italic text-[#1a1a1a] text-[26px] sm:text-[40px] leading-[1.15] tracking-tight mb-2">
+              <h2 className="font-serif italic text-[#1a1a1a] text-[26px] sm:text-[40px] leading-[1.15] tracking-tight mb-1 sm:mb-2">
                 What are you designing?
               </h2>
-              <p className="font-sans text-sm text-neutral-500 mb-6 sm:mb-8">
+              <p className="font-sans text-sm text-neutral-500 mb-4 sm:mb-6">
                 Select your commercial space type to get started.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                 {spaceTypes.map((t) => {
                   const active = form.spaceType === t.id;
                   return (
@@ -176,14 +176,14 @@ export default function StartProjectModal({ onClose }) {
                       key={t.id}
                       type="button"
                       onClick={() => setForm((f) => ({ ...f, spaceType: t.id }))}
-                      className={`relative text-left p-4 sm:p-5 border transition-all cursor-pointer ${
+                      className={`relative text-left p-3 sm:p-4 border transition-all cursor-pointer ${
                         active
                           ? "border-[#bf572b] bg-white"
                           : "border-neutral-200 bg-white hover:border-neutral-300"
                       }`}
                     >
                       <div className="flex items-center gap-3.5 sm:gap-4">
-                        <div className={`w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 flex items-center justify-center ${active ? "bg-[#fdf5f0]" : "bg-[#f0ebe5]"}`}>
+                        <div className={`w-9 h-9 sm:w-10 sm:h-10 flex-shrink-0 flex items-center justify-center ${active ? "bg-[#fdf5f0]" : "bg-[#f0ebe5]"}`}>
                           <SpaceIcon type={t.icon} active={active} />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -208,19 +208,19 @@ export default function StartProjectModal({ onClose }) {
           {/* Step 2: Size & Budget */}
           {step === 2 && (
             <div>
-              <h2 className="font-serif italic text-[#1a1a1a] text-[26px] sm:text-[40px] leading-[1.15] tracking-tight mb-2">
+              <h2 className="font-serif italic text-[#1a1a1a] text-[26px] sm:text-[40px] leading-[1.15] tracking-tight mb-1 sm:mb-2">
                 About your project
               </h2>
-              <p className="font-sans text-sm text-neutral-500 mb-6 sm:mb-8">
+              <p className="font-sans text-sm text-neutral-500 mb-4 sm:mb-5">
                 Pick approximate dimensions and budget so we can tailor the timeline.
               </p>
 
               {/* Size Section */}
-              <div className="mb-6 sm:mb-8">
-                <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-3">
+              <div className="mb-4 sm:mb-5">
+                <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-2 sm:mb-3">
                   1. APPROXIMATE SIZE
                 </label>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
                   {sizeOptions.map((s) => {
                     const active = form.size === s.value;
                     return (
@@ -228,7 +228,7 @@ export default function StartProjectModal({ onClose }) {
                         key={s.value}
                         type="button"
                         onClick={() => setForm((f) => ({ ...f, size: s.value }))}
-                        className={`relative text-left p-4 border transition-all cursor-pointer ${
+                        className={`relative text-left p-3 sm:p-4 border transition-all cursor-pointer ${
                           active
                             ? "border-[#bf572b] bg-white"
                             : "border-neutral-200 bg-white hover:border-neutral-300"
@@ -255,10 +255,10 @@ export default function StartProjectModal({ onClose }) {
 
               {/* Budget Section */}
               <div>
-                <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-3">
+                <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-2 sm:mb-3">
                   2. ESTIMATED BUDGET
                 </label>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
                   {budgetOptions.map((b) => {
                     const active = form.budget === b.value;
                     return (
@@ -266,7 +266,7 @@ export default function StartProjectModal({ onClose }) {
                         key={b.value}
                         type="button"
                         onClick={() => setForm((f) => ({ ...f, budget: b.value }))}
-                        className={`relative text-left p-4 border transition-all cursor-pointer ${
+                        className={`relative text-left p-3 sm:p-4 border transition-all cursor-pointer ${
                           active
                             ? "border-[#bf572b] bg-white"
                             : "border-neutral-200 bg-white hover:border-neutral-300"
@@ -296,16 +296,16 @@ export default function StartProjectModal({ onClose }) {
           {/* Step 3: Contact Info */}
           {step === 3 && (
             <div>
-              <h2 className="font-serif italic text-[#1a1a1a] text-[26px] sm:text-[40px] leading-[1.15] tracking-tight mb-2">
+              <h2 className="font-serif italic text-[#1a1a1a] text-[26px] sm:text-[40px] leading-[1.15] tracking-tight mb-1 sm:mb-2">
                 Where can we reach you?
               </h2>
-              <p className="font-sans text-sm text-neutral-500 mb-6 sm:mb-8">
+              <p className="font-sans text-sm text-neutral-500 mb-4 sm:mb-5">
                 We&apos;ll review your details and respond with initial ideas within 24 hours.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
                 <div>
-                  <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-2">
+                  <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
                     FULL NAME <span className="text-[#bf572b]">*</span>
                   </label>
                   <input
@@ -313,15 +313,15 @@ export default function StartProjectModal({ onClose }) {
                     value={form.name}
                     onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                     placeholder="Aarav Mehta"
-                    className="w-full h-12 sm:h-13 border border-neutral-200 bg-white px-4 text-sm text-[#1a1a1a] placeholder-neutral-300 font-sans focus:outline-none focus:border-[#bf572b] transition-colors"
+                    className="w-full h-11 sm:h-12 border border-neutral-200 bg-white px-4 text-sm text-[#1a1a1a] placeholder-neutral-300 font-sans focus:outline-none focus:border-[#bf572b] transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-2">
+                  <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
                     PHONE NUMBER <span className="text-[#bf572b]">*</span>
                   </label>
-                  <div className="flex h-12 sm:h-13 border border-neutral-200 bg-white focus-within:border-[#bf572b] transition-colors">
+                  <div className="flex h-11 sm:h-12 border border-neutral-200 bg-white focus-within:border-[#bf572b] transition-colors">
                     <div className="flex items-center gap-1 px-3 border-r border-neutral-200 bg-neutral-50">
                       <span className="text-sm text-[#1a1a1a] font-sans">+91</span>
                       <svg className="w-3.5 h-3.5 text-neutral-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -339,14 +339,14 @@ export default function StartProjectModal({ onClose }) {
                 </div>
 
                 <div>
-                  <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-2">
+                  <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
                     CITY OR LOCATION <span className="text-[#bf572b]">*</span>
                   </label>
                   <div className="relative">
                     <select
                       value={form.city}
                       onChange={(e) => setForm((f) => ({ ...f, city: e.target.value }))}
-                      className="w-full h-12 sm:h-13 border border-neutral-200 bg-white px-4 pr-8 text-sm text-[#1a1a1a] font-sans focus:outline-none focus:border-[#bf572b] appearance-none transition-colors cursor-pointer"
+                      className="w-full h-11 sm:h-12 border border-neutral-200 bg-white px-4 pr-8 text-sm text-[#1a1a1a] font-sans focus:outline-none focus:border-[#bf572b] appearance-none transition-colors cursor-pointer"
                     >
                       {cityOptions.map((c) => (
                         <option key={c} value={c}>{c}</option>
@@ -359,7 +359,7 @@ export default function StartProjectModal({ onClose }) {
                 </div>
 
                 <div>
-                  <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-2">
+                  <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
                     EMAIL ADDRESS <span className="text-neutral-400 font-normal">(optional)</span>
                   </label>
                   <input
@@ -367,7 +367,7 @@ export default function StartProjectModal({ onClose }) {
                     value={form.email}
                     onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                     placeholder="name@brand.com"
-                    className="w-full h-12 sm:h-13 border border-neutral-200 bg-white px-4 text-sm text-[#1a1a1a] placeholder-neutral-300 font-sans focus:outline-none focus:border-[#bf572b] transition-colors"
+                    className="w-full h-11 sm:h-12 border border-neutral-200 bg-white px-4 text-sm text-[#1a1a1a] placeholder-neutral-300 font-sans focus:outline-none focus:border-[#bf572b] transition-colors"
                   />
                 </div>
               </div>
@@ -376,7 +376,7 @@ export default function StartProjectModal({ onClose }) {
         </div>
 
         {/* Footer */}
-        <div className="border-t border-neutral-200 px-5 sm:px-8 py-4 sm:py-5 flex items-center justify-between flex-shrink-0 bg-[#FAF9F7]">
+        <div className="border-t border-neutral-200 px-5 sm:px-8 py-3 sm:py-4 flex items-center justify-between flex-shrink-0 bg-[#FAF9F7]">
           <button
             onClick={step === 1 ? onClose : () => setStep((s) => s - 1)}
             className="font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold text-neutral-500 hover:text-[#1a1a1a] transition-colors cursor-pointer"
