@@ -121,6 +121,14 @@ export default function OurWork({ data }) {
             No projects found for this filter.
           </p>
         </div>
+      ) : filteredProjects.length < 3 ? (
+        <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            {filteredProjects.map((project, i) =>
+              renderCard(project, i, "w-full")
+            )}
+          </div>
+        </div>
       ) : (
         <div className="w-full relative px-5 sm:px-10 lg:px-14 max-w-7xl mx-auto overflow-hidden">
           <div
