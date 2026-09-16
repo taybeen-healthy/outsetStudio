@@ -4,11 +4,13 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ContactModal from "./ContactModal";
+import VendorModal from "./VendorModal";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showContact, setShowContact] = useState(false);
+  const [showVendor, setShowVendor] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
 
@@ -25,7 +27,6 @@ export default function Navbar() {
     { name: "WHAT WE DO", href: "/what-we-do" },
     { name: "OUR WORK", href: isHome ? "#our-work" : "/#our-work" },
     { name: "INDUSTRIES", href: isHome ? "#industries" : "/#industries" },
-    { name: "REGISTER VENDORS", href: "/register-vendors" },
   ];
 
   return (
@@ -42,7 +43,7 @@ export default function Navbar() {
             }`
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 flex items-center justify-between py-5 sm:py-6">
+      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 flex items-center justify-between py-5 sm:py-6">
         <Link
           href="/"
           className="group flex items-baseline tracking-[0.18em] focus:outline-none hover:opacity-70 transition-opacity cursor-pointer"
@@ -75,10 +76,16 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-3 xl:gap-4">
+          <button
+            onClick={() => setShowVendor(true)}
+            className="text-[10px] xl:text-xs tracking-[0.2em] uppercase font-normal text-neutral-200 border border-neutral-600/80 hover:border-white hover:bg-white hover:text-black px-5 xl:px-7 py-2.5 bg-black/20 transition-all duration-300 rounded-none font-sans cursor-pointer whitespace-nowrap"
+          >
+            REGISTER VENDORS
+          </button>
           <button
             onClick={() => setShowContact(true)}
-            className="inline-block text-xs tracking-[0.2em] uppercase font-normal text-neutral-200 border border-neutral-600/80 hover:border-white hover:bg-white hover:text-black px-7 py-2.5 bg-black/20 transition-all duration-300 rounded-none font-sans cursor-pointer"
+            className="text-[10px] xl:text-xs tracking-[0.2em] uppercase font-normal text-neutral-200 border border-neutral-600/80 hover:border-white hover:bg-white hover:text-black px-5 xl:px-7 py-2.5 bg-black/20 transition-all duration-300 rounded-none font-sans cursor-pointer whitespace-nowrap"
           >
             CONTACT
           </button>
@@ -139,6 +146,19 @@ export default function Navbar() {
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
+                setShowVendor(true);
+              }}
+              className={`text-center text-xs tracking-[0.2em] uppercase font-normal px-6 py-2.5 mt-4 transition-all rounded-none cursor-pointer ${
+                isHome
+                  ? "text-[#1a1a1a] border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white"
+                  : "text-white border border-white/40 hover:bg-white hover:text-black"
+              }`}
+            >
+              REGISTER VENDORS
+            </button>
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
                 setShowContact(true);
               }}
               className={`text-center text-xs tracking-[0.2em] uppercase font-normal px-6 py-2.5 mt-4 transition-all rounded-none cursor-pointer ${
@@ -153,6 +173,7 @@ export default function Navbar() {
         </div>
       )}
       {showContact && <ContactModal onClose={() => setShowContact(false)} />}
+      {showVendor && <VendorModal onClose={() => setShowVendor(false)} />}
     </header>
   );
 }

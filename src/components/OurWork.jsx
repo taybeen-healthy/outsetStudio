@@ -140,9 +140,9 @@ export default function OurWork({ data }) {
         </div>
       ) : (!isMobile && filteredProjects.length < 3) || (isMobile && filteredProjects.length < 2) ? (
         <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4">
             {filteredProjects.map((project, i) =>
-              renderCard(project, i, "w-full")
+              renderCard(project, i, "w-[70vw] sm:w-[360px] lg:w-[420px] flex-shrink-0")
             )}
           </div>
         </div>

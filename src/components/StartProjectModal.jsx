@@ -83,6 +83,7 @@ function SpaceIcon({ type, active }) {
 
 export default function StartProjectModal({ onClose }) {
   const [step, setStep] = useState(1);
+  const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
     spaceType: "",
     size: "",
@@ -116,7 +117,7 @@ export default function StartProjectModal({ onClose }) {
               <span className="font-sans text-[11px] sm:text-xs tracking-[0.18em] uppercase text-white font-medium whitespace-nowrap">
                 OUTSET STUDIO
               </span>
-              {step === 1 && (
+              {!submitted && step === 1 && (
                 <>
                   <span className="w-1 h-1 bg-white/40 rounded-full mx-0.5 flex-shrink-0" />
                   <span className="font-sans text-[11px] sm:text-xs text-white/50 whitespace-nowrap">
@@ -137,24 +138,47 @@ export default function StartProjectModal({ onClose }) {
           </div>
         </div>
 
-        {/* Progress Bar */}
-        <div className="px-5 sm:px-8 pt-3 sm:pt-4 pb-0 flex-shrink-0">
-          <div className="flex items-center gap-3 sm:gap-4">
-            <div className="flex-1 flex gap-2">
-              {Array.from({ length: totalSteps }).map((_, i) => (
-                <div
-                  key={i}
-                  className={`h-[3px] flex-1 transition-colors duration-500 ${
-                    step > i ? "bg-[#bf572b]" : "bg-neutral-200"
-                  }`}
-                />
-              ))}
+        {submitted ? (
+          <div className="flex-1 px-5 sm:px-8 py-10 sm:py-14 text-center flex flex-col items-center justify-center">
+            <div className="w-14 h-14 mx-auto flex items-center justify-center bg-[#bf572b] rounded-full">
+              <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
             </div>
-            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.14em] uppercase text-neutral-500 font-medium flex-shrink-0">
-              STEP {step} OF {totalSteps}
-            </span>
+            <h2 className="font-serif italic text-[#1a1a1a] text-[30px] sm:text-[40px] leading-tight tracking-tight mt-6 mb-2">
+              Thank You, {form.name}
+            </h2>
+            <p className="font-sans text-sm sm:text-[15px] text-neutral-500 leading-relaxed max-w-md mx-auto mb-8">
+              We&apos;ve received your project details. Our team will reach out
+              within 24 hours with initial ideas tailored to your space.
+            </p>
+            <button
+              onClick={onClose}
+              className="h-12 px-10 font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold bg-[#bf572b] text-white hover:bg-[#a34320] transition-all cursor-pointer"
+            >
+              DONE
+            </button>
           </div>
-        </div>
+        ) : (
+          <>
+            {/* Progress Bar */}
+            <div className="px-5 sm:px-8 pt-3 sm:pt-4 pb-0 flex-shrink-0">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="flex-1 flex gap-2">
+                  {Array.from({ length: totalSteps }).map((_, i) => (
+                    <div
+                      key={i}
+                      className={`h-[3px] flex-1 transition-colors duration-500 ${
+                        step > i ? "bg-[#bf572b]" : "bg-neutral-200"
+                      }`}
+                    />
+                  ))}
+                </div>
+                <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.14em] uppercase text-neutral-500 font-medium flex-shrink-0">
+                  STEP {step} OF {totalSteps}
+                </span>
+              </div>
+            </div>
 
         {/* Step Content */}
         <div className="flex-1 px-5 sm:px-8 py-4 sm:py-6">
@@ -386,7 +410,7 @@ export default function StartProjectModal({ onClose }) {
           <button
             onClick={() => {
               if (step < totalSteps) setStep((s) => s + 1);
-              else onClose();
+              else setSubmitted(true);
             }}
             disabled={!canNext}
             className={`h-11 sm:h-12 px-8 sm:px-12 font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold transition-all ${
@@ -396,6 +420,8 @@ export default function StartProjectModal({ onClose }) {
             {step === totalSteps ? "SUBMIT" : "CONTINUE"}
           </button>
         </div>
+        </>
+      )}
       </div>
     </div>
   );
