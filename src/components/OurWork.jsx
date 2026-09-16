@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ourWorkData } from "@/lib/data";
@@ -12,6 +12,14 @@ export default function OurWork({ data }) {
 
   const [activeFilter, setActiveFilter] = useState("ALL");
   const [paused, setPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const filteredProjects = projects.filter((p) => {
     if (activeFilter === "ALL") return true;
