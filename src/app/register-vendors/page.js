@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
 const serviceOptions = [
@@ -22,13 +22,36 @@ export default function RegisterVendorsPage() {
   const [form, setForm] = useState({
     vendorName: "",
     gstNumber: "",
-    service: "",
+    services: [],
   });
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const handleChange = (e) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  const canSubmit = form.vendorName && form.gstNumber && form.service;
+  const toggleService = (svc) =>
+    setForm((f) => ({
+      ...f,
+      services: f.services.includes(svc)
+        ? f.services.filter((s) => s !== svc)
+        : [...f.services, svc],
+    }));
+
+  const removeService = (svc) =>
+    setForm((f) => ({ ...f, services: f.services.filter((s) => s !== svc) }));
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const canSubmit = form.vendorName && form.gstNumber && form.services.length > 0;
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -94,24 +117,76 @@ export default function RegisterVendorsPage() {
 
             <div>
               <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-2">
-                SERVICE PROVIDED <span className="text-[#C0532C]">*</span>
+                SERVICES PROVIDED <span className="text-[#C0532C]">*</span>
               </label>
-              <div className="relative">
-                <select
-                  name="service"
-                  value={form.service}
-                  onChange={handleChange}
-                  className="w-full h-12 sm:h-13 border border-neutral-200 px-4 pr-10 text-sm text-neutral-700 font-sans bg-white focus:outline-none focus:border-[#C0532C] appearance-none transition-colors rounded-none cursor-pointer"
+
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  type="button"
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  className="w-full h-12 sm:h-13 border border-neutral-200 px-4 pr-10 text-left text-sm font-sans bg-white focus:outline-none focus:border-[#C0532C] transition-colors rounded-none cursor-pointer flex items-center"
                 >
-                  <option value="">Select the service you provide...</option>
-                  {serviceOptions.map((s) => (
-                    <option key={s} value={s}>{s}</option>
-                  ))}
-                </select>
-                <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400 pointer-events-none" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <span className={form.services.length > 0 ? "text-neutral-800" : "text-neutral-300"}>
+                    {form.services.length > 0
+                      ? `${form.services.length} service${form.services.length > 1 ? "s" : ""} selected`
+                      : "Select the services you provide..."}
+                  </span>
+                </button>
+                <svg className={`absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400 pointer-events-none transition-transform ${dropdownOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
+
+                {dropdownOpen && (
+                  <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-neutral-200 shadow-lg max-h-60 overflow-y-auto z-50">
+                    {serviceOptions.map((svc) => {
+                      const checked = form.services.includes(svc);
+                      return (
+                        <button
+                          key={svc}
+                          type="button"
+                          onClick={() => toggleService(svc)}
+                          className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-neutral-50 transition-colors cursor-pointer border-b border-neutral-100 last:border-0"
+                        >
+                          <span
+                            className={`w-4 h-4 flex-shrink-0 flex items-center justify-center border rounded-sm transition-colors ${
+                              checked ? "bg-[#C0532C] border-[#C0532C]" : "border-neutral-300"
+                            }`}
+                          >
+                            {checked && (
+                              <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                              </svg>
+                            )}
+                          </span>
+                          <span className="text-sm font-sans text-neutral-700">{svc}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
+
+              {form.services.length > 0 && (
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {form.services.map((svc) => (
+                    <span
+                      key={svc}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#C0532C] text-white text-[12px] sm:text-[13px] font-sans font-medium rounded-none"
+                    >
+                      {svc}
+                      <button
+                        type="button"
+                        onClick={() => removeService(svc)}
+                        className="w-4 h-4 flex items-center justify-center hover:bg-white/20 rounded-sm transition-colors cursor-pointer"
+                      >
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
