@@ -18,7 +18,7 @@ export default function CTABanner() {
         <div className="hidden lg:block absolute top-0 right-0 w-32 sm:w-48 h-28 sm:h-36 bg-[#c96234] pointer-events-none" />
         <div className="hidden lg:block absolute bottom-0 left-0 w-32 sm:w-48 h-28 sm:h-36 bg-[#c96234] pointer-events-none" />
 
-        <div className="relative z-10 flex flex-col items-start lg:items-center text-left lg:text-center gap-4 lg:gap-5 px-5 sm:px-12 max-w-7xl mx-auto lg:max-w-none">
+        <div className="relative z-10 section-container flex flex-col items-start lg:items-center text-left lg:text-center gap-4 lg:gap-5">
           <h2 className="font-serif font-normal text-white text-[32px] sm:text-4xl lg:text-[50px] leading-[1.2] tracking-tight max-w-[280px] sm:max-w-none">
             Ready to Transform Your Space?
           </h2>

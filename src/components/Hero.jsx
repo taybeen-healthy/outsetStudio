@@ -22,7 +22,7 @@ export default function Hero({ data, stats }) {
   return (
     <>
       <main className="relative z-10 flex-1 flex flex-col items-start lg:items-center justify-center px-5 sm:px-10 lg:px-14 pt-6 pb-10 sm:py-24 lg:py-28 text-left lg:text-center">
-        <div className="max-w-5xl mx-auto flex flex-col items-start lg:items-center w-full">
+        <div className="max-w-7xl mx-auto flex flex-col items-start lg:items-center w-full">
           <h1 className="font-serif text-[#1a1a1a] lg:text-white text-[34px] sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[78px] leading-[1.18] font-normal tracking-tight max-w-5xl">
             {headline.prefix}{" "}
             <span className="italic text-[#C0532C] font-normal font-serif">

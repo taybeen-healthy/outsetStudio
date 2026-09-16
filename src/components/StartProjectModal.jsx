@@ -107,7 +107,7 @@ export default function StartProjectModal({ onClose }) {
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="relative w-full max-w-[860px] max-h-[100dvh] sm:max-h-[90vh] bg-[#FAF9F7] shadow-2xl flex flex-col overflow-hidden">
+      <div className="relative w-full max-w-[860px] max-h-[100dvh] sm:max-h-[90vh] bg-[#FAF9F7] shadow-2xl flex flex-col overflow-hidden" style={{ scrollbarWidth: "none" }}>
         {/* Dark Header */}
         <div className="bg-[#1a1a1a] px-5 sm:px-8 pt-4 sm:pt-5 pb-3 sm:pb-4 flex-shrink-0">
           <div className="flex items-center justify-between">
@@ -157,7 +157,7 @@ export default function StartProjectModal({ onClose }) {
         </div>
 
         {/* Step Content */}
-        <div className="flex-1 overflow-y-auto px-5 sm:px-8 py-5 sm:py-8">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden px-5 sm:px-8 py-5 sm:py-8 modal-scroll">
           {/* Step 1: Space Type */}
           {step === 1 && (
             <div>
