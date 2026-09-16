@@ -54,7 +54,7 @@ export default function RegisterVendorsPage() {
   const canSubmit = form.vendorName && form.gstNumber && form.services.length > 0;
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="h-screen h-dvh bg-white flex flex-col overflow-hidden">
       {/* Header */}
       <div className="bg-[#1a1a1a] px-5 sm:px-8 pt-4 sm:pt-5 pb-3 sm:pb-4">
         <div className="flex items-center justify-between max-w-[720px] mx-auto">
@@ -77,7 +77,7 @@ export default function RegisterVendorsPage() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 px-5 sm:px-8 py-6 sm:py-10 pb-16 sm:pb-10">
+      <div className="flex-1 overflow-y-auto px-5 sm:px-8 py-6 sm:py-10">
         <div className="max-w-[720px] mx-auto">
           <h1 className="font-serif text-[#1a1a1a] text-[28px] sm:text-[36px] font-normal leading-tight mb-2">
             Vendor Registration
