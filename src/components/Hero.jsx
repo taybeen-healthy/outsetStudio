@@ -29,7 +29,7 @@ export default function Hero({ data, stats }) {
               {headline.highlight}
             </span>
             <br />
-            {headline.middle} {headline.suffix}
+            {headline.middle} Business-Driving<br className="sm:hidden" /> Experiences.
           </h1>
 
           <p className="mt-4 sm:mt-8 text-[14px] sm:text-[15px] md:text-base text-neutral-500 lg:text-neutral-400 font-normal lg:font-light max-w-2xl leading-[1.7] tracking-normal font-sans">
