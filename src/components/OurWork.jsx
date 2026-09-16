@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { ourWorkData } from "@/lib/data";
 
@@ -11,14 +11,6 @@ export default function OurWork({ data }) {
 
   const [activeFilter, setActiveFilter] = useState("ALL");
   const [paused, setPaused] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 640);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
 
   const filteredProjects = projects.filter((p) => {
     if (activeFilter === "ALL") return true;
@@ -49,7 +41,7 @@ export default function OurWork({ data }) {
             src={project.image}
             alt={project.title}
             fill
-            sizes="(max-width: 640px) 85vw, 420px"
+            sizes="(max-width: 640px) 70vw, 420px"
             className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
           />
         </div>
@@ -87,7 +79,7 @@ export default function OurWork({ data }) {
     >
       <style>{`@keyframes outset-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }`}</style>
 
-      <div className="max-w-7xl mx-auto px-2">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 lg:gap-8 mb-6 sm:mb-16">
           <div>
             <h2 className="font-serif font-normal text-[#1a1a1a] text-[28px] sm:text-4xl lg:text-[44px] xl:text-[48px] leading-[1.2] tracking-tight">
@@ -124,33 +116,25 @@ export default function OurWork({ data }) {
       </div>
 
       {filteredProjects.length === 0 ? (
-        <div className="max-w-7xl mx-auto px-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
           <p className="w-full text-center font-sans text-sm text-neutral-500 py-16">
             No projects found for this filter.
           </p>
         </div>
-      ) : (isMobile && filteredProjects.length < 2) || (!isMobile && filteredProjects.length < 3) ? (
-        <div className="max-w-7xl mx-auto px-2">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-            {filteredProjects.map((project, i) =>
-              renderCard(project, i, "w-full")
-            )}
-          </div>
-        </div>
       ) : (
-        <div className="w-full relative px-2 max-w-7xl mx-auto overflow-hidden">
+        <div className="w-full relative max-w-7xl mx-auto overflow-hidden">
           <div
             key={activeFilter}
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
-            className="flex w-max pt-2 pb-6 will-change-transform"
+            className="flex w-max pt-2 pb-6 pl-2 will-change-transform"
             style={{
               animation: `outset-marquee ${marqueeDuration}s linear infinite`,
               animationPlayState: paused ? "paused" : "running",
             }}
           >
             {marqueeProjects.map((project, i) =>
-              renderCard(project, i, "w-[85vw] sm:w-[360px] lg:w-[420px] pr-4 sm:pr-6 lg:pr-8")
+              renderCard(project, i, "w-[70vw] sm:w-[360px] lg:w-[420px] pr-3 sm:pr-6 lg:pr-8")
             )}
           </div>
         </div>

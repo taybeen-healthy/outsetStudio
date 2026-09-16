@@ -20,8 +20,8 @@ import {
 
 export default function Home() {
   return (
-    <div className="relative w-full bg-[#FAF7F2] lg:bg-white overflow-x-hidden font-sans select-none">
-      <div className="relative lg:min-h-screen flex flex-col justify-between bg-[#FAF7F2] lg:bg-transparent">
+      <div className="relative w-full bg-[#FAF7F2] lg:bg-white overflow-x-hidden font-sans select-none">
+        <div className="relative lg:min-h-screen flex flex-col justify-between bg-[#FAF7F2] lg:bg-transparent overflow-hidden">
         <div className="hidden lg:block absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image
             src={heroData?.backgroundImage ?? "/image1.jpg"}
@@ -44,7 +44,7 @@ export default function Home() {
         <Hero data={heroData} stats={statsData} />
       </div>
 
-      <div className="hidden lg:block relative z-20 w-full max-w-7xl mx-auto px-2 -mt-16">
+      <div className="hidden lg:block relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 -mt-16">
         <Stats data={statsData} />
       </div>
 

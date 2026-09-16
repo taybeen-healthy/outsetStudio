@@ -29,7 +29,7 @@ export default function HowWeWork({ data }) {
       aria-label="How We Work"
       className="w-full bg-[#FAF7F2] lg:bg-[#F7F6F2] py-10 sm:py-24 lg:py-28 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-2">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
         <div className="text-left lg:text-center mb-6 sm:mb-16 lg:mb-20">
           <h2 className="font-serif font-normal text-[#1a1a1a] text-[32px] sm:text-4xl lg:text-[46px] leading-tight tracking-tight">
             {title}
