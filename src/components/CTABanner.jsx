@@ -38,7 +38,7 @@ export default function CTABanner() {
             </button>
             <Link
               href="#our-work"
-              className="lg:hidden w-full h-12 px-7 flex items-center justify-center text-[11px] tracking-[0.18em] uppercase font-medium text-white border border-white/70 bg-transparent hover:bg-white hover:text-[#bf572b] transition-all duration-300 rounded-none"
+              className="lg:hidden w-full h-12 px-7 flex items-center justify-center text-[11px] tracking-[0.18em] uppercase font-medium text-white border border-white/70 bg-transparent hover:bg-white hover:text-[#bf572b] transition-all duration-300 rounded-none cursor-pointer"
             >
               Explore Our Work
             </Link>

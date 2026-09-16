@@ -14,7 +14,7 @@ export default function NotFound() {
       </p>
       <Link
         href="/"
-        className="border border-white/60 hover:border-white px-8 py-3 text-xs tracking-[0.2em] uppercase text-white bg-transparent hover:bg-white/10 transition-colors rounded-none"
+        className="border border-white/60 hover:border-white px-8 py-3 text-xs tracking-[0.2em] uppercase text-white bg-transparent hover:bg-white/10 transition-colors rounded-none cursor-pointer"
       >
         Return to Outset
       </Link>

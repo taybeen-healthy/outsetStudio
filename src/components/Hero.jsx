@@ -50,7 +50,7 @@ export default function Hero({ data, stats }) {
                 <Link
                   key={action.label}
                   href={action.href}
-                  className="group w-full lg:w-auto h-12 lg:h-[46px] px-6 lg:px-7 flex items-center justify-center gap-2.5 text-center border border-[#C9C4BC] lg:border-neutral-700 bg-white lg:bg-[#0e0f11]/80 hover:border-[#1a1a1a] lg:hover:border-white lg:hover:bg-white lg:hover:text-black text-[#1a1a1a] lg:text-white font-sans font-medium text-[11px] lg:text-xs tracking-[0.2em] uppercase whitespace-nowrap rounded-none transition-all duration-300"
+                  className="group w-full lg:w-auto h-12 lg:h-[46px] px-6 lg:px-7 flex items-center justify-center gap-2.5 text-center border border-[#C9C4BC] lg:border-neutral-700 bg-white lg:bg-[#0e0f11]/80 hover:border-[#1a1a1a] lg:hover:border-white lg:hover:bg-white lg:hover:text-black text-[#1a1a1a] lg:text-white font-sans font-medium text-[11px] lg:text-xs tracking-[0.2em] uppercase whitespace-nowrap rounded-none transition-all duration-300 cursor-pointer"
                 >
                   <span>{action.label}</span>
                 </Link>

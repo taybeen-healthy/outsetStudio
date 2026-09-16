@@ -59,7 +59,7 @@ export default function WhatWeDoPage() {
               <div className="mt-9 sm:mt-11">
                 <Link
                   href="/#our-work"
-                  className="inline-flex items-center justify-center px-8 py-3 text-sm tracking-wider uppercase text-white border border-white/80 hover:border-white bg-transparent hover:bg-white hover:text-[#0c0d0e] transition-all duration-300 rounded-none"
+                  className="inline-flex items-center justify-center px-8 py-3 text-sm tracking-wider uppercase text-white border border-white/80 hover:border-white bg-transparent hover:bg-white hover:text-[#0c0d0e] transition-all duration-300 rounded-none cursor-pointer"
                 >
                   Explore Our Work
                 </Link>

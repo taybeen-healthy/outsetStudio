@@ -44,7 +44,7 @@ export default function Home() {
         <Hero data={heroData} stats={statsData} />
       </div>
 
-      <div className="hidden lg:block relative z-20 w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-14 -mt-16">
+      <div className="hidden lg:block relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 -mt-16">
         <Stats data={statsData} />
       </div>
 
@@ -63,7 +63,7 @@ export default function Home() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 group"
+        className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 group cursor-pointer"
       >
         <span className="absolute inset-0 bg-[#25D366] animate-ping opacity-20 rounded-full" />
         <span className="relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] hover:bg-[#20bd5a] rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:shadow-[0_6px_28px_rgba(37,211,102,0.55)] transition-all duration-300 group-hover:scale-110">

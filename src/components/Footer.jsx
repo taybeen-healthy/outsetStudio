@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="lg:hidden">
           <Link
             href="/"
-            className="flex items-baseline tracking-[0.22em] w-fit focus:outline-none hover:opacity-70 transition-opacity"
+            className="flex items-baseline tracking-[0.22em] w-fit focus:outline-none hover:opacity-70 transition-opacity cursor-pointer"
             aria-label="Outset Studio Homepage"
           >
             <span className="font-serif text-[18px] tracking-[0.22em] text-[#B84E29] font-normal uppercase">
@@ -47,7 +47,7 @@ export default function Footer() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="font-sans text-[13px] text-neutral-400 hover:text-white transition-colors font-light"
+                    className="font-sans text-[13px] text-neutral-400 hover:text-white transition-colors font-light cursor-pointer"
                   >
                     {link.name}
                   </Link>
@@ -80,7 +80,7 @@ export default function Footer() {
             <div className="md:col-span-6 lg:col-span-6 flex flex-col">
               <Link
                 href="/"
-                className="flex items-baseline w-fit focus:outline-none group hover:opacity-70 transition-opacity"
+                className="flex items-baseline w-fit focus:outline-none group hover:opacity-70 transition-opacity cursor-pointer"
                 aria-label="Outset Studio Homepage"
               >
                 <span className="font-serif text-xl sm:text-2xl tracking-[0.16em] text-[#B84E29] font-normal uppercase">
@@ -149,7 +149,7 @@ export default function Footer() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="font-sans text-xs sm:text-sm text-neutral-300 hover:text-white transition-colors font-light"
+                    className="font-sans text-xs sm:text-sm text-neutral-300 hover:text-white transition-colors font-light cursor-pointer"
                   >
                     {link.name}
                   </Link>
@@ -179,11 +179,11 @@ export default function Footer() {
               &copy; 2026 Outset Studio. All rights reserved.
             </p>
             <div className="flex items-center gap-2.5 text-xs text-neutral-500 font-light">
-              <a href="#" className="hover:text-neutral-300 transition-colors">
+              <a href="#" className="hover:text-neutral-300 transition-colors cursor-pointer">
                 Terms and conditions
               </a>
               <span>&middot;</span>
-              <a href="#" className="hover:text-neutral-300 transition-colors">
+              <a href="#" className="hover:text-neutral-300 transition-colors cursor-pointer">
                 Privacy Policy
               </a>
             </div>
