@@ -194,7 +194,7 @@ export const ourWorkData = {
       titleItalic: "Baksh Cafe",
       subtitle:
         "A thoughtfully crafted café experience where distinctive interiors, warm atmospheres, and memorable moments come together to create a space people want to return to.",
-      image: "/image31.png",
+      image: "/image39.png",
       location: "GURUGRAM",
       specs: {
         projectName: "SARDAR JI BAKSH CAFE",
@@ -213,7 +213,7 @@ export const ourWorkData = {
           title: "Natural & Textured",
           description:
             "Fluted white oak millwork, hand-fired Rajasthan terracotta tile, unlacquered brass, and breathable lime wash plaster.",
-          image: "/image36.png",
+          image: "/image40.png",
         },
         palette: {
           subtitle: "02 // COLOUR PALETTE",
@@ -231,14 +231,14 @@ export const ourWorkData = {
           title: "Warm & Comfortable",
           description:
             "Custom 2700K hand-blown amber glass pendants casting warm luminescence across curved acoustic terracotta walls.",
-          image: "/image10.jpg",
+          image: "/image41.png",
         },
         furniture: {
           subtitle: "04 // FURNITURE & DETAILING",
           title: "Simple & Custom",
           description:
             "Custom wooden furniture, comfortable seating, and handcrafted tables bring warmth and character to the café.",
-          image: "/image12.jpg",
+          image: "/image42.png",
         },
       },
       spatialExperience: [
@@ -263,31 +263,31 @@ export const ourWorkData = {
       ],
       galleryPlates: {
         plate1: {
-          image: "/image31.png",
-          index: "INDEX: ARCH-001-MAIN",
+          image: "/image43.png",
+          index: "INDEX: ARCH-081-MAIN",
           caption: "NATURAL DIURNAL PENETRATION",
         },
         plate2: {
-          image: "/image1.jpg",
-          index: "INDEX: ARCH-002-LUX",
+          image: "/image44.png",
+          index: "INDEX: ARCH-082-LUX",
           caption: "2700K EVENING GLOW",
         },
         plate3: {
-          image: "/image14.jpg",
-          index: "INDEX: ARCH-003-FURN",
+          image: "/image45.png",
+          index: "INDEX: ARCH-083-FURN",
           caption: "TRAVERTINE & COGNAC LEATHER",
         },
         plate4: {
-          image: "/image36.png",
-          caption: "ARCH-004-MAT • TACTILE STUDY",
+          image: "/image46.jpg",
+          caption: "ARCH-084-MAT • TACTILE STUDY",
         },
         plate5: {
-          image: "/image35.png",
-          caption: "ARCH-005-INT • FLUTED GLAZING",
+          image: "/image47.jpg",
+          caption: "ARCH-085-INT • FLUTED GLAZING",
         },
         plate6: {
-          image: "/image11.jpg",
-          caption: "ARCH-006-EXT • STREET VERANDAH",
+          image: "/image48.jpg",
+          caption: "ARCH-086-EXT • STREET VERANDAH",
         },
       },
     },

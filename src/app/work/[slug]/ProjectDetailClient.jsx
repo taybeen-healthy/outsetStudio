@@ -8,12 +8,20 @@ import Footer from "@/components/Footer";
 export default function ProjectDetailClient({ project, nextProject }) {
   const router = useRouter();
 
+  const handleBack = () => {
+    if (typeof window !== "undefined" && document.referrer && document.referrer.includes(window.location.host)) {
+      router.back();
+    } else {
+      router.push("/#our-work");
+    }
+  };
+
   return (
     <div className="relative w-full bg-[#FAF7F2] text-[#1a1a1a] min-h-screen font-sans select-none overflow-x-hidden">
-      <header className="w-full border-b border-neutral-200/80 bg-[#FAF7F2] sticky top-0 z-30 animate-slide-up">
+      <header className="w-full border-b border-neutral-200/80 bg-[#FAF7F2]/95 backdrop-blur-sm sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 h-14 flex items-center justify-between">
           <button
-            onClick={() => router.back()}
+            onClick={handleBack}
             className="inline-flex items-center gap-2 font-sans text-[11px] tracking-[0.2em] uppercase font-medium text-neutral-600 hover:text-[#1a1a1a] transition-colors cursor-pointer"
           >
             <span>&larr;</span>
@@ -193,7 +201,7 @@ export default function ProjectDetailClient({ project, nextProject }) {
 
         <div className="pt-12 sm:pt-16 pb-4 border-t border-neutral-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-sans text-xs tracking-[0.2em] uppercase font-medium">
           <button
-            onClick={() => router.back()}
+            onClick={handleBack}
             className="text-neutral-700 hover:text-[#1a1a1a] transition-colors cursor-pointer inline-flex items-center gap-2"
           >
             <span>&larr;</span>
