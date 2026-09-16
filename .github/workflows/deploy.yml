@@ -58,6 +58,9 @@ jobs:
             npm run build
             chmod -R 755 /var/www/outsetStudio
             
+            # Auto-start pm2 on VPS reboot
+            pm2 startup systemd -u $USER --hp $HOME 2>/dev/null || true
+            
             # Restart ONLY outset-studio process without touching other services
             pm2 delete outset-studio 2>/dev/null || true
             pm2 start node_modules/next/dist/bin/next --name "outset-studio" -- start -p 3004
