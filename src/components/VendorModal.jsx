@@ -51,7 +51,13 @@ export default function VendorModal({ onClose }) {
   const updatePos = useCallback(() => {
     if (btnRef.current) {
       const r = btnRef.current.getBoundingClientRect();
-      setDropdownPos({ top: r.bottom + 4, left: r.left, width: r.width });
+      const spaceBelow = window.innerHeight - r.bottom;
+      const dropdownHeight = 320;
+      if (spaceBelow < dropdownHeight && r.top > dropdownHeight) {
+        setDropdownPos({ top: r.top - dropdownHeight - 4, left: r.left, width: r.width });
+      } else {
+        setDropdownPos({ top: r.bottom + 4, left: r.left, width: r.width });
+      }
     }
   }, []);
 
@@ -217,37 +223,38 @@ export default function VendorModal({ onClose }) {
                     {errors.vendorName && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.vendorName}</p>}
                   </div>
 
-                  <div>
-                    <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
-                      CONTACT NUMBER <span className="text-[#C0532C]">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={form.phone}
-                      onChange={handleChange}
-                      maxLength={10}
-                      placeholder="e.g. 98765 43210"
-                      pattern="[0-9]*"
-                      inputMode="numeric"
-                      className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.phone ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
-                    />
-                    {errors.phone && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.phone}</p>}
-                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div>
+                      <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
+                        EMAIL ADDRESS <span className="text-[#C0532C]">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={form.email}
+                        onChange={handleChange}
+                        placeholder="e.g. contact@apexwoodworks.com"
+                        className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.email ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
+                      />
+                      {errors.email && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.email}</p>}
+                    </div>
 
-                  <div>
-                    <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
-                      EMAIL ADDRESS <span className="text-[#C0532C]">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={form.email}
-                      onChange={handleChange}
-                      placeholder="e.g. vendor@company.com"
-                      className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.email ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
-                    />
-                    {errors.email && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.email}</p>}
+                    <div>
+                      <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
+                        PHONE NUMBER <span className="text-[#C0532C]">*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={form.phone}
+                        onChange={handleChange}
+                        maxLength={10}
+                        placeholder="e.g. +91 98765 43210"
+                        inputMode="numeric"
+                        className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.phone ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
+                      />
+                      {errors.phone && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.phone}</p>}
+                    </div>
                   </div>
 
                   <div>
@@ -267,7 +274,7 @@ export default function VendorModal({ onClose }) {
 
                   <div>
                     <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
-                      SERVICES PROVIDED <span className="text-[#C0532C]">*</span>
+                      SERVICE PROVIDED <span className="text-[#C0532C]">*</span>
                     </label>
 
                     <div className="relative">
@@ -326,19 +333,19 @@ export default function VendorModal({ onClose }) {
 
             {/* Fixed Footer */}
             <div className="border-t border-neutral-200 px-5 sm:px-8 py-4 sm:py-5 flex-shrink-0 bg-[#FAF9F7]">
-              <div className="max-w-[720px] mx-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+              <div className="max-w-[720px] mx-auto flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                <button
+                  onClick={onClose}
+                  className="h-12 w-full sm:w-auto sm:px-8 border border-neutral-300 font-sans text-[11px] tracking-[0.14em] uppercase font-semibold text-neutral-700 hover:bg-neutral-100 transition-all cursor-pointer"
+                >
+                  CANCEL
+                </button>
                 <button
                   onClick={handleSubmit}
                   disabled={!canSubmit}
-                  className={`h-12 w-full sm:w-auto sm:px-8 font-sans text-[11px] tracking-[0.14em] uppercase font-semibold transition-all bg-[#bf572b] text-white order-1 sm:order-2 ${!canSubmit ? "opacity-40 cursor-not-allowed" : "hover:bg-[#a34320] cursor-pointer"}`}
+                  className={`h-12 w-full sm:w-auto sm:px-8 font-sans text-[11px] tracking-[0.14em] uppercase font-semibold transition-all bg-[#bf572b] text-white ${!canSubmit ? "opacity-40 cursor-not-allowed" : "hover:bg-[#a34320] cursor-pointer"}`}
                 >
                   SUBMIT VENDOR REGISTRATION
-                </button>
-                <button
-                  onClick={onClose}
-                  className="h-12 w-full sm:w-auto sm:px-8 border border-neutral-300 font-sans text-[11px] tracking-[0.14em] uppercase font-semibold text-neutral-700 hover:bg-neutral-100 transition-all cursor-pointer order-2 sm:order-1"
-                >
-                  CANCEL
                 </button>
               </div>
             </div>
@@ -349,9 +356,9 @@ export default function VendorModal({ onClose }) {
       {/* Dropdown portal — renders outside scrollable container */}
       {dropdownOpen && (
         <>
-          <div className="fixed inset-0 z-[55]" onClick={() => setDropdownOpen(false)} />
+          <div className="fixed inset-0 z-[10000]" onClick={() => setDropdownOpen(false)} />
           <div
-            className="fixed bg-white border border-neutral-200 shadow-lg max-h-60 overflow-y-auto z-[60]"
+            className="fixed bg-white border border-neutral-200 shadow-lg max-h-[320px] overflow-y-auto z-[10001]"
             style={{ top: dropdownPos.top, left: dropdownPos.left, width: dropdownPos.width }}
           >
             {serviceOptions.map((svc) => {
