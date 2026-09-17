@@ -20,6 +20,8 @@ const serviceOptions = [
 export default function VendorModal({ onClose }) {
   const [form, setForm] = useState({
     vendorName: "",
+    phone: "",
+    email: "",
     gstNumber: "",
     services: [],
   });
@@ -31,9 +33,18 @@ export default function VendorModal({ onClose }) {
   const pointerStart = useRef(null);
 
   useEffect(() => {
-    const prev = document.body.style.overflow;
+    const scrollY = window.scrollY;
     document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = prev; };
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = "100%";
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollY);
+    };
   }, []);
 
   const updatePos = useCallback(() => {
@@ -79,11 +90,21 @@ export default function VendorModal({ onClose }) {
   const removeService = (svc) =>
     setForm((f) => ({ ...f, services: f.services.filter((s) => s !== svc) }));
 
-  const canSubmit = form.vendorName && form.gstNumber && form.services.length > 0;
+  const canSubmit = form.vendorName && form.phone && form.email && form.gstNumber && form.services.length > 0;
 
   const validate = () => {
     const errs = {};
     if (!form.vendorName.trim()) errs.vendorName = "Vendor name is required";
+    if (!form.phone.trim()) {
+      errs.phone = "Phone number is required";
+    } else if (!/^[6-9]\d{9}$/.test(form.phone.replace(/\s/g, ""))) {
+      errs.phone = "Enter a valid 10-digit Indian phone number";
+    }
+    if (!form.email.trim()) {
+      errs.email = "Email address is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      errs.email = "Enter a valid email address";
+    }
     if (!form.gstNumber.trim()) {
       errs.gstNumber = "GST number is required";
     } else if (!/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/.test(form.gstNumber.replace(/\s/g, ""))) {
@@ -180,6 +201,36 @@ export default function VendorModal({ onClose }) {
                       className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.vendorName ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
                     />
                     {errors.vendorName && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.vendorName}</p>}
+                  </div>
+
+                  <div>
+                    <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
+                      CONTACT NUMBER <span className="text-[#C0532C]">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={form.phone}
+                      onChange={handleChange}
+                      placeholder="e.g. 98765 43210"
+                      className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.phone ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
+                    />
+                    {errors.phone && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.phone}</p>}
+                  </div>
+
+                  <div>
+                    <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
+                      EMAIL ADDRESS <span className="text-[#C0532C]">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      placeholder="e.g. vendor@company.com"
+                      className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.email ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
+                    />
+                    {errors.email && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.email}</p>}
                   </div>
 
                   <div>

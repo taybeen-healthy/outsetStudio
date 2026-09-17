@@ -1,174 +1,228 @@
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
-
 import Footer from "@/components/Footer";
-import CTABanner from "@/components/CTABanner";
 
 export const metadata = {
   title: "What We Do",
   description:
-    "We bring together design, planning, execution, and long-term thinking to create commercial spaces built around your business.",
+    "We bring together the expertise, execution, and strategies businesses need to create outlets that work today and are ready for tomorrow.",
 };
 
 export default function WhatWeDoPage() {
   return (
-    <div className="relative w-full bg-[#0c0d0e] overflow-x-hidden font-sans select-none">
+    <div className="relative w-full bg-white overflow-x-hidden font-sans select-none">
+      <Navbar />
+
       <main>
-        {/* Hero section wrapper */}
-        <div className="relative min-h-screen flex flex-col pb-16 sm:pb-20">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-            <Image
-              src="/image14.jpg"
-              alt="What We Do hero - coffee shop interior"
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/50 pointer-events-none" />
+        {/* Hero */}
+        <section className="bg-[#FAF7F2] py-16 sm:py-24 lg:py-32">
+          <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
+            <h1 className="font-serif text-[36px] sm:text-5xl md:text-6xl lg:text-[72px] text-[#1a1a1a] font-normal leading-[1.1] tracking-tight max-w-4xl mb-6">
+              Building Better Outlets,{" "}
+              <br className="hidden sm:block" />
+              From <span className="text-[#C0532C] italic">Space to Scale.</span>
+            </h1>
+            <p className="font-sans text-[14px] sm:text-[15px] text-neutral-500 leading-[1.75] max-w-xl">
+              We bring together the expertise, execution, and strategies businesses need to create outlets that work today and are ready for tomorrow.
+            </p>
           </div>
+        </section>
 
-          {/* Navigation Header */}
-          <Navbar />
-
-          {/* What We Do Hero Content */}
-          <section className="relative z-10 flex-1 flex flex-col items-center justify-center px-2 py-16 sm:py-24 text-center">
-            <div className="max-w-[365px] sm:max-w-5xl mx-auto flex flex-col items-center">
-              {/* Main Headline */}
-              <h1 className="font-serif font-bold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[60px] xl:text-[68px] leading-[1.16] tracking-tight drop-shadow-md max-w-5xl xl:max-w-6xl mx-auto">
-                <span className="sm:hidden block">
-                  From Strategy to Space. From Vision to Reality.
-                </span>
-                <span className="hidden sm:block sm:whitespace-nowrap">
-                  From Strategy to Space.
-                </span>
-                <span className="hidden sm:block font-serif font-bold text-white sm:whitespace-nowrap mt-1">
-                  From Vision to Reality.
-                </span>
-              </h1>
-
-              {/* Subtitle Description */}
-              <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl lg:text-[22px] text-white font-normal max-w-4xl mx-auto leading-relaxed sm:leading-[1.7] tracking-normal font-sans">
-                We bring together design, planning, execution, and long-term thinking
-                to create commercial spaces built around your business.
-              </p>
-
-              {/* CTA Button */}
-              <div className="mt-9 sm:mt-11">
-                <Link
-                  href="/#our-work"
-                  className="inline-flex items-center justify-center px-8 py-3 text-sm tracking-wider uppercase text-white border border-white/80 hover:border-white bg-transparent hover:bg-white hover:text-[#0c0d0e] transition-all duration-300 rounded-none cursor-pointer"
-                >
-                  Explore Our Work
-                </Link>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        {/* Everything Your Space Needs to Perform Section */}
-        <section className="w-full bg-white py-20 sm:py-28 lg:py-32">
-          <div className="max-w-7xl mx-auto px-2 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            {/* Left: Text Content */}
-            <div className="max-w-lg">
-              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-semibold leading-[1.15] tracking-tight mb-6">
-                Everything Your Space
-                <br />
-                Needs to Perform.
+        {/* Everything That Goes Into */}
+        <section className="border-t border-neutral-200 py-20 sm:py-28">
+          <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20">
+            <div>
+              <h2 className="font-serif text-[28px] sm:text-3xl md:text-4xl lg:text-[40px] text-[#1a1a1a] font-normal leading-[1.15] tracking-tight">
+                Everything That Goes Into a Successful Outlet
               </h2>
-              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7]">
-                Our approach connects every stage of the journey—from
-                understanding your business to designing, building,
-                launching, and supporting your growth.
-              </p>
             </div>
-
-            {/* Right: Image 15 with asymmetric rounded corners */}
-            <div className="relative w-full max-w-[520px] mx-auto lg:mx-0 aspect-[4/5] overflow-hidden rounded-tl-[40px] rounded-br-[40px]">
-              <Image
-                src="/image15.png"
-                alt="Modern cafe interior with marble floor"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-center"
-              />
+            <div>
+              <p className="font-sans text-[14px] sm:text-[15px] text-[#1a1a1a] leading-[1.75] mb-8">
+                Outset Studio works across the key areas required to create, launch and grow an outlet — eliminating fragmented handoffs between disparate agencies, general contractors, and marketing teams. We unite physical spatial architecture, physical manufacturing, digital visibility, and sustained commercial performance under one roof.
+              </p>
+              <div className="flex flex-wrap gap-x-6 gap-y-3 font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-medium">
+                <span>SPATIAL DESIGN</span>
+                <span className="text-neutral-300">/</span>
+                <span>DIRECT BUILD</span>
+                <span className="text-neutral-300">/</span>
+                <span>DIGITAL FOOTPRINT</span>
+                <span className="text-neutral-300">/</span>
+                <span>COMMERCIAL SCALING</span>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Four Pillars of Purposeful Spaces Section */}
-        <section className="w-full bg-white py-20 sm:py-28 lg:py-32">
-          <div className="max-w-7xl mx-auto px-2">
-            {/* Heading row: heading left, description right */}
-            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-12 mb-14 lg:mb-20">
-              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium leading-[1.15] tracking-tight max-w-xl">
-                Four Pillars of Purposeful
-                <br />
-                Spaces
+        {/* 01 — Outlet Design */}
+        <section className="bg-[#FAF7F2] border-t border-neutral-200 py-20 sm:py-28">
+          <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div>
+              <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#C0532C] font-semibold block mb-4">
+                01 — OUTLET DESIGN
+              </span>
+              <h2 className="font-serif text-[28px] sm:text-3xl md:text-4xl lg:text-[40px] text-[#1a1a1a] font-normal leading-[1.15] tracking-tight mb-6">
+                Designed Around Your Business.
               </h2>
-              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7] max-w-sm lg:pt-2">
-                Each phase seamlessly transitioning into the next for flawless
-                commercial delivery.
+              <p className="font-sans text-[14px] sm:text-[15px] text-[#1a1a1a] leading-[1.75] mb-8">
+                We create spaces around your brand, customers and business goals. Every detail is considered to make the outlet functional, attractive and easy for customers to experience.
               </p>
-            </div>
-
-            {/* Image left + 4 Steps right */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-              {/* Left: Image 16 - narrower portrait shape */}
-              <div className="relative w-full max-w-[480px] mx-auto lg:mx-0 aspect-[3/4] overflow-hidden">
-                <Image
-                  src="/image16.png"
-                  alt="Coffee shop bakery display"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-center"
-                />
+              <div className="border-t border-neutral-200 pt-6">
+                <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-semibold block mb-4">
+                  CORE DELIVERABLES
+                </span>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+                  {["Interior & Exterior Design", "Space Planning", "Customer Flow", "Furniture & Lighting", "3D Visualization", "In-Space Branding"].map((item) => (
+                    <div key={item} className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#C0532C] flex-shrink-0" />
+                      <span className="font-sans text-[13px] text-[#1a1a1a]">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
+            </div>
+            <div className="border border-neutral-200 p-2 sm:p-3">
+              <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
+                <Image src="/image52.jpg" alt="Outlet design - cafe interior" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+              </div>
+            </div>
+          </div>
+        </section>
 
-              {/* Right: 4 Numbered Steps */}
-              <div className="flex flex-col gap-10 lg:gap-12">
-                <div>
-                  <div className="flex items-baseline gap-4 mb-3">
-                    <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">01</span>
-                    <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold">Discover</h3>
-                  </div>
-                  <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
-                    Understand your brand, space, customers, and goals before a
-                    single line is drawn.
-                  </p>
+        {/* 02 — Build & Execution */}
+        <section className="border-t border-neutral-200 py-20 sm:py-28">
+          <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="border border-neutral-200 p-2 sm:p-3 order-2 lg:order-1">
+              <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
+                <Image src="/image53.jpg" alt="Build and execution - fabrication" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#C0532C] font-semibold block mb-4">
+                02 — BUILD &amp; EXECUTION
+              </span>
+              <h2 className="font-serif text-[28px] sm:text-3xl md:text-4xl lg:text-[40px] text-[#1a1a1a] font-normal leading-[1.15] tracking-tight mb-6">
+                From Design Files to a Finished Space.
+              </h2>
+              <p className="font-sans text-[14px] sm:text-[15px] text-[#1a1a1a] leading-[1.75] mb-8">
+                We turn approved designs into real, functional outlets through coordinated execution and attention to detail across the site.
+              </p>
+              <div className="border-t border-neutral-200 pt-6">
+                <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-semibold block mb-4">
+                  CORE DELIVERABLES
+                </span>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+                  {["Fabrication", "Signage", "Electrical", "Furniture", "Site Coordination", "Complete Execution"].map((item) => (
+                    <div key={item} className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#C0532C] flex-shrink-0" />
+                      <span className="font-sans text-[13px] text-[#1a1a1a]">{item}</span>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <div className="flex items-baseline gap-4 mb-3">
-                    <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">02</span>
-                    <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold">Design</h3>
-                  </div>
-                  <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
-                    Create the concept, layout, identity, and experience that
-                    define the room.
-                  </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 03 — Digital Setup */}
+        <section className="bg-[#FAF7F2] border-t border-neutral-200 py-20 sm:py-28">
+          <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div>
+              <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#C0532C] font-semibold block mb-4">
+                03 — DIGITAL SETUP
+              </span>
+              <h2 className="font-serif text-[28px] sm:text-3xl md:text-4xl lg:text-[40px] text-[#1a1a1a] font-normal leading-[1.15] tracking-tight mb-6">
+                Make Your Outlet Easy to Find.
+              </h2>
+              <p className="font-sans text-[14px] sm:text-[15px] text-[#1a1a1a] leading-[1.75] mb-8">
+                We create the essential digital touchpoints that help customers discover, understand and connect with your outlet from the moment it launches.
+              </p>
+              <div className="border-t border-neutral-200 pt-6">
+                <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-semibold block mb-4">
+                  CORE DELIVERABLES
+                </span>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+                  {["Website / Landing Page", "Google Business Presence", "Online Ordering", "Social Media Setup", "Digital Brand Presence"].map((item) => (
+                    <div key={item} className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#C0532C] flex-shrink-0" />
+                      <span className="font-sans text-[13px] text-[#1a1a1a]">{item}</span>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <div className="flex items-baseline gap-4 mb-3">
-                    <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">03</span>
-                    <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold">Build</h3>
-                  </div>
-                  <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
-                    Manage fabrication, execution, signage, and delivery — on site,
-                    on time.
-                  </p>
+              </div>
+            </div>
+            <div className="border border-neutral-200 p-2 sm:p-3">
+              <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
+                <Image src="/image54.png" alt="Digital setup - website on laptop" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 04 — Sales Growth */}
+        <section className="border-t border-neutral-200 py-20 sm:py-28">
+          <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="border border-neutral-200 p-2 sm:p-3 order-2 lg:order-1">
+              <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
+                <Image src="/image55.jpg" alt="Sales growth - customers" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#C0532C] font-semibold block mb-4">
+                04 — SALES GROWTH
+              </span>
+              <h2 className="font-serif text-[28px] sm:text-3xl md:text-4xl lg:text-[40px] text-[#1a1a1a] font-normal leading-[1.15] tracking-tight mb-6">
+                Turn Opening Day Into Ongoing Growth.
+              </h2>
+              <p className="font-sans text-[14px] sm:text-[15px] text-[#1a1a1a] leading-[1.75] mb-8">
+                We help outlets move beyond launch by creating practical strategies that attract customers, encourage repeat visits and improve sales performance.
+              </p>
+              <div className="border-t border-neutral-200 pt-6">
+                <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-semibold block mb-4">
+                  CORE DELIVERABLES
+                </span>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+                  {["Launch Campaigns", "Local Marketing", "Offers & Combos", "Loyalty Strategies", "Repeat Customer Growth"].map((item) => (
+                    <div key={item} className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#C0532C] flex-shrink-0" />
+                      <span className="font-sans text-[13px] text-[#1a1a1a]">{item}</span>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <div className="flex items-baseline gap-4 mb-3">
-                    <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">04</span>
-                    <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold">Launch &amp; Grow</h3>
-                  </div>
-                  <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
-                    Launch, strengthen, and grow your outlet long after the ribbon
-                    is cut.
-                  </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 05 — Scale */}
+        <section className="bg-[#FAF7F2] border-t border-neutral-200 py-20 sm:py-28">
+          <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div>
+              <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#C0532C] font-semibold block mb-4">
+                05 — SCALE
+              </span>
+              <h2 className="font-serif text-[28px] sm:text-3xl md:text-4xl lg:text-[40px] text-[#1a1a1a] font-normal leading-[1.15] tracking-tight mb-6">
+                Built to Grow Beyond One Location.
+              </h2>
+              <p className="font-sans text-[14px] sm:text-[15px] text-[#1a1a1a] leading-[1.75] mb-8">
+                We help businesses create repeatable systems and consistent experiences that make expansion from one outlet to multiple locations easier.
+              </p>
+              <div className="border-t border-neutral-200 pt-6">
+                <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-semibold block mb-4">
+                  CORE DELIVERABLES
+                </span>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-3">
+                  {["Standardized Systems", "Repeatable Outlet Setup", "Multi-Location Growth", "Expansion Planning", "Consistency Across Locations"].map((item) => (
+                    <div key={item} className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#C0532C] flex-shrink-0" />
+                      <span className="font-sans text-[13px] text-[#1a1a1a]">{item}</span>
+                    </div>
+                  ))}
                 </div>
+              </div>
+            </div>
+            <div className="border border-neutral-200 p-2 sm:p-3">
+              <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
+                <Image src="/image56.png" alt="Scale - multiple store locations" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
               </div>
             </div>
           </div>
@@ -176,7 +230,24 @@ export default function WhatWeDoPage() {
       </main>
 
       {/* CTA Banner */}
-      <CTABanner />
+      <section className="bg-[#C0532C] py-16 sm:py-20 lg:py-24">
+        <div className="max-w-3xl mx-auto px-5 text-center">
+          <h2 className="font-serif text-white text-[32px] sm:text-4xl md:text-5xl lg:text-[56px] font-normal leading-[1.1] tracking-tight mb-5">
+            Ready to Take Your Outlet From Space to Scale?
+          </h2>
+          <p className="font-sans text-white/90 text-[14px] sm:text-[15px] leading-[1.75] mb-10 max-w-2xl mx-auto">
+            From outlet design to build execution, digital setup, and sales growth strategy — tell us about your business and your space, and we&apos;ll bring together everything it takes to launch and grow a customer-ready outlet
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button className="h-12 px-8 bg-white text-[#1a1a1a] font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-neutral-100 transition-colors cursor-pointer w-full sm:w-auto">
+              START A PROJECT
+            </button>
+            <button className="h-12 px-8 border border-white text-white font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-white/10 transition-colors cursor-pointer w-full sm:w-auto">
+              EXPLORE OUR WORK
+            </button>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const spaceTypes = [
   { id: "cafe", title: "Café & Roastery", sub: "Speciality coffee, artisan bakery & QSR", icon: "cafe" },
@@ -95,6 +95,21 @@ export default function StartProjectModal({ onClose }) {
   });
 
   const totalSteps = 3;
+
+  useEffect(() => {
+    const scrollY = window.scrollY;
+    document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = "100%";
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollY);
+    };
+  }, []);
 
   const canNext =
     step === 1
