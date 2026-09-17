@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 export default function ContactModal({ onClose }) {
   const [form, setForm] = useState({ name: "", phone: "", email: "", message: "" });
@@ -61,38 +62,34 @@ export default function ContactModal({ onClose }) {
     if (validate()) setSubmitted(true);
   };
 
-  if (submitted) {
-    return (
-      <div
-        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-        onClick={(e) => e.target === e.currentTarget && onClose()}
-      >
-        <div className="relative w-full max-w-[480px] bg-[#FAFAF8] shadow-2xl px-8 py-14 text-center">
-          <button onClick={onClose} aria-label="Close" className="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center text-neutral-400 hover:text-neutral-700 hover:bg-neutral-100 rounded transition-all cursor-pointer">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          <div className="w-14 h-14 mx-auto flex items-center justify-center bg-[#B84E29] rounded-full">
-            <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <h2 className="font-serif italic text-[#1a1a1a] text-3xl leading-tight mt-6 mb-2">Thank You</h2>
-          <p className="font-sans text-sm text-neutral-500 leading-relaxed max-w-sm mx-auto mb-8">
-            We&apos;ll get back to you within 24 hours.
-          </p>
-          <button onClick={onClose} className="h-12 px-10 font-sans text-xs tracking-[0.14em] uppercase font-semibold bg-[#B84E29] text-white hover:bg-[#a34320] transition-all cursor-pointer">
-            DONE
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  return (
+  const content = submitted ? (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+      onClick={(e) => e.target === e.currentTarget && onClose()}
+    >
+      <div className="relative w-full max-w-[480px] bg-[#FAFAF8] shadow-2xl px-8 py-14 text-center">
+        <button onClick={onClose} aria-label="Close" className="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center text-neutral-400 hover:text-neutral-700 hover:bg-neutral-100 rounded transition-all cursor-pointer">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <div className="w-14 h-14 mx-auto flex items-center justify-center bg-[#B84E29] rounded-full">
+          <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h2 className="font-serif italic text-[#1a1a1a] text-3xl leading-tight mt-6 mb-2">Thank You</h2>
+        <p className="font-sans text-sm text-neutral-500 leading-relaxed max-w-sm mx-auto mb-8">
+          We&apos;ll get back to you within 24 hours.
+        </p>
+        <button onClick={onClose} className="h-12 px-10 font-sans text-xs tracking-[0.14em] uppercase font-semibold bg-[#B84E29] text-white hover:bg-[#a34320] transition-all cursor-pointer">
+          DONE
+        </button>
+      </div>
+    </div>
+  ) : (
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
       onPointerDown={(e) => { pointerStart.current = { x: e.clientX, y: e.clientY }; }}
       onPointerUp={(e) => {
         if (!pointerStart.current) return;
@@ -216,4 +213,7 @@ export default function ContactModal({ onClose }) {
       </div>
     </div>
   );
+
+  if (typeof window === "undefined") return null;
+  return createPortal(content, document.body);
 }

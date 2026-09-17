@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 const spaceTypes = [
   { id: "cafe", title: "Café & Roastery", sub: "Speciality coffee, artisan bakery & QSR", icon: "cafe" },
@@ -118,9 +119,9 @@ export default function StartProjectModal({ onClose }) {
       ? form.size && form.budget
       : form.name && form.phone;
 
-  return (
+  const content = (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
       <div className="relative w-full max-w-[860px] max-h-[100dvh] sm:max-h-[90vh] bg-[#FAF9F7] shadow-2xl flex flex-col overflow-hidden">
@@ -446,4 +447,7 @@ export default function StartProjectModal({ onClose }) {
       </div>
     </div>
   );
+
+  if (typeof window === "undefined") return null;
+  return createPortal(content, document.body);
 }

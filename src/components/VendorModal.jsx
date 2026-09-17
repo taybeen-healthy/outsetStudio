@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
 
 const serviceOptions = [
   "Interior Design & Fit-out",
@@ -132,9 +133,9 @@ export default function VendorModal({ onClose }) {
     if (validate()) setSubmitted(true);
   };
 
-  return (
+  const content = (
     <div
-      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm"
       onPointerDown={(e) => { pointerStart.current = { x: e.clientX, y: e.clientY }; }}
       onPointerUp={(e) => {
         if (!pointerStart.current) return;
@@ -382,4 +383,7 @@ export default function VendorModal({ onClose }) {
       )}
     </div>
   );
+
+  if (typeof window === "undefined") return null;
+  return createPortal(content, document.body);
 }
