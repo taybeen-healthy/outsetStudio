@@ -72,8 +72,21 @@ export default function VendorModal({ onClose }) {
   }, [dropdownOpen, updatePos]);
 
   const handleChange = (e) => {
-    setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
-    setErrors((f) => ({ ...f, [e.target.name]: "" }));
+    const { name, value } = e.target;
+    if (name === "phone") {
+      const digits = value.replace(/\D/g, "").slice(0, 10);
+      setForm((f) => ({ ...f, [name]: digits }));
+    } else if (name === "gstNumber") {
+      const cleaned = value.replace(/[^0-9A-Za-z]/g, "").slice(0, 15).toUpperCase();
+      setForm((f) => ({ ...f, [name]: cleaned }));
+    } else if (name === "vendorName") {
+      setForm((f) => ({ ...f, [name]: value.slice(0, 100) }));
+    } else if (name === "email") {
+      setForm((f) => ({ ...f, [name]: value.slice(0, 100) }));
+    } else {
+      setForm((f) => ({ ...f, [name]: value }));
+    }
+    setErrors((f) => ({ ...f, [name]: "" }));
   };
 
   const toggleService = (svc) => {
@@ -212,7 +225,10 @@ export default function VendorModal({ onClose }) {
                       name="phone"
                       value={form.phone}
                       onChange={handleChange}
+                      maxLength={10}
                       placeholder="e.g. 98765 43210"
+                      pattern="[0-9]*"
+                      inputMode="numeric"
                       className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.phone ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
                     />
                     {errors.phone && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.phone}</p>}

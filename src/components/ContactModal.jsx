@@ -24,8 +24,20 @@ export default function ContactModal({ onClose }) {
   }, []);
 
   const handleChange = (e) => {
-    setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
-    setErrors((f) => ({ ...f, [e.target.name]: "" }));
+    const { name, value } = e.target;
+    if (name === "phone") {
+      const digits = value.replace(/\D/g, "").slice(0, 10);
+      setForm((f) => ({ ...f, [name]: digits }));
+    } else if (name === "name") {
+      setForm((f) => ({ ...f, [name]: value.slice(0, 80) }));
+    } else if (name === "email") {
+      setForm((f) => ({ ...f, [name]: value.slice(0, 100) }));
+    } else if (name === "message") {
+      setForm((f) => ({ ...f, [name]: value.slice(0, 500) }));
+    } else {
+      setForm((f) => ({ ...f, [name]: value }));
+    }
+    setErrors((f) => ({ ...f, [name]: "" }));
   };
 
   const validate = () => {

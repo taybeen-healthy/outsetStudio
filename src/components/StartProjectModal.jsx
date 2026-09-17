@@ -350,7 +350,8 @@ export default function StartProjectModal({ onClose }) {
                   <input
                     type="text"
                     value={form.name}
-                    onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
+                    onChange={(e) => setForm((f) => ({ ...f, name: e.target.value.slice(0, 80) }))}
+                    maxLength={80}
                     placeholder="Aarav Mehta"
                     className="w-full h-11 sm:h-12 border border-neutral-200 bg-white px-4 text-sm text-[#1a1a1a] placeholder-neutral-300 font-sans focus:outline-none focus:border-[#bf572b] transition-colors"
                   />
@@ -370,7 +371,12 @@ export default function StartProjectModal({ onClose }) {
                     <input
                       type="tel"
                       value={form.phone}
-                      onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
+                      onChange={(e) => {
+                        const digits = e.target.value.replace(/\D/g, "").slice(0, 10);
+                        setForm((f) => ({ ...f, phone: digits }));
+                      }}
+                      maxLength={10}
+                      inputMode="numeric"
                       placeholder="98765 43210"
                       className="flex-1 bg-transparent px-4 text-sm text-[#1a1a1a] placeholder-neutral-300 font-sans outline-none"
                     />
