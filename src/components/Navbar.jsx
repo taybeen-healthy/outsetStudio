@@ -51,7 +51,7 @@ export default function Navbar() {
           aria-label="Outset Studio Homepage"
         >
           <span
-            className="font-serif text-[17px] sm:text-[22px] tracking-[0.18em] font-bold sm:font-normal uppercase text-white"
+            className="font-serif text-[17px] sm:text-[22px] tracking-[0.18em] font-bold sm:font-normal uppercase text-[#1a1a1a] lg:text-white"
           >
             OUTSET
           </span>

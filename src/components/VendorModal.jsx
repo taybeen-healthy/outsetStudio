@@ -66,6 +66,7 @@ export default function VendorModal({ onClose }) {
         : [...f.services, svc],
     }));
     setErrors((f) => ({ ...f, services: "" }));
+    setDropdownOpen(false);
   };
 
   const removeService = (svc) =>

@@ -37,7 +37,19 @@ export default async function ProjectDetailPage({ params }) {
 
   return (
     <div className="relative w-full bg-[#FAF7F2] text-[#1a1a1a] min-h-screen font-sans select-none overflow-x-hidden">
-      <Navbar />
+      {/* Header */}
+      <div className="lg:hidden">
+        <Navbar />
+      </div>
+      <div className="hidden lg:flex items-center justify-between py-5 sm:py-6 border-b border-neutral-200/80">
+        <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 flex items-center justify-between w-full">
+          <Link href="/#our-work" className="flex items-center gap-2 text-[10px] sm:text-[11px] tracking-[0.2em] uppercase font-medium text-neutral-700 hover:text-[#1a1a1a] transition-colors cursor-pointer whitespace-nowrap">
+            <span>&larr;</span>
+            <span>BACK TO PROJECTS</span>
+          </Link>
+          <span className="text-[10px] sm:text-[11px] tracking-[0.2em] uppercase font-medium text-neutral-700 whitespace-nowrap">{project.specs.location}</span>
+        </div>
+      </div>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-6 sm:pt-12 pb-20">
         {/* Title */}
