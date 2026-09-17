@@ -31,9 +31,12 @@ export default function VendorModal({ onClose }) {
   const pointerStart = useRef(null);
 
   useEffect(() => {
-    const prev = document.body.style.overflow;
+    document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = prev; };
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    };
   }, []);
 
   const updatePos = useCallback(() => {
@@ -101,6 +104,8 @@ export default function VendorModal({ onClose }) {
   return (
     <div
       className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm"
+      onWheel={(e) => { if (!e.currentTarget.contains(e.target) || e.target === e.currentTarget) e.preventDefault(); }}
+      onTouchMove={(e) => { if (e.target === e.currentTarget) e.preventDefault(); }}
       onPointerDown={(e) => { pointerStart.current = { x: e.clientX, y: e.clientY }; }}
       onPointerUp={(e) => {
         if (!pointerStart.current) return;

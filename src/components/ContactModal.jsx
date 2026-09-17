@@ -9,9 +9,12 @@ export default function ContactModal({ onClose }) {
   const pointerStart = useRef(null);
 
   useEffect(() => {
-    const prev = document.body.style.overflow;
+    document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = prev; };
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    };
   }, []);
 
   const handleChange = (e) => {
@@ -72,6 +75,8 @@ export default function ContactModal({ onClose }) {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+      onWheel={(e) => { if (e.target === e.currentTarget) e.preventDefault(); }}
+      onTouchMove={(e) => { if (e.target === e.currentTarget) e.preventDefault(); }}
       onPointerDown={(e) => { pointerStart.current = { x: e.clientX, y: e.clientY }; }}
       onPointerUp={(e) => {
         if (!pointerStart.current) return;
