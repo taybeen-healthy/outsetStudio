@@ -1,248 +1,283 @@
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import CTABanner from "@/components/CTABanner";
 
 export const metadata = {
   title: "About",
   description:
-    "Outset Studio transforms commercial spaces into distinctive environments that bring together brand, customer experience, and business goals.",
+    "Outset Studio is a design and growth studio that helps businesses turn empty spaces into successful, customer-focused outlets.",
 };
 
 export default function AboutPage() {
   return (
-    <div className="relative w-full bg-[#0c0d0e] overflow-x-hidden font-sans select-none">
-      <main>
-        {/* Hero section wrapper */}
-        <div className="relative min-h-screen flex flex-col pb-16 sm:pb-20">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+    <div className="relative w-full bg-[#FAF7F2] overflow-x-hidden font-sans select-none">
+      <Navbar />
+
+      <main className="max-w-7xl mx-auto px-2 pt-16 sm:pt-24 pb-20">
+        {/* Hero */}
+        <div className="mb-12 sm:mb-20">
+          <h1 className="font-serif text-[36px] sm:text-5xl md:text-6xl lg:text-[72px] text-[#1a1a1a] font-normal leading-[1.1] tracking-tight">
+            Creating Distinctive Outlets Where{" "}
+            <span className="text-[#C0532C]">Design, Strategy,</span> and{" "}
+            <span className="text-[#C0532C]">Growth</span> Come Together.
+          </h1>
+        </div>
+
+        {/* Hero Image */}
+        <div className="border border-neutral-200 p-2 sm:p-3 mb-20 sm:mb-28">
+          <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden bg-neutral-100">
             <Image
-              src="/image11.jpg"
-              alt="Outset Studio about hero"
+              src="/image49.png"
+              alt="Outset Studio team collaborating on architectural plans"
               fill
               priority
               sizes="100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/50 pointer-events-none" />
           </div>
-
-          {/* Navigation Header */}
-          <Navbar />
-
-          {/* About Hero Content */}
-          <section className="relative z-10 flex-1 flex flex-col items-start justify-center px-2 py-16 sm:py-24">
-            <div className="max-w-4xl mx-auto w-full">
-              {/* Main Headline */}
-              <h1 className="font-serif font-bold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[60px] xl:text-[68px] leading-[1.16] tracking-tight drop-shadow-md mt-4 mb-6">
-                We Design Spaces That<br />
-                Move Businesses Forward.
-              </h1>
-
-              {/* Description */}
-              <p className="text-sm sm:text-base md:text-[17px] lg:text-[18px] text-white/95 font-normal max-w-2xl leading-relaxed sm:leading-[1.7] tracking-normal mb-8">
-                Outset Studio transforms commercial spaces into distinctive
-                environments that bring together brand, customer experience,
-                and business goals.
-              </p>
-
-              {/* CTA Button */}
-              <Link
-                href="/#our-work"
-                className="inline-flex items-center justify-center px-8 py-3 text-sm tracking-wider uppercase text-white border border-white/80 hover:border-white bg-transparent hover:bg-white hover:text-[#0c0d0e] transition-all duration-300 rounded-none cursor-pointer"
-              >
-                Explore Our Work
-              </Link>
-            </div>
-          </section>
         </div>
 
-        {/* More Than Just Design Section */}
-        <section className="w-full bg-[#f5f5f5] py-20 sm:py-28 lg:py-32">
-          <div className="max-w-7xl mx-auto px-2 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-            {/* Left: Text Content */}
-            <div className="max-w-xl">
-              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight mb-8">
-                More Than Just
-                <br />
-                Design.
-              </h2>
-              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7] mb-5">
-                We believe a successful space should do more than look
-                good. It should support the people who use it, strengthen the
-                brand behind it, and help the business grow.
-              </p>
-              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7]">
-                From the first idea to the final execution, we bring strategy,
-                design, and functionality together to create spaces with
-                lasting value.
-              </p>
-            </div>
+        {/* We bring design section */}
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 mb-20 sm:mb-28">
+          <div>
+            <h2 className="font-serif text-[28px] sm:text-3xl md:text-4xl lg:text-[40px] text-[#1a1a1a] font-normal leading-[1.2] tracking-tight mb-6">
+              We bring design, execution, and growth together to build outlets that work.
+            </h2>
+            <div className="w-10 h-[2px] bg-[#C0532C] mb-6" />
+            <p className="font-sans text-[11px] sm:text-[12px] tracking-[0.2em] uppercase text-neutral-400 font-medium">
+              DELHI . PATNA BIHAR . GURUGRAM . RAJASTHAN
+            </p>
+          </div>
+          <div>
+            <p className="font-sans text-[14px] sm:text-[15px] text-[#1a1a1a] leading-[1.75] mb-6">
+              Outset Studio is a design and growth studio built to make creating successful outlets simpler. We help businesses turn empty spaces into well-designed, customer-ready outlets by bringing everything they need together in one place — from outlet design and execution to digital setup and sales growth.
+            </p>
+            <p className="font-sans text-[14px] sm:text-[15px] text-[#1a1a1a] leading-[1.75] mb-6">
+              We work with businesses across cafés, QSRs, bakeries, salons, retail stores, clinics, and other outlet-based brands. From understanding the space and planning the customer journey to creating the design and bringing it to life, we manage the process with a clear focus on the business.
+            </p>
+            <p className="font-sans text-[14px] sm:text-[15px] text-[#1a1a1a] leading-[1.75] font-semibold">
+              We believe a successful outlet needs more than good design. It needs to look right, work efficiently, attract customers, and support long-term growth. That is why every project we take on is planned around both experience and business performance.
+            </p>
+          </div>
+        </section>
 
-            {/* Right: Image */}
-            <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[560/385] overflow-hidden">
+        {/* Built Around the Reality */}
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-20 sm:mb-28">
+          <div className="border border-neutral-200 p-2 sm:p-3">
+            <div className="relative w-full aspect-[3/4] sm:aspect-[4/5] overflow-hidden bg-neutral-100">
               <Image
-                src="/image12.jpg"
-                alt="Cafe interior with chairs and table"
+                src="/image50.png"
+                alt="Empty space being built into an outlet"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
               />
             </div>
           </div>
-        </section>
-
-        {/* Every Great Space Starts With Understanding Section */}
-        <section className="w-full bg-white py-20 sm:py-28 lg:py-32">
-          <div className="max-w-7xl mx-auto px-2 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-            {/* Left: Image */}
-            <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[560/385] overflow-hidden order-2 lg:order-1">
-              <Image
-                src="/image13.jpg"
-                alt="Outdoor garden cafe with seating"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-center"
-              />
-            </div>
-
-            {/* Right: Text Content */}
-            <div className="max-w-xl order-1 lg:order-2">
-              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight mb-8">
-                Every Great Space Starts
-                <br />
-                With Understanding.
-              </h2>
-              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7] mb-5">
-                No two businesses are the same. That&apos;s why we begin by
-                understanding your goals, customers, operations, and vision
-                before creating the right solution for your space.
-              </p>
-              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7]">
-                Our work is built around one simple idea: design should have
-                a purpose.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Designed With Purpose Section */}
-        <section className="w-full bg-[#f5f5f5] py-20 sm:py-28 lg:py-32">
-          <div className="max-w-7xl mx-auto px-2">
-            {/* Heading */}
-            <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight mb-14 sm:mb-20">
-              Designed With Purpose.
-              <br />
-              Built for Impact.
+          <div>
+            <h2 className="font-serif text-[28px] sm:text-3xl md:text-4xl lg:text-[40px] text-[#1a1a1a] font-normal leading-[1.15] tracking-tight mb-10">
+              Built Around the Reality of Building Outlets
             </h2>
 
-            {/* 4 Columns */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-              <div>
-                <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">01</span>
-                <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold mt-3 mb-3">Strategic Thinking</h3>
-                <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
-                  We understand the business before we begin designing the space.
+            <div className="space-y-8">
+              <div className="border-l-2 border-[#C0532C] pl-6">
+                <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#C0532C] font-semibold block mb-2">
+                  CHAPTER 01 — THE STARTING POINT
+                </span>
+                <h3 className="font-serif text-[20px] sm:text-[22px] text-[#1a1a1a] font-normal mb-2">
+                  From Empty Space to Business Opportunity
+                </h3>
+                <p className="font-sans text-[13px] sm:text-[14px] text-[#1a1a1a] leading-[1.7]">
+                  Every outlet starts with an empty space and a vision. But turning that vision into a successful customer-ready outlet requires more than just good design. Outset Studio was created to bring the different parts of this journey together under one roof.
                 </p>
               </div>
-              <div>
-                <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">02</span>
-                <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold mt-3 mb-3">Thoughtful Design</h3>
-                <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
-                  We create environments that reflect your brand and connect with your customers.
+
+              <div className="border-l-2 border-neutral-200 pl-6">
+                <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-semibold block mb-2">
+                  CHAPTER 02 — ONE CONNECTED APPROACH
+                </span>
+                <h3 className="font-serif text-[20px] sm:text-[22px] text-[#1a1a1a] font-normal mb-2">
+                  Design, Build &amp; Grow — Together
+                </h3>
+                <p className="font-sans text-[13px] sm:text-[14px] text-[#1a1a1a] leading-[1.7]">
+                  We combine outlet design, build and execution, digital setup, and sales growth into one connected process. From planning the space and creating the right customer experience to establishing your digital presence, every step is designed to work together.
                 </p>
               </div>
-              <div>
-                <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">03</span>
-                <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold mt-3 mb-3">Practical Execution</h3>
-                <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
-                  Every idea is developed with functionality, quality, and real-world delivery in mind.
-                </p>
-              </div>
-              <div>
-                <span className="font-serif text-[#bf572b] text-3xl sm:text-4xl font-light">04</span>
-                <h3 className="font-serif text-[#1a1a1a] text-xl sm:text-2xl font-bold mt-3 mb-3">Long-Term Value</h3>
-                <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed">
-                  We create spaces designed to support your business today and as it grows.
+
+              <div className="border-l-2 border-neutral-200 pl-6">
+                <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-semibold block mb-2">
+                  CHAPTER 03 — BUILT FOR WHAT COMES NEXT
+                </span>
+                <h3 className="font-serif text-[20px] sm:text-[22px] text-[#1a1a1a] font-normal mb-2">
+                  From One Outlet to Lasting Growth
+                </h3>
+                <p className="font-sans text-[13px] sm:text-[14px] text-[#1a1a1a] leading-[1.7]">
+                  Our work doesn&apos;t stop when the outlet opens. We help businesses launch with the right foundation, attract customers, improve performance, and build systems that can support future growth — whether that&apos;s one successful outlet or the next location.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* One Studio. One Connected Journey Section */}
-        <section className="w-full bg-white py-20 sm:py-28 lg:py-32">
-          <div className="max-w-7xl mx-auto px-2 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-            {/* Left: Text Content */}
-            <div className="max-w-xl">
-              <h2 className="font-serif text-[#1a1a1a] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.15] tracking-tight mb-6">
-                One Studio. One
-                <br />
-                Connected Journey.
-              </h2>
-              <p className="text-sm sm:text-base text-[#2c2c2c] font-normal leading-relaxed sm:leading-[1.7] mb-10">
-                From discovering the opportunity to designing, building,
-                and supporting future growth, we bring every stage of
-                the journey together.
-              </p>
+        {/* Leadership */}
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-20 sm:mb-28">
+          <div>
+            <h2 className="font-serif text-[28px] sm:text-3xl md:text-4xl lg:text-[40px] text-[#1a1a1a] font-normal leading-[1.15] tracking-tight mb-2">
+              The Leadership Behind Outset
+            </h2>
+            <p className="font-sans text-[11px] sm:text-[12px] tracking-[0.2em] uppercase text-neutral-400 font-medium mb-8">
+              CEO &amp; FOUNDER
+            </p>
 
-              {/* 4 Process Steps with Icons */}
-              <div className="flex flex-wrap gap-8 sm:gap-12">
-                <div className="flex flex-col items-center gap-3">
-                  <div className="w-12 h-12 rounded-full border border-[#e0e0e0] flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#1a1a1a]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                    </svg>
-                  </div>
-                  <span className="text-xs text-[#2c2c2c] font-normal">Discover</span>
-                </div>
-                <div className="flex flex-col items-center gap-3">
-                  <div className="w-12 h-12 rounded-full border border-[#e0e0e0] flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#1a1a1a]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-                    </svg>
-                  </div>
-                  <span className="text-xs text-[#2c2c2c] font-normal">Design</span>
-                </div>
-                <div className="flex flex-col items-center gap-3">
-                  <div className="w-12 h-12 rounded-full border border-[#e0e0e0] flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#1a1a1a]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21" />
-                    </svg>
-                  </div>
-                  <span className="text-xs text-[#2c2c2c] font-normal">Build</span>
-                </div>
-                <div className="flex flex-col items-center gap-3">
-                  <div className="w-12 h-12 rounded-full border border-[#e0e0e0] flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#1a1a1a]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-                    </svg>
-                  </div>
-                  <span className="text-xs text-[#2c2c2c] font-normal">Grow</span>
-                </div>
+            <div className="border-l-2 border-[#C0532C] pl-6 mb-8 bg-neutral-100/60 py-6 pr-6">
+              <p className="font-serif text-[16px] sm:text-[18px] text-[#1a1a1a] italic leading-[1.6] mb-4">
+                &ldquo;We don&apos;t just build outlets; we create spaces and strategies that help businesses attract customers and grow.&rdquo;
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-[1.5px] bg-[#C0532C]" />
+                <span className="font-sans text-[11px] tracking-[0.15em] uppercase text-neutral-500 font-medium">
+                  ARIF SAIFI , CEO &amp; FOUNDER
+                </span>
               </div>
             </div>
 
-            {/* Right: Image (same as section 2) */}
-            <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[560/385] overflow-hidden">
+            <p className="font-sans text-[14px] sm:text-[15px] text-[#1a1a1a] leading-[1.75] mb-5">
+              Outset Studio was created with a simple idea — building an outlet should be easier, more connected, and more effective. We bring together design, execution, digital setup, and sales growth to help businesses turn their ideas into customer-ready outlets.
+            </p>
+            <p className="font-sans text-[14px] sm:text-[15px] text-[#1a1a1a] leading-[1.75] mb-8">
+              Our approach goes beyond designing a beautiful space. We think about the complete outlet experience — how it looks, how customers move through it, how the brand is presented online, and how the outlet can perform and grow after launch.
+            </p>
+
+            <div className="grid grid-cols-3 gap-4">
+              <div className="border border-neutral-200 p-4">
+                <span className="font-serif text-[28px] sm:text-[32px] text-[#1a1a1a] font-normal">4+</span>
+                <p className="font-sans text-[10px] sm:text-[11px] tracking-[0.15em] uppercase text-neutral-400 font-medium mt-1">
+                  CORE SERVICES
+                </p>
+              </div>
+              <div className="border border-neutral-200 p-4">
+                <span className="font-serif text-[28px] sm:text-[32px] text-[#1a1a1a] font-normal">360°</span>
+                <p className="font-sans text-[10px] sm:text-[11px] tracking-[0.15em] uppercase text-neutral-400 font-medium mt-1">
+                  OUTLET APPROACH
+                </p>
+              </div>
+              <div className="border border-neutral-200 p-4">
+                <span className="font-serif text-[28px] sm:text-[32px] text-[#1a1a1a] font-normal">8</span>
+                <p className="font-sans text-[10px] sm:text-[11px] tracking-[0.15em] uppercase text-neutral-400 font-medium mt-1">
+                  IDEA TO LAUNCH
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="border border-neutral-200 p-2 sm:p-3 self-start">
+            <div className="relative w-full aspect-[3/4] overflow-hidden bg-neutral-100">
               <Image
-                src="/image12.jpg"
-                alt="Cafe interior with chairs and table"
+                src="/image51.jpg"
+                alt="Arif Saifi - CEO & Founder"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 400px"
                 className="object-cover object-center"
               />
+            </div>
+          </div>
+        </section>
+
+        {/* Approach & Mission Cards */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20 sm:mb-28">
+          <div className="border border-neutral-200 bg-neutral-50/50 p-8 sm:p-10 border-l-4 border-l-[#1a1a1a]">
+            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-semibold block mb-4">
+              OUR APPROACH
+            </span>
+            <h3 className="font-serif text-[24px] sm:text-[28px] text-[#1a1a1a] font-normal leading-tight mb-6">
+              Designing Spaces That Work
+            </h3>
+            <p className="font-sans text-[13px] sm:text-[14px] text-[#1a1a1a] leading-[1.7] mb-8">
+              At Outset Studio, we believe an outlet should be more than just a good-looking space. It should be designed around the business, the customer, and the experience you want to create. From the layout and customer flow to furniture, lighting, branding, and visual details, we bring every element together to create outlets that are practical, engaging, and built for everyday business.
+            </p>
+            <div className="border-t border-neutral-200 pt-5">
+              <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-medium">
+                CUSTOMER-FOCUSED DESIGN
+              </span>
+            </div>
+          </div>
+
+          <div className="border border-neutral-200 bg-neutral-50/50 p-8 sm:p-10 border-l-4 border-l-[#C0532C]">
+            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#C0532C] font-semibold block mb-4">
+              OUR MISSION
+            </span>
+            <h3 className="font-serif text-[24px] sm:text-[28px] text-[#1a1a1a] font-normal leading-tight mb-6">
+              Building More Than Just an Outlet
+            </h3>
+            <p className="font-sans text-[13px] sm:text-[14px] text-[#1a1a1a] leading-[1.7] mb-8">
+              Creating a successful outlet takes more than design alone. We bring outlet design, build &amp; execution, digital setup, and sales growth together under one roof, making the entire process easier and more connected. From an empty space to a launch-ready outlet, we help businesses build a strong foundation that is ready to attract customers, perform better, and grow.
+            </p>
+            <div className="border-t border-neutral-200 pt-5">
+              <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-400 font-medium">
+                END-TO-END SUPPORT
+              </span>
+            </div>
+          </div>
+        </section>
+
+        {/* Milestones */}
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-20 sm:mb-28">
+          <div>
+            <h2 className="font-serif text-[28px] sm:text-3xl md:text-4xl lg:text-[40px] text-[#1a1a1a] font-normal leading-[1.15] tracking-tight mb-5">
+              Milestones That Define Our Journey.
+            </h2>
+            <p className="font-sans text-[14px] sm:text-[15px] text-[#1a1a1a] leading-[1.75]">
+              From building successful outlets to creating a connected design-to-growth approach, every milestone reflects our commitment to helping businesses build better spaces and stronger outlets.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <div className="border border-neutral-200 bg-neutral-50/50 p-6 sm:p-8">
+              <h3 className="font-serif text-[18px] sm:text-[20px] text-[#1a1a1a] font-normal mb-3">
+                Growing Across Multiple Business Categories
+              </h3>
+              <p className="font-sans text-[13px] sm:text-[14px] text-neutral-500 leading-[1.7]">
+                Working with businesses across cafés, QSRs, bakeries, salons, retail, pharmacies, clinics, and other outlet-based businesses.
+              </p>
+            </div>
+            <div className="border border-neutral-200 bg-neutral-50/50 p-6 sm:p-8">
+              <h3 className="font-serif text-[18px] sm:text-[20px] text-[#1a1a1a] font-normal mb-3">
+                Design to Execution, Under One Roof
+              </h3>
+              <p className="font-sans text-[13px] sm:text-[14px] text-neutral-500 leading-[1.7]">
+                Built an integrated approach that brings outlet design, build &amp; execution, digital setup, and sales growth together through one connected process.
+              </p>
+            </div>
+            <div className="border border-neutral-200 bg-neutral-50/50 p-6 sm:p-8">
+              <h3 className="font-serif text-[18px] sm:text-[20px] text-[#1a1a1a] font-normal mb-3">
+                Building Outlets With a Growth Mindset
+              </h3>
+              <p className="font-sans text-[13px] sm:text-[14px] text-neutral-500 leading-[1.7]">
+                Going beyond the physical space to help businesses create customer-focused outlets with a strong digital presence and a foundation for long-term growth.
+              </p>
             </div>
           </div>
         </section>
       </main>
 
       {/* CTA Banner */}
-      <CTABanner />
+      <section className="bg-[#C0532C] py-16 sm:py-20 lg:py-24">
+        <div className="max-w-3xl mx-auto px-2 text-center">
+          <h2 className="font-serif text-white text-[32px] sm:text-4xl md:text-5xl lg:text-[56px] font-normal leading-[1.1] tracking-tight mb-5">
+            Ready to Build Your Outlet?
+          </h2>
+          <p className="font-sans text-white/90 text-[14px] sm:text-[15px] leading-[1.75] mb-10 max-w-2xl mx-auto">
+            Tell us about your business, your space, and what you want to achieve. We&apos;ll bring together the right design, execution, digital setup, and growth strategy to help you create a customer-ready outlet.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button className="h-12 px-8 bg-white text-[#1a1a1a] font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-neutral-100 transition-colors cursor-pointer w-full sm:w-auto">
+              START A PROJECT
+            </button>
+            <button className="h-12 px-8 border border-white text-white font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-white/10 transition-colors cursor-pointer w-full sm:w-auto">
+              EXPLORE OUR WORK
+            </button>
+          </div>
+        </div>
+      </section>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

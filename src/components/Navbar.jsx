@@ -14,6 +14,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const isLightBg = isHome || pathname.startsWith("/work/");
+  const isDarkNavbar = !isHome && !pathname.startsWith("/work/");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +41,11 @@ export default function Navbar() {
                 : "bg-[#FAF7F2] lg:bg-transparent"
             }`
           : `border-b border-white/10 ${
-              scrolled ? "bg-black/85 backdrop-blur-md shadow-lg" : "bg-transparent"
+              isDarkNavbar
+                ? "bg-black/95 backdrop-blur-md"
+                : scrolled
+                  ? "bg-black/85 backdrop-blur-md shadow-lg"
+                  : "bg-transparent"
             }`
       }`}
     >
@@ -51,7 +56,9 @@ export default function Navbar() {
           aria-label="Outset Studio Homepage"
         >
           <span
-            className="font-serif text-[17px] sm:text-[22px] tracking-[0.18em] font-bold sm:font-normal uppercase text-[#1a1a1a] lg:text-white"
+            className={`font-serif text-[17px] sm:text-[22px] tracking-[0.18em] font-bold sm:font-normal uppercase ${
+              isDarkNavbar ? "text-white lg:text-white" : "text-[#1a1a1a] lg:text-white"
+            }`}
           >
             OUTSET
           </span>
@@ -64,15 +71,22 @@ export default function Navbar() {
           className="hidden lg:flex items-center space-x-10 xl:space-x-14"
           aria-label="Main Navigation"
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="text-xs tracking-[0.2em] uppercase font-normal text-neutral-300 hover:text-white transition-colors duration-200 py-1 font-sans cursor-pointer"
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || (link.href.startsWith("/") && pathname === link.href);
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`text-xs tracking-[0.2em] uppercase font-normal transition-colors duration-200 py-1 font-sans cursor-pointer ${
+                  isActive
+                    ? "text-[#C0532C]"
+                    : "text-neutral-300 hover:text-white"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden lg:flex items-center gap-3 xl:gap-4">
