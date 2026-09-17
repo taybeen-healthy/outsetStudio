@@ -24,7 +24,7 @@ export const viewport = {
 };
 
 export const metadata = {
-  metadataBase: new URL("https://outsetstudio.com"),
+  metadataBase: new URL("https://outsetstudio.in"),
   title: {
     default: "Outset Studio | Architectural & Experience Design",
     template: "%s | Outset Studio",
@@ -51,7 +51,7 @@ export const metadata = {
     title: "Outset Studio | Architectural & Experience Design",
     description:
       "We transform empty spaces into business-driving experiences. Strategy, design, execution, digital presence, and growth.",
-    url: "https://outsetstudio.com",
+    url: "https://outsetstudio.in",
     siteName: "Outset Studio",
     locale: "en_US",
     type: "website",

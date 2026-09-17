@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${project.title} - Architectural Case Study | Outset Studio`,
       description: project.subtitle,
-      url: `https://outsetstudio.com/work/${project.slug}`,
+      url: `https://outsetstudio.in/work/${project.slug}`,
       images: [{ url: project.image, width: 1200, height: 630, alt: project.title }],
     },
   };
