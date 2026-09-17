@@ -1,11 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function ContactModal({ onClose }) {
-  const [form, setForm] = useState({ name: "", contact: "", message: "" });
+  const [form, setForm] = useState({ name: "", phone: "", email: "", message: "" });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const pointerStart = useRef(null);
+
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = prev; };
+  }, []);
 
   const handleChange = (e) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -15,12 +22,14 @@ export default function ContactModal({ onClose }) {
   const validate = () => {
     const errs = {};
     if (!form.name.trim()) errs.name = "Name is required";
-    if (!form.contact.trim()) {
-      errs.contact = "Email or phone is required";
+    if (!form.phone.trim()) {
+      errs.phone = "Phone number is required";
     } else {
-      const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.contact);
-      const isPhone = /^[+]?[\d\s-]{10,}$/.test(form.contact.replace(/\s/g, ""));
-      if (!isEmail && !isPhone) errs.contact = "Enter a valid email or phone number";
+      const digits = form.phone.replace(/\D/g, "");
+      if (digits.length !== 10) errs.phone = "Phone number must be exactly 10 digits";
+    }
+    if (form.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      errs.email = "Enter a valid email address";
     }
     if (!form.message.trim()) errs.message = "Message is required";
     setErrors(errs);
@@ -63,7 +72,14 @@ export default function ContactModal({ onClose }) {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-      onClick={(e) => e.target === e.currentTarget && onClose()}
+      onPointerDown={(e) => { pointerStart.current = { x: e.clientX, y: e.clientY }; }}
+      onPointerUp={(e) => {
+        if (!pointerStart.current) return;
+        const dx = Math.abs(e.clientX - pointerStart.current.x);
+        const dy = Math.abs(e.clientY - pointerStart.current.y);
+        pointerStart.current = null;
+        if (dx < 5 && dy < 5 && e.target === e.currentTarget) onClose();
+      }}
     >
       <div className="relative w-full max-w-[480px] shadow-2xl overflow-hidden">
         <button
@@ -121,17 +137,33 @@ export default function ContactModal({ onClose }) {
 
             <div>
               <label className="block font-sans text-[10px] font-semibold tracking-[0.15em] text-neutral-500 mb-2">
-                EMAIL OR PHONE *
+                PHONE NUMBER *
               </label>
               <input
-                type="text"
-                name="contact"
-                value={form.contact}
+                type="tel"
+                name="phone"
+                value={form.phone}
                 onChange={handleChange}
-                placeholder="siddharth@venture.in or +9199585..."
-                className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.contact ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
+                maxLength={10}
+                placeholder="e.g. 9958544930"
+                className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.phone ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
               />
-              {errors.contact && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.contact}</p>}
+              {errors.phone && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.phone}</p>}
+            </div>
+
+            <div>
+              <label className="block font-sans text-[10px] font-semibold tracking-[0.15em] text-neutral-500 mb-2">
+                EMAIL (OPTIONAL)
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="e.g. siddharth@venture.in"
+                className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.email ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
+              />
+              {errors.email && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.email}</p>}
             </div>
 
             <div>

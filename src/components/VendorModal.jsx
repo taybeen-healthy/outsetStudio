@@ -28,6 +28,13 @@ export default function VendorModal({ onClose }) {
   const [errors, setErrors] = useState({});
   const [dropdownPos, setDropdownPos] = useState({ top: 0, left: 0, width: 0 });
   const btnRef = useRef(null);
+  const pointerStart = useRef(null);
+
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = prev; };
+  }, []);
 
   const updatePos = useCallback(() => {
     if (btnRef.current) {
@@ -94,9 +101,16 @@ export default function VendorModal({ onClose }) {
   return (
     <div
       className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm"
-      onClick={(e) => e.target === e.currentTarget && onClose()}
+      onPointerDown={(e) => { pointerStart.current = { x: e.clientX, y: e.clientY }; }}
+      onPointerUp={(e) => {
+        if (!pointerStart.current) return;
+        const dx = Math.abs(e.clientX - pointerStart.current.x);
+        const dy = Math.abs(e.clientY - pointerStart.current.y);
+        pointerStart.current = null;
+        if (dx < 5 && dy < 5 && e.target === e.currentTarget) onClose();
+      }}
     >
-      <div className="relative w-full sm:max-w-[720px] h-[100dvh] sm:h-auto sm:max-h-[90vh] bg-[#FAF9F7] sm:shadow-2xl flex flex-col sm:overflow-hidden">
+      <div className="relative w-full sm:max-w-[720px] h-[100dvh] sm:h-auto sm:max-h-[90vh] bg-[#FAF9F7] sm:shadow-2xl flex flex-col overflow-hidden">
         {/* Dark Header */}
         <div className="bg-[#1a1a1a] px-5 sm:px-8 pt-4 sm:pt-5 pb-3 sm:pb-4 flex-shrink-0">
           <div className="flex items-center justify-between">
@@ -243,18 +257,18 @@ export default function VendorModal({ onClose }) {
             </div>
 
             {/* Fixed Footer */}
-            <div className="border-t border-neutral-200 px-5 sm:px-8 py-4 flex-shrink-0 bg-[#FAF9F7]">
-              <div className="max-w-[720px] mx-auto space-y-3">
+            <div className="border-t border-neutral-200 px-5 sm:px-8 py-4 sm:py-5 flex-shrink-0 bg-[#FAF9F7]">
+              <div className="max-w-[720px] mx-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                 <button
                   onClick={handleSubmit}
                   disabled={!canSubmit}
-                  className={`h-12 w-full font-sans text-[11px] tracking-[0.14em] uppercase font-semibold transition-all bg-[#bf572b] text-white ${!canSubmit ? "opacity-40 cursor-not-allowed" : "hover:bg-[#a34320] cursor-pointer"}`}
+                  className={`h-12 w-full sm:w-auto sm:px-8 font-sans text-[11px] tracking-[0.14em] uppercase font-semibold transition-all bg-[#bf572b] text-white order-1 sm:order-2 ${!canSubmit ? "opacity-40 cursor-not-allowed" : "hover:bg-[#a34320] cursor-pointer"}`}
                 >
                   SUBMIT VENDOR REGISTRATION
                 </button>
                 <button
                   onClick={onClose}
-                  className="h-12 w-full border border-neutral-300 font-sans text-[11px] tracking-[0.14em] uppercase font-semibold text-neutral-700 hover:bg-neutral-100 transition-all cursor-pointer"
+                  className="h-12 w-full sm:w-auto sm:px-8 border border-neutral-300 font-sans text-[11px] tracking-[0.14em] uppercase font-semibold text-neutral-700 hover:bg-neutral-100 transition-all cursor-pointer order-2 sm:order-1"
                 >
                   CANCEL
                 </button>
