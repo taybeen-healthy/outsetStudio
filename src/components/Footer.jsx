@@ -179,9 +179,9 @@ export default function Footer() {
               &copy; 2026 Outset Studio. All rights reserved.
             </p>
             <div className="flex items-center gap-2.5 text-xs text-neutral-500 font-light">
-              <a href="#" className="hover:text-neutral-300 transition-colors cursor-pointer">
+              <Link href="/terms" className="hover:text-neutral-300 transition-colors cursor-pointer">
                 Terms and conditions
-              </a>
+              </Link>
               <span>&middot;</span>
               <Link href="/privacy" className="hover:text-neutral-300 transition-colors cursor-pointer">
                 Privacy Policy
