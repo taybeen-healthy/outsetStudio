@@ -27,7 +27,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "ABOUT", href: "/about" },
     { name: "WHAT WE DO", href: "/what-we-do" },
-    { name: "OUR WORK", href: isHome ? "#our-work" : "/#our-work" },
+    { name: "OUR WORK", href: "/our-work" },
     { name: "INDUSTRIES", href: isHome ? "#industries" : "/#industries" },
   ];
 
@@ -52,7 +52,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 flex items-center justify-between py-5 sm:py-6">
         <Link
           href="/"
-          className="group flex items-baseline tracking-[0.18em] focus:outline-none hover:opacity-70 transition-opacity cursor-pointer"
+          className="flex items-baseline tracking-[0.18em] focus:outline-none cursor-pointer"
           aria-label="Outset Studio Homepage"
         >
           <span
