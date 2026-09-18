@@ -183,9 +183,9 @@ export default function Footer() {
                 Terms and conditions
               </a>
               <span>&middot;</span>
-              <a href="#" className="hover:text-neutral-300 transition-colors cursor-pointer">
+              <Link href="/privacy" className="hover:text-neutral-300 transition-colors cursor-pointer">
                 Privacy Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
