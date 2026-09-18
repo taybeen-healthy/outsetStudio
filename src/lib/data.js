@@ -816,6 +816,208 @@ export const ourWorkData = {
         },
       },
     },
+    {
+      id: 7,
+      slug: "luxury-jewellery-showroom",
+      title: "Luxury Jewellery Showroom",
+      titleRoman: "Luxury",
+      titleItalic: "Jewellery Showroom",
+      subtitle:
+        "An opulent retail experience where curated displays, ambient lighting, and refined craftsmanship come together to showcase timeless elegance.",
+      image: "/LJ.png",
+      location: "DELHI",
+      specs: {
+        projectName: "LUXURY JEWELLERY SHOWROOM",
+        type: "RETAIL SHOWROOM",
+        location: "DELHI",
+        scope: "INTERIOR DESIGN & DISPLAY FIT-OUT",
+      },
+      concept: {
+        title: "Where elegance meets experience.",
+        description:
+          "A luxury showroom designed around premium materials, sophisticated displays, and ambient lighting. Rich textures, polished surfaces, and curated arrangements create an immersive space that elevates the art of fine jewellery.",
+      },
+      keyElements: {
+        material: {
+          image: "/image1.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Rich & Refined",
+          description:
+            "Rich marbles, polished brass accents, velvet upholstery, and warm wood tones create a tactile journey through luxury and craftsmanship.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Opulent Hues",
+          swatches: [
+            { name: "CHAMPAGNE GOLD", hex: "#C9A96E", bg: "#C9A96E" },
+            { name: "DEEP EMERALD", hex: "#1B4332", bg: "#1B4332" },
+            { name: "IVORY CREAM", hex: "#F5F0E8", bg: "#F5F0E8" },
+          ],
+          bottomTag: "LUXURY JEWELLERY RETAIL PALETTE",
+        },
+        lighting: {
+          image: "/image2.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Ambient Brilliance",
+          description:
+            "Focused spotlighting on display cases, warm ambient wash on walls, and subtle accent lights that bring gemstones and metals to life.",
+        },
+        furniture: {
+          image: "/image3.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Bespoke Craft",
+          description:
+            "Custom display vitrines, velvet-lined presentation trays, and handcrafted detailing that mirror the precision of the jewellery they showcase.",
+        },
+      },
+      spatialExperience: [
+        {
+          number: "01.",
+          title: "Grand Entrance Lobby",
+          description:
+            "A sweeping entrance with polished marble floors, backlit display panels, and a statement chandelier that sets the tone for luxury.",
+        },
+        {
+          number: "02.",
+          title: "Bridal Collection Hall",
+          description:
+            "An intimate gallery showcasing bridal collections under warm, focused lighting with private consultation seating.",
+        },
+        {
+          number: "03.",
+          title: "Heritage Vault Section",
+          description:
+            "A climate-controlled heritage zone housing antique and bespoke pieces in museum-grade display cases.",
+        },
+        {
+          number: "04.",
+          title: "Private Viewing Suites",
+          description:
+            "Exclusive consultation rooms with soft seating, soundproofing, and personalised display lighting for high-value clients.",
+        },
+        {
+          number: "05.",
+          title: "Custom Design Studio",
+          description:
+            "An open workshop area where artisans and designers collaborate with clients to create bespoke pieces.",
+        },
+        {
+          number: "06.",
+          title: "VIP Lounge & Refreshment Bar",
+          description:
+            "A relaxed lounge with premium finishes, offering refreshments while clients browse curated collections.",
+        },
+      ],
+      galleryPlates: {
+        plate1: { image: "/LJ.png", caption: "LOUX-001 • MAIN SHOWROOM FLOOR" },
+        plate2: { image: "/image1.png", caption: "LOUX-002 • DISPLAY VITRINE GALLERY" },
+        plate3: { image: "/image2.png", caption: "LOUX-003 • AMBIENT LIGHTING DETAIL" },
+        plate4: { image: "/image3.png", caption: "LOUX-004 • BESPOKE FURNITURE" },
+        plate5: { image: "/image4.png", caption: "LOUX-005 • BRIDAL COLLECTION HALL" },
+        plate6: { image: "/image5.png", caption: "LOUX-006 • PRIVATE VIEWING SUITE" },
+      },
+    },
+    {
+      id: 8,
+      slug: "yaa-securities",
+      title: "YAA Securities",
+      titleRoman: "YAA",
+      titleItalic: "Securities",
+      subtitle:
+        "A modern financial workspace where clean lines, professional aesthetics, and functional design come together to create a confident, trust-driven environment.",
+      image: "/YAA.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "YAA SECURITIES",
+        type: "CORPORATE OFFICE",
+        location: "GURUGRAM",
+        scope: "INTERIOR DESIGN & WORKSPACE FIT-OUT",
+      },
+      concept: {
+        title: "Designing trust through professional spaces.",
+        description:
+          "A contemporary corporate office designed around clean geometry, professional palettes, and functional layouts. Neutral tones, glass partitions, and strategic lighting create a focused environment that reflects reliability and growth.",
+      },
+      keyElements: {
+        material: {
+          image: "/image1.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Sleek & Professional",
+          description:
+            "Glass partitions, matte finishes, engineered wood, and metallic accents combine to create a workspace that balances professionalism with modern comfort.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Corporate Neutrals",
+          swatches: [
+            { name: "CHARCOAL GRAY", hex: "#36454F", bg: "#36454F" },
+            { name: "SLATE BLUE", hex: "#4A6274", bg: "#4A6274" },
+            { name: "WARM WHITE", hex: "#F8F6F0", bg: "#F8F6F0" },
+          ],
+          bottomTag: "CORPORATE WORKSPACE PALETTE",
+        },
+        lighting: {
+          image: "/image2.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Focused Illumination",
+          description:
+            "Layered lighting with recessed ceiling panels, task lighting at workstations, and feature pendants in reception areas.",
+        },
+        furniture: {
+          image: "/image3.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Ergonomic Elegance",
+          description:
+            "Ergonomic workstations, executive desks in engineered wood, and meeting tables that combine form with function.",
+        },
+      },
+      spatialExperience: [
+        {
+          number: "01.",
+          title: "Reception & Welcome Zone",
+          description:
+            "A clean, professional reception with branded feature wall, comfortable seating, and ambient lighting that instills confidence.",
+        },
+        {
+          number: "02.",
+          title: "Open Trading Floor",
+          description:
+            "An expansive collaborative workspace with multiple monitor setups, acoustic paneling, and task-focused lighting.",
+        },
+        {
+          number: "03.",
+          title: "Executive Cabins",
+          description:
+            "Private offices with glass partitions, premium finishes, and personalised layouts for senior leadership.",
+        },
+        {
+          number: "04.",
+          title: "Client Meeting Rooms",
+          description:
+            "Formal meeting spaces with conference tables, AV integration, and branded design elements.",
+        },
+        {
+          number: "05.",
+          title: "Breakout & Informal Zones",
+          description:
+            "Relaxed collaborative areas with casual seating, coffee stations, and a lighter colour palette.",
+        },
+        {
+          number: "06.",
+          title: "Boardroom & Strategy Hall",
+          description:
+            "A premium boardroom with executive seating, integrated presentation systems, and a commanding view.",
+        },
+      ],
+      galleryPlates: {
+        plate1: { image: "/YAA.png", caption: "YAAS-001 • LOBBY & RECEPTION" },
+        plate2: { image: "/image1.png", caption: "YAAS-002 • OPEN TRADING FLOOR" },
+        plate3: { image: "/image2.png", caption: "YAAS-003 • LIGHTING DETAIL" },
+        plate4: { image: "/image3.png", caption: "YAAS-004 • ERGONOMIC WORKSTATION" },
+        plate5: { image: "/image4.png", caption: "YAAS-005 • CLIENT MEETING ROOM" },
+        plate6: { image: "/image5.png", caption: "YAAS-006 • BOARDROOM" },
+      },
+    },
   ],
 };
 
