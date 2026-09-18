@@ -839,7 +839,7 @@ export const ourWorkData = {
       },
       keyElements: {
         material: {
-          image: "/image1.png",
+          image: "/LJ.png",
           subtitle: "01 // MATERIAL & TEXTURE",
           title: "Rich & Refined",
           description:
@@ -856,14 +856,14 @@ export const ourWorkData = {
           bottomTag: "LUXURY JEWELLERY RETAIL PALETTE",
         },
         lighting: {
-          image: "/image2.png",
+          image: "/LJ.png",
           subtitle: "03 // LIGHTING DESIGN",
           title: "Ambient Brilliance",
           description:
             "Focused spotlighting on display cases, warm ambient wash on walls, and subtle accent lights that bring gemstones and metals to life.",
         },
         furniture: {
-          image: "/image3.png",
+          image: "/LJ.png",
           subtitle: "04 // FURNITURE & DETAILING",
           title: "Bespoke Craft",
           description:
@@ -910,11 +910,11 @@ export const ourWorkData = {
       ],
       galleryPlates: {
         plate1: { image: "/LJ.png", caption: "LOUX-001 • MAIN SHOWROOM FLOOR" },
-        plate2: { image: "/image1.png", caption: "LOUX-002 • DISPLAY VITRINE GALLERY" },
-        plate3: { image: "/image2.png", caption: "LOUX-003 • AMBIENT LIGHTING DETAIL" },
-        plate4: { image: "/image3.png", caption: "LOUX-004 • BESPOKE FURNITURE" },
-        plate5: { image: "/image4.png", caption: "LOUX-005 • BRIDAL COLLECTION HALL" },
-        plate6: { image: "/image5.png", caption: "LOUX-006 • PRIVATE VIEWING SUITE" },
+        plate2: { image: "/LJ.png", caption: "LOUX-002 • DISPLAY VITRINE GALLERY" },
+        plate3: { image: "/LJ.png", caption: "LOUX-003 • AMBIENT LIGHTING DETAIL" },
+        plate4: { image: "/LJ.png", caption: "LOUX-004 • BESPOKE FURNITURE" },
+        plate5: { image: "/LJ.png", caption: "LOUX-005 • BRIDAL COLLECTION HALL" },
+        plate6: { image: "/LJ.png", caption: "LOUX-006 • PRIVATE VIEWING SUITE" },
       },
     },
     {
@@ -940,7 +940,7 @@ export const ourWorkData = {
       },
       keyElements: {
         material: {
-          image: "/image1.png",
+          image: "/YAA.png",
           subtitle: "01 // MATERIAL & TEXTURE",
           title: "Sleek & Professional",
           description:
@@ -957,14 +957,14 @@ export const ourWorkData = {
           bottomTag: "CORPORATE WORKSPACE PALETTE",
         },
         lighting: {
-          image: "/image2.png",
+          image: "/YAA.png",
           subtitle: "03 // LIGHTING DESIGN",
           title: "Focused Illumination",
           description:
             "Layered lighting with recessed ceiling panels, task lighting at workstations, and feature pendants in reception areas.",
         },
         furniture: {
-          image: "/image3.png",
+          image: "/YAA.png",
           subtitle: "04 // FURNITURE & DETAILING",
           title: "Ergonomic Elegance",
           description:
@@ -1011,11 +1011,11 @@ export const ourWorkData = {
       ],
       galleryPlates: {
         plate1: { image: "/YAA.png", caption: "YAAS-001 • LOBBY & RECEPTION" },
-        plate2: { image: "/image1.png", caption: "YAAS-002 • OPEN TRADING FLOOR" },
-        plate3: { image: "/image2.png", caption: "YAAS-003 • LIGHTING DETAIL" },
-        plate4: { image: "/image3.png", caption: "YAAS-004 • ERGONOMIC WORKSTATION" },
-        plate5: { image: "/image4.png", caption: "YAAS-005 • CLIENT MEETING ROOM" },
-        plate6: { image: "/image5.png", caption: "YAAS-006 • BOARDROOM" },
+        plate2: { image: "/YAA.png", caption: "YAAS-002 • OPEN TRADING FLOOR" },
+        plate3: { image: "/YAA.png", caption: "YAAS-003 • LIGHTING DETAIL" },
+        plate4: { image: "/YAA.png", caption: "YAAS-004 • ERGONOMIC WORKSTATION" },
+        plate5: { image: "/YAA.png", caption: "YAAS-005 • CLIENT MEETING ROOM" },
+        plate6: { image: "/YAA.png", caption: "YAAS-006 • BOARDROOM" },
       },
     },
   ],
