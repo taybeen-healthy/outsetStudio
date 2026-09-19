@@ -51,7 +51,7 @@ export default function Hero({ data, stats }) {
                 <button
                   key={action.label}
                   onClick={() => setShowProject(true)}
-                  className="w-full lg:w-auto h-12 lg:h-[46px] px-7 lg:px-8 flex items-center justify-center text-center border border-white/60 bg-transparent text-white font-sans font-medium text-[11px] lg:text-xs tracking-[0.2em] uppercase whitespace-nowrap rounded-none transition-all duration-300 hover:bg-white hover:text-[#bf572b] cursor-pointer"
+                  className="w-full lg:w-auto h-12 lg:h-[46px] px-7 lg:px-8 flex items-center justify-center text-center border border-[#1a1a1a] lg:border-white/60 bg-transparent text-[#1a1a1a] lg:text-white font-sans font-medium text-[11px] lg:text-xs tracking-[0.2em] uppercase whitespace-nowrap rounded-none transition-all duration-300 hover:bg-[#1a1a1a] hover:text-white lg:hover:bg-white lg:hover:text-[#bf572b] cursor-pointer"
                 >
                   {action.label}
                 </button>
