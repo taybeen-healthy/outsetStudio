@@ -4,24 +4,24 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "What commercial spaces does Outset Studio specialize in?",
-    a: "We specialize in hospitality, food & beverage outlets (specialty cafés, roasteries, fine dining, bistros), flagship retail showrooms, and bespoke corporate workspaces. Our team handles complete spatial strategy, interior architecture, and façade design.",
+    q: "How much does a typical project cost?",
+    a: "Project costs vary depending on the size, location, scope, and requirements of the space. After understanding your project and visiting the site, we provide a project-specific estimate.",
   },
   {
-    q: "Do you offer end-to-end turnkey build and execution?",
-    a: "Yes. Outset Studio provides complete turnkey execution — from initial concept and architectural design through civil works, MEP coordination, custom furniture, signage, and final handover. We manage every trade under one roof.",
-  },
-  {
-    q: "What is the typical project timeline from concept to launch?",
+    q: "How long does a typical project take?",
     a: "A standard outlet project takes 8–14 weeks from concept to handover, depending on scale, site conditions, and complexity. We provide a detailed timeline during the discovery phase.",
   },
   {
-    q: "How does Outset Studio structure its design and build pricing?",
-    a: "We offer transparent, phase-based pricing. Design fees are scoped per project, and build costs are quoted after a detailed site survey and material selection. No hidden charges — every deliverable is documented upfront.",
+    q: "Do you work outside Delhi-NCR?",
+    a: "Yes. While our studio is based in Gurugram, we execute projects across Delhi NCR, Mumbai, Bangalore, and other major cities. We have a trusted network of vendors and site supervisors nationwide.",
   },
   {
-    q: "Can you work across different cities and regions?",
-    a: "Yes. While our studio is based in Gurugram, we execute projects across Delhi NCR, Mumbai, Bangalore, and other major cities. We have a trusted network of vendors and site supervisors nationwide.",
+    q: "Do you handle licensing and civil approvals?",
+    a: "Yes. Outset Studio assists with all necessary licensing, civil approvals, and regulatory compliance required for your project. We coordinate with local authorities to ensure smooth approvals.",
+  },
+  {
+    q: "Do you provide both design and execution?",
+    a: "Yes. Outset Studio provides complete turnkey execution — from initial concept and architectural design through civil works, MEP coordination, custom furniture, signage, and final handover. We manage every trade under one roof.",
   },
 ];
 
