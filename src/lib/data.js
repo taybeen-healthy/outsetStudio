@@ -1062,7 +1062,7 @@ export const footerData = {
     { name: "What We Do", href: "/what-we-do" },
     { name: "Our Work", href: "#our-work" },
     { name: "Process", href: "#process" },
-    { name: "Industries", href: "#industries" },
+    { name: "Industries", href: "/industries" },
   ],
   services: ["Outlet", "Build", "Growth", "Scale"],
   copyright: "© 2024 Outset Studio. All rights reserved.",

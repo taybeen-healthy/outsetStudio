@@ -28,7 +28,7 @@ export default function Navbar() {
     { name: "ABOUT", href: "/about" },
     { name: "WHAT WE DO", href: "/what-we-do" },
     { name: "OUR WORK", href: "/our-work" },
-    { name: "INDUSTRIES", href: isHome ? "#industries" : "/#industries" },
+    { name: "INDUSTRIES", href: "/industries" },
   ];
 
   return (

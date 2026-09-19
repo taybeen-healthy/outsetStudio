@@ -5,7 +5,7 @@ const quickLinks = [
   { name: "What We Do", href: "/what-we-do" },
   { name: "Our Work", href: "/#our-work" },
   { name: "Process", href: "/#process" },
-  { name: "Industries", href: "/#industries" },
+  { name: "Industries", href: "/industries" },
 ];
 
 const services = ["Outlet", "Build", "Growth", "Scale"];
