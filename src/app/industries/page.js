@@ -32,7 +32,7 @@ export default function IndustriesPage() {
             </div>
             <div className="relative w-full aspect-[4/3] lg:aspect-[4/3] overflow-hidden bg-neutral-100">
               <img
-                src="/image49.png"
+                src="/indust.png"
                 alt="Industry spaces"
                 className="w-full h-full object-cover object-center"
               />
