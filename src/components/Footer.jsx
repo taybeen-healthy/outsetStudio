@@ -3,12 +3,12 @@ import Link from "next/link";
 const quickLinks = [
   { name: "About", href: "/about" },
   { name: "What We Do", href: "/what-we-do" },
-  { name: "Our Work", href: "/#our-work" },
-  { name: "Process", href: "/#process" },
+  { name: "Our Work", href: "/our-work" },
   { name: "Industries", href: "/industries" },
+  { name: "Register Vendor", href: "/register-vendors" },
 ];
 
-const services = ["Outlet", "Build", "Growth", "Scale"];
+const services = ["Strategy", "Design", "Site Visit", "Partnership"];
 
 export default function Footer() {
   return (
@@ -56,7 +56,7 @@ export default function Footer() {
             </div>
             <div>
               <h3 className="font-sans text-[11px] uppercase tracking-[0.18em] text-white font-semibold mb-5">
-                SERVICES
+                EXPLORE
               </h3>
               <ul className="flex flex-col space-y-3">
                 {services.map((service) => (
@@ -159,7 +159,7 @@ export default function Footer() {
 
             <div className="md:col-span-3 lg:col-span-3 flex flex-col">
               <h3 className="font-sans text-xs uppercase tracking-[0.2em] text-neutral-400 font-medium mb-6">
-                SERVICES
+                EXPLORE
               </h3>
               <ul className="flex flex-col space-y-3.5">
                 {services.map((service) => (
