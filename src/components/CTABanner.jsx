@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import StartProjectModal from "./StartProjectModal";
 import ContactModal from "./ContactModal";
 
@@ -31,22 +30,16 @@ export default function CTABanner() {
 
           <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3 lg:gap-4 mt-4 lg:mt-3 w-full lg:w-auto">
             <button
+              onClick={() => setShowContact(true)}
+              className="w-full lg:w-auto h-12 px-7 flex items-center justify-center text-[11px] lg:text-[13px] tracking-[0.18em] uppercase font-medium lg:font-normal text-[#C0562A] lg:text-[#bf572b] bg-white border border-white hover:bg-transparent hover:text-white transition-all duration-300 rounded-none cursor-pointer"
+            >
+              Get in Touch
+            </button>
+            <button
               onClick={() => setShowProject(true)}
-              className="w-full lg:w-auto h-12 px-7 flex items-center justify-center text-[11px] lg:text-[13px] tracking-[0.18em] uppercase font-medium lg:font-normal text-[#C0562A] lg:text-white bg-white lg:bg-transparent border border-white hover:bg-white hover:text-[#bf572b] transition-all duration-300 rounded-none cursor-pointer"
+              className="w-full lg:w-auto h-12 px-7 flex items-center justify-center text-[11px] lg:text-[13px] tracking-[0.18em] uppercase font-medium lg:font-normal text-white border border-white bg-transparent hover:bg-white hover:text-[#bf572b] transition-all duration-300 rounded-none cursor-pointer"
             >
               Start a Project
-            </button>
-            <Link
-              href="#our-work"
-              className="lg:hidden w-full h-12 px-7 flex items-center justify-center text-[11px] tracking-[0.18em] uppercase font-medium text-white border border-white/70 bg-transparent hover:bg-white hover:text-[#bf572b] transition-all duration-300 rounded-none cursor-pointer"
-            >
-              Explore Our Work
-            </Link>
-            <button
-              onClick={() => setShowContact(true)}
-              className="hidden lg:flex h-12 px-7 items-center justify-center text-[13px] tracking-widest uppercase font-normal text-white border border-white bg-transparent hover:bg-white hover:text-[#bf572b] transition-all duration-300 rounded-none cursor-pointer"
-            >
-              Contact
             </button>
           </div>
         </div>

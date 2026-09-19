@@ -285,10 +285,10 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button className="h-12 px-8 bg-white text-[#1a1a1a] font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-neutral-100 transition-colors cursor-pointer w-full sm:w-auto">
-              START A PROJECT
+              GET IN TOUCH
             </button>
             <button className="h-12 px-8 border border-white text-white font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-white/10 transition-colors cursor-pointer w-full sm:w-auto">
-              EXPLORE OUR WORK
+              START A PROJECT
             </button>
           </div>
         </div>

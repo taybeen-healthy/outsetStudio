@@ -1,13 +1,14 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import StartProjectModal from "./StartProjectModal";
+import ContactModal from "./ContactModal";
 import Stats from "./Stats";
 
 export default function Hero({ data, stats }) {
   const [showProject, setShowProject] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   const headline = data?.headline ?? {
     prefix: "We Transform",
@@ -41,19 +42,19 @@ export default function Hero({ data, stats }) {
               action.variant === "primary" ? (
                 <button
                   key={action.label}
-                  onClick={() => setShowProject(true)}
-                  className="w-full lg:w-auto h-12 lg:h-[46px] px-7 lg:px-8 flex items-center justify-center text-center bg-[#B85A32] hover:bg-[#A84520] text-white font-sans font-medium text-[11px] lg:text-xs tracking-[0.2em] uppercase whitespace-nowrap rounded-none transition-all duration-300 shadow-none lg:shadow-md cursor-pointer"
+                  onClick={() => setShowContact(true)}
+                  className="w-full lg:w-auto h-12 lg:h-[46px] px-7 lg:px-8 flex items-center justify-center text-center bg-[#bf572b] hover:bg-[#a34320] text-white font-sans font-medium text-[11px] lg:text-xs tracking-[0.2em] uppercase whitespace-nowrap rounded-none transition-all duration-300 cursor-pointer"
                 >
                   {action.label}
                 </button>
               ) : (
-                <Link
+                <button
                   key={action.label}
-                  href={action.href}
-                  className="group w-full lg:w-auto h-12 lg:h-[46px] px-6 lg:px-7 flex items-center justify-center gap-2.5 text-center border border-[#C9C4BC] lg:border-neutral-700 bg-white lg:bg-[#0e0f11]/80 hover:border-[#1a1a1a] lg:hover:border-white lg:hover:bg-white lg:hover:text-black text-[#1a1a1a] lg:text-white font-sans font-medium text-[11px] lg:text-xs tracking-[0.2em] uppercase whitespace-nowrap rounded-none transition-all duration-300 cursor-pointer"
+                  onClick={() => setShowProject(true)}
+                  className="w-full lg:w-auto h-12 lg:h-[46px] px-7 lg:px-8 flex items-center justify-center text-center border border-white/60 bg-transparent text-white font-sans font-medium text-[11px] lg:text-xs tracking-[0.2em] uppercase whitespace-nowrap rounded-none transition-all duration-300 hover:bg-white hover:text-[#bf572b] cursor-pointer"
                 >
-                  <span>{action.label}</span>
-                </Link>
+                  {action.label}
+                </button>
               )
             )}
           </div>
@@ -77,6 +78,7 @@ export default function Hero({ data, stats }) {
       </main>
 
       {showProject && <StartProjectModal onClose={() => setShowProject(false)} />}
+      {showContact && <ContactModal onClose={() => setShowContact(false)} />}
     </>
   );
 }

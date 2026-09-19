@@ -14,12 +14,12 @@ export const heroData = {
     "Outset Studio brings strategy, design, execution, digital presence, and growth together to transform empty spaces into distinctive outlets that attract customers, strengthen brands, and drive growth.",
   actions: [
     {
-      label: "START A PROJECT",
+      label: "GET IN TOUCH",
       href: "mailto:outsetstudio@gmail.com",
       variant: "primary",
     },
     {
-      label: "EXPLORE OUR WORK",
+      label: "START A PROJECT",
       href: "#our-work",
       variant: "outline",
     },

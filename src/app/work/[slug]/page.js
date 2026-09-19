@@ -173,7 +173,7 @@ export default async function ProjectDetailPage({ params }) {
         <section className="py-10 sm:py-14 animate-slide-up animate-slide-up-delay-7">
           <div className="flex items-baseline justify-between gap-2 mb-6 sm:mb-10">
             <h2 className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#C2592D] font-semibold">CURATED GALLERY PLATES</h2>
-            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-500 font-medium">07 PLATES</span>
+            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-500 font-medium">{Object.keys(project.galleryPlates).length} PLATES</span>
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:gap-4">

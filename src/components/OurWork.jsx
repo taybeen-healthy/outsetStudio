@@ -69,16 +69,13 @@ export default function OurWork({ data }) {
               </p>
             </div>
 
-            <div className="pt-4 border-t border-neutral-100 flex items-center justify-between">
+            <div className="pt-4 border-t border-neutral-200/80">
               <Link
                 href={projectUrl}
                 className="group/case inline-flex items-center gap-2 cursor-pointer transition-all duration-200 active:scale-95"
               >
-                <span className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.18em] uppercase text-[#1a1a1a] border-b border-transparent group-hover/case:border-[#C2592D] group-hover/case:text-[#C2592D] transition-colors duration-200">
+                <span className="font-sans text-[10px] sm:text-[11px] font-bold tracking-[0.18em] uppercase text-[#1a1a1a] group-hover/case:text-[#C2592D] transition-colors duration-200">
                   VIEW CASE
-                </span>
-                <span className="text-xs text-neutral-400 group-hover/case:text-[#C2592D] group-hover/case:translate-x-0.5 transition-all">
-                  →
                 </span>
               </Link>
             </div>

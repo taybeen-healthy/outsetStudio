@@ -76,13 +76,13 @@ export default function IndustriesClient({ industries }) {
               href="mailto:outsetstudio@gmail.com"
               className="bg-white text-[#1a1a1a] px-8 py-3 text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-neutral-100 transition-colors cursor-pointer"
             >
-              START A PROJECT
+              GET IN TOUCH
             </Link>
             <Link
               href="/#our-work"
               className="border border-white/40 text-white px-8 py-3 text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-white/10 transition-colors cursor-pointer"
             >
-              EXPLORE OUR WORK
+              START A PROJECT
             </Link>
           </div>
         </div>
