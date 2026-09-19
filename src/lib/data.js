@@ -1038,9 +1038,209 @@ export const testimonialsData = {
       id: 2,
       name: "Ananya Patel",
       company: "ARTISAN CAFE",
-      rating: 5,
+      rating: 4,
       quote:
         "Working with Outset Studio was a game changer for our outlet launch. Their attention to detail and commercial focus set them apart from traditional studios.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 3,
+      name: "Vikram Mehra",
+      company: "BREW HOUSE",
+      rating: 4,
+      quote:
+        "Good team to work with. They understood our vision and delivered a café space that our customers genuinely love. Minor delays but overall satisfied.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 4,
+      name: "Priya Singh",
+      company: "THE GOLD ROOM",
+      rating: 5,
+      quote:
+        "Outset Studio transformed our jewellery showroom into a luxury experience. The display design and lighting work was exceptional. Highly recommend them.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 5,
+      name: "Amit郭",
+      company: "SPICE ROUTE KITCHEN",
+      rating: 3,
+      quote:
+        "Decent work on our restaurant interiors. The design was good but execution took longer than expected. Communication could be better during the project.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 6,
+      name: "Neha Kapoor",
+      company: "BLOOM SALON",
+      rating: 4,
+      quote:
+        "Our salon looks absolutely stunning now. The team was professional and creative. Only feedback would be faster turnaround on revision requests.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 7,
+      name: "Rajesh Gupta",
+      company: "TECH FORWARD OFFICE",
+      rating: 5,
+      quote:
+        "Exceptional workspace design. Our team productivity and client impressions have improved significantly since moving into the new office designed by Outset Studio.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 8,
+      name: "Sonia Verma",
+      company: "SAFFRON RESTAURANT",
+      rating: 4,
+      quote:
+        "Beautiful restaurant design that perfectly captures our brand essence. The team was responsive and delivered quality work within budget.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 9,
+      name: "Karan Bajaj",
+      company: "FITZONE GYM",
+      rating: 3,
+      quote:
+        "The gym design is functional and looks good. However, some equipment placement decisions could have been better discussed beforehand. Acceptable overall.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 10,
+      name: "Meera Reddy",
+      company: "THE BOOK CAFÉ",
+      rating: 5,
+      quote:
+        "Our book café has become the most Instagrammed spot in the city thanks to Outset Studio. Their understanding of ambiance and customer flow is unmatched.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 11,
+      name: "Arjun Nair",
+      company: "PHARMA PLUS",
+      rating: 4,
+      quote:
+        "Clean, professional pharmacy design. The storage solutions and customer flow were well planned. Good experience working with the team.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 12,
+      name: "Deepika Joshi",
+      company: "Wellness Spa",
+      rating: 4,
+      quote:
+        "The spa interior design perfectly balances luxury and tranquility. Our clients constantly compliment the space. Slightly over budget but worth it.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 13,
+      name: "Mohit Aggarwal",
+      company: "URBAN EATS",
+      rating: 3,
+      quote:
+        "Standard QSR design, nothing extraordinary but gets the job done. The team was easy to work with though. Would consider for basic projects.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 14,
+      name: "Pooja Saxena",
+      company: "LUXE BOUTIQUE",
+      rating: 5,
+      quote:
+        "Outset Studio understood our high-end retail vision from day one. The boutique design is sophisticated and our sales have increased since the redesign.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 15,
+      name: "Sanjay Mishra",
+      company: "CORPORATE HUB",
+      rating: 4,
+      quote:
+        "Professional office interiors with great attention to detail. The project management was solid. Minor scheduling issues but handled well.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 16,
+      name: "Kavita Sharma",
+      company: "GREEN LEAF CAFÉ",
+      rating: 4,
+      quote:
+        "Love how our café turned out. The natural materials and warm lighting create exactly the vibe we wanted. Great team to collaborate with.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 17,
+      name: "Rohit Verma",
+      company: "PIZZA CORNER",
+      rating: 3,
+      quote:
+        "Functional design for our pizza outlet. The kitchen layout works well but the dining area could have been more creative. Acceptable for the price point.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 18,
+      name: "Shruti Gupta",
+      company: "HAIR STUDIO",
+      rating: 5,
+      quote:
+        "Our hair studio looks absolutely fantastic. The lighting design for the styling stations was genius. Clients love the modern yet cozy atmosphere.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 19,
+      name: "Anil Kumar",
+      company: "MEDICAL CENTER",
+      rating: 4,
+      quote:
+        "Clean, functional medical center design. The patient flow and waiting area design were well thought out. Professional team with good execution.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 20,
+      name: "Tanvi Malhotra",
+      company: "THE GREEN ROOM",
+      rating: 4,
+      quote:
+        "Beautiful co-working space design. The team captured our brand's modern aesthetic perfectly. Some minor finish issues but overall very happy.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 21,
+      name: "Vishal Chauhan",
+      company: "STEAK HOUSE",
+      rating: 3,
+      quote:
+        "Good restaurant design with nice ambiance. The bar area turned out great. Dining section could use more character but overall a decent project.",
+      avatar: "/image14.jpg",
+      image: "/image38.png",
+    },
+    {
+      id: 22,
+      name: "Preeti Singh",
+      company: "YOGA STUDIO",
+      rating: 5,
+      quote:
+        "Outset Studio created a serene, beautiful yoga studio that perfectly embodies our philosophy. The natural light and material choices are spot on.",
       avatar: "/image14.jpg",
       image: "/image38.png",
     },
