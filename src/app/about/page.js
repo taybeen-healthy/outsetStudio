@@ -183,7 +183,7 @@ export default function AboutPage() {
             <div className="border border-neutral-200 p-2 sm:p-3 self-start">
               <div className="relative w-full aspect-[3/4] overflow-hidden bg-neutral-100">
                 <Image
-                  src="/image51.jpg"
+                  src="/image50.png"
                   alt="Arif Saifi - CEO & Founder"
                   fill
                   sizes="(max-width: 1024px) 100vw, 400px"
