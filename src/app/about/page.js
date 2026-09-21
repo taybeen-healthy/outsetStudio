@@ -147,7 +147,7 @@ export default function AboutPage() {
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-[1.5px] bg-[#C0532C]" />
                   <span className="font-sans text-[11px] tracking-[0.15em] uppercase text-neutral-500 font-medium">
-                    ARIF SAIFI , CEO &amp; FOUNDER
+                    MOHD ARIF SAIFI , CEO &amp; FOUNDER
                   </span>
                 </div>
               </div>
