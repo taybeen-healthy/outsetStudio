@@ -80,9 +80,6 @@ export const metadata = {
     ],
     apple: "/favicon.png",
   },
-  alternates: {
-    canonical: "https://outsetstudio.in",
-  },
 };
 
 export default function RootLayout({ children }) {
