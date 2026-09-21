@@ -2,12 +2,15 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import StartProjectModal from "@/components/StartProjectModal";
+import ContactModal from "@/components/ContactModal";
 
 const INITIAL_COUNT = 6;
 
 export default function IndustriesClient({ industries }) {
   const [expanded, setExpanded] = useState(false);
+  const [showProject, setShowProject] = useState(false);
+  const [showContact, setShowContact] = useState(false);
   const visibleIndustries = expanded ? industries : industries.slice(0, INITIAL_COUNT);
   const hasMore = industries.length > INITIAL_COUNT;
 
@@ -64,29 +67,32 @@ export default function IndustriesClient({ industries }) {
 
       {/* CTA Banner */}
       <section className="bg-[#C0532C] py-16 sm:py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 text-center">
-          <h2 className="font-serif text-[32px] sm:text-4xl md:text-5xl lg:text-[56px] text-white font-normal leading-[1.1] tracking-tight mb-4">
+        <div className="max-w-3xl mx-auto px-5 text-center">
+          <h2 className="font-serif text-white text-[32px] sm:text-4xl md:text-5xl lg:text-[56px] font-normal leading-[1.1] tracking-tight mb-5">
             Let&apos;s Shape your Space
           </h2>
-          <p className="font-sans text-[14px] sm:text-[15px] text-white/80 leading-relaxed mb-8 max-w-lg mx-auto">
+          <p className="font-sans text-white/90 text-[14px] sm:text-[15px] leading-[1.75] mb-10 max-w-2xl mx-auto">
             Tell us about your business and what you want your space to achieve.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="mailto:outsetstudio@gmail.com"
-              className="bg-white text-[#1a1a1a] px-8 py-3 text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-neutral-100 transition-colors cursor-pointer"
+            <button
+              onClick={() => setShowContact(true)}
+              className="h-12 px-8 bg-white text-[#1a1a1a] font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-neutral-100 transition-colors cursor-pointer w-full sm:w-auto"
             >
               GET IN TOUCH
-            </Link>
-            <Link
-              href="/#our-work"
-              className="border border-white/40 text-white px-8 py-3 text-[11px] tracking-[0.2em] uppercase font-medium hover:bg-white/10 transition-colors cursor-pointer"
+            </button>
+            <button
+              onClick={() => setShowProject(true)}
+              className="h-12 px-8 border border-white text-white font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-white/10 transition-colors cursor-pointer w-full sm:w-auto"
             >
               START A PROJECT
-            </Link>
+            </button>
           </div>
         </div>
       </section>
+
+      {showProject && <StartProjectModal onClose={() => setShowProject(false)} />}
+      {showContact && <ContactModal onClose={() => setShowContact(false)} />}
     </>
   );
 }

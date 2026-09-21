@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 export const metadata = {
@@ -75,7 +76,7 @@ export default function AboutPage() {
             <div className="border border-neutral-200 p-2 sm:p-3">
               <div className="relative w-full aspect-[3/4] sm:aspect-[4/5] overflow-hidden bg-neutral-100">
                 <Image
-                  src="/about.png"
+                  src="/image50.png"
                   alt="Empty space being built into an outlet"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -147,7 +148,7 @@ export default function AboutPage() {
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-[1.5px] bg-[#C0532C]" />
                   <span className="font-sans text-[11px] tracking-[0.15em] uppercase text-neutral-500 font-medium">
-                    MOHD ARIF SAIFI , CEO &amp; FOUNDER
+                    MOHD ARIF , CEO &amp; FOUNDER
                   </span>
                 </div>
               </div>
@@ -183,8 +184,8 @@ export default function AboutPage() {
             <div className="border border-neutral-200 p-2 sm:p-3 self-start">
               <div className="relative w-full aspect-[3/4] overflow-hidden bg-neutral-100">
                 <Image
-                  src="/image50.png"
-                  alt="Arif Saifi - CEO & Founder"
+                  src="/ab1.png"
+                  alt="Mohd Arif - CEO & Founder"
                   fill
                   sizes="(max-width: 1024px) 100vw, 400px"
                   className="object-cover object-center"
@@ -275,24 +276,10 @@ export default function AboutPage() {
       </main>
 
       {/* CTA Banner */}
-      <section className="bg-[#C0532C] py-16 sm:py-20 lg:py-24">
-        <div className="max-w-3xl mx-auto px-5 text-center">
-          <h2 className="font-serif text-white text-[32px] sm:text-4xl md:text-5xl lg:text-[56px] font-normal leading-[1.1] tracking-tight mb-5">
-            Ready to Build Your Outlet?
-          </h2>
-          <p className="font-sans text-white/90 text-[14px] sm:text-[15px] leading-[1.75] mb-10 max-w-2xl mx-auto">
-            Tell us about your business, your space, and what you want to achieve. We&apos;ll bring together the right design, execution, digital setup, and growth strategy to help you create a customer-ready outlet.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="h-12 px-8 bg-white text-[#1a1a1a] font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-neutral-100 transition-colors cursor-pointer w-full sm:w-auto">
-              GET IN TOUCH
-            </button>
-            <button className="h-12 px-8 border border-white text-white font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-white/10 transition-colors cursor-pointer w-full sm:w-auto">
-              START A PROJECT
-            </button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title="Ready to Build Your Outlet?"
+        description="Tell us about your business, your space, and what you want to achieve. We'll bring together the right design, execution, digital setup, and growth strategy to help you create a customer-ready outlet."
+      />
 
       <Footer />
     </div>

@@ -1,5 +1,7 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CTABannerInline from "@/components/CTABannerInline";
 
 export const metadata = {
   title: "Privacy Policy & Client Terms",
@@ -239,9 +241,9 @@ export default function PrivacyPage() {
             <p className="font-sans text-[14px] sm:text-[15px] text-[#1a1a1a] leading-[1.75] mb-4">
               The updated version will be published on this page with a revised &ldquo;Last Updated&rdquo; date.
             </p>
-            <a href="#" className="font-sans text-[14px] text-[#C0532C] hover:underline cursor-pointer">
+            <Link href="/terms" className="font-sans text-[14px] text-[#C0532C] hover:underline cursor-pointer">
               Terms &amp; Conditions &rarr;
-            </a>
+            </Link>
           </section>
 
           {/* 12 */}
@@ -333,6 +335,8 @@ export default function PrivacyPage() {
           </section>
         </div>
       </main>
+
+      <CTABannerInline />
 
       <Footer />
     </div>

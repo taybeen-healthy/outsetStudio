@@ -87,15 +87,24 @@ export default function ReviewPage() {
     email: "",
     brand: "",
     completionDate: "",
-    category: "",
+    categories: [],
     rating: 4.5,
     review: "",
     consent: true,
   });
-  const [files, setFiles] = useState([
-    { name: "espresso-bar-dining-area.jpg", size: 4.8 * 1024 * 1024, type: "image/jpeg", isDemo: true },
-    { name: "outlet-walkthrough-evening.mp4", size: 42.1 * 1024 * 1024, type: "video/mp4", isDemo: true },
-  ]);
+  const [files, setFiles] = useState([]);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleCategory = (cat) =>
+    setForm((f) => ({
+      ...f,
+      categories: f.categories.includes(cat)
+        ? f.categories.filter((c) => c !== cat)
+        : [...f.categories, cat],
+    }));
+
+  const removeCategory = (cat) =>
+    setForm((f) => ({ ...f, categories: f.categories.filter((c) => c !== cat) }));
 
   const handleFileDrop = (e) => {
     e.preventDefault();
@@ -196,23 +205,67 @@ export default function ReviewPage() {
                   </div>
                 </div>
 
-                {/* Category */}
+                {/* Category Multi-Select */}
                 <div>
                   <label className="font-sans text-[10px] sm:text-[11px] tracking-[0.14em] uppercase text-[#1a1a1a] font-semibold block mb-2">
                     SERVICE / WORK CATEGORY CHOSEN *
                   </label>
-                  <select
-                    value={form.category}
-                    onChange={(e) => setForm({ ...form, category: e.target.value })}
-                    required
-                    className="w-full border border-neutral-300 px-4 py-3 text-[13px] font-sans text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors appearance-none bg-white cursor-pointer"
-                  >
-                    {categories.map((cat, i) => (
-                      <option key={i} value={i === 0 ? "" : cat}>
-                        {cat}
-                      </option>
-                    ))}
-                  </select>
+                  <div className="relative">
+                    <button
+                      type="button"
+                      onClick={() => setDropdownOpen(!dropdownOpen)}
+                      className="w-full border border-neutral-300 px-4 py-3 text-left text-[13px] font-sans bg-white focus:outline-none focus:border-[#1a1a1a] transition-colors cursor-pointer flex items-center justify-between"
+                    >
+                      <span className={form.categories.length > 0 ? "text-[#1a1a1a]" : "text-neutral-400"}>
+                        {form.categories.length > 0
+                          ? `${form.categories.length} categor${form.categories.length > 1 ? "ies" : "y"} selected`
+                          : "Select categories..."}
+                      </span>
+                      <svg className={`w-4 h-4 text-neutral-400 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                    {dropdownOpen && (
+                      <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-neutral-200 shadow-lg max-h-60 overflow-y-auto z-50">
+                        {categories.slice(1).map((cat) => {
+                          const checked = form.categories.includes(cat);
+                          return (
+                            <button
+                              key={cat}
+                              type="button"
+                              onClick={() => { toggleCategory(cat); setDropdownOpen(false); }}
+                              className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-neutral-50 transition-colors cursor-pointer border-b border-neutral-100 last:border-0"
+                            >
+                              <span className={`w-4 h-4 flex-shrink-0 flex items-center justify-center border rounded-sm transition-colors ${checked ? "bg-[#bf572b] border-[#bf572b]" : "border-neutral-300"}`}>
+                                {checked && (
+                                  <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                  </svg>
+                                )}
+                              </span>
+                              <span className="text-[13px] font-sans text-[#1a1a1a]">{cat}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+
+                  {form.categories.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {form.categories.map((cat) => (
+                        <span key={cat} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#bf572b] text-white text-[12px] font-sans font-medium">
+                          {cat}
+                          <button type="button" onClick={() => removeCategory(cat)} className="w-4 h-4 flex items-center justify-center hover:bg-white/20 rounded-sm transition-colors cursor-pointer">
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                          </button>
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 {/* Rating */}
@@ -250,7 +303,7 @@ export default function ReviewPage() {
                     OUTLET IMAGERY &amp; WALKTHROUGH FOOTAGE
                   </label>
                   <p className="font-sans text-[12px] text-neutral-500 mb-3">
-                    Upload high-res interior/facade photos and brief video walkthroughs (JPG, PNG, MP4, MOV up to 100MB).
+                    Upload high-res interior/facade photos and brief video walkthroughs.
                   </p>
                   <div
                     onDrop={handleFileDrop}
@@ -274,9 +327,6 @@ export default function ReviewPage() {
                       <p className="font-sans text-[13px] text-neutral-600">
                         <span className="text-[#bf572b] font-medium">Click to upload</span> or drag and drop outlet files
                       </p>
-                      <p className="font-sans text-[11px] text-neutral-400 mt-1">
-                        Recommended: 3 to 6 high-res shots displaying finished lighting and customer zones.
-                      </p>
                     </label>
                   </div>
                 </div>
@@ -290,8 +340,6 @@ export default function ReviewPage() {
                     <div className="space-y-2">
                       {files.map((file, i) => {
                         const isVideo = file.type?.startsWith("video/") || file.name?.endsWith(".mp4") || file.name?.endsWith(".mov");
-                        const isImage = file.type?.startsWith("image/") || file.name?.endsWith(".jpg") || file.name?.endsWith(".jpeg") || file.name?.endsWith(".png");
-                        const previewUrl = file.isDemo ? null : (!isVideo ? URL.createObjectURL(file) : null);
                         return (
                           <div key={i} className="flex items-center justify-between bg-white border border-neutral-200 px-4 py-3">
                             <div className="flex items-center gap-3">
@@ -302,22 +350,18 @@ export default function ReviewPage() {
                                       <path d="M8 5v14l11-7z" />
                                     </svg>
                                   </div>
-                                ) : isImage ? (
+                                ) : (
                                   <div className="w-full h-full bg-gradient-to-br from-amber-200 to-amber-400 flex items-center justify-center">
                                     <svg className="w-5 h-5 text-amber-700" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                                       <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a1.5 1.5 0 001.5-1.5V5.25a1.5 1.5 0 00-1.5-1.5H3.75a1.5 1.5 0 00-1.5 1.5v14.25a1.5 1.5 0 001.5 1.5z" />
                                     </svg>
                                   </div>
-                                ) : previewUrl ? (
-                                  <Image src={previewUrl} alt={file.name} width={48} height={48} className="w-full h-full object-cover" />
-                                ) : (
-                                  <div className="w-full h-full bg-neutral-200" />
                                 )}
                               </div>
                               <div>
                                 <p className="font-sans text-[12px] text-[#1a1a1a]">{file.name}</p>
                                 <p className="font-sans text-[11px] text-neutral-400">
-                                  {(file.size / (1024 * 1024)).toFixed(1)} MB • {isVideo ? "4K Video Clip" : "High Resolution Photo"}
+                                  {(file.size / (1024 * 1024)).toFixed(1)} MB • {isVideo ? "Video Clip" : "Photo"}
                                 </p>
                               </div>
                             </div>

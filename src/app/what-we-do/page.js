@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 export const metadata = {
@@ -82,7 +83,7 @@ export default function WhatWeDoPage() {
             </div>
             <div className="border border-neutral-200 p-2 sm:p-3">
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
-                <Image src="/image52.jpg" alt="Outlet design - cafe interior" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+                <Image src="/wwd1.jpg" alt="Outlet design - cafe interior" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
               </div>
             </div>
           </div>
@@ -93,7 +94,7 @@ export default function WhatWeDoPage() {
           <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="border border-neutral-200 p-2 sm:p-3 order-2 lg:order-1">
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
-                <Image src="/image53.jpg" alt="Build and execution - fabrication" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+                <Image src="/wwd2.jpg" alt="Build and execution - fabrication" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -152,7 +153,7 @@ export default function WhatWeDoPage() {
             </div>
             <div className="border border-neutral-200 p-2 sm:p-3">
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
-                <Image src="/image54.png" alt="Digital setup - website on laptop" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+                <Image src="/wwd3.png" alt="Digital setup - website on laptop" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
               </div>
             </div>
           </div>
@@ -163,7 +164,7 @@ export default function WhatWeDoPage() {
           <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="border border-neutral-200 p-2 sm:p-3 order-2 lg:order-1">
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
-                <Image src="/image55.jpg" alt="Sales growth - customers" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+                <Image src="/wwd4.png" alt="Sales growth - customers" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -222,7 +223,7 @@ export default function WhatWeDoPage() {
             </div>
             <div className="border border-neutral-200 p-2 sm:p-3">
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
-                <Image src="/image56.png" alt="Scale - multiple store locations" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+                <Image src="/wwd5.png" alt="Scale - multiple store locations" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
               </div>
             </div>
           </div>
@@ -230,24 +231,10 @@ export default function WhatWeDoPage() {
       </main>
 
       {/* CTA Banner */}
-      <section className="bg-[#C0532C] py-16 sm:py-20 lg:py-24">
-        <div className="max-w-3xl mx-auto px-5 text-center">
-          <h2 className="font-serif text-white text-[32px] sm:text-4xl md:text-5xl lg:text-[56px] font-normal leading-[1.1] tracking-tight mb-5">
-            Ready to Take Your Outlet From Space to Scale?
-          </h2>
-          <p className="font-sans text-white/90 text-[14px] sm:text-[15px] leading-[1.75] mb-10 max-w-2xl mx-auto">
-            From outlet design to build execution, digital setup, and sales growth strategy — tell us about your business and your space, and we&apos;ll bring together everything it takes to launch and grow a customer-ready outlet
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="h-12 px-8 bg-white text-[#1a1a1a] font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-neutral-100 transition-colors cursor-pointer w-full sm:w-auto">
-              GET IN TOUCH
-            </button>
-            <button className="h-12 px-8 border border-white text-white font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-white/10 transition-colors cursor-pointer w-full sm:w-auto">
-              START A PROJECT
-            </button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title="Ready to Take Your Outlet From Space to Scale?"
+        description="From outlet design to build execution, digital setup, and sales growth strategy — tell us about your business and your space, and we'll bring together everything it takes to launch and grow a customer-ready outlet."
+      />
 
       <Footer />
     </div>
