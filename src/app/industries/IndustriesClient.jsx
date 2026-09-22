@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import StartProjectModal from "@/components/StartProjectModal";
 import ContactModal from "@/components/ContactModal";
@@ -11,8 +11,20 @@ export default function IndustriesClient({ industries }) {
   const [expanded, setExpanded] = useState(false);
   const [showProject, setShowProject] = useState(false);
   const [showContact, setShowContact] = useState(false);
+  const gridRef = useRef(null);
   const visibleIndustries = expanded ? industries : industries.slice(0, INITIAL_COUNT);
   const hasMore = industries.length > INITIAL_COUNT;
+
+  const handleToggle = () => {
+    if (!expanded) {
+      setExpanded(true);
+      setTimeout(() => {
+        gridRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    } else {
+      setExpanded(false);
+    }
+  };
 
   return (
     <>
@@ -31,7 +43,7 @@ export default function IndustriesClient({ industries }) {
 
             {hasMore && (
               <button
-                onClick={() => setExpanded((prev) => !prev)}
+                onClick={handleToggle}
                 className="self-start border border-[#1a1a1a] text-[#1a1a1a] bg-white lg:bg-transparent hover:bg-[#1a1a1a] hover:text-white px-6 py-2.5 lg:px-8 lg:py-3 text-[11px] lg:text-xs tracking-[0.2em] uppercase font-medium rounded-none transition-all cursor-pointer flex-shrink-0"
               >
                 {expanded ? "SHOW LESS" : "VIEW ALL"}
@@ -39,7 +51,7 @@ export default function IndustriesClient({ industries }) {
             )}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7">
+          <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7">
             {visibleIndustries.map((industry) => (
               <div key={industry.id} className="bg-white border border-neutral-200/70 shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col justify-between overflow-hidden">
                 <div className="relative w-full aspect-[16/10] overflow-hidden bg-neutral-100">
