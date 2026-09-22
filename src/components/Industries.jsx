@@ -1,9 +1,6 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-
-const INITIAL_COUNT = 6;
 
 function IndustryCard({ industry }) {
   return (
@@ -36,10 +33,6 @@ export default function Industries({ data }) {
     data?.subtitle ??
     "We create distinctive spaces that align your brand, customer experience, and business goals to help every outlet grow.";
 
-  const [expanded, setExpanded] = useState(false);
-  const visibleIndustries = expanded ? industries : industries.slice(0, INITIAL_COUNT);
-  const hasMore = industries.length > INITIAL_COUNT;
-
   return (
     <section
       id="industries"
@@ -56,19 +49,10 @@ export default function Industries({ data }) {
               {subtitle}
             </p>
           </div>
-
-          {hasMore && (
-            <button
-              onClick={() => setExpanded((prev) => !prev)}
-              className="self-start border border-[#1a1a1a] text-[#1a1a1a] bg-white lg:bg-transparent hover:bg-[#1a1a1a] hover:text-white px-6 py-2.5 lg:px-8 lg:py-3 text-[11px] lg:text-xs tracking-[0.2em] uppercase font-medium rounded-none transition-all cursor-pointer flex-shrink-0"
-            >
-              {expanded ? "SHOW LESS" : "VIEW ALL"}
-            </button>
-          )}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7">
-          {visibleIndustries.map((industry) => (
+          {industries.map((industry) => (
             <IndustryCard key={industry.id} industry={industry} />
           ))}
         </div>
