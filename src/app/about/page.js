@@ -160,22 +160,22 @@ export default function AboutPage() {
                 Our approach goes beyond designing a beautiful space. We think about the complete outlet experience — how it looks, how customers move through it, how the brand is presented online, and how the outlet can perform and grow after launch.
               </p>
 
-              <div className="grid grid-cols-3 gap-4">
-                <div className="border border-neutral-200 p-4">
-                  <span className="font-serif text-[28px] sm:text-[32px] text-[#1a1a1a] font-normal">4+</span>
-                  <p className="font-sans text-[10px] sm:text-[11px] tracking-[0.15em] uppercase text-neutral-400 font-medium mt-1">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
+                <div className="border border-neutral-200 p-2.5 sm:p-4 text-center sm:text-left">
+                  <span className="font-serif text-[22px] sm:text-[32px] text-[#1a1a1a] font-normal leading-tight">4+</span>
+                  <p className="font-sans text-[8.5px] sm:text-[11px] tracking-[0.12em] sm:tracking-[0.15em] uppercase text-neutral-400 font-medium mt-1 leading-snug">
                     CORE SERVICES
                   </p>
                 </div>
-                <div className="border border-neutral-200 p-4">
-                  <span className="font-serif text-[28px] sm:text-[32px] text-[#1a1a1a] font-normal">360°</span>
-                  <p className="font-sans text-[10px] sm:text-[11px] tracking-[0.15em] uppercase text-neutral-400 font-medium mt-1">
+                <div className="border border-neutral-200 p-2.5 sm:p-4 text-center sm:text-left">
+                  <span className="font-serif text-[22px] sm:text-[32px] text-[#1a1a1a] font-normal leading-tight">360°</span>
+                  <p className="font-sans text-[8.5px] sm:text-[11px] tracking-[0.12em] sm:tracking-[0.15em] uppercase text-neutral-400 font-medium mt-1 leading-snug">
                     OUTLET APPROACH
                   </p>
                 </div>
-                <div className="border border-neutral-200 p-4">
-                  <span className="font-serif text-[28px] sm:text-[32px] text-[#1a1a1a] font-normal">8</span>
-                  <p className="font-sans text-[10px] sm:text-[11px] tracking-[0.15em] uppercase text-neutral-400 font-medium mt-1">
+                <div className="border border-neutral-200 p-2.5 sm:p-4 text-center sm:text-left">
+                  <span className="font-serif text-[22px] sm:text-[32px] text-[#1a1a1a] font-normal leading-tight">8</span>
+                  <p className="font-sans text-[8.5px] sm:text-[11px] tracking-[0.12em] sm:tracking-[0.15em] uppercase text-neutral-400 font-medium mt-1 leading-snug">
                     IDEA TO LAUNCH
                   </p>
                 </div>

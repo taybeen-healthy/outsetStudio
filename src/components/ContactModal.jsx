@@ -64,10 +64,10 @@ export default function ContactModal({ onClose }) {
 
   const content = submitted ? (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="relative w-full max-w-[480px] bg-[#FAFAF8] shadow-2xl px-8 py-14 text-center">
+      <div className="relative w-full sm:max-w-[480px] bg-[#FAFAF8] shadow-2xl px-8 py-14 text-center">
         <button onClick={onClose} aria-label="Close" className="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center text-neutral-400 hover:text-neutral-700 hover:bg-neutral-100 rounded transition-all cursor-pointer">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -89,7 +89,7 @@ export default function ContactModal({ onClose }) {
     </div>
   ) : (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm"
       onPointerDown={(e) => { pointerStart.current = { x: e.clientX, y: e.clientY }; }}
       onPointerUp={(e) => {
         if (!pointerStart.current) return;
@@ -99,7 +99,7 @@ export default function ContactModal({ onClose }) {
         if (dx < 5 && dy < 5 && e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="relative w-full max-w-[480px] shadow-2xl overflow-hidden">
+      <div className="relative w-full sm:max-w-[480px] max-h-[100dvh] sm:max-h-[90vh] shadow-2xl overflow-hidden flex flex-col">
         <button
           onClick={onClose}
           aria-label="Close"
@@ -110,7 +110,7 @@ export default function ContactModal({ onClose }) {
           </svg>
         </button>
 
-        <div className="bg-[#FAFAF8] px-8 pt-8 pb-8 space-y-6">
+        <div className="bg-[#FAFAF8] px-6 sm:px-8 pt-8 pb-8 space-y-6 overflow-y-auto modal-scroll flex-1">
           <div>
             <h2 className="font-serif italic text-[#1a1a1a] text-3xl sm:text-4xl leading-tight">
               Get in Touch
@@ -121,11 +121,11 @@ export default function ContactModal({ onClose }) {
           </div>
 
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            <a href="mailto:outsetstudio@gmail.com" className="flex items-center gap-2 font-sans text-sm text-neutral-600 hover:text-[#B84E29] transition-colors cursor-pointer">
+            <a href="mailto:info@outsetstudio.in" className="flex items-center gap-2 font-sans text-sm text-neutral-600 hover:text-[#B84E29] transition-colors cursor-pointer">
               <svg className="w-4 h-4 text-[#B84E29] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              outsetstudio@gmail.com
+              info@outsetstudio.in
             </a>
             <a href="tel:+919958544930" className="flex items-center gap-2 font-sans text-sm text-neutral-600 hover:text-[#B84E29] transition-colors cursor-pointer">
               <svg className="w-4 h-4 text-[#B84E29] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">

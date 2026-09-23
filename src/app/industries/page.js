@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import IndustriesClient from "./IndustriesClient";
@@ -31,10 +32,13 @@ export default function IndustriesPage() {
               </p>
             </div>
             <div className="relative w-full aspect-[4/3] lg:aspect-[4/3] overflow-hidden bg-neutral-100">
-              <img
-                src="/indust.png"
+              <Image
+                src="/indus.png"
                 alt="Industry spaces"
-                className="w-full h-full object-cover object-center"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center"
               />
             </div>
           </div>

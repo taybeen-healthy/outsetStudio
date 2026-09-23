@@ -15,7 +15,7 @@ export const heroData = {
   actions: [
     {
       label: "GET IN TOUCH",
-      href: "mailto:outsetstudio@gmail.com",
+      href: "mailto:info@outsetstudio.in",
       variant: "primary",
     },
     {
@@ -30,7 +30,7 @@ export const heroData = {
 export const statsData = [
   { id: 1, value: "10+", label: "TOTAL VENDORS", highlight: true },
   { id: 2, value: "10+", label: "EXPERIENCED VENDORS", highlight: false },
-  { id: 3, value: "15+", label: "TOTAL NUMBER OF PROJECTS", highlight: false },
+  { id: 3, value: "15+", label: "SPECIALIZED CATEGORIES", highlight: false },
   { id: 4, value: "07+", label: "YEARS OF EXPERIENCE", highlight: false },
 ];
 
@@ -1066,7 +1066,7 @@ export const testimonialsData = {
     },
     {
       id: 5,
-      name: "Amit郭",
+      name: "Amit Sharma",
       company: "SPICE ROUTE KITCHEN",
       rating: 3,
       quote:
@@ -1254,7 +1254,7 @@ export const footerData = {
       "Outset Studio brings strategy, design, execution, digital presence, and growth together to transform spaces into distinctive, high-performing outlets.",
   },
   contacts: {
-    email: "outsetstudio@gmail.com",
+    email: "info@outsetstudio.in",
     phone: "9958544930",
   },
   quickLinks: [

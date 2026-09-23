@@ -20,7 +20,7 @@ import {
 
 export default function Home() {
   return (
-      <div className="relative w-full bg-[#FAF7F2] lg:bg-white overflow-x-hidden font-sans select-none">
+      <div className="relative w-full bg-[#FAF7F2] lg:bg-white overflow-x-clip font-sans select-none">
         <div className="relative lg:min-h-screen flex flex-col justify-between bg-[#FAF7F2] lg:bg-transparent overflow-hidden">
         <div className="hidden lg:block absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image

@@ -81,7 +81,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-3 mt-8 font-sans text-[13px] text-neutral-300 font-light">
               <a href="tel:9958544930" className="hover:text-white transition-colors">Tel: 9958544930</a>
-              <a href="mailto:outsetstudio@gmail.com" className="hover:text-white transition-colors">Email: outsetstudio@gmail.com</a>
+              <a href="mailto:info@outsetstudio.in" className="hover:text-white transition-colors">Email: info@outsetstudio.in</a>
             </div>
             <div className="grid grid-cols-2 gap-8 mt-10">
               <div>
@@ -146,7 +146,7 @@ export default function Footer() {
 
                 <div className="flex flex-col gap-3 mt-6">
                   <a
-                    href="mailto:outsetstudio@gmail.com"
+                    href="mailto:info@outsetstudio.in"
                     className="font-sans text-xs sm:text-sm text-neutral-300 hover:text-white transition-colors font-light flex items-center gap-3"
                   >
                     <svg
@@ -162,7 +162,7 @@ export default function Footer() {
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    outsetstudio@gmail.com
+                    info@outsetstudio.in
                   </a>
 
                   <a

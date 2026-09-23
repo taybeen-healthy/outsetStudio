@@ -75,11 +75,11 @@ export default function StatsWork() {
   return (
     <div ref={ref} aria-label="Key statistics" className="w-full bg-[#FAF7F2]">
       <div className="bg-white border-y border-neutral-200">
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-neutral-200">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-neutral-200 divide-y lg:divide-y-0">
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="flex flex-col items-center justify-center py-12 sm:py-14 lg:py-16 text-center px-4"
+              className="flex flex-col items-center justify-center py-8 sm:py-12 lg:py-16 text-center px-3 sm:px-4"
               style={{
                 opacity: inView ? 1 : 0,
                 transform: inView ? "translateY(0)" : "translateY(20px)",
@@ -87,7 +87,7 @@ export default function StatsWork() {
                 transitionDelay: `${i * 120}ms`,
               }}
             >
-              <span className="font-serif text-[36px] sm:text-[42px] lg:text-[48px] font-normal leading-none tracking-tight text-[#1a1a1a]">
+              <span className="font-serif tabular-nums text-[36px] sm:text-[42px] lg:text-[48px] font-normal leading-none tracking-tight text-[#1a1a1a]">
                 <CountUp value={stat.value} inView={inView} />
               </span>
               <span className="font-sans text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-neutral-400 font-medium mt-3">

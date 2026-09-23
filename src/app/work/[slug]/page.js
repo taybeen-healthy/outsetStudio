@@ -67,21 +67,21 @@ export default async function ProjectDetailPage({ params }) {
 
         {/* Specs Bar */}
         <div className="grid grid-cols-2 border-t border-b border-neutral-200/80 my-6 sm:my-10 py-5 sm:py-6 gap-y-5 divide-y sm:divide-y-0 sm:divide-x divide-neutral-200/80 animate-slide-up animate-slide-up-delay-3">
-          <div className="pt-2 sm:pt-0 pr-4">
+          <div className="pt-2 sm:pt-0 pr-3 sm:pr-4">
             <span className="block font-sans text-[10px] tracking-[0.2em] uppercase text-neutral-400 font-medium mb-1">PROJECT</span>
-            <span className="block font-sans text-[13px] font-semibold text-[#1a1a1a]">{project.specs.projectName}</span>
+            <span className="block font-sans text-[11px] sm:text-[13px] font-semibold text-[#1a1a1a] leading-snug">{project.specs.projectName}</span>
           </div>
-          <div className="pt-2 sm:pt-0 pl-0 sm:pl-6 pr-4">
+          <div className="pt-2 sm:pt-0 pl-3 sm:pl-6 pr-3 sm:pr-4">
             <span className="block font-sans text-[10px] tracking-[0.2em] uppercase text-neutral-400 font-medium mb-1">TYPE</span>
-            <span className="block font-sans text-[13px] font-semibold text-[#1a1a1a]">{project.specs.type}</span>
+            <span className="block font-sans text-[11px] sm:text-[13px] font-semibold text-[#1a1a1a] leading-snug">{project.specs.type}</span>
           </div>
-          <div className="pt-5 sm:pt-0 pr-4">
+          <div className="pt-5 sm:pt-0 pr-3 sm:pr-4">
             <span className="block font-sans text-[10px] tracking-[0.2em] uppercase text-neutral-400 font-medium mb-1">LOCATION</span>
-            <span className="block font-sans text-[13px] font-semibold text-[#1a1a1a]">{project.specs.location}</span>
+            <span className="block font-sans text-[11px] sm:text-[13px] font-semibold text-[#1a1a1a] leading-snug">{project.specs.location}</span>
           </div>
-          <div className="pt-5 sm:pt-0 pl-0 sm:pl-6">
+          <div className="pt-5 sm:pt-0 pl-3 sm:pl-6">
             <span className="block font-sans text-[10px] tracking-[0.2em] uppercase text-neutral-400 font-medium mb-1">SCOPE</span>
-            <span className="block font-sans text-[13px] font-semibold text-[#1a1a1a]">{project.specs.scope}</span>
+            <span className="block font-sans text-[11px] sm:text-[13px] font-semibold text-[#1a1a1a] leading-snug">{project.specs.scope}</span>
           </div>
         </div>
 
@@ -188,13 +188,14 @@ export default async function ProjectDetailPage({ params }) {
         </section>
 
         {/* Bottom Navigation */}
-        <div className="pt-10 sm:pt-14 mt-12 sm:mt-16 border-t border-neutral-200/80 flex items-center justify-between font-sans text-[11px] tracking-[0.16em] uppercase font-medium">
+        <div className="pt-10 sm:pt-14 mt-12 sm:mt-16 border-t border-neutral-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-sans text-[11px] tracking-[0.16em] uppercase font-medium">
           <Link href="/#our-work" className="text-neutral-700 hover:text-[#1a1a1a] transition-colors cursor-pointer inline-flex items-center gap-2">
-            <span>&larr;</span>
+            <span>←</span>
             <span>INDEX OF ALL</span>
           </Link>
-          <Link href={`/work/${nextProject.slug}`} className="text-[#C2592D] hover:opacity-80 transition-opacity cursor-pointer font-semibold inline-flex items-center gap-2">
-            <span>NEXT: {nextProject.title} &rarr;</span>
+          <Link href={`/work/${nextProject.slug}`} className="text-[#C2592D] hover:opacity-80 transition-opacity cursor-pointer font-semibold inline-flex items-center gap-2 max-w-[60vw] sm:max-w-none">
+            <span className="truncate">NEXT: {nextProject.title}</span>
+            <span className="flex-shrink-0">→</span>
           </Link>
         </div>
       </main>

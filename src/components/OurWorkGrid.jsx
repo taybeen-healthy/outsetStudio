@@ -30,8 +30,8 @@ export default function OurWorkGrid({ data }) {
     >
       {/* Filter Bar */}
       <div className="w-full border-b border-neutral-200 bg-[#FAF7F2]">
-        <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 py-6 sm:py-7 lg:py-8 flex items-center justify-between gap-6">
-          <div className="flex flex-wrap items-center gap-3 lg:gap-5">
+        <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 py-5 sm:py-7 lg:py-8 flex items-center justify-between gap-4 overflow-x-auto">
+          <div className="flex items-center gap-2.5 lg:gap-5 flex-shrink-0">
             {filters.map((f) => {
               const isActive = activeFilter.toUpperCase() === f.toUpperCase();
               const count = getFilterCount(f);

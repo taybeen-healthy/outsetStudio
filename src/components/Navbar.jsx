@@ -68,19 +68,19 @@ export default function Navbar() {
         </Link>
 
         <nav
-          className="hidden lg:flex items-center space-x-10 xl:space-x-14"
+          className="hidden lg:flex items-center gap-2 xl:gap-3"
           aria-label="Main Navigation"
         >
           {navLinks.map((link) => {
-            const isActive = pathname === link.href || (link.href.startsWith("/") && pathname === link.href);
+            const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
             return (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-xs tracking-[0.2em] uppercase font-normal transition-colors duration-200 py-1 font-sans cursor-pointer ${
+                className={`text-[11px] xl:text-xs tracking-[0.18em] uppercase font-sans cursor-pointer px-4 py-1.5 rounded-full transition-all duration-300 ${
                   isActive
-                    ? "text-[#C0532C] border-b border-[#C0532C] pb-1"
-                    : "text-neutral-300 hover:text-white"
+                    ? "bg-[#C0532C]/20 text-white border border-[#C0532C]/40 shadow-[0_2px_12px_rgba(192,83,44,0.18)] font-medium"
+                    : "text-neutral-300 hover:text-white hover:bg-white/[0.06] border border-transparent font-normal"
                 }`}
               >
                 {link.name}
@@ -135,27 +135,33 @@ export default function Navbar() {
 
       {mobileMenuOpen && (
         <div
-          className={`lg:hidden absolute top-full left-0 w-full px-5 py-6 transition-all duration-300 shadow-2xl ${
+          className={`lg:hidden absolute top-full left-0 w-full px-5 py-6 max-h-[85vh] overflow-y-auto transition-all duration-300 shadow-2xl ${
             isLightBg
               ? "bg-[#FAF7F2] border-b border-neutral-200"
               : "bg-black/95 backdrop-blur-xl border-b border-white/10"
           }`}
         >
           <nav className="flex flex-col space-y-4" aria-label="Mobile Navigation">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`text-xs tracking-[0.2em] uppercase font-normal py-2 transition-colors cursor-pointer ${
-                  isLightBg
-                    ? "text-[#1a1a1a] hover:text-[#C0532C] border-b border-neutral-200"
-                    : "text-neutral-300 hover:text-white border-b border-white/5"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`text-xs tracking-[0.2em] uppercase font-normal px-4 py-2.5 rounded-full transition-all cursor-pointer flex items-center justify-between ${
+                    isActive
+                      ? "bg-[#C0532C]/15 text-[#C0532C] font-medium border border-[#C0532C]/30"
+                      : isLightBg
+                        ? "text-[#1a1a1a] hover:text-[#C0532C] hover:bg-neutral-100"
+                        : "text-neutral-300 hover:text-white hover:bg-white/5"
+                  }`}
+                >
+                  <span>{link.name}</span>
+                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#C0532C]" />}
+                </Link>
+              );
+            })}
             <button
               onClick={() => {
                 setMobileMenuOpen(false);

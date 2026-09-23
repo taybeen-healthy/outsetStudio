@@ -255,7 +255,7 @@ export default function TermsPage() {
                     EMAIL ADVISORY
                   </span>
                   <span className="font-sans text-[14px] text-[#1a1a1a] font-semibold">
-                    outsetstudio@gmail.com
+                    info@outsetstudio.in
                   </span>
                 </div>
                 <div className="p-6">

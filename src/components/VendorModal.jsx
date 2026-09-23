@@ -359,7 +359,11 @@ export default function VendorModal({ onClose }) {
           <div className="fixed inset-0 z-[10000]" onClick={() => setDropdownOpen(false)} />
           <div
             className="fixed bg-white border border-neutral-200 shadow-lg max-h-[320px] overflow-y-auto z-[10001]"
-            style={{ top: dropdownPos.top, left: dropdownPos.left, width: dropdownPos.width }}
+            style={{
+              top: dropdownPos.top,
+              left: dropdownPos.left,
+              width: Math.min(dropdownPos.width, window.innerWidth - 16),
+            }}
           >
             {serviceOptions.map((svc) => {
               const checked = form.services.includes(svc);

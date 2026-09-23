@@ -83,7 +83,7 @@ export default function WhatWeDoPage() {
             </div>
             <div className="border border-neutral-200 p-2 sm:p-3">
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
-                <Image src="/wwd1.jpg" alt="Outlet design - cafe interior" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+                <Image src="/ww1.png" alt="Outlet design - cafe interior" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function WhatWeDoPage() {
           <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="border border-neutral-200 p-2 sm:p-3 order-2 lg:order-1">
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
-                <Image src="/wwd2.jpg" alt="Build and execution - fabrication" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+                <Image src="/ww2.png" alt="Build and execution - fabrication" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -153,7 +153,7 @@ export default function WhatWeDoPage() {
             </div>
             <div className="border border-neutral-200 p-2 sm:p-3">
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
-                <Image src="/wwd3.png" alt="Digital setup - website on laptop" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+                <Image src="/ww3.png" alt="Digital setup - website on laptop" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
               </div>
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function WhatWeDoPage() {
           <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="border border-neutral-200 p-2 sm:p-3 order-2 lg:order-1">
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
-                <Image src="/wwd4.png" alt="Sales growth - customers" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+                <Image src="/ww4.png" alt="Sales growth - customers" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -223,7 +223,7 @@ export default function WhatWeDoPage() {
             </div>
             <div className="border border-neutral-200 p-2 sm:p-3">
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
-                <Image src="/wwd5.png" alt="Scale - multiple store locations" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
+                <Image src="/ww5.png" alt="Scale - multiple store locations" fill sizes="(max-width: 1024px) 100vw, 600px" className="object-cover object-center" />
               </div>
             </div>
           </div>

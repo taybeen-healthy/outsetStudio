@@ -197,7 +197,7 @@ export default function StartProjectModal({ onClose }) {
             </div>
 
         {/* Step Content */}
-        <div className="flex-1 px-5 sm:px-8 py-4 sm:py-6">
+        <div className="flex-1 px-5 sm:px-8 py-4 sm:py-6 overflow-y-auto modal-scroll">
           {/* Step 1: Space Type */}
           {step === 1 && (
             <div>
