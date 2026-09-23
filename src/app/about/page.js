@@ -32,7 +32,7 @@ export default function AboutPage() {
             <div className="border border-neutral-200 p-2 sm:p-3">
               <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden bg-neutral-100">
                 <Image
-                  src="/about.png"
+                  src="/a1.png"
                   alt="Outset Studio team collaborating on architectural plans"
                   fill
                   priority
@@ -76,7 +76,7 @@ export default function AboutPage() {
             <div className="border border-neutral-200 p-2 sm:p-3">
               <div className="relative w-full aspect-[3/4] sm:aspect-[4/5] overflow-hidden bg-neutral-100">
                 <Image
-                  src="/image50.png"
+                  src="/a2.png"
                   alt="Empty space being built into an outlet"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -184,7 +184,7 @@ export default function AboutPage() {
             <div className="border border-neutral-200 p-2 sm:p-3 self-start">
               <div className="relative w-full aspect-[3/4] overflow-hidden bg-neutral-100">
                 <Image
-                  src="/ab1.png"
+                  src="/a3.png"
                   alt="Mohd Arif - CEO & Founder"
                   fill
                   sizes="(max-width: 1024px) 100vw, 400px"

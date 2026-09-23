@@ -156,8 +156,8 @@ export default function Testimonials() {
 
           <div className="relative min-h-[320px] lg:min-h-[460px] w-full h-full overflow-hidden">
             <Image
-              src={t.image}
-              alt="Outset Studio restaurant interior execution"
+              src="/cust.png"
+              alt="Outset Studio customer review"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
