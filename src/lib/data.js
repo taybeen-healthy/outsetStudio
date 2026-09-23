@@ -24,7 +24,7 @@ export const heroData = {
       variant: "outline",
     },
   ],
-  backgroundImage: "/image1.jpg",
+  backgroundImage: "/hero.jpg",
 };
 
 export const statsData = [
@@ -44,8 +44,8 @@ export const aboutData = {
     "Functional spaces built to perform.",
     "Systems designed to scale.",
   ],
-  mainImage: "/image2.jpg",
-  secondaryImage: "/image3.jpg",
+  mainImage: "/hs2.png",
+  secondaryImage: "/hs22.png",
 };
 
 export const howWeWorkData = {
