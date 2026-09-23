@@ -29,7 +29,7 @@ export default function About({ data }) {
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 500px"
-                className="object-cover object-center"
+                className="object-cover object-center object-[65%_center]"
               />
             </div>
 
