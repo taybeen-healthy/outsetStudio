@@ -79,7 +79,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-xs tracking-[0.2em] uppercase font-normal transition-colors duration-200 py-1 font-sans cursor-pointer ${
                   isActive
-                    ? "text-[#C0532C]"
+                    ? "text-[#C0532C] border-b border-[#C0532C] pb-1"
                     : "text-neutral-300 hover:text-white"
                 }`}
               >
@@ -90,12 +90,6 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3 xl:gap-4">
-          <button
-            onClick={() => setShowVendor(true)}
-            className="text-[10px] xl:text-xs tracking-[0.2em] uppercase font-normal text-neutral-200 border border-neutral-600/80 hover:border-white hover:bg-white hover:text-black px-5 xl:px-7 py-2.5 bg-black/20 transition-all duration-300 rounded-none font-sans cursor-pointer whitespace-nowrap"
-          >
-            REGISTER VENDOR
-          </button>
           <button
             onClick={() => setShowContact(true)}
             className="text-[10px] xl:text-xs tracking-[0.2em] uppercase font-normal text-neutral-200 border border-neutral-600/80 hover:border-white hover:bg-white hover:text-black px-5 xl:px-7 py-2.5 bg-black/20 transition-all duration-300 rounded-none font-sans cursor-pointer whitespace-nowrap"
