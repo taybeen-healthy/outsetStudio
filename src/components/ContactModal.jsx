@@ -64,7 +64,7 @@ export default function ContactModal({ onClose }) {
 
   const content = submitted ? (
     <div
-      className="fixed inset-0 z-[9999] flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
       <div className="relative w-full sm:max-w-[480px] bg-[#FAFAF8] shadow-2xl px-8 py-14 text-center">
@@ -89,7 +89,7 @@ export default function ContactModal({ onClose }) {
     </div>
   ) : (
     <div
-      className="fixed inset-0 z-[9999] flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
       onPointerDown={(e) => { pointerStart.current = { x: e.clientX, y: e.clientY }; }}
       onPointerUp={(e) => {
         if (!pointerStart.current) return;
@@ -99,7 +99,7 @@ export default function ContactModal({ onClose }) {
         if (dx < 5 && dy < 5 && e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="relative w-full sm:max-w-[480px] max-h-[100dvh] shadow-2xl overflow-hidden flex flex-col">
+      <div className="relative w-full sm:max-w-[480px] max-h-[100dvh] shadow-2xl overflow-hidden flex flex-col mx-auto my-auto">
         <button
           onClick={onClose}
           aria-label="Close"
@@ -110,12 +110,12 @@ export default function ContactModal({ onClose }) {
           </svg>
         </button>
 
-        <div className="bg-[#FAFAF8] px-5 sm:px-8 pt-6 pb-6 space-y-4 flex-1">
+        <div className="bg-[#FAFAF8] px-4 sm:px-8 pt-5 sm:pt-6 pb-5 sm:pb-6 space-y-3 sm:space-y-4 flex-1">
           <div>
-            <h2 className="font-serif italic text-[#1a1a1a] text-3xl sm:text-4xl leading-tight">
+            <h2 className="font-serif italic text-[#1a1a1a] text-2xl sm:text-3xl leading-tight">
               Get in Touch
             </h2>
-            <p className="font-sans text-sm text-neutral-500 mt-2 leading-relaxed">
+            <p className="font-sans text-xs sm:text-sm text-neutral-500 mt-1.5 sm:mt-2 leading-relaxed">
               Direct inquiries for commercial architecture, spatial design, and site feasibility.
             </p>
           </div>
@@ -148,7 +148,7 @@ export default function ContactModal({ onClose }) {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="e.g. Siddharth Mehra"
-                className={`w-full h-11 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.name ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
+                className={`w-full h-10 sm:h-11 border bg-white px-3 sm:px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.name ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
               />
               {errors.name && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.name}</p>}
             </div>
@@ -164,7 +164,7 @@ export default function ContactModal({ onClose }) {
                 onChange={handleChange}
                 maxLength={10}
                 placeholder="e.g. 9958544930"
-                className={`w-full h-11 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.phone ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
+                className={`w-full h-10 sm:h-11 border bg-white px-3 sm:px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.phone ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
               />
               {errors.phone && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.phone}</p>}
             </div>
