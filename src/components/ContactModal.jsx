@@ -99,7 +99,7 @@ export default function ContactModal({ onClose }) {
         if (dx < 5 && dy < 5 && e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="relative w-full sm:max-w-[480px] max-h-[100dvh] sm:max-h-[90vh] shadow-2xl overflow-hidden flex flex-col">
+      <div className="relative w-full sm:max-w-[480px] max-h-[100dvh] shadow-2xl overflow-hidden flex flex-col">
         <button
           onClick={onClose}
           aria-label="Close"
@@ -110,7 +110,7 @@ export default function ContactModal({ onClose }) {
           </svg>
         </button>
 
-        <div className="bg-[#FAFAF8] px-6 sm:px-8 pt-8 pb-8 space-y-6 flex-1">
+        <div className="bg-[#FAFAF8] px-5 sm:px-8 pt-6 pb-6 space-y-4 flex-1">
           <div>
             <h2 className="font-serif italic text-[#1a1a1a] text-3xl sm:text-4xl leading-tight">
               Get in Touch
@@ -137,7 +137,7 @@ export default function ContactModal({ onClose }) {
 
           <div className="border-t border-neutral-200" />
 
-          <div className="space-y-5">
+          <div className="space-y-4">
             <div>
               <label className="block font-sans text-[10px] font-semibold tracking-[0.15em] text-neutral-500 mb-2">
                 YOUR NAME *
@@ -148,7 +148,7 @@ export default function ContactModal({ onClose }) {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="e.g. Siddharth Mehra"
-                className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.name ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
+                className={`w-full h-11 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.name ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
               />
               {errors.name && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.name}</p>}
             </div>
@@ -164,7 +164,7 @@ export default function ContactModal({ onClose }) {
                 onChange={handleChange}
                 maxLength={10}
                 placeholder="e.g. 9958544930"
-                className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.phone ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
+                className={`w-full h-11 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.phone ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
               />
               {errors.phone && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.phone}</p>}
             </div>
@@ -179,7 +179,7 @@ export default function ContactModal({ onClose }) {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="e.g. siddharth@venture.in"
-                className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.email ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
+                className={`w-full h-11 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.email ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
               />
               {errors.email && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.email}</p>}
             </div>
@@ -192,7 +192,7 @@ export default function ContactModal({ onClose }) {
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                rows={4}
+                rows={3}
                 placeholder="Tell us briefly about your space, location, or goals..."
                 className={`w-full border bg-white px-4 py-3 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors resize-none rounded-none ${errors.message ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#B84E29]"}`}
               />
@@ -202,7 +202,7 @@ export default function ContactModal({ onClose }) {
 
           <button
             onClick={handleSubmit}
-            className="w-full h-14 font-sans text-xs tracking-[0.2em] uppercase font-medium text-white bg-[#B84E29] hover:bg-[#a34320] transition-colors rounded-none flex items-center justify-center gap-2.5 mt-2 cursor-pointer"
+            className="w-full h-12 font-sans text-xs tracking-[0.2em] uppercase font-medium text-white bg-[#B84E29] hover:bg-[#a34320] transition-colors rounded-none flex items-center justify-center gap-2.5 cursor-pointer"
           >
             Send Inquiry
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
