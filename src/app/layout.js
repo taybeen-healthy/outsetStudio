@@ -1,5 +1,6 @@
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -90,6 +91,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col font-sans bg-[#0c0d0e] text-white selection:bg-amber-500 selection:text-black">
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );
