@@ -110,7 +110,7 @@ export default function ContactModal({ onClose }) {
           </svg>
         </button>
 
-        <div className="bg-[#FAFAF8] px-6 sm:px-8 pt-8 pb-8 space-y-6 overflow-y-auto modal-scroll flex-1">
+        <div className="bg-[#FAFAF8] px-6 sm:px-8 pt-8 pb-8 space-y-6 flex-1">
           <div>
             <h2 className="font-serif italic text-[#1a1a1a] text-3xl sm:text-4xl leading-tight">
               Get in Touch

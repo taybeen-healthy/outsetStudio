@@ -198,7 +198,7 @@ export default function VendorModal({ onClose }) {
         ) : (
           <>
             {/* Form Content */}
-            <div className="flex-1 px-5 sm:px-8 py-6 sm:py-6 sm:overflow-y-auto">
+            <div className="flex-1 px-5 sm:px-8 py-6 sm:py-6">
               <div className="max-w-[720px] mx-auto">
                 <h1 className="font-serif text-[#1a1a1a] text-[28px] sm:text-[32px] font-normal leading-tight mb-1.5">
                   Vendor Registration
