@@ -1119,6 +1119,361 @@ export const ourWorkData = {
         plate6: { image: "/delhi.png", caption: "HRDL-006 • FINISHING DETAILS" },
       },
     },
+    {
+      id: 10,
+      slug: "old-rao-hotel",
+      title: "Old Rao Hotel",
+      titleRoman: "Old Rao",
+      titleItalic: "Hotel",
+      subtitle:
+        "A thoughtfully designed hospitality space that blends timeless character with contemporary comfort, creating a warm and memorable experience for every guest.",
+      image: "/OR.png",
+      location: "DELHI",
+      specs: {
+        projectName: "OLD RAO HOTEL",
+        type: "HOSPITALITY",
+        location: "DELHI",
+        scope: "EXTERIOR & INTERIOR DESIGN",
+      },
+      concept: {
+        title: "Timeless hospitality with contemporary warmth.",
+        description:
+          "A hospitality project that brings together classic architectural character and modern comfort. The design creates an inviting atmosphere that resonates with guests from the moment they arrive.",
+      },
+      keyElements: {
+        material: {
+          image: "/OR.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Classic Meets Modern",
+          description:
+            "Stone facades, warm wood accents, ambient lighting, and rich textures combine to create a hotel that feels both grand and welcoming.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Warm Hospitality",
+          swatches: [
+            { name: "WARM GOLD", hex: "#C9A96E", bg: "#C9A96E" },
+            { name: "DEEP BROWN", hex: "#3E2723", bg: "#3E2723" },
+            { name: "CREAM", hex: "#F5F0E1", bg: "#F5F0E1" },
+          ],
+          bottomTag: "HOSPITALITY PALETTE",
+        },
+        lighting: {
+          image: "/OR.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Grand Illumination",
+          description:
+            "Exterior facade lighting, warm lobby chandeliers, and accent wall lights create a dramatic yet inviting presence.",
+        },
+        furniture: {
+          image: "/OR.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Refined Comfort",
+          description:
+            "Plush lobby seating, custom headboards, and curated artwork that reflect the hotel's personality and heritage.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Grand Facade & Entrance", description: "A striking exterior with illuminated signage, arched windows, and a welcoming portico." },
+        { number: "02.", title: "Lobby & Reception", description: "A warm, elegant lobby with rich textures, ambient lighting, and comfortable seating." },
+        { number: "03.", title: "Guest Rooms", description: "Thoughtfully designed rooms with premium finishes, layered lighting, and personalised touches." },
+        { number: "04.", title: "Dining & Lounge", description: "A versatile dining space with curated decor, ambient lighting, and a distinctive atmosphere." },
+        { number: "05.", title: "Corridors & Transition Spaces", description: "Designed pathways that maintain the hotel's character with art, lighting, and texture." },
+        { number: "06.", title: "Exterior Courtyard", description: "A landscaped outdoor area with seating, fountain features, and evening illumination." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/OR.png", caption: "ORH-001 • GRAND FACADE" },
+        plate2: { image: "/OR.png", caption: "ORH-002 • LOBBY & RECEPTION" },
+        plate3: { image: "/OR.png", caption: "ORH-003 • GUEST ROOM" },
+        plate4: { image: "/OR.png", caption: "ORH-004 • DINING SPACE" },
+        plate5: { image: "/OR.png", caption: "ORH-005 • CORRIDOR DETAIL" },
+        plate6: { image: "/OR.png", caption: "ORH-006 • COURTYARD" },
+      },
+    },
+    {
+      id: 11,
+      slug: "builder-flat-delhi",
+      title: "Builder Flat",
+      titleRoman: "Builder",
+      titleItalic: "Flat",
+      subtitle:
+        "We transform builder flats with smart planning, refined interiors and personalised details that make the space feel truly yours.",
+      image: "/builder.png",
+      location: "DELHI",
+      specs: {
+        projectName: "BUILDER FLAT",
+        type: "RESIDENTIAL INTERIOR",
+        location: "DELHI",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "Personalised living in compact spaces.",
+        description:
+          "A builder flat transformed with smart spatial planning, refined material choices, and personalised design details that maximise both functionality and aesthetics within a compact footprint.",
+      },
+      keyElements: {
+        material: {
+          image: "/builder.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Smart & Refined",
+          description:
+            "Marble flooring, mirrored panels, decorative wall treatments, and layered lighting create a sense of spaciousness and luxury.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Crisp Modern",
+          swatches: [
+            { name: "PEARL WHITE", hex: "#F0EDE5", bg: "#F0EDE5" },
+            { name: "SOFT GOLD", hex: "#C5A880", bg: "#C5A880" },
+            { name: "DARK CHARCOAL", hex: "#2C2C2C", bg: "#2C2C2C" },
+          ],
+          bottomTag: "RESIDENTIAL PALETTE",
+        },
+        lighting: {
+          image: "/builder.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Layered Brilliance",
+          description:
+            "Statement chandeliers, concealed cove lighting, and accent wall lights that make compact rooms feel open and inviting.",
+        },
+        furniture: {
+          image: "/builder.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Space-Smart Design",
+          description:
+            "Custom modular furniture, storage-integrated seating, and multi-functional pieces designed for modern urban living.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Living Room", description: "An open, well-lit living space with decorative wall panels and statement lighting." },
+        { number: "02.", title: "Bedroom Suite", description: "A serene bedroom with layered lighting, custom headboard, and warm material palette." },
+        { number: "03.", title: "Kitchen & Dining", description: "A compact, efficient kitchen with smart storage solutions and modern finishes." },
+        { number: "04.", title: "Bathroom", description: "Clean, contemporary bathroom with quality fittings and refined tile work." },
+        { number: "05.", title: "Balcony & View", description: "A small but well-designed outdoor extension with seating and greenery." },
+        { number: "06.", title: "Entry Foyer", description: "A welcoming entryway with mirror accents, shoe storage, and ambient lighting." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/builder.png", caption: "BFL-001 • LIVING ROOM" },
+        plate2: { image: "/builder.png", caption: "BFL-002 • BEDROOM SUITE" },
+        plate3: { image: "/builder.png", caption: "BFL-003 • KITCHEN" },
+        plate4: { image: "/builder.png", caption: "BFL-004 • BATHROOM" },
+        plate5: { image: "/builder.png", caption: "BFL-005 • BALCONY" },
+        plate6: { image: "/builder.png", caption: "BFL-006 • ENTRY FOYER" },
+      },
+    },
+    {
+      id: 12,
+      slug: "fecade-gurugram",
+      title: "Fecade",
+      titleRoman: "",
+      titleItalic: "Fecade",
+      subtitle:
+        "We create distinctive facades that give your building a strong identity while balancing aesthetics, functionality and architectural character.",
+      image: "/fecade.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "FECADE",
+        type: "ARCHITECTURAL EXTERIOR",
+        location: "GURUGRAM",
+        scope: "FACADE DESIGN & EXECUTION",
+      },
+      concept: {
+        title: "Building identity through facade design.",
+        description:
+          "An architectural facade project designed to create a strong visual identity. The design balances aesthetic appeal with functional requirements including weather resistance, lighting integration, and material durability.",
+      },
+      keyElements: {
+        material: {
+          image: "/fecade.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Bold & Distinctive",
+          description:
+            "Natural stone cladding, decorative mouldings, arched window frames, and premium exterior paint create a facade with presence and durability.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Architectural Classic",
+          swatches: [
+            { name: "IVORY STONE", hex: "#E8DCC8", bg: "#E8DCC8" },
+            { name: "WARM GREY", hex: "#8C8278", bg: "#8C8278" },
+            { name: "DARK FOREST", hex: "#1A2E1A", bg: "#1A2E1A" },
+          ],
+          bottomTag: "EXTERIOR PALETTE",
+        },
+        lighting: {
+          image: "/fecade.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Dramatic Facade Lighting",
+          description:
+            "Warm uplights, window accent lights, and landscape lighting that highlight architectural features after dark.",
+        },
+        furniture: {
+          image: "/fecade.png",
+          subtitle: "04 // ARCHITECTURAL DETAILING",
+          title: "Classical Character",
+          description:
+            "Decorative cornices, pilasters, arched doorways, and wrought-iron accents that define the building's architectural personality.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Main Facade", description: "A grand front elevation with classical proportions, stone cladding, and decorative elements." },
+        { number: "02.", title: "Window Treatments", description: "Arched and rectangular windows with premium frames and decorative surrounds." },
+        { number: "03.", title: "Entrance Portico", description: "A welcoming covered entrance with columns, lighting, and a sense of arrival." },
+        { number: "04.", title: "Landscape & Approach", description: "Thoughtfully designed landscaping with pathway lighting and greenery framing the building." },
+        { number: "05.", title: "Evening Illumination", description: "Strategic lighting design that transforms the facade's character after sunset." },
+        { number: "06.", title: "Side Elevation", description: "Consistent design language extended to side profiles for a cohesive architectural statement." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/fecade.png", caption: "FCD-001 • MAIN FACADE" },
+        plate2: { image: "/fecade.png", caption: "FCD-002 • WINDOW DETAIL" },
+        plate3: { image: "/fecade.png", caption: "FCD-003 • ENTRANCE PORTICO" },
+        plate4: { image: "/fecade.png", caption: "FCD-004 • LANDSCAPE" },
+        plate5: { image: "/fecade.png", caption: "FCD-005 • EVENING VIEW" },
+        plate6: { image: "/fecade.png", caption: "FCD-006 • SIDE ELEVATION" },
+      },
+    },
+    {
+      id: 13,
+      slug: "police-station-gurugram",
+      title: "Police Station",
+      titleRoman: "Police",
+      titleItalic: "Station",
+      subtitle:
+        "Thoughtfully designed to create a secure, functional and welcoming environment, with clear planning, durable materials and efficient spaces that support both public needs and daily police operations.",
+      image: "/PS.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "POLICE STATION",
+        type: "GOVERNMENT / INSTITUTIONAL",
+        location: "GURUGRAM",
+        scope: "ARCHITECTURE & INTERIOR DESIGN",
+      },
+      concept: {
+        title: "Designing trust through functional architecture.",
+        description:
+          "A police station designed to project security, efficiency, and approachability. The layout separates public and operational zones while maintaining clear circulation and accessibility.",
+      },
+      keyElements: {
+        material: {
+          image: "/PS.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Durable & Purposeful",
+          description:
+            "Reinforced concrete, anti-skid flooring, security-grade glazing, and impact-resistant surfaces built for high-traffic institutional use.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Civic Authority",
+          swatches: [
+            { name: "NAVAL BLUE", hex: "#003366", bg: "#003366" },
+            { name: "CONCRETE GREY", hex: "#8E9196", bg: "#8E9196" },
+            { name: "CLEAN WHITE", hex: "#F2F2F2", bg: "#F2F2F2" },
+          ],
+          bottomTag: "INSTITUTIONAL PALETTE",
+        },
+        lighting: {
+          image: "/PS.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Functional Brightness",
+          description:
+            "High-output LED panels, emergency lighting systems, and exterior security lights ensuring 24/7 visibility and safety.",
+        },
+        furniture: {
+          image: "/PS.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Operational Efficiency",
+          description:
+            "Modular desk systems, secure filing stations, waiting area seating, and CCTV monitoring positions designed for workflow.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Public Reception & Help Desk", description: "A clearly marked, accessible entrance with a secure help desk and waiting area." },
+        { number: "02.", title: "Complaint & Filing Area", description: "A semi-private zone for public complaints with counter service and seating." },
+        { number: "03.", title: "Investigation Rooms", description: "Private, sound-insulated rooms for interviews and case work with secure storage." },
+        { number: "04.", title: "Operations Room", description: "A central monitoring hub with CCTV screens, communication systems, and rapid response coordination." },
+        { number: "05.", title: "Evidence & Records Room", description: "A secure, climate-controlled area for evidence preservation and document storage." },
+        { number: "06.", title: "Staff Quarters & Break Area", description: "Comfortable rest areas for officers with lockers, refreshment facilities, and quiet zones." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/PS.png", caption: "PS-001 • BUILDING EXTERIOR" },
+        plate2: { image: "/PS.png", caption: "PS-002 • RECEPTION AREA" },
+        plate3: { image: "/PS.png", caption: "PS-003 • COMPLAINT DESK" },
+        plate4: { image: "/PS.png", caption: "PS-004 • OPERATIONS ROOM" },
+        plate5: { image: "/PS.png", caption: "PS-005 • INVESTIGATION ROOM" },
+        plate6: { image: "/PS.png", caption: "PS-006 • STAFF AREA" },
+      },
+    },
+    {
+      id: 14,
+      slug: "bhutan-residence-gurugram",
+      title: "Bhutan Residence",
+      titleRoman: "Bhutan",
+      titleItalic: "Residence",
+      subtitle:
+        "A thoughtfully designed residence that blends Bhutanese architectural character with modern comfort, creating a warm, elegant and timeless home.",
+      image: "/BR.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "BHUTAN RESIDENCE",
+        type: "RESIDENTIAL INTERIOR",
+        location: "GURUGRAM",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "Cultural heritage meets modern living.",
+        description:
+          "A residential project that draws from Bhutanese architectural traditions — warm wood tones, artisanal textures, and a deep connection to nature — while delivering all the comforts of a modern home.",
+      },
+      keyElements: {
+        material: {
+          image: "/BR.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Natural & Warm",
+          description:
+            "Solid wood panelling, woven textiles, natural stone, and handcrafted details that create an atmosphere of warmth, culture, and timeless elegance.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Himalayan Earth",
+          swatches: [
+            { name: "RICH WALNUT", hex: "#5B3A29", bg: "#5B3A29" },
+            { name: "TERRACOTTA", hex: "#B7572A", bg: "#B7572A" },
+            { name: "WARM SAND", hex: "#C8B69A", bg: "#C8B69A" },
+          ],
+          bottomTag: "CULTURAL RESIDENCE PALETTE",
+        },
+        lighting: {
+          image: "/BR.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Soft Glow",
+          description:
+            "Warm pendant lights, backlit wooden shelving, and concealed LED strips that enhance the natural material palette.",
+        },
+        furniture: {
+          image: "/BR.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Artisanal Character",
+          description:
+            "Custom wood dining tables, leather-upholstered seating, handcrafted shelving, and cultural art pieces as focal points.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Living & Lounge", description: "A rich, warm living space with wood panelling, leather seating, and cultural art displays." },
+        { number: "02.", title: "Dining Hall", description: "A statement dining area with a solid wood table, pendant lighting, and an art wall." },
+        { number: "03.", title: "Bedroom Suite", description: "A serene bedroom with wooden headboard wall, layered lighting, and soft textile palette." },
+        { number: "04.", title: "Study & Library", description: "A contemplative space with built-in bookshelves, warm desk lighting, and wood-wrapped walls." },
+        { number: "05.", title: "Bathroom & Spa", description: "A spa-inspired bathroom with natural stone, wood accents, and soft ambient lighting." },
+        { number: "06.", title: "Courtyard Connection", description: "Seamless indoor-outdoor transitions connecting living spaces to a private courtyard garden." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/BR.png", caption: "BHR-001 • LIVING SPACE" },
+        plate2: { image: "/BR.png", caption: "BHR-002 • DINING HALL" },
+        plate3: { image: "/BR.png", caption: "BHR-003 • BEDROOM SUITE" },
+        plate4: { image: "/BR.png", caption: "BHR-004 • STUDY" },
+        plate5: { image: "/BR.png", caption: "BHR-005 • BATHROOM" },
+        plate6: { image: "/BR.png", caption: "BHR-006 • COURTYARD" },
+      },
+    },
   ],
 };
 
