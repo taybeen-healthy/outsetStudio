@@ -1018,6 +1018,107 @@ export const ourWorkData = {
         plate6: { image: "/YAA.png", caption: "YAAS-006 • BOARDROOM" },
       },
     },
+    {
+      id: 9,
+      slug: "home-renovation-delhi",
+      title: "Home Renovation",
+      titleRoman: "Home",
+      titleItalic: "Renovation",
+      subtitle:
+        "We rethink existing spaces with thoughtful design, practical planning and refined details — creating homes that feel better and work better.",
+      image: "/delhi.png",
+      location: "DELHI",
+      specs: {
+        projectName: "HOME RENOVATION",
+        type: "RESIDENTIAL INTERIOR",
+        location: "DELHI",
+        scope: "INTERIOR DESIGN & RENOVATION",
+      },
+      concept: {
+        title: "Transforming existing spaces into refined living.",
+        description:
+          "A residential renovation project that reimagined an existing home with thoughtful design, practical planning and refined details — creating a living space that feels both elevated and effortlessly functional.",
+      },
+      keyElements: {
+        material: {
+          image: "/delhi.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Warm & Refined",
+          description:
+            "Engineered wood cabinetry, marble countertops, brass accents, and soft neutral tones combine to create a kitchen that balances luxury with everyday functionality.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Warm Neutrals",
+          swatches: [
+            { name: "WALNUT BROWN", hex: "#5C4033", bg: "#5C4033" },
+            { name: "WARM BEIGE", hex: "#C2A68C", bg: "#C2A68C" },
+            { name: "CREAM WHITE", hex: "#F5F0E8", bg: "#F5F0E8" },
+          ],
+          bottomTag: "RESIDENTIAL INTERIOR PALETTE",
+        },
+        lighting: {
+          image: "/delhi.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Ambient Elegance",
+          description:
+            "Statement pendant lighting over the island, integrated LED strip lighting in display cabinets, and recessed ceiling lights for layered illumination throughout.",
+        },
+        furniture: {
+          image: "/delhi.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Curated Comfort",
+          description:
+            "Custom upholstered bar stools with brass legs, marble-top island counter, and bespoke glass display shelving with integrated backlighting.",
+        },
+      },
+      spatialExperience: [
+        {
+          number: "01.",
+          title: "Kitchen Island & Dining",
+          description:
+            "A central marble-top island with integrated seating, creating a social hub for casual dining and entertaining.",
+        },
+        {
+          number: "02.",
+          title: "Cabinetry & Storage",
+          description:
+            "Full-height engineered wood cabinetry with clean lines, soft-close mechanisms, and integrated appliances for a seamless look.",
+        },
+        {
+          number: "03.",
+          title: "Display & Accent Wall",
+          description:
+            "Glass-front display cabinets with LED backlighting showcase curated collections and add depth to the space.",
+        },
+        {
+          number: "04.",
+          title: "Lighting & Ambience",
+          description:
+            "Layered lighting design combining statement pendants, task lighting, and ambient LEDs to create the perfect mood for every moment.",
+        },
+        {
+          number: "05.",
+          title: "Material Transitions",
+          description:
+            "Thoughtful transitions between marble, wood, and brass surfaces create visual rhythm and tactile interest throughout the space.",
+        },
+        {
+          number: "06.",
+          title: "Finishing Details",
+          description:
+            "Brass hardware, fluted glass panels, and carefully selected accessories complete the refined yet welcoming aesthetic.",
+        },
+      ],
+      galleryPlates: {
+        plate1: { image: "/delhi.png", caption: "HRDL-001 • KITCHEN ISLAND VIEW" },
+        plate2: { image: "/delhi.png", caption: "HRDL-002 • CABINETRY DETAIL" },
+        plate3: { image: "/delhi.png", caption: "HRDL-003 • DISPLAY CABINET" },
+        plate4: { image: "/delhi.png", caption: "HRDL-004 • LIGHTING DESIGN" },
+        plate5: { image: "/delhi.png", caption: "HRDL-005 • MATERIAL PALETTE" },
+        plate6: { image: "/delhi.png", caption: "HRDL-006 • FINISHING DETAILS" },
+      },
+    },
   ],
 };
 
