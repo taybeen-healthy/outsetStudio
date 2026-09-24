@@ -40,7 +40,7 @@ export default function Navbar() {
                 ? "bg-[#FAF7F2]/95 lg:bg-black/85 backdrop-blur-md shadow-sm lg:shadow-lg"
                 : "bg-[#FAF7F2] lg:bg-transparent"
             }`
-          : `border-b border-white/10 ${
+          : `border-b border-transparent ${
               isDarkNavbar
                 ? "bg-black/95 backdrop-blur-md"
                 : scrolled
