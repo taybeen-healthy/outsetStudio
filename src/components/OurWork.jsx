@@ -94,8 +94,8 @@ export default function OurWork({ data }) {
       <style>{`@keyframes outset-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }`}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5 lg:gap-8 mb-6 sm:mb-16">
-          <div className="w-full lg:max-w-[400px] xl:max-w-[540px]">
+        <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-5 xl:gap-8 mb-6 sm:mb-16">
+          <div className="w-full xl:max-w-[540px]">
             <h2 className="font-serif font-normal text-[#1a1a1a] text-[28px] sm:text-4xl lg:text-[44px] xl:text-[48px] leading-[1.2] tracking-tight text-left">
               <span className="lg:hidden">One Studio from Concept to Growth.</span>
               <span className="hidden lg:block">
@@ -109,7 +109,7 @@ export default function OurWork({ data }) {
             </p>
           </div>
 
-          <div className="flex flex-nowrap overflow-x-auto min-w-0 max-w-full gap-2.5 lg:gap-3 lg:pt-[122px] xl:pt-[131px] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex flex-wrap items-center gap-2.5 lg:gap-3 xl:pt-[131px]">
             {filters.map((f) => {
               const isActive = activeFilter.toUpperCase() === f.toUpperCase();
               return (

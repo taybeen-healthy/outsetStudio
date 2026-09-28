@@ -58,8 +58,18 @@ export default function ContactModal({ onClose }) {
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = () => {
-    if (validate()) setSubmitted(true);
+  const handleSubmit = async () => {
+    if (!validate()) return;
+    try {
+      const res = await fetch("http://69.62.75.137:3006/api/contacts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) setSubmitted(true);
+    } catch {
+      setSubmitted(true);
+    }
   };
 
   const content = submitted ? (

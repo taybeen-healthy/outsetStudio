@@ -135,8 +135,18 @@ export default function VendorModal({ onClose }) {
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = () => {
-    if (validate()) setSubmitted(true);
+  const handleSubmit = async () => {
+    if (!validate()) return;
+    try {
+      const res = await fetch("http://69.62.75.137:3006/api/vendors", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) setSubmitted(true);
+    } catch {
+      setSubmitted(true);
+    }
   };
 
   const content = (
@@ -151,22 +161,22 @@ export default function VendorModal({ onClose }) {
         if (dx < 5 && dy < 5 && e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="relative w-full sm:max-w-[720px] h-[100dvh] sm:h-auto sm:max-h-[90vh] bg-[#FAF9F7] sm:shadow-2xl flex flex-col overflow-hidden">
+      <div className="relative w-full sm:max-w-[780px] h-[100dvh] sm:h-[calc(100dvh-2rem)] bg-[#FAF9F7] sm:shadow-2xl flex flex-col overflow-hidden">
         {/* Dark Header */}
-        <div className="bg-[#1a1a1a] px-5 sm:px-8 pt-4 sm:pt-5 pb-3 sm:pb-4 flex-shrink-0">
+        <div className="bg-[#1a1a1a] px-4 sm:px-8 pt-[clamp(10px,2.2vh,22px)] pb-[clamp(8px,1.8vh,18px)] flex-shrink-0">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 bg-[#C0532C] flex-shrink-0" />
-              <span className="font-sans text-[11px] sm:text-xs tracking-[0.2em] uppercase text-white font-medium whitespace-nowrap">
+              <span className="font-sans text-[clamp(10px,1.6vh,12px)] tracking-[0.2em] uppercase text-white font-medium whitespace-nowrap">
                 VENDOR REGISTRATION
               </span>
             </div>
             <button
               onClick={onClose}
               aria-label="Close"
-              className="w-8 h-8 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all flex-shrink-0 cursor-pointer"
+              className="w-[clamp(28px,4.5vh,36px)] h-[clamp(28px,4.5vh,36px)] flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-all flex-shrink-0 cursor-pointer"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <svg className="w-[clamp(16px,2.6vh,20px)] h-[clamp(16px,2.6vh,20px)]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
@@ -181,10 +191,10 @@ export default function VendorModal({ onClose }) {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h2 className="font-serif text-[#1a1a1a] text-[32px] sm:text-[38px] leading-tight mt-6 mb-3">
+              <h2 className="font-serif text-[#1a1a1a] text-[clamp(26px,5vh,38px)] leading-tight mt-6 mb-3">
                 Thank you, {form.vendorName || "there"}.
               </h2>
-              <p className="font-sans text-sm sm:text-[15px] text-neutral-500 leading-relaxed max-w-md mx-auto mb-10">
+              <p className="font-sans text-[clamp(13px,1.9vh,15px)] text-neutral-500 leading-relaxed max-w-md mx-auto mb-10">
                 We&apos;ve received your project brief and will review your details within 24 hours.
               </p>
               <p className="font-sans text-xs sm:text-sm tracking-[0.05em] text-neutral-500">
@@ -198,18 +208,18 @@ export default function VendorModal({ onClose }) {
         ) : (
           <>
             {/* Form Content */}
-            <div className="flex-1 px-5 sm:px-8 py-6 sm:py-6">
-              <div className="max-w-[720px] mx-auto">
-                <h1 className="font-serif text-[#1a1a1a] text-[28px] sm:text-[32px] font-normal leading-tight mb-1.5">
+            <div className="flex-1 min-h-0 overflow-y-auto flex px-[clamp(16px,5vw,48px)] py-[clamp(8px,2vh,24px)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <div className="w-full max-w-[720px] mx-auto my-auto">
+                <h1 className="font-serif text-[#1a1a1a] text-[clamp(22px,4.6vh,34px)] font-normal leading-tight mb-1">
                   Vendor Registration
                 </h1>
-                <p className="font-sans text-sm text-neutral-500 mb-6 sm:mb-7">
+                <p className="font-sans text-[clamp(12px,1.9vh,15px)] text-neutral-500 mb-[clamp(10px,2.4vh,26px)]">
                   Partner with Outset Studio for commercial and outlet projects.
                 </p>
 
-                <div className="space-y-4 sm:space-y-5">
+                <div className="space-y-[clamp(8px,1.7vh,20px)]">
                   <div>
-                    <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
+                    <label className="block font-sans text-[clamp(10px,1.5vh,12px)] font-semibold tracking-[0.12em] text-[#1a1a1a] mb-[clamp(4px,0.8vh,8px)]">
                       NAME OF THE VENDOR <span className="text-[#C0532C]">*</span>
                     </label>
                     <input
@@ -218,14 +228,14 @@ export default function VendorModal({ onClose }) {
                       value={form.vendorName}
                       onChange={handleChange}
                       placeholder="e.g. Apex Woodworks & Fabrication"
-                      className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.vendorName ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
+                      className={`w-full h-[clamp(40px,6.2vh,52px)] border bg-white px-4 text-[clamp(13px,1.9vh,15px)] text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.vendorName ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
                     />
-                    {errors.vendorName && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.vendorName}</p>}
+                    {errors.vendorName && <p className="font-sans text-[clamp(10px,1.4vh,12px)] text-red-500 mt-1">{errors.vendorName}</p>}
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-[clamp(8px,1.6vh,20px)]">
                     <div>
-                      <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
+                      <label className="block font-sans text-[clamp(10px,1.5vh,12px)] font-semibold tracking-[0.12em] text-[#1a1a1a] mb-[clamp(4px,0.8vh,8px)]">
                         EMAIL ADDRESS <span className="text-[#C0532C]">*</span>
                       </label>
                       <input
@@ -234,13 +244,13 @@ export default function VendorModal({ onClose }) {
                         value={form.email}
                         onChange={handleChange}
                         placeholder="e.g. contact@apexwoodworks.com"
-                        className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.email ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
+                        className={`w-full h-[clamp(40px,6.2vh,52px)] border bg-white px-4 text-[clamp(13px,1.9vh,15px)] text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.email ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
                       />
-                      {errors.email && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.email}</p>}
+                      {errors.email && <p className="font-sans text-[clamp(10px,1.4vh,12px)] text-red-500 mt-1">{errors.email}</p>}
                     </div>
 
                     <div>
-                      <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
+                      <label className="block font-sans text-[clamp(10px,1.5vh,12px)] font-semibold tracking-[0.12em] text-[#1a1a1a] mb-[clamp(4px,0.8vh,8px)]">
                         PHONE NUMBER <span className="text-[#C0532C]">*</span>
                       </label>
                       <input
@@ -251,14 +261,14 @@ export default function VendorModal({ onClose }) {
                         maxLength={10}
                         placeholder="e.g. +91 98765 43210"
                         inputMode="numeric"
-                        className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.phone ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
+                        className={`w-full h-[clamp(40px,6.2vh,52px)] border bg-white px-4 text-[clamp(13px,1.9vh,15px)] text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.phone ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
                       />
-                      {errors.phone && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.phone}</p>}
+                      {errors.phone && <p className="font-sans text-[clamp(10px,1.4vh,12px)] text-red-500 mt-1">{errors.phone}</p>}
                     </div>
                   </div>
 
                   <div>
-                    <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
+                    <label className="block font-sans text-[clamp(10px,1.5vh,12px)] font-semibold tracking-[0.12em] text-[#1a1a1a] mb-[clamp(4px,0.8vh,8px)]">
                       GST NUMBER <span className="text-[#C0532C]">*</span>
                     </label>
                     <input
@@ -267,13 +277,13 @@ export default function VendorModal({ onClose }) {
                       value={form.gstNumber}
                       onChange={handleChange}
                       placeholder="E.G. 07AAFCO2481K1Z3"
-                      className={`w-full h-12 border bg-white px-4 text-sm text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none uppercase ${errors.gstNumber ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
+                      className={`w-full h-[clamp(40px,6.2vh,52px)] border bg-white px-4 text-[clamp(13px,1.9vh,15px)] text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none uppercase ${errors.gstNumber ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
                     />
-                    {errors.gstNumber && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.gstNumber}</p>}
+                    {errors.gstNumber && <p className="font-sans text-[clamp(10px,1.4vh,12px)] text-red-500 mt-1">{errors.gstNumber}</p>}
                   </div>
 
                   <div>
-                    <label className="block font-sans text-[11px] sm:text-xs font-semibold tracking-[0.12em] text-[#1a1a1a] mb-1.5 sm:mb-2">
+                    <label className="block font-sans text-[clamp(10px,1.5vh,12px)] font-semibold tracking-[0.12em] text-[#1a1a1a] mb-[clamp(4px,0.8vh,8px)]">
                       SERVICE PROVIDED <span className="text-[#C0532C]">*</span>
                     </label>
 
@@ -282,7 +292,7 @@ export default function VendorModal({ onClose }) {
                         ref={btnRef}
                         type="button"
                         onClick={() => setDropdownOpen(!dropdownOpen)}
-                        className="w-full h-12 border border-neutral-200 bg-white px-4 pr-10 text-left text-sm font-sans focus:outline-none focus:border-[#C0532C] transition-colors rounded-none cursor-pointer flex items-center"
+                        className="w-full h-[clamp(40px,6.2vh,52px)] border border-neutral-200 bg-white px-4 pr-10 text-left text-[clamp(13px,1.9vh,15px)] font-sans focus:outline-none focus:border-[#C0532C] transition-colors rounded-none cursor-pointer flex items-center"
                       >
                         {form.services.length > 0 ? (
                           <span className="text-neutral-800">
@@ -303,14 +313,14 @@ export default function VendorModal({ onClose }) {
                       </svg>
                     </div>
 
-                    {errors.services && <p className="font-sans text-[11px] text-red-500 mt-1">{errors.services}</p>}
+                    {errors.services && <p className="font-sans text-[clamp(10px,1.4vh,12px)] text-red-500 mt-1">{errors.services}</p>}
 
                     {form.services.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mt-3">
+                      <div className="flex flex-wrap gap-1.5 mt-[clamp(6px,1vh,12px)]">
                         {form.services.map((svc) => (
                           <span
                             key={svc}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#C0532C] text-white text-[12px] font-sans font-medium rounded-none"
+                            className="inline-flex items-center gap-1.5 px-2.5 py-[clamp(3px,0.6vh,6px)] bg-[#C0532C] text-white text-[clamp(10px,1.5vh,12px)] font-sans font-medium rounded-none"
                           >
                             {svc}
                             <button
@@ -332,18 +342,18 @@ export default function VendorModal({ onClose }) {
             </div>
 
             {/* Fixed Footer */}
-            <div className="border-t border-neutral-200 px-5 sm:px-8 py-4 sm:py-5 flex-shrink-0 bg-[#FAF9F7]">
+            <div className="border-t border-neutral-200 px-[clamp(16px,5vw,48px)] py-[clamp(8px,1.8vh,18px)] flex-shrink-0 bg-[#FAF9F7]">
               <div className="max-w-[720px] mx-auto flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-3">
                 <button
                   onClick={onClose}
-                  className="h-12 w-full sm:w-auto sm:px-8 border border-neutral-300 font-sans text-[11px] tracking-[0.14em] uppercase font-semibold text-neutral-700 hover:bg-neutral-100 transition-all cursor-pointer"
+                  className="h-[clamp(40px,6vh,50px)] w-full sm:w-auto px-6 sm:px-8 border border-neutral-300 font-sans text-[clamp(10px,1.5vh,12px)] tracking-[0.14em] uppercase font-semibold text-neutral-700 hover:bg-neutral-100 transition-all cursor-pointer"
                 >
                   CANCEL
                 </button>
                 <button
                   onClick={handleSubmit}
                   disabled={!canSubmit}
-                  className={`h-12 w-full sm:w-auto sm:px-8 font-sans text-[11px] tracking-[0.14em] uppercase font-semibold transition-all bg-[#bf572b] text-white ${!canSubmit ? "opacity-40 cursor-not-allowed" : "hover:bg-[#a34320] cursor-pointer"}`}
+                  className={`h-[clamp(40px,6vh,50px)] w-full sm:w-auto px-6 sm:px-8 font-sans text-[clamp(10px,1.5vh,12px)] tracking-[0.14em] uppercase font-semibold transition-all bg-[#bf572b] text-white ${!canSubmit ? "opacity-40 cursor-not-allowed" : "hover:bg-[#a34320] cursor-pointer"}`}
                 >
                   SUBMIT VENDOR REGISTRATION
                 </button>
