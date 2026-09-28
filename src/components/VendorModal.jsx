@@ -110,7 +110,7 @@ export default function VendorModal({ onClose }) {
   const removeService = (svc) =>
     setForm((f) => ({ ...f, services: f.services.filter((s) => s !== svc) }));
 
-  const canSubmit = form.vendorName && form.phone && form.email && form.gstNumber && form.services.length > 0;
+  const canSubmit = form.vendorName && form.phone && form.services.length > 0;
 
   const validate = () => {
     const errs = {};
@@ -119,16 +119,6 @@ export default function VendorModal({ onClose }) {
       errs.phone = "Phone number is required";
     } else if (!/^[6-9]\d{9}$/.test(form.phone.replace(/\s/g, ""))) {
       errs.phone = "Enter a valid 10-digit Indian phone number";
-    }
-    if (!form.email.trim()) {
-      errs.email = "Email address is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-      errs.email = "Enter a valid email address";
-    }
-    if (!form.gstNumber.trim()) {
-      errs.gstNumber = "GST number is required";
-    } else if (!/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/.test(form.gstNumber.replace(/\s/g, ""))) {
-      errs.gstNumber = "Enter a valid 15-digit GST number";
     }
     if (form.services.length === 0) errs.services = "Select at least one service";
     setErrors(errs);
@@ -236,7 +226,7 @@ export default function VendorModal({ onClose }) {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-[clamp(8px,1.6vh,20px)]">
                     <div>
                       <label className="block font-sans text-[clamp(10px,1.5vh,12px)] font-semibold tracking-[0.12em] text-[#1a1a1a] mb-[clamp(4px,0.8vh,8px)]">
-                        EMAIL ADDRESS <span className="text-[#C0532C]">*</span>
+                        EMAIL ADDRESS
                       </label>
                       <input
                         type="email"
@@ -269,7 +259,7 @@ export default function VendorModal({ onClose }) {
 
                   <div>
                     <label className="block font-sans text-[clamp(10px,1.5vh,12px)] font-semibold tracking-[0.12em] text-[#1a1a1a] mb-[clamp(4px,0.8vh,8px)]">
-                      GST NUMBER <span className="text-[#C0532C]">*</span>
+                      GST NUMBER
                     </label>
                     <input
                       type="text"
@@ -343,17 +333,17 @@ export default function VendorModal({ onClose }) {
 
             {/* Fixed Footer */}
             <div className="border-t border-neutral-200 px-[clamp(16px,5vw,48px)] py-[clamp(8px,1.8vh,18px)] flex-shrink-0 bg-[#FAF9F7]">
-              <div className="max-w-[720px] mx-auto flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-3">
+              <div className="max-w-[720px] mx-auto flex flex-col-reverse lg:flex-row items-stretch lg:items-center justify-between gap-2.5 lg:gap-3">
                 <button
                   onClick={onClose}
-                  className="h-[clamp(40px,6vh,50px)] w-full sm:w-auto px-6 sm:px-8 border border-neutral-300 font-sans text-[clamp(10px,1.5vh,12px)] tracking-[0.14em] uppercase font-semibold text-neutral-700 hover:bg-neutral-100 transition-all cursor-pointer"
+                  className="min-h-[clamp(40px,6vh,50px)] w-full lg:w-auto px-6 lg:px-8 py-2.5 flex items-center justify-center text-center whitespace-nowrap border border-neutral-300 font-sans text-[clamp(10px,1.5vh,12px)] tracking-[0.14em] uppercase font-semibold text-neutral-700 hover:bg-neutral-100 transition-all cursor-pointer"
                 >
                   CANCEL
                 </button>
                 <button
                   onClick={handleSubmit}
                   disabled={!canSubmit}
-                  className={`h-[clamp(40px,6vh,50px)] w-full sm:w-auto px-6 sm:px-8 font-sans text-[clamp(10px,1.5vh,12px)] tracking-[0.14em] uppercase font-semibold transition-all bg-[#bf572b] text-white ${!canSubmit ? "opacity-40 cursor-not-allowed" : "hover:bg-[#a34320] cursor-pointer"}`}
+                  className={`min-h-[clamp(40px,6vh,50px)] w-full lg:w-auto px-6 lg:px-8 py-2.5 flex items-center justify-center text-center whitespace-nowrap font-sans text-[clamp(10px,1.5vh,12px)] tracking-[0.14em] uppercase font-semibold transition-all bg-[#bf572b] text-white ${!canSubmit ? "opacity-40 cursor-not-allowed" : "hover:bg-[#a34320] cursor-pointer"}`}
                 >
                   SUBMIT VENDOR REGISTRATION
                 </button>
