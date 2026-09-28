@@ -66,7 +66,7 @@ export default function RegisterVendorsPage() {
               </p>
               <Link
                 href="/"
-                className="inline-block px-10 py-3 font-sans text-[11px] tracking-[0.14em] uppercase font-semibold bg-[#C0532C] text-white hover:bg-[#a34320] transition-all"
+                className="inline-block w-full sm:w-auto min-h-12 px-8 py-3.5 font-sans text-[11px] tracking-[0.14em] uppercase font-semibold text-center bg-[#C0532C] text-white hover:bg-[#a34320] transition-all"
               >
                 DONE
               </Link>
@@ -176,7 +176,7 @@ export default function RegisterVendorsPage() {
                   <button
                     disabled={!canSubmit}
                     onClick={() => setSubmitted(true)}
-                    className={`h-12 px-10 font-sans text-[11px] tracking-[0.14em] uppercase font-semibold transition-all bg-[#C0532C] text-white ${!canSubmit ? "opacity-40 cursor-not-allowed hover:bg-[#C0532C]" : "hover:bg-[#a34320] cursor-pointer"}`}
+                    className={`w-full sm:w-auto max-w-full min-h-12 px-6 sm:px-10 py-3 font-sans text-[11px] sm:text-[12px] leading-tight tracking-[0.1em] whitespace-nowrap text-center uppercase font-semibold transition-all bg-[#C0532C] text-white ${!canSubmit ? "opacity-40 cursor-not-allowed hover:bg-[#C0532C]" : "hover:bg-[#a34320] cursor-pointer"}`}
                   >
                     SUBMIT VENDOR REGISTRATION
                   </button>

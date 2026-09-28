@@ -93,10 +93,10 @@ export default function OurWork({ data }) {
     >
       <style>{`@keyframes outset-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }`}</style>
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 lg:gap-8 mb-6 sm:mb-16">
-          <div>
-            <h2 className="font-serif font-normal text-[#1a1a1a] text-[28px] sm:text-4xl lg:text-[44px] xl:text-[48px] leading-[1.2] tracking-tight">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5 lg:gap-8 mb-6 sm:mb-16">
+          <div className="w-full lg:max-w-[400px] xl:max-w-[540px]">
+            <h2 className="font-serif font-normal text-[#1a1a1a] text-[28px] sm:text-4xl lg:text-[44px] xl:text-[48px] leading-[1.2] tracking-tight text-left">
               <span className="lg:hidden">One Studio from Concept to Growth.</span>
               <span className="hidden lg:block">
                 One Studio from
@@ -104,21 +104,21 @@ export default function OurWork({ data }) {
                 Concept to Growth.
               </span>
             </h2>
-            <p className="font-sans text-[14px] sm:text-[15px] text-neutral-500 font-normal leading-relaxed max-w-lg mt-3 lg:mt-4">
+            <p className="font-sans text-[14px] sm:text-[15px] text-neutral-500 font-normal leading-relaxed max-w-lg mt-3 lg:mt-4 text-left">
               From concept to growth, Outset Studio creates distinctive, high-performing outlets.
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2 lg:gap-2.5 lg:pb-1">
+          <div className="flex flex-nowrap overflow-x-auto min-w-0 max-w-full gap-2.5 lg:gap-3 lg:pt-[122px] xl:pt-[131px] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {filters.map((f) => {
               const isActive = activeFilter.toUpperCase() === f.toUpperCase();
               return (
                 <button
                   key={f}
                   onClick={() => handleFilter(f)}
-                  className={`px-3.5 lg:px-5 py-2 lg:py-2.5 text-[10px] lg:text-xs tracking-[0.16em] uppercase font-medium transition-all duration-300 cursor-pointer rounded-none ${isActive
+                  className={`flex-shrink-0 whitespace-nowrap min-h-[46px] px-5 lg:px-6 text-center text-[11px] lg:text-xs tracking-[0.16em] uppercase font-medium transition-all duration-300 cursor-pointer rounded-none ${isActive
                       ? "bg-[#1a1a1a] text-white shadow-sm"
-                      : "bg-transparent lg:bg-white text-[#1a1a1a] border-0 lg:border lg:border-neutral-200/80 hover:border-[#1a1a1a] hover:bg-neutral-50"
+                      : "bg-white text-[#1a1a1a] border border-neutral-200/80 hover:border-[#1a1a1a] hover:bg-neutral-50"
                     }`}
                 >
                   {f}
@@ -130,13 +130,13 @@ export default function OurWork({ data }) {
       </div>
 
       {filteredProjects.length === 0 ? (
-        <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
           <p className="w-full text-center font-sans text-sm text-neutral-500 py-16">
             No projects found for this filter.
           </p>
         </div>
       ) : (!isMobile && filteredProjects.length < 3) || (isMobile && filteredProjects.length < 2) ? (
-        <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
           <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4">
             {filteredProjects.map((project, i) =>
               renderCard(project, i, "w-[70vw] sm:w-[360px] lg:w-[420px] flex-shrink-0")
@@ -144,7 +144,7 @@ export default function OurWork({ data }) {
           </div>
         </div>
       ) : (
-        <div className="w-full relative max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 overflow-hidden">
+        <div className="w-full relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 overflow-hidden">
           <div
             key={activeFilter}
             onMouseEnter={() => setPaused(true)}

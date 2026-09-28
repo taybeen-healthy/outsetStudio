@@ -92,7 +92,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="hidden lg:grid max-w-5xl mx-auto bg-white shadow-[0_20px_50px_rgba(0,0,0,0.07)] border border-neutral-100 overflow-hidden grid-cols-1 lg:grid-cols-2">
+        <div className="hidden lg:grid w-full bg-white shadow-[0_20px_50px_rgba(0,0,0,0.07)] border border-neutral-100 overflow-hidden grid-cols-1 lg:grid-cols-2">
           <div className="p-8 sm:p-12 lg:p-14 flex flex-col justify-between">
             <div>
               <div className="flex items-start justify-between">
