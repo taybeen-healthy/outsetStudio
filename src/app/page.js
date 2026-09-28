@@ -16,9 +16,22 @@ import {
   aboutData,
   howWeWorkData,
   industriesData,
+  ourWorkData,
 } from "@/lib/data";
+import {
+  getPortfolioProjects,
+  getApprovedTestimonials,
+  getIndustries,
+} from "@/lib/content";
 
-export default function Home() {
+export const revalidate = 60;
+
+export default async function Home() {
+  const [projects, testimonials, industries] = await Promise.all([
+    getPortfolioProjects(),
+    getApprovedTestimonials(),
+    getIndustries(),
+  ]);
   return (
       <div className="relative w-full bg-[#FAF7F2] lg:bg-white overflow-x-clip font-sans select-none">
         <div className="relative lg:min-h-screen flex flex-col justify-between bg-[#FAF7F2] lg:bg-transparent overflow-hidden">
@@ -44,13 +57,13 @@ export default function Home() {
         <Hero data={heroData} stats={statsData} />
       </div>
 
-      <div className="hidden lg:block relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 -mt-16">
+      <div className="hidden lg:block relative z-20 w-full max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 -mt-16">
         <Stats data={statsData} />
       </div>
 
       <HowWeWork data={howWeWorkData} />
-      <OurWork />
-      <Industries data={industriesData} />
+      <OurWork data={{ ...ourWorkData, projects }} />
+      <Industries data={{ ...industriesData, industries }} />
       <CTABanner />
       <FAQ />
 
@@ -84,7 +97,7 @@ export default function Home() {
       </section>
 
       <About data={aboutData} />
-      <Testimonials />
+      <Testimonials testimonials={testimonials} />
       <Footer />
     </div>
   );

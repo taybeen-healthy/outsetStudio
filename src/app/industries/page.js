@@ -2,7 +2,9 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import IndustriesClient from "./IndustriesClient";
-import { industriesData } from "@/lib/data";
+import { getIndustries } from "@/lib/content";
+
+export const revalidate = 60;
 
 export const metadata = {
   title: "Industries",
@@ -10,7 +12,8 @@ export const metadata = {
     "From high-frequency quick-service outlets to refined corporate environments, we engineer commercial spaces where tactile materiality, spatial choreography, and business performance converge.",
 };
 
-export default function IndustriesPage() {
+export default async function IndustriesPage() {
+  const industries = await getIndustries();
   return (
     <div className="relative w-full bg-white overflow-x-hidden font-sans select-none">
       <Navbar />
@@ -44,7 +47,7 @@ export default function IndustriesPage() {
           </div>
         </section>
 
-        <IndustriesClient industries={industriesData.industries} />
+        <IndustriesClient industries={industries} />
       </main>
 
       <Footer />

@@ -3,17 +3,21 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ourWorkData } from "@/lib/data";
+import { getPortfolioProjects } from "@/lib/content";
 
-export function generateStaticParams() {
-  return ourWorkData.projects.map((project) => ({
+export const revalidate = 60;
+
+export async function generateStaticParams() {
+  const projects = await getPortfolioProjects();
+  return projects.map((project) => ({
     slug: project.slug,
   }));
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const project = ourWorkData.projects.find((p) => p.slug === slug);
+  const projects = await getPortfolioProjects();
+  const project = projects.find((p) => p.slug === slug);
   if (!project) return { title: "Project Not Found | Outset Studio" };
   return {
     title: `${project.title} | Outset Studio`,
@@ -29,11 +33,12 @@ export async function generateMetadata({ params }) {
 
 export default async function ProjectDetailPage({ params }) {
   const { slug } = await params;
-  const projectIndex = ourWorkData.projects.findIndex((p) => p.slug === slug);
+  const projects = await getPortfolioProjects();
+  const projectIndex = projects.findIndex((p) => p.slug === slug);
   if (projectIndex === -1) notFound();
 
-  const project = ourWorkData.projects[projectIndex];
-  const nextProject = ourWorkData.projects[(projectIndex + 1) % ourWorkData.projects.length];
+  const project = projects[projectIndex];
+  const nextProject = projects[(projectIndex + 1) % projects.length];
 
   return (
     <div className="relative w-full bg-[#FAF7F2] text-[#1a1a1a] min-h-screen font-sans select-none overflow-x-hidden">
@@ -51,7 +56,7 @@ export default async function ProjectDetailPage({ params }) {
         </div>
       </div>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-6 sm:pt-12 pb-20">
+      <main className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 pt-6 sm:pt-12 pb-20">
         {/* Title */}
         <div className="mb-5 sm:mb-8 animate-slide-up animate-slide-up-delay-1">
           <h1 className="font-serif text-[32px] sm:text-6xl lg:text-[72px] text-[#1a1a1a] font-normal leading-[1.08] tracking-tight">
@@ -86,7 +91,7 @@ export default async function ProjectDetailPage({ params }) {
         </div>
 
         {/* Concept Section */}
-        <section className="bg-neutral-100/60 -mx-4 sm:-mx-8 lg:-mx-12 px-4 sm:px-8 lg:px-12 py-10 sm:py-14 mb-12 sm:mb-16 animate-slide-up animate-slide-up-delay-4">
+        <section className="bg-neutral-100/60 -mx-5 sm:-mx-10 lg:-mx-14 px-5 sm:px-10 lg:px-14 py-10 sm:py-14 mb-12 sm:mb-16 animate-slide-up animate-slide-up-delay-4">
           <div className="flex items-center gap-3 mb-5 sm:mb-6">
             <div className="w-8 h-[1.5px] bg-[#C2592D]" />
             <span className="text-[11px] font-sans font-semibold tracking-[0.2em] uppercase text-[#C2592D]">CONCEPT</span>
@@ -96,7 +101,7 @@ export default async function ProjectDetailPage({ params }) {
         </section>
 
         {/* Key Design Elements */}
-        <section className="bg-neutral-100/60 -mx-4 sm:-mx-8 lg:-mx-12 px-4 sm:px-8 lg:px-12 py-10 sm:py-14 mb-12 sm:mb-16 animate-slide-up animate-slide-up-delay-5">
+        <section className="bg-neutral-100/60 -mx-5 sm:-mx-10 lg:-mx-14 px-5 sm:px-10 lg:px-14 py-10 sm:py-14 mb-12 sm:mb-16 animate-slide-up animate-slide-up-delay-5">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-8 sm:mb-10">
             <h2 className="font-serif text-[22px] sm:text-3xl text-[#1a1a1a] font-normal">Key Design Elements</h2>
             <span className="font-sans text-[10px] tracking-[0.2em] uppercase text-neutral-500 font-medium">MATERIALITY &amp; ARCHITECTURAL LANGUAGE</span>
@@ -159,7 +164,7 @@ export default async function ProjectDetailPage({ params }) {
         <section className="py-10 sm:py-14 mb-12 sm:mb-16 animate-slide-up animate-slide-up-delay-6">
           <h2 className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#C2592D] font-semibold mb-6 sm:mb-10">SPATIAL EXPERIENCE</h2>
           <div className="space-y-4 sm:space-y-6">
-            {project.spatialExperience.map((exp, eIdx) => (
+            {(project.spatialExperience || []).map((exp, eIdx) => (
               <div key={eIdx} className="bg-neutral-100/60 p-6 sm:p-8">
                 <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.16em] text-[#C2592D] font-medium mb-2 block">{exp.number}</span>
                 <h3 className="font-serif text-[20px] sm:text-2xl text-[#1a1a1a] font-normal mb-2">{exp.title}</h3>
@@ -173,11 +178,11 @@ export default async function ProjectDetailPage({ params }) {
         <section className="py-10 sm:py-14 animate-slide-up animate-slide-up-delay-7">
           <div className="flex items-baseline justify-between gap-2 mb-6 sm:mb-10">
             <h2 className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#C2592D] font-semibold">CURATED GALLERY PLATES</h2>
-            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-500 font-medium">{Object.keys(project.galleryPlates).length} PLATES</span>
+            <span className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-neutral-500 font-medium">{Object.keys(project.galleryPlates || {}).length} PLATES</span>
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
-            {[project.galleryPlates.plate1, project.galleryPlates.plate2, project.galleryPlates.plate3, project.galleryPlates.plate4, project.galleryPlates.plate5, project.galleryPlates.plate6].map((plate, idx) => (
+            {[project.galleryPlates?.plate1, project.galleryPlates?.plate2, project.galleryPlates?.plate3, project.galleryPlates?.plate4, project.galleryPlates?.plate5, project.galleryPlates?.plate6].filter((plate) => plate && plate.image).map((plate, idx) => (
               <div key={idx} className="bg-white border border-neutral-200/70 overflow-hidden">
                 <div className="relative w-full aspect-square overflow-hidden bg-neutral-100">
                   <Image src={plate.image} alt={plate.caption} fill sizes="(max-width: 640px) 50vw, 400px" className="object-cover object-center" />

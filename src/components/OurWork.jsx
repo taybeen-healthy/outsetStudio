@@ -93,7 +93,7 @@ export default function OurWork({ data }) {
     >
       <style>{`@keyframes outset-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }`}</style>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
+      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
         <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-5 xl:gap-8 mb-6 sm:mb-16">
           <div className="w-full xl:max-w-[540px]">
             <h2 className="font-serif font-normal text-[#1a1a1a] text-[28px] sm:text-4xl lg:text-[44px] xl:text-[48px] leading-[1.2] tracking-tight text-left">
@@ -130,13 +130,13 @@ export default function OurWork({ data }) {
       </div>
 
       {filteredProjects.length === 0 ? (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
+        <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
           <p className="w-full text-center font-sans text-sm text-neutral-500 py-16">
             No projects found for this filter.
           </p>
         </div>
       ) : (!isMobile && filteredProjects.length < 3) || (isMobile && filteredProjects.length < 2) ? (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
+        <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
           <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4">
             {filteredProjects.map((project, i) =>
               renderCard(project, i, "w-[70vw] sm:w-[360px] lg:w-[420px] flex-shrink-0")
@@ -144,7 +144,7 @@ export default function OurWork({ data }) {
           </div>
         </div>
       ) : (
-        <div className="w-full relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 overflow-hidden">
+        <div className="w-full relative max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 overflow-hidden">
           <div
             key={activeFilter}
             onMouseEnter={() => setPaused(true)}

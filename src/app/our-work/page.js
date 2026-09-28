@@ -4,12 +4,17 @@ import OurWorkGrid from "@/components/OurWorkGrid";
 import StatsWork from "@/components/StatsWork";
 import CTAWork from "@/components/CTAWork";
 import Footer from "@/components/Footer";
+import { ourWorkData } from "@/lib/data";
+import { getPortfolioProjects } from "@/lib/content";
+
+export const revalidate = 60;
 
 export const metadata = {
   title: "Our Work | Outset Studio",
 };
 
-export default function OurWorkPage() {
+export default async function OurWorkPage() {
+  const projects = await getPortfolioProjects();
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
@@ -39,7 +44,7 @@ export default function OurWorkPage() {
           </a>
         </div>
       </div>
-      <OurWorkGrid />
+      <OurWorkGrid data={{ ...ourWorkData, projects }} />
       <StatsWork />
       <div className="w-full bg-[#FAF7F2] h-20 sm:h-28 lg:h-36" />
       <CTAWork />
