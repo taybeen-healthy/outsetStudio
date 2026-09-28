@@ -85,6 +85,7 @@ function SpaceIcon({ type, active }) {
 export default function StartProjectModal({ onClose }) {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     spaceType: "",
     size: "",
@@ -96,6 +97,41 @@ export default function StartProjectModal({ onClose }) {
   });
 
   const totalSteps = 3;
+
+  const handleSubmit = async () => {
+    setSubmitting(true);
+    try {
+      const space = spaceTypes.find((t) => t.id === form.spaceType);
+      const size = sizeOptions.find((s) => s.value === form.size);
+      const budget = budgetOptions.find((b) => b.value === form.budget);
+      const brief = `Start a Project — ${space?.title || ""}, ${form.size} ${size?.sub || "sq.ft"}, ${form.budget} budget (${budget?.sub || ""}), ${form.city}.`;
+      const res = await fetch("/api/contacts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+          service: space?.title || "",
+          typology: space?.title || "",
+          location: form.city,
+          footprint: `${form.size} ${size?.sub || ""}`.trim(),
+          budget: form.budget,
+          message: brief,
+          brief,
+        }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch {
+      alert("Network error. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     const scrollY = window.scrollY;
@@ -432,14 +468,14 @@ export default function StartProjectModal({ onClose }) {
           <button
             onClick={() => {
               if (step < totalSteps) setStep((s) => s + 1);
-              else setSubmitted(true);
+              else handleSubmit();
             }}
-            disabled={!canNext}
+            disabled={!canNext || submitting}
             className={`h-11 sm:h-12 px-8 sm:px-12 font-sans text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold transition-all ${
               "bg-[#bf572b] text-white hover:bg-[#a34320]"
-            } ${!canNext ? "opacity-40 cursor-not-allowed" : "cursor-pointer"}`}
+            } ${!canNext || submitting ? "opacity-40 cursor-not-allowed" : "cursor-pointer"}`}
           >
-            {step === totalSteps ? "SUBMIT" : "CONTINUE"}
+            {step < totalSteps ? "CONTINUE" : submitting ? "SUBMITTING..." : "SUBMIT"}
           </button>
         </div>
         </>
