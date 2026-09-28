@@ -89,7 +89,7 @@ export default function ContactModal({ onClose }) {
     </div>
   ) : (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm"
       onPointerDown={(e) => { pointerStart.current = { x: e.clientX, y: e.clientY }; }}
       onPointerUp={(e) => {
         if (!pointerStart.current) return;
@@ -99,7 +99,7 @@ export default function ContactModal({ onClose }) {
         if (dx < 5 && dy < 5 && e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="relative w-full sm:max-w-[480px] max-h-[100dvh] shadow-2xl overflow-hidden flex flex-col mx-auto my-auto">
+      <div className="relative w-full sm:max-w-[480px] max-h-[100dvh] shadow-2xl overflow-hidden flex flex-col">
         <button
           onClick={onClose}
           aria-label="Close"

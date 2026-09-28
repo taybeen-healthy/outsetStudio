@@ -30,14 +30,14 @@ export default function AboutPage() {
         <section className="bg-[#FAF7F2] pb-20 sm:pb-28">
           <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
             <div className="border border-neutral-200 p-2 sm:p-3">
-              <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden bg-neutral-100">
+              <div className="relative w-full aspect-[3/2] overflow-hidden bg-neutral-100">
                 <Image
                   src="/a1.png"
                   alt="Outset Studio team collaborating on architectural plans"
                   fill
                   priority
                   sizes="100vw"
-                  className="object-cover object-center"
+                  className="object-contain object-center"
                 />
               </div>
             </div>
@@ -74,13 +74,13 @@ export default function AboutPage() {
         <section className="bg-[#FAF7F2] border-t border-neutral-200 py-20 sm:py-28">
           <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             <div className="border border-neutral-200 p-2 sm:p-3">
-              <div className="relative w-full aspect-[3/4] sm:aspect-[4/5] overflow-hidden bg-neutral-100">
+              <div className="relative w-full aspect-[4/5] overflow-hidden bg-neutral-100">
                 <Image
                   src="/a2.png"
                   alt="Empty space being built into an outlet"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-center"
+                  className="object-contain object-center"
                 />
               </div>
             </div>
@@ -182,13 +182,13 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="border border-neutral-200 p-2 sm:p-3 self-start">
-              <div className="relative w-full aspect-[3/4] overflow-hidden bg-neutral-100">
+              <div className="relative w-full aspect-square overflow-hidden bg-neutral-100">
                 <Image
                   src="/a3.png"
                   alt="Mohd Arif - CEO & Founder"
                   fill
                   sizes="(max-width: 1024px) 100vw, 400px"
-                  className="object-cover object-center"
+                  className="object-contain object-center"
                 />
               </div>
             </div>
