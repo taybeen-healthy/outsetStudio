@@ -35,7 +35,7 @@ export default function Navbar() {
     <header
       className={`relative z-30 w-full transition-all duration-300 ${
         isLightBg
-          ? `border-b border-transparent lg:border-white/10 ${
+          ? `border-b border-neutral-200 lg:border-white/10 ${
               scrolled
                 ? "bg-[#FAF7F2]/95 lg:bg-black/85 backdrop-blur-md shadow-sm lg:shadow-lg"
                 : "bg-[#FAF7F2] lg:bg-transparent"
