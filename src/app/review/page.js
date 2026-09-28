@@ -94,6 +94,8 @@ export default function ReviewPage() {
   });
   const [files, setFiles] = useState([]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const toggleCategory = (cat) =>
     setForm((f) => ({
@@ -121,9 +123,36 @@ export default function ReviewPage() {
     setFiles((prev) => prev.filter((_, i) => i !== index));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Review submitted! (Demo)");
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/reviews", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: form.fullName,
+          email: form.email,
+          brand: form.brand,
+          completionDate: form.completionDate,
+          categories: form.categories,
+          rating: form.rating,
+          review: form.review,
+          consent: form.consent,
+          files: files.map((f) => f.name),
+        }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch {
+      alert("Network error. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -135,6 +164,46 @@ export default function ReviewPage() {
           {/* Left - Form */}
           <div className="lg:col-span-7">
             <div className="bg-white border border-neutral-200 p-6 sm:p-8 lg:p-10">
+              {submitted ? (
+                <div className="py-10 text-center">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-[#bf572b] rounded-full flex items-center justify-center">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                  </div>
+                  <p className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#bf572b] font-medium mb-2">
+                    REVIEW RECEIVED
+                  </p>
+                  <h2 className="font-serif text-[#1a1a1a] text-[26px] sm:text-[32px] leading-tight tracking-tight mb-3">
+                    Thank You, {form.fullName.split(" ")[0] || "Client"}
+                  </h2>
+                  <p className="font-sans text-[13px] text-neutral-500 leading-relaxed max-w-md mx-auto mb-8">
+                    Your review has been submitted and is pending verification against our project logs.
+                    Once approved, it will be featured on our public website.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSubmitted(false);
+                      setForm({
+                        fullName: "",
+                        email: "",
+                        brand: "",
+                        completionDate: "",
+                        categories: [],
+                        rating: 4.5,
+                        review: "",
+                        consent: true,
+                      });
+                      setFiles([]);
+                    }}
+                    className="h-12 px-8 bg-[#bf572b] text-white font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-[#a34320] transition-colors cursor-pointer"
+                  >
+                    SUBMIT ANOTHER REVIEW
+                  </button>
+                </div>
+              ) : (
+                <>
               <p className="font-sans text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#bf572b] font-medium mb-2">
                 FEEDBACK PORTAL
               </p>
@@ -396,9 +465,10 @@ export default function ReviewPage() {
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
                   <button
                     type="submit"
-                    className="h-12 px-8 bg-[#bf572b] text-white font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-[#a34320] transition-colors cursor-pointer"
+                    disabled={submitting}
+                    className="h-12 px-8 bg-[#bf572b] text-white font-sans text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-[#a34320] transition-colors cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    SUBMIT CLIENT REVIEW
+                    {submitting ? "SUBMITTING..." : "SUBMIT CLIENT REVIEW"}
                   </button>
                   <button
                     type="button"
@@ -408,6 +478,8 @@ export default function ReviewPage() {
                   </button>
                 </div>
               </form>
+                </>
+              )}
             </div>
           </div>
 

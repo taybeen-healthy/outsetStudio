@@ -128,7 +128,7 @@ export default function VendorModal({ onClose }) {
   const handleSubmit = async () => {
     if (!validate()) return;
     try {
-      const res = await fetch("http://69.62.75.137:3006/api/vendors", {
+      const res = await fetch("/api/vendors", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
