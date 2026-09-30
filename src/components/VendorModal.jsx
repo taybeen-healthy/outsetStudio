@@ -198,16 +198,16 @@ export default function VendorModal({ onClose }) {
         ) : (
           <>
             {/* Form Content */}
-            <div className="flex-1 min-h-0 overflow-y-auto flex px-[clamp(16px,5vw,48px)] py-[clamp(8px,2vh,24px)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex-1 min-h-0 overflow-hidden sm:overflow-y-auto flex px-[clamp(16px,5vw,48px)] py-[clamp(6px,2vh,24px)]">
               <div className="w-full max-w-[720px] mx-auto my-auto">
-                <h1 className="font-serif text-[#1a1a1a] text-[clamp(22px,4.6vh,34px)] font-normal leading-tight mb-1">
+                <h1 className="font-serif text-[#1a1a1a] text-[clamp(19px,4.4vh,34px)] font-normal leading-tight mb-1">
                   Vendor Registration
                 </h1>
-                <p className="font-sans text-[clamp(12px,1.9vh,15px)] text-neutral-500 mb-[clamp(10px,2.4vh,26px)]">
+                <p className="font-sans text-[clamp(12px,1.9vh,15px)] text-neutral-500 mb-[clamp(6px,2vh,26px)]">
                   Partner with Outset Studio for commercial and outlet projects.
                 </p>
 
-                <div className="space-y-[clamp(8px,1.7vh,20px)]">
+                <div className="space-y-[clamp(6px,1.5vh,20px)]">
                   <div>
                     <label className="block font-sans text-[clamp(10px,1.5vh,12px)] font-semibold tracking-[0.12em] text-[#1a1a1a] mb-[clamp(4px,0.8vh,8px)]">
                       NAME OF THE VENDOR <span className="text-[#C0532C]">*</span>
@@ -218,7 +218,7 @@ export default function VendorModal({ onClose }) {
                       value={form.vendorName}
                       onChange={handleChange}
                       placeholder="e.g. Apex Woodworks & Fabrication"
-                      className={`w-full h-[clamp(40px,6.2vh,52px)] border bg-white px-4 text-[clamp(13px,1.9vh,15px)] text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.vendorName ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
+                      className={`w-full h-[clamp(34px,6vh,52px)] border bg-white px-4 text-[clamp(13px,1.9vh,15px)] text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.vendorName ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
                     />
                     {errors.vendorName && <p className="font-sans text-[clamp(10px,1.4vh,12px)] text-red-500 mt-1">{errors.vendorName}</p>}
                   </div>
@@ -234,7 +234,7 @@ export default function VendorModal({ onClose }) {
                         value={form.email}
                         onChange={handleChange}
                         placeholder="e.g. contact@apexwoodworks.com"
-                        className={`w-full h-[clamp(40px,6.2vh,52px)] border bg-white px-4 text-[clamp(13px,1.9vh,15px)] text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.email ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
+                        className={`w-full h-[clamp(34px,6vh,52px)] border bg-white px-4 text-[clamp(13px,1.9vh,15px)] text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.email ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
                       />
                       {errors.email && <p className="font-sans text-[clamp(10px,1.4vh,12px)] text-red-500 mt-1">{errors.email}</p>}
                     </div>
@@ -251,7 +251,7 @@ export default function VendorModal({ onClose }) {
                         maxLength={10}
                         placeholder="e.g. +91 98765 43210"
                         inputMode="numeric"
-                        className={`w-full h-[clamp(40px,6.2vh,52px)] border bg-white px-4 text-[clamp(13px,1.9vh,15px)] text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.phone ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
+                        className={`w-full h-[clamp(34px,6vh,52px)] border bg-white px-4 text-[clamp(13px,1.9vh,15px)] text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none ${errors.phone ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
                       />
                       {errors.phone && <p className="font-sans text-[clamp(10px,1.4vh,12px)] text-red-500 mt-1">{errors.phone}</p>}
                     </div>
@@ -267,7 +267,7 @@ export default function VendorModal({ onClose }) {
                       value={form.gstNumber}
                       onChange={handleChange}
                       placeholder="E.G. 07AAFCO2481K1Z3"
-                      className={`w-full h-[clamp(40px,6.2vh,52px)] border bg-white px-4 text-[clamp(13px,1.9vh,15px)] text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none uppercase ${errors.gstNumber ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
+                      className={`w-full h-[clamp(34px,6vh,52px)] border bg-white px-4 text-[clamp(13px,1.9vh,15px)] text-neutral-800 placeholder-neutral-300 font-sans focus:outline-none transition-colors rounded-none uppercase ${errors.gstNumber ? "border-red-500 focus:border-red-500" : "border-neutral-200 focus:border-[#C0532C]"}`}
                     />
                     {errors.gstNumber && <p className="font-sans text-[clamp(10px,1.4vh,12px)] text-red-500 mt-1">{errors.gstNumber}</p>}
                   </div>
@@ -282,7 +282,7 @@ export default function VendorModal({ onClose }) {
                         ref={btnRef}
                         type="button"
                         onClick={() => setDropdownOpen(!dropdownOpen)}
-                        className="w-full h-[clamp(40px,6.2vh,52px)] border border-neutral-200 bg-white px-4 pr-10 text-left text-[clamp(13px,1.9vh,15px)] font-sans focus:outline-none focus:border-[#C0532C] transition-colors rounded-none cursor-pointer flex items-center"
+                        className="w-full h-[clamp(34px,6vh,52px)] border border-neutral-200 bg-white px-4 pr-10 text-left text-[clamp(13px,1.9vh,15px)] font-sans focus:outline-none focus:border-[#C0532C] transition-colors rounded-none cursor-pointer flex items-center"
                       >
                         {form.services.length > 0 ? (
                           <span className="text-neutral-800">
@@ -336,14 +336,14 @@ export default function VendorModal({ onClose }) {
               <div className="max-w-[720px] mx-auto flex flex-col-reverse lg:flex-row items-stretch lg:items-center justify-between gap-2.5 lg:gap-3">
                 <button
                   onClick={onClose}
-                  className="min-h-[clamp(40px,6vh,50px)] w-full lg:w-auto px-6 lg:px-8 py-2.5 flex items-center justify-center text-center whitespace-nowrap border border-neutral-300 font-sans text-[clamp(10px,1.5vh,12px)] tracking-[0.14em] uppercase font-semibold text-neutral-700 hover:bg-neutral-100 transition-all cursor-pointer"
+                  className="min-h-[clamp(36px,6vh,50px)] w-full lg:w-auto px-6 lg:px-8 py-2.5 flex items-center justify-center text-center whitespace-nowrap border border-neutral-300 font-sans text-[clamp(10px,1.5vh,12px)] tracking-[0.14em] uppercase font-semibold text-neutral-700 hover:bg-neutral-100 transition-all cursor-pointer"
                 >
                   CANCEL
                 </button>
                 <button
                   onClick={handleSubmit}
                   disabled={!canSubmit}
-                  className={`min-h-[clamp(40px,6vh,50px)] w-full lg:w-auto px-6 lg:px-8 py-2.5 flex items-center justify-center text-center whitespace-nowrap font-sans text-[clamp(10px,1.5vh,12px)] tracking-[0.14em] uppercase font-semibold transition-all bg-[#bf572b] text-white ${!canSubmit ? "opacity-40 cursor-not-allowed" : "hover:bg-[#a34320] cursor-pointer"}`}
+                  className={`min-h-[clamp(36px,6vh,50px)] w-full lg:w-auto px-6 lg:px-8 py-2.5 flex items-center justify-center text-center whitespace-nowrap font-sans text-[clamp(10px,1.5vh,12px)] tracking-[0.14em] uppercase font-semibold transition-all bg-[#bf572b] text-white ${!canSubmit ? "opacity-40 cursor-not-allowed" : "hover:bg-[#a34320] cursor-pointer"}`}
                 >
                   SUBMIT VENDOR REGISTRATION
                 </button>
