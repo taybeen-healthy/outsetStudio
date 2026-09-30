@@ -4,6 +4,38 @@ import { useState } from "react";
 import Image from "next/image";
 import { testimonialsData } from "@/lib/data";
 
+const AVATAR_TONES = {
+  blush: { bg: "#EAC9C4", fg: "#8A4A40" },
+  sage: { bg: "#BCC9B8", fg: "#4A5A46" },
+  clay: { bg: "#DCC3AE", fg: "#7A4E33" },
+  sand: { bg: "#E7D9BE", fg: "#7A6437" },
+  slate: { bg: "#C6CDD5", fg: "#46525E" },
+};
+
+function Avatar({ testimonial }) {
+  if (testimonial.avatar) {
+    return (
+      <Image
+        src={testimonial.avatar}
+        alt={testimonial.name}
+        fill
+        sizes="48px"
+        className="object-cover"
+      />
+    );
+  }
+  const tone = AVATAR_TONES[testimonial.tone] ?? AVATAR_TONES.blush;
+  return (
+    <div
+      className="w-full h-full flex items-center justify-center font-sans text-[13px] font-semibold tracking-wide"
+      style={{ backgroundColor: tone.bg, color: tone.fg }}
+      aria-label={testimonial.name}
+    >
+      {testimonial.initials}
+    </div>
+  );
+}
+
 function StarRating({ count }) {
   return (
     <div className="flex items-center gap-1">
@@ -98,13 +130,7 @@ export default function Testimonials({ testimonials: propTestimonials }) {
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3.5">
                   <div className="relative w-12 h-12 bg-neutral-100 overflow-hidden flex-shrink-0 shadow-sm">
-                    <Image
-                      src={t.avatar}
-                      alt={t.name}
-                      fill
-                      sizes="48px"
-                      className="object-cover"
-                    />
+                    <Avatar testimonial={t} />
                   </div>
                   <div>
                     <p className="font-sans text-base font-bold text-[#1a1a1a] leading-tight">

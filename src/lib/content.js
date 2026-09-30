@@ -42,12 +42,41 @@ export async function getPortfolioProjects() {
 
 export async function getApprovedTestimonials() {
   const list = await fetchList("/api/testimonials", testimonialsData.testimonials);
-  return list.map((t) => ({
-    ...t,
-    rating: Math.min(5, Math.max(1, Math.round(Number(t.rating) || 5))),
-    avatar: isImageSrc(t.avatar) ? t.avatar : "/image1.jpg",
-    image: isImageSrc(t.image) ? t.image : "/image38.png",
-  }));
+  const EXTRA_AVATARS = {
+    "tanya sharma": "/image33.png",
+    "karan mehta": "/image34.png",
+    "rohan malhotra": "/image30.png",
+  };
+  const tones = ["blush", "sage", "clay", "sand", "slate"];
+  const usedTones = new Set();
+  let toneCursor = 0;
+  return list.map((t) => {
+    const hasAvatar = isImageSrc(t.avatar);
+    const name = String(t.name ?? "").trim();
+    const assigned = EXTRA_AVATARS[name.toLowerCase()] ?? null;
+    let avatar = hasAvatar ? t.avatar : assigned;
+    let tone = null;
+    if (!avatar) {
+      const original = typeof t.avatar === "string" && t.avatar && !t.avatar.startsWith("/") ? t.avatar : null;
+      if (original && !usedTones.has(original)) {
+        tone = original;
+      } else {
+        while (usedTones.has(tones[toneCursor % tones.length])) toneCursor += 1;
+        tone = tones[toneCursor % tones.length];
+        toneCursor += 1;
+      }
+      usedTones.add(tone);
+    }
+    const derived = name.split(/\s+/).map((w) => w[0] ?? "").join("").slice(0, 2).toUpperCase();
+    return {
+      ...t,
+      rating: Math.min(5, Math.max(1, Math.round(Number(t.rating) || 5))),
+      avatar,
+      tone,
+      initials: (String(t.initials ?? "").trim() || derived || "OS"),
+      image: isImageSrc(t.image) ? t.image : "/image38.png",
+    };
+  });
 }
 
 export async function getIndustries() {
