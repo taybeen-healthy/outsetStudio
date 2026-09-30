@@ -36,27 +36,34 @@ export default function OurWorkGrid({ data }) {
     >
       {/* Filter Bar */}
       <div className="w-full border-b border-neutral-200 bg-[#FAF7F2]">
-        <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 py-5 sm:py-7 lg:py-8 flex items-center justify-between gap-4 overflow-x-auto">
-          <div className="flex items-center gap-2.5 lg:gap-5 flex-shrink-0">
-            {filters.map((f) => {
-              const isActive = activeFilter.toUpperCase() === f.toUpperCase();
-              const count = getFilterCount(f);
-              return (
-                <button
-                  key={f}
-                  onClick={() => setActiveFilter(f)}
-                  className={`px-4 lg:px-5 py-2 lg:py-2.5 text-[10px] lg:text-[11px] tracking-[0.14em] uppercase font-medium transition-all duration-300 cursor-pointer rounded-none ${
-                    isActive
-                      ? "bg-[#1a1a1a] text-white"
-                      : "bg-transparent text-neutral-500 hover:text-[#1a1a1a]"
-                  }`}
-                >
-                  {f === "ALL" ? `All (${String(count).padStart(2, "0")})` : f}
-                </button>
-              );
-            })}
+        <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 py-5 sm:py-7 lg:py-8 flex items-start justify-between gap-4">
+          <div className="flex flex-col gap-2.5 lg:gap-3 min-w-0">
+            {[
+              filters.slice(0, 5),
+              filters.slice(5, 9),
+              filters.slice(9),
+            ].map((row, ri) => (
+              <div key={ri} className="flex flex-wrap items-center gap-2.5 lg:gap-3">
+                {row.map((f) => {
+                  const isActive = activeFilter.toUpperCase() === f.toUpperCase();
+                  const count = getFilterCount(f);
+                  return (
+                    <button
+                      key={f}
+                      onClick={() => setActiveFilter(f)}
+                      className={`flex-shrink-0 whitespace-nowrap min-h-9 lg:min-h-10 px-4 lg:px-5 text-center text-[10px] lg:text-[11px] tracking-[0.14em] uppercase font-medium transition-all duration-300 cursor-pointer rounded-none ${isActive
+                          ? "bg-[#1a1a1a] text-white"
+                          : "bg-white text-[#1a1a1a] border border-neutral-200/80 hover:border-[#1a1a1a] hover:bg-neutral-50"
+                        }`}
+                    >
+                      {f === "ALL" ? `All (${String(count).padStart(2, "0")})` : f}
+                    </button>
+                  );
+                })}
+              </div>
+            ))}
           </div>
-          <p className="hidden sm:block font-sans text-[10px] lg:text-[11px] tracking-[0.18em] uppercase text-neutral-400 whitespace-nowrap">
+          <p className="hidden sm:block font-sans text-[10px] lg:text-[11px] tracking-[0.18em] uppercase text-neutral-400 whitespace-nowrap pt-2">
             SHOWING {String(filteredProjects.length).padStart(2, "0")} SELECTED COMMISSIONS
           </p>
         </div>

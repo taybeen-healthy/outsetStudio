@@ -77,9 +77,9 @@ export default function OurWork({ data }) {
       <style>{`@keyframes outset-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }`}</style>
 
       <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-5 md:gap-8 mb-6 sm:mb-16">
-          <div className="w-full md:max-w-[400px] lg:max-w-[440px] xl:max-w-[540px]">
-            <h2 className="font-serif font-normal text-[#1a1a1a] text-[28px] sm:text-4xl lg:text-[44px] xl:text-[48px] leading-[1.2] tracking-tight text-left">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5 lg:gap-6 xl:gap-8 mb-6 sm:mb-16">
+          <div className="w-full lg:max-w-[340px] xl:max-w-[440px]">
+            <h2 className="font-serif font-normal text-[#1a1a1a] text-[28px] sm:text-4xl lg:text-[40px] xl:text-[48px] leading-[1.2] tracking-tight text-left">
               <span className="md:hidden">One Studio from Concept to Growth.</span>
               <span className="hidden md:block">
                 One Studio from
@@ -92,22 +92,30 @@ export default function OurWork({ data }) {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2.5 lg:gap-3 md:flex-1 md:justify-end min-w-0">
-            {filters.map((f) => {
-              const isActive = activeFilter.toUpperCase() === f.toUpperCase();
-              return (
-                <button
-                  key={f}
-                  onClick={() => handleFilter(f)}
-                  className={`flex-shrink-0 whitespace-nowrap min-h-10 lg:min-h-11 px-4 lg:px-5 text-center text-[11px] lg:text-xs tracking-[0.16em] uppercase font-medium transition-all duration-300 cursor-pointer rounded-none ${isActive
-                      ? "bg-[#1a1a1a] text-white shadow-sm"
-                      : "bg-white text-[#1a1a1a] border border-neutral-200/80 hover:border-[#1a1a1a] hover:bg-neutral-50"
-                    }`}
-                >
-                  {f}
-                </button>
-              );
-            })}
+          <div className="flex flex-col items-start lg:items-end gap-2 lg:gap-2.5 xl:gap-3 lg:flex-1 lg:min-w-0">
+            {[
+              filters.slice(0, 5),
+              filters.slice(5, 9),
+              filters.slice(9),
+            ].map((row, ri) => (
+              <div key={ri} className="flex flex-wrap items-center gap-2 lg:gap-2.5 xl:gap-3 w-full lg:justify-end">
+                {row.map((f) => {
+                  const isActive = activeFilter.toUpperCase() === f.toUpperCase();
+                  return (
+                    <button
+                      key={f}
+                      onClick={() => handleFilter(f)}
+                      className={`flex-shrink-0 whitespace-nowrap min-h-9 lg:min-h-10 xl:min-h-11 px-3.5 lg:px-4 xl:px-5 text-center text-[10px] xl:text-[11px] tracking-[0.14em] xl:tracking-[0.16em] uppercase font-medium transition-all duration-300 cursor-pointer rounded-none ${isActive
+                          ? "bg-[#1a1a1a] text-white shadow-sm"
+                          : "bg-white text-[#1a1a1a] border border-neutral-200/80 hover:border-[#1a1a1a] hover:bg-neutral-50"
+                        }`}
+                    >
+                      {f}
+                    </button>
+                  );
+                })}
+              </div>
+            ))}
           </div>
         </div>
       </div>
