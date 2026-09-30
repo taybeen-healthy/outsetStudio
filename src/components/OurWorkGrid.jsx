@@ -7,19 +7,25 @@ import { ourWorkData } from "@/lib/data";
 
 export default function OurWorkGrid({ data }) {
   const content = data ?? ourWorkData;
-  const filters = content.filters ?? ["ALL", "DELHI", "GURUGRAM", "PATNA BIHAR", "RAJASTHAN"];
+  const filters = content.filters ?? ["ALL", "RENOVATION", "POLICE STATION", "BEDROOM", "KITCHEN", "LIVING ROOM", "COMMERCIAL & OFFICE", "FECADE", "BATHROOM & SPA", "CAFE"];
   const projects = content.projects ?? [];
 
   const [activeFilter, setActiveFilter] = useState("ALL");
 
-  const filteredProjects = projects.filter((p) => {
-    if (activeFilter === "ALL") return true;
-    return p.location.toUpperCase() === activeFilter.toUpperCase();
-  });
+  const matchesFilter = (project, f) => {
+    if (f.toUpperCase() === "ALL") return true;
+    const target = f.toUpperCase();
+    const cats = (project.categories ?? []).map((c) => String(c).toUpperCase());
+    if (cats.includes(target)) return true;
+    const haystack = `${project.title ?? ""} ${project.type ?? ""}`.toUpperCase();
+    return haystack.includes(target);
+  };
+
+  const filteredProjects = projects.filter((p) => matchesFilter(p, activeFilter));
 
   const getFilterCount = (f) => {
-    if (f === "ALL") return projects.length;
-    return projects.filter((p) => p.location.toUpperCase() === f.toUpperCase()).length;
+    if (f.toUpperCase() === "ALL") return projects.length;
+    return projects.filter((p) => matchesFilter(p, f)).length;
   };
 
   return (
@@ -86,8 +92,8 @@ export default function OurWorkGrid({ data }) {
             {filteredProjects.map((project, i) => {
               const projectUrl = `/work/${project.slug ?? "sardar-ji-baksh-cafe"}`;
               return (
-                <div key={`${project.id ?? i}-${i}`} className="group flex flex-col">
-                  <Link href={projectUrl} className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100 block">
+                <div key={`${project.id ?? i}-${i}`} className="group">
+                  <Link href={projectUrl} className="relative w-full aspect-[2/3] overflow-hidden bg-neutral-100 block">
                     <span className="absolute top-3 left-3 z-10 bg-black/90 text-white font-sans text-[9px] tracking-[0.2em] uppercase px-2.5 py-1 font-medium">
                       {project.location}
                     </span>
@@ -99,25 +105,6 @@ export default function OurWorkGrid({ data }) {
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
                   </Link>
-
-                  <div className="pt-5 flex flex-col flex-1">
-                    <Link href={projectUrl} className="block cursor-pointer">
-                      <h3 className="font-serif font-normal text-[#1a1a1a] text-xl sm:text-[22px] lg:text-[24px] leading-tight mb-2.5 hover:text-[#bf572b] transition-colors">
-                        {project.title}
-                      </h3>
-                    </Link>
-                    <p className="font-sans text-[12px] sm:text-[13px] text-neutral-500 font-normal leading-[1.65] mb-5 flex-1">
-                      {project.subtitle}
-                    </p>
-                    <Link
-                      href={projectUrl}
-                      className="inline-flex items-center gap-2 cursor-pointer group/case"
-                    >
-                      <span className="font-sans text-[10px] sm:text-[11px] font-semibold tracking-[0.18em] uppercase text-[#1a1a1a] border-b border-transparent group-hover/case:border-[#bf572b] group-hover/case:text-[#bf572b] transition-colors duration-200">
-                        VIEW CASE
-                      </span>
-                    </Link>
-                  </div>
                 </div>
               );
             })}

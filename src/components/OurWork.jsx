@@ -7,7 +7,7 @@ import { ourWorkData } from "@/lib/data";
 
 export default function OurWork({ data }) {
   const content = data ?? ourWorkData;
-  const filters = content.filters ?? ["ALL", "DELHI", "GURUGRAM", "PATNA BIHAR", "RAJASTHAN"];
+  const filters = content.filters ?? ["ALL", "RENOVATION", "POLICE STATION", "BEDROOM", "KITCHEN", "LIVING ROOM", "COMMERCIAL & OFFICE", "FECADE", "BATHROOM & SPA", "CAFE"];
   const projects = content.projects ?? [];
 
   const [activeFilter, setActiveFilter] = useState("ALL");
@@ -21,10 +21,16 @@ export default function OurWork({ data }) {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  const filteredProjects = projects.filter((p) => {
-    if (activeFilter === "ALL") return true;
-    return p.location.toUpperCase() === activeFilter.toUpperCase();
-  });
+  const matchesFilter = (project, f) => {
+    if (f.toUpperCase() === "ALL") return true;
+    const target = f.toUpperCase();
+    const cats = (project.categories ?? []).map((c) => String(c).toUpperCase());
+    if (cats.includes(target)) return true;
+    const haystack = `${project.title ?? ""} ${project.type ?? ""}`.toUpperCase();
+    return haystack.includes(target);
+  };
+
+  const filteredProjects = projects.filter((p) => matchesFilter(p, activeFilter));
 
   // Repeat the filtered list so half the row always out-widths the viewport,
   // keeping the -50% marquee loop seamless even for single-project filters.
@@ -43,44 +49,21 @@ export default function OurWork({ data }) {
         key={`${project.id ?? i}-${i}`}
         className={`group flex-shrink-0 ${wrapperClass}`}
       >
-        <div className="bg-white shadow-sm border border-neutral-200/60 transition-all duration-300 hover:shadow-lg flex flex-col justify-between overflow-hidden h-full">
-          <Link href={projectUrl} className="relative w-full aspect-[16/10] sm:aspect-[4/3] overflow-hidden bg-neutral-100 block cursor-pointer">
-            <span className="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 z-10 bg-black/90 text-white font-sans text-[9px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.2em] uppercase px-2.5 sm:px-3 py-1 font-medium rounded-none">
-              {project.location}
-            </span>
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              sizes="(max-width: 640px) 70vw, 420px"
-              className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-            />
-          </Link>
-
-          <div className="p-5 sm:p-6 lg:p-7 flex flex-col justify-between flex-1">
-            <div>
-              <Link href={projectUrl} className="block cursor-pointer">
-                <h3 className="font-serif font-normal text-[#1a1a1a] text-xl sm:text-2xl lg:text-[26px] leading-tight mb-2 sm:mb-3 hover:text-[#C2592D] transition-colors">
-                  {project.title}
-                </h3>
-              </Link>
-              <p className="font-sans text-xs sm:text-[13px] text-neutral-500 font-normal leading-[1.65] mb-4 sm:mb-6">
-                {project.subtitle}
-              </p>
-            </div>
-
-            <div className="pt-4 border-t border-neutral-200/80">
-              <Link
-                href={projectUrl}
-                className="group/case inline-flex items-center gap-2 cursor-pointer transition-all duration-200 active:scale-95"
-              >
-                <span className="font-sans text-[10px] sm:text-[11px] font-bold tracking-[0.18em] uppercase text-[#1a1a1a] group-hover/case:text-[#C2592D] transition-colors duration-200">
-                  VIEW CASE
-                </span>
-              </Link>
-            </div>
-          </div>
-        </div>
+        <Link
+          href={projectUrl}
+          className="relative block w-full aspect-[2/3] overflow-hidden bg-neutral-100"
+        >
+          <span className="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 z-10 bg-black/90 text-white font-sans text-[9px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.2em] uppercase px-2.5 sm:px-3 py-1 font-medium rounded-none">
+            {project.location}
+          </span>
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            sizes="(max-width: 640px) 70vw, 420px"
+            className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+          />
+        </Link>
       </div>
     );
   };
@@ -94,11 +77,11 @@ export default function OurWork({ data }) {
       <style>{`@keyframes outset-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }`}</style>
 
       <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
-        <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-5 xl:gap-8 mb-6 sm:mb-16">
-          <div className="w-full xl:max-w-[540px]">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-5 md:gap-8 mb-6 sm:mb-16">
+          <div className="w-full md:max-w-[400px] lg:max-w-[440px] xl:max-w-[540px]">
             <h2 className="font-serif font-normal text-[#1a1a1a] text-[28px] sm:text-4xl lg:text-[44px] xl:text-[48px] leading-[1.2] tracking-tight text-left">
-              <span className="lg:hidden">One Studio from Concept to Growth.</span>
-              <span className="hidden lg:block">
+              <span className="md:hidden">One Studio from Concept to Growth.</span>
+              <span className="hidden md:block">
                 One Studio from
                 <br />
                 Concept to Growth.
@@ -109,14 +92,14 @@ export default function OurWork({ data }) {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2.5 lg:gap-3 xl:pt-[131px]">
+          <div className="flex flex-wrap items-center gap-2.5 lg:gap-3 md:flex-1 md:justify-end min-w-0">
             {filters.map((f) => {
               const isActive = activeFilter.toUpperCase() === f.toUpperCase();
               return (
                 <button
                   key={f}
                   onClick={() => handleFilter(f)}
-                  className={`flex-shrink-0 whitespace-nowrap min-h-[46px] px-5 lg:px-6 text-center text-[11px] lg:text-xs tracking-[0.16em] uppercase font-medium transition-all duration-300 cursor-pointer rounded-none ${isActive
+                  className={`flex-shrink-0 whitespace-nowrap min-h-10 lg:min-h-11 px-4 lg:px-5 text-center text-[11px] lg:text-xs tracking-[0.16em] uppercase font-medium transition-all duration-300 cursor-pointer rounded-none ${isActive
                       ? "bg-[#1a1a1a] text-white shadow-sm"
                       : "bg-white text-[#1a1a1a] border border-neutral-200/80 hover:border-[#1a1a1a] hover:bg-neutral-50"
                     }`}

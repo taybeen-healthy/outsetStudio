@@ -184,11 +184,12 @@ export const ourWorkData = {
   title: "One Studio from Concept to Growth.",
   subtitle:
     "From concept to growth, Outset Studio creates distinctive, high-performing outlets.",
-  filters: ["ALL", "DELHI", "GURUGRAM", "PATNA BIHAR", "RAJASTHAN"],
+  filters: ["ALL", "RENOVATION", "POLICE STATION", "BEDROOM", "KITCHEN", "LIVING ROOM", "COMMERCIAL & OFFICE", "FECADE", "BATHROOM & SPA", "CAFE"],
   projects: [
     {
       id: 1,
       slug: "sardar-ji-baksh-cafe",
+      categories: ["CAFE"],
       title: "Sardar Ji Baksh Cafe",
       titleRoman: "Sardar Ji",
       titleItalic: "Baksh Cafe",
@@ -294,6 +295,7 @@ export const ourWorkData = {
     {
       id: 2,
       slug: "rigo-cafe",
+      categories: ["CAFE"],
       title: "Rigo Cafe",
       titleRoman: "Rigo",
       titleItalic: "Cafe",
@@ -399,6 +401,7 @@ export const ourWorkData = {
     {
       id: 3,
       slug: "patna-bihar-sardar-ji-baksh",
+      categories: ["CAFE"],
       title: "Patna Bihar Sardar Ji Baksh",
       titleRoman: "Sardar Ji Baksh",
       titleItalic: "Patna Flagship",
@@ -504,6 +507,7 @@ export const ourWorkData = {
     {
       id: 4,
       slug: "minerals-the-garden-cafe",
+      categories: ["CAFE"],
       title: "Minerals The Garden Cafe",
       titleRoman: "Minerals",
       titleItalic: "The Garden Cafe",
@@ -609,6 +613,7 @@ export const ourWorkData = {
     {
       id: 5,
       slug: "punjabi-bagh-sardar-ji-baksh",
+      categories: ["CAFE"],
       title: "Punjabi Bagh Sardar ji Baksh",
       titleRoman: "Sardar Ji Baksh",
       titleItalic: "Punjabi Bagh",
@@ -714,6 +719,7 @@ export const ourWorkData = {
     {
       id: 6,
       slug: "bakery-house",
+      categories: ["CAFE"],
       title: "Bakery House",
       titleRoman: "Bakery House",
       titleItalic: "Artisanal Patisserie",
@@ -819,6 +825,7 @@ export const ourWorkData = {
     {
       id: 7,
       slug: "luxury-jewellery-showroom",
+      categories: [],
       title: "Luxury Jewellery Showroom",
       titleRoman: "Luxury",
       titleItalic: "Jewellery Showroom",
@@ -920,6 +927,7 @@ export const ourWorkData = {
     {
       id: 8,
       slug: "yaa-securities",
+      categories: [],
       title: "YAA Securities",
       titleRoman: "YAA",
       titleItalic: "Securities",
@@ -1021,6 +1029,7 @@ export const ourWorkData = {
     {
       id: 9,
       slug: "home-renovation-delhi",
+      categories: ["RENOVATION", "BEDROOM"],
       title: "Home Renovation",
       titleRoman: "Home",
       titleItalic: "Renovation",
@@ -1122,6 +1131,7 @@ export const ourWorkData = {
     {
       id: 10,
       slug: "old-rao-hotel",
+      categories: [],
       title: "Old Rao Hotel",
       titleRoman: "Old Rao",
       titleItalic: "Hotel",
@@ -1193,6 +1203,7 @@ export const ourWorkData = {
     {
       id: 11,
       slug: "builder-flat-delhi",
+      categories: ["BEDROOM"],
       title: "Builder Flat",
       titleRoman: "Builder",
       titleItalic: "Flat",
@@ -1264,6 +1275,7 @@ export const ourWorkData = {
     {
       id: 12,
       slug: "fecade-gurugram",
+      categories: [],
       title: "Fecade",
       titleRoman: "",
       titleItalic: "Fecade",
@@ -1335,6 +1347,7 @@ export const ourWorkData = {
     {
       id: 13,
       slug: "police-station-gurugram",
+      categories: ["POLICE STATION"],
       title: "Police Station",
       titleRoman: "Police",
       titleItalic: "Station",
@@ -1406,6 +1419,7 @@ export const ourWorkData = {
     {
       id: 14,
       slug: "bhutan-residence-gurugram",
+      categories: ["BEDROOM"],
       title: "Bhutan Residence",
       titleRoman: "Bhutan",
       titleItalic: "Residence",
@@ -1472,6 +1486,1806 @@ export const ourWorkData = {
         plate4: { image: "/BR.png", caption: "BHR-004 • STUDY" },
         plate5: { image: "/BR.png", caption: "BHR-005 • BATHROOM" },
         plate6: { image: "/BR.png", caption: "BHR-006 • COURTYARD" },
+      },
+    },
+    {
+      id: 15,
+      slug: "graphite-modular-kitchen",
+      categories: ["KITCHEN"],
+      title: "Graphite Modular Kitchen",
+      titleRoman: "Graphite Modular",
+      titleItalic: "Kitchen",
+      subtitle:
+        "A U-shaped modular kitchen where handleless beige cabinetry, black glass fronts and warm cove lighting come together to make everyday cooking effortless.",
+      image: "/5ed22d0f5336c8d4c87aaa50835a726df94275b0.png",
+      location: "DELHI",
+      specs: {
+        projectName: "GRAPHITE MODULAR KITCHEN",
+        type: "MODULAR KITCHEN",
+        location: "DELHI",
+        scope: "KITCHEN DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "A U-shaped kitchen built for effortless cooking.",
+        description:
+          "Designed around a continuous work triangle, this U-shaped kitchen pairs handleless beige shutters with tinted black glass overheads, a durable granite counter, and warm concealed cove lighting that makes the space glow after dark.",
+      },
+      keyElements: {
+        material: {
+          image: "/5ed22d0f5336c8d4c87aaa50835a726df94275b0.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Granite & Glass",
+          description:
+            "Speckled granite counters, matte beige laminate shutters, and tinted black glass overhead cabinets create a durable, easy-to-clean palette.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Warm Neutrals",
+          swatches: [
+            { name: "SOFT BEIGE", hex: "#E6DFD3", bg: "#E6DFD3" },
+            { name: "GRAPHITE BLACK", hex: "#1C1C1C", bg: "#1C1C1C" },
+            { name: "WARM GREY", hex: "#8E8B85", bg: "#8E8B85" },
+          ],
+          bottomTag: "MODULAR KITCHEN PALETTE",
+        },
+        lighting: {
+          image: "/5ed22d0f5336c8d4c87aaa50835a726df94275b0.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Concealed Cove Glow",
+          description:
+            "Warm LED strips under the overhead cabinets and along the ceiling cove illuminate the counter run without glare.",
+        },
+        furniture: {
+          image: "/5ed22d0f5336c8d4c87aaa50835a726df94275b0.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Handleless Cabinetry",
+          description:
+            "Full-height overhead units, soft-close drawers, and a dedicated hob-and-chimney bay keep the U-layout clean and efficient.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Continuous Counter Run", description: "An uninterrupted granite counter along three walls, giving generous prep space on every side." },
+        { number: "02.", title: "Glass Overhead Bank", description: "Tinted black glass cabinets that hide clutter while reflecting light back into the kitchen." },
+        { number: "03.", title: "Hob & Chimney Bay", description: "A centered cooking zone with a sleek black chimney and easy-access drawer storage below." },
+        { number: "04.", title: "Breakfast Corner", description: "A slim counter extension at the opening that doubles as a quick-bite breakfast ledge." },
+        { number: "05.", title: "Tall Appliance Unit", description: "A floor-to-ceiling housing for the refrigerator and microwave, keeping small appliances off the counter." },
+        { number: "06.", title: "Warm Night Lighting", description: "Cove and under-cabinet lighting that turns the kitchen into a warm feature of the home after sunset." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/5ed22d0f5336c8d4c87aaa50835a726df94275b0.png", caption: "GMK-001 • U-SHAPED COUNTER RUN" },
+        plate2: { image: "/5ed22d0f5336c8d4c87aaa50835a726df94275b0.png", caption: "GMK-002 • GLASS OVERHEADS" },
+        plate3: { image: "/5ed22d0f5336c8d4c87aaa50835a726df94275b0.png", caption: "GMK-003 • HOB & CHIMNEY BAY" },
+        plate4: { image: "/5ed22d0f5336c8d4c87aaa50835a726df94275b0.png", caption: "GMK-004 • GRANITE COUNTER DETAIL" },
+        plate5: { image: "/5ed22d0f5336c8d4c87aaa50835a726df94275b0.png", caption: "GMK-005 • COVE LIGHTING" },
+        plate6: { image: "/5ed22d0f5336c8d4c87aaa50835a726df94275b0.png", caption: "GMK-006 • HANDLELESS SHUTTERS" },
+      },
+    },
+    {
+      id: 16,
+      slug: "fluted-modular-kitchen",
+      categories: ["KITCHEN"],
+      title: "Fluted Modular Kitchen",
+      titleRoman: "Fluted Modular",
+      titleItalic: "Kitchen",
+      subtitle:
+        "A compact kitchen with fluted marble-look overheads, a deep black backsplash and warm under-cove lighting — small in footprint, generous in character.",
+      image: "/9ce30cadd3f79de15a944b9970ba417bc19b183a.png",
+      location: "DELHI",
+      specs: {
+        projectName: "FLUTED MODULAR KITCHEN",
+        type: "MODULAR KITCHEN",
+        location: "DELHI",
+        scope: "KITCHEN DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "Compact kitchen, sculpted surfaces.",
+        description:
+          "Every millimetre is put to work in this compact kitchen. Fluted stone-finish overheads run above a deep black backsplash and a practical sink zone, while a warm cove light washes the whole wall in soft glow.",
+      },
+      keyElements: {
+        material: {
+          image: "/9ce30cadd3f79de15a944b9970ba417bc19b183a.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Fluted Stone & Gloss",
+          description:
+            "Fluted marble-patterned shutters paired with a glossy black backsplash and a durable dark granite counter.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Ivory & Obsidian",
+          swatches: [
+            { name: "IVORY STONE", hex: "#EFEAE0", bg: "#EFEAE0" },
+            { name: "OBSIDIAN BLACK", hex: "#141414", bg: "#141414" },
+            { name: "OAK FLOOR", hex: "#B08D6A", bg: "#B08D6A" },
+          ],
+          bottomTag: "COMPACT KITCHEN PALETTE",
+        },
+        lighting: {
+          image: "/9ce30cadd3f79de15a944b9970ba417bc19b183a.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Under-Cove Wash",
+          description:
+            "A concealed warm LED cove above the overheads throws light across the ceiling and the fluted fronts.",
+        },
+        furniture: {
+          image: "/9ce30cadd3f79de15a944b9970ba417bc19b183a.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Efficient Base Units",
+          description:
+            "Deep soft-close drawers and a dedicated sink cabinet that keep daily essentials within arm's reach.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Fluted Overhead Wall", description: "Overhead cabinets with a fluted stone finish that adds texture to the compact volume." },
+        { number: "02.", title: "Sink & Prep Zone", description: "A practical stainless sink set into the granite counter with dish rack and utility access." },
+        { number: "03.", title: "Black Backsplash", description: "A full-height glossy black backsplash that is easy to wipe and makes the ivory cabinetry pop." },
+        { number: "04.", title: "Corner Storage", description: "Dead corner space converted into deep storage for bulky vessels and daily-use jars." },
+        { number: "05.", title: "Warm Wood Floor", description: "Wood-look plank flooring that keeps the small kitchen warm and comfortable underfoot." },
+        { number: "06.", title: "Task Lighting", description: "Focused light at the counter for safe prep, balanced by the ambient cove glow above." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/9ce30cadd3f79de15a944b9970ba417bc19b183a.png", caption: "FMK-001 • FLUTED OVERHEAD WALL" },
+        plate2: { image: "/9ce30cadd3f79de15a944b9970ba417bc19b183a.png", caption: "FMK-002 • SINK & PREP ZONE" },
+        plate3: { image: "/9ce30cadd3f79de15a944b9970ba417bc19b183a.png", caption: "FMK-003 • BLACK BACKSPLASH" },
+        plate4: { image: "/9ce30cadd3f79de15a944b9970ba417bc19b183a.png", caption: "FMK-004 • GRANITE COUNTER" },
+        plate5: { image: "/9ce30cadd3f79de15a944b9970ba417bc19b183a.png", caption: "FMK-005 • UNDER-COVE LIGHTING" },
+        plate6: { image: "/9ce30cadd3f79de15a944b9970ba417bc19b183a.png", caption: "FMK-006 • BASE UNIT DETAIL" },
+      },
+    },
+    {
+      id: 17,
+      slug: "marble-island-kitchen",
+      categories: ["KITCHEN"],
+      title: "Marble Island Kitchen",
+      titleRoman: "Marble Island",
+      titleItalic: "Kitchen",
+      subtitle:
+        "A sculpted marble island with patterned bar stools forms the heart of this warm contemporary kitchen, framed by wood veneer, glossy shutters and an arched fluted niche.",
+      image: "/7205b41557d71177f5a4c60efbac209a0ad33c52.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "MARBLE ISLAND KITCHEN",
+        type: "ISLAND KITCHEN",
+        location: "GURUGRAM",
+        scope: "KITCHEN DESIGN & MILLWORK",
+      },
+      concept: {
+        title: "The island as the social centre of the home.",
+        description:
+          "A waterfall marble island with integrated seating anchors the room, while warm wood veneer, high-gloss shutters, and an arched fluted niche create a layered, gallery-like backdrop for everyday living.",
+      },
+      keyElements: {
+        material: {
+          image: "/7205b41557d71177f5a4c60efbac209a0ad33c52.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Marble & Warm Oak",
+          description:
+            "Dramatic marble across counters and island, warm oak veneer panelling, and glossy ivory overhead shutters.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Ivory & Veined Stone",
+          swatches: [
+            { name: "MARBLE WHITE", hex: "#F1EEE8", bg: "#F1EEE8" },
+            { name: "WARM OAK", hex: "#B4906B", bg: "#B4906B" },
+            { name: "SOFT TAUPE", hex: "#A79B8C", bg: "#A79B8C" },
+          ],
+          bottomTag: "ISLAND KITCHEN PALETTE",
+        },
+        lighting: {
+          image: "/7205b41557d71177f5a4c60efbac209a0ad33c52.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Linear Cove System",
+          description:
+            "Black recessed linear coves and spot lights wash the island and fluted arch evenly without visible fixtures.",
+        },
+        furniture: {
+          image: "/7205b41557d71177f5a4c60efbac209a0ad33c52.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Patterned Bar Stools",
+          description:
+            "Sculptural printed bar stools with brass-toned legs that give the island a bold graphic signature.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Waterfall Island", description: "A marble island with a raised breakfast ledge and seating for three along the outer edge." },
+        { number: "02.", title: "Arched Fluted Niche", description: "A central arched panel with fluted shutters framing the sink and open display shelving." },
+        { number: "03.", title: "Full-Height Storage", description: "Glossy overheads and tall units wrapping the perimeter for a clutter-free working wall." },
+        { number: "04.", title: "Prep & Wash Zone", description: "An undermount sink with a matte black tap set into the marble backsplash run." },
+        { number: "05.", title: "Appliance Alcove", description: "Dedicated counters for the coffee machine, air fryer and daily appliances with power at hand." },
+        { number: "06.", title: "Stone Flooring", description: "Large-format grey stone tiles that ground the light cabinetry and take heavy footfall." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/7205b41557d71177f5a4c60efbac209a0ad33c52.png", caption: "MIK-001 • WATERFALL ISLAND" },
+        plate2: { image: "/7205b41557d71177f5a4c60efbac209a0ad33c52.png", caption: "MIK-002 • ARCHED FLUTED NICHE" },
+        plate3: { image: "/7205b41557d71177f5a4c60efbac209a0ad33c52.png", caption: "MIK-003 • MARBLE BACKSPLASH" },
+        plate4: { image: "/7205b41557d71177f5a4c60efbac209a0ad33c52.png", caption: "MIK-004 • BAR SEATING" },
+        plate5: { image: "/7205b41557d71177f5a4c60efbac209a0ad33c52.png", caption: "MIK-005 • CEILING COVE DETAIL" },
+        plate6: { image: "/7205b41557d71177f5a4c60efbac209a0ad33c52.png", caption: "MIK-006 • TALL STORAGE WALL" },
+      },
+    },
+    {
+      id: 18,
+      slug: "l-shape-modular-kitchen",
+      categories: ["KITCHEN"],
+      title: "L-Shape Modular Kitchen",
+      titleRoman: "L-Shape Modular",
+      titleItalic: "Kitchen",
+      subtitle:
+        "A glossy beige L-shaped kitchen with a dramatic black backsplash, cove-lit ceiling and a clean work triangle designed for compact urban homes.",
+      image: "/99899c7bc291bd4ed6b02b11c6fdb7f786b30542.png",
+      location: "DELHI",
+      specs: {
+        projectName: "L-SHAPE MODULAR KITCHEN",
+        type: "MODULAR KITCHEN",
+        location: "DELHI",
+        scope: "KITCHEN DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "Efficient geometry for everyday cooking.",
+        description:
+          "The L-layout puts sink, hob and storage on two connected runs, opening the kitchen towards the home. Glossy beige shutters, a black granite counter and a cove-lit ceiling keep the space bright, clean and easy to maintain.",
+      },
+      keyElements: {
+        material: {
+          image: "/99899c7bc291bd4ed6b02b11c6fdb7f786b30542.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Gloss & Granite",
+          description:
+            "High-gloss beige acrylic shutters, black granite counters, and a polished vitrified floor that reflects the cove light.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Champagne & Charcoal",
+          swatches: [
+            { name: "CHAMPAGNE BEIGE", hex: "#E8DFD1", bg: "#E8DFD1" },
+            { name: "CHARCOAL BLACK", hex: "#171717", bg: "#171717" },
+            { name: "SOFT WHITE", hex: "#F6F4EF", bg: "#F6F4EF" },
+          ],
+          bottomTag: "GALLERY KITCHEN PALETTE",
+        },
+        lighting: {
+          image: "/99899c7bc291bd4ed6b02b11c6fdb7f786b30542.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Perimeter Cove Ceiling",
+          description:
+            "A recessed cove ceiling with warm LED lines and downlights that evenly wash the L-run without shadows.",
+        },
+        furniture: {
+          image: "/99899c7bc291bd4ed6b02b11c6fdb7f786b30542.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Handleless Drawers",
+          description:
+            "J-pull handleless shutters, soft-close drawer stacks, and a tall pantry unit at the return of the L.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "The L Work Triangle", description: "Sink, hob and fridge placed at the three points of the triangle for minimal steps while cooking." },
+        { number: "02.", title: "Black Backsplash Run", description: "A continuous dark backsplash behind the hob that hides splashes and contrasts the glossy shutters." },
+        { number: "03.", title: "Glass-Front Overheads", description: "Tinted glass overheads displaying glassware while keeping dust out." },
+        { number: "04.", title: "Cove Ceiling", description: "A tray ceiling with concealed warm cove light that gives the kitchen a soft, even glow." },
+        { number: "05.", title: "Tall Pantry Unit", description: "A full-height pantry at the end of the run for grains, spices and dry goods." },
+        { number: "06.", title: "Open Floor Zone", description: "An open centre that keeps the kitchen comfortable for two people working together." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/99899c7bc291bd4ed6b02b11c6fdb7f786b30542.png", caption: "LSK-001 • L-SHAPED RUN" },
+        plate2: { image: "/99899c7bc291bd4ed6b02b11c6fdb7f786b30542.png", caption: "LSK-002 • HOB & BACKSPLASH" },
+        plate3: { image: "/99899c7bc291bd4ed6b02b11c6fdb7f786b30542.png", caption: "LSK-003 • GLASS OVERHEADS" },
+        plate4: { image: "/99899c7bc291bd4ed6b02b11c6fdb7f786b30542.png", caption: "LSK-004 • COVE CEILING" },
+        plate5: { image: "/99899c7bc291bd4ed6b02b11c6fdb7f786b30542.png", caption: "LSK-005 • SINK CORNER" },
+        plate6: { image: "/99899c7bc291bd4ed6b02b11c6fdb7f786b30542.png", caption: "LSK-006 • BASE DRAWER STACK" },
+      },
+    },
+    {
+      id: 19,
+      slug: "onyx-island-kitchen",
+      categories: ["KITCHEN"],
+      title: "Onyx Island Kitchen",
+      titleRoman: "Onyx Island",
+      titleItalic: "Kitchen",
+      subtitle:
+        "A green onyx island set against warm oak walls and garden views — a serene kitchen where natural stone, herringbone floors and open shelving set a calm, organic tone.",
+      image: "/a47b92b11ace4464e6020ab555f4434d0462d869.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "ONYX ISLAND KITCHEN",
+        type: "ISLAND KITCHEN",
+        location: "GURUGRAM",
+        scope: "INTERIOR DESIGN & STONE WORK",
+      },
+      concept: {
+        title: "Natural stone as the centrepiece.",
+        description:
+          "A monolithic green onyx island anchors the kitchen within floor-to-ceiling oak joinery. Full-height windows pull the garden inside, while open shelves and warm sconces keep the space relaxed and lived-in.",
+      },
+      keyElements: {
+        material: {
+          image: "/a47b92b11ace4464e6020ab555f4434d0462d869.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Onyx & Oak",
+          description:
+            "A book-matched green onyx island, warm oak wall panelling, and light herringbone timber flooring.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Garden Greens",
+          swatches: [
+            { name: "ONYX GREEN", hex: "#8FA07A", bg: "#8FA07A" },
+            { name: "WARM OAK", hex: "#B8906B", bg: "#B8906B" },
+            { name: "PARCHMENT", hex: "#EFE9DD", bg: "#EFE9DD" },
+          ],
+          bottomTag: "ORGANIC KITCHEN PALETTE",
+        },
+        lighting: {
+          image: "/a47b92b11ace4464e6020ab555f4434d0462d869.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Sconces & Daylight",
+          description:
+            "Fluted glass wall sconces and slim spotlights complement the abundant daylight from full-height garden windows.",
+        },
+        furniture: {
+          image: "/a47b92b11ace4464e6020ab555f4434d0462d869.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Open Shelving",
+          description:
+            "Floating oak shelves displaying glassware and ceramics, plus a round dining table with sculptural leather chairs.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Onyx Monolith", description: "A floor-to-ceiling-height onyx island that reads as sculpture from every angle of the room." },
+        { number: "02.", title: "Garden Outlook", description: "Full-height glazed doors framing the trees and pulling green views into the kitchen." },
+        { number: "03.", title: "Oak Library Wall", description: "Warm oak joinery wrapping the room with integrated open shelves and closed base units." },
+        { number: "04.", title: "Coffee Station", description: "A dedicated espresso corner on the counter with power and storage for daily rituals." },
+        { number: "05.", title: "Dining Nook", description: "A round dining table beside the island for casual meals and conversation while cooking." },
+        { number: "06.", title: "Herringbone Floor", description: "Light timber herringbone boards that add rhythm and warmth underfoot." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/a47b92b11ace4464e6020ab555f4434d0462d869.png", caption: "OIK-001 • ONYX ISLAND" },
+        plate2: { image: "/a47b92b11ace4464e6020ab555f4434d0462d869.png", caption: "OIK-002 • OAK SHELVING WALL" },
+        plate3: { image: "/a47b92b11ace4464e6020ab555f4434d0462d869.png", caption: "OIK-003 • GARDEN WINDOWS" },
+        plate4: { image: "/a47b92b11ace4464e6020ab555f4434d0462d869.png", caption: "OIK-004 • DINING NOOK" },
+        plate5: { image: "/a47b92b11ace4464e6020ab555f4434d0462d869.png", caption: "OIK-005 • SCONCE DETAIL" },
+        plate6: { image: "/a47b92b11ace4464e6020ab555f4434d0462d869.png", caption: "OIK-006 • HERRINGBONE FLOOR" },
+      },
+    },
+    {
+      id: 20,
+      slug: "minimal-stone-kitchen",
+      categories: ["KITCHEN"],
+      title: "Minimal Stone Kitchen",
+      titleRoman: "Minimal Stone",
+      titleItalic: "Kitchen",
+      subtitle:
+        "A minimal linear kitchen in soft taupe with a dramatic dark marble island, track lighting and handleless fronts — quiet, precise and architectural.",
+      image: "/d35e5a0259d459b9e52e33a15229c5da6a638989.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "MINIMAL STONE KITCHEN",
+        type: "ISLAND KITCHEN",
+        location: "GURUGRAM",
+        scope: "KITCHEN DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "Restraint, geometry and stone.",
+        description:
+          "A single clean line of handleless taupe cabinetry runs along the wall, answered by a monolithic dark marble island. Track lighting and a slim linear pendant complete an intentionally quiet, architectural room.",
+      },
+      keyElements: {
+        material: {
+          image: "/d35e5a0259d459b9e52e33a15229c5da6a638989.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Matte Lacquer & Marble",
+          description:
+            "Matte taupe lacquer shutters, a dark veined marble island and backsplash, and pale porcelain floor tiles.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Taupe & Nero",
+          swatches: [
+            { name: "SOFT TAUPE", hex: "#B9AFA1", bg: "#B9AFA1" },
+            { name: "NERO MARBLE", hex: "#1E1B18", bg: "#1E1B18" },
+            { name: "PALE ASH", hex: "#E9E6E0", bg: "#E9E6E0" },
+          ],
+          bottomTag: "MINIMAL KITCHEN PALETTE",
+        },
+        lighting: {
+          image: "/d35e5a0259d459b9e52e33a15229c5da6a638989.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Track & Linear Pendant",
+          description:
+            "A black magnetic track system with adjustable spots paired with a slim linear pendant over the island.",
+        },
+        furniture: {
+          image: "/d35e5a0259d459b9e52e33a15229c5da6a638989.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Handleless Precision",
+          description:
+            "Push-to-open shutters, shadow-gap detailing, and a glass-front display cabinet for glassware.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Linear Working Wall", description: "One uninterrupted run of counter, sink and hob with tall units at the left flank." },
+        { number: "02.", title: "Marble Island", description: "A dark marble island that doubles as prep surface and informal dining bar." },
+        { number: "03.", title: "Glass Display Cabinet", description: "Smoked glass overheads with internal lighting for glassware and collectibles." },
+        { number: "04.", title: "Concealed Appliances", description: "Microwave and small appliances integrated into the tall units to keep counters clear." },
+        { number: "05.", title: "Track Lighting Grid", description: "A ceiling track grid that lets light be aimed exactly where work happens." },
+        { number: "06.", title: "Shadow-Gap Details", description: "Fine shadow gaps between panels and floor that give the joinery a floating, precise look." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/d35e5a0259d459b9e52e33a15229c5da6a638989.png", caption: "MSK-001 • LINEAR WORKING WALL" },
+        plate2: { image: "/d35e5a0259d459b9e52e33a15229c5da6a638989.png", caption: "MSK-002 • MARBLE ISLAND" },
+        plate3: { image: "/d35e5a0259d459b9e52e33a15229c5da6a638989.png", caption: "MSK-003 • GLASS DISPLAY" },
+        plate4: { image: "/d35e5a0259d459b9e52e33a15229c5da6a638989.png", caption: "MSK-004 • TRACK LIGHTING" },
+        plate5: { image: "/d35e5a0259d459b9e52e33a15229c5da6a638989.png", caption: "MSK-005 • BACKSPLASH VEINING" },
+        plate6: { image: "/d35e5a0259d459b9e52e33a15229c5da6a638989.png", caption: "MSK-006 • HANDLELESS FRONTS" },
+      },
+    },
+    {
+      id: 21,
+      slug: "classic-shaker-kitchen",
+      categories: ["KITCHEN"],
+      title: "Classic Shaker Kitchen",
+      titleRoman: "Classic Shaker",
+      titleItalic: "Kitchen",
+      subtitle:
+        "A classic grey shaker kitchen with gold-veined marble, open black shelving and a curved banquette — timeless cabinetry meets relaxed, everyday dining.",
+      image: "/e47b2892c7db8a8323976f8ebd349c7f4a286f44.png",
+      location: "RAJASTHAN",
+      specs: {
+        projectName: "CLASSIC SHAKER KITCHEN",
+        type: "KITCHEN & DINING",
+        location: "RAJASTHAN",
+        scope: "CABINETRY & INTERIOR DESIGN",
+      },
+      concept: {
+        title: "Timeless cabinetry, made for gathering.",
+        description:
+          "Grey shaker frames, brass hardware and a dramatic gold-veined marble slab create a refined backdrop, while a curved olive banquette and round marble table turn the kitchen into the home's favourite gathering spot.",
+      },
+      keyElements: {
+        material: {
+          image: "/e47b2892c7db8a8323976f8ebd349c7f4a286f44.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Shaker & Slab Marble",
+          description:
+            "Painted grey shaker shutters with brass pulls, a full-height gold-veined marble slab, and dark timber flooring.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Dove Grey & Brass",
+          swatches: [
+            { name: "DOVE GREY", hex: "#A9AEB0", bg: "#A9AEB0" },
+            { name: "MARBLE WHITE", hex: "#F4F1EA", bg: "#F4F1EA" },
+            { name: "OLIVE MOSS", hex: "#8A8A4F", bg: "#8A8A4F" },
+          ],
+          bottomTag: "CLASSIC KITCHEN PALETTE",
+        },
+        lighting: {
+          image: "/e47b2892c7db8a8323976f8ebd349c7f4a286f44.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Woven Pendant",
+          description:
+            "A large sculptural woven pendant over the dining table, supported by discreet ceiling spots across the kitchen.",
+        },
+        furniture: {
+          image: "/e47b2892c7db8a8323976f8ebd349c7f4a286f44.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Curved Banquette",
+          description:
+            "A ribbed olive banquette wrapping the round marble table, paired with a cane-backed dining chair.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Marble Feature Wall", description: "A full-height marble slab behind open shelving that becomes the room's focal wall." },
+        { number: "02.", title: "Open Shelf Display", description: "Black floating shelves styling everyday ceramics, jars and small appliances within easy reach." },
+        { number: "03.", title: "Banquette Dining", description: "A curved upholstered bench that seats the family comfortably around the round table." },
+        { number: "04.", title: "Tall Larder Run", description: "Floor-to-ceiling shaker units hiding the fridge and pantry behind matching doors." },
+        { number: "05.", title: "Island Breakfast Bar", description: "A marble-topped island with backless stools for quick breakfasts and conversation." },
+        { number: "06.", title: "Brass Details", description: "Brass handles, taps and shelf brackets that warm up the cool grey cabinetry." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/e47b2892c7db8a8323976f8ebd349c7f4a286f44.png", caption: "CSK-001 • MARBLE FEATURE WALL" },
+        plate2: { image: "/e47b2892c7db8a8323976f8ebd349c7f4a286f44.png", caption: "CSK-002 • OPEN SHELVING" },
+        plate3: { image: "/e47b2892c7db8a8323976f8ebd349c7f4a286f44.png", caption: "CSK-003 • BANQUETTE DINING" },
+        plate4: { image: "/e47b2892c7db8a8323976f8ebd349c7f4a286f44.png", caption: "CSK-004 • SHAKER CABINETRY" },
+        plate5: { image: "/e47b2892c7db8a8323976f8ebd349c7f4a286f44.png", caption: "CSK-005 • WOVEN PENDANT" },
+        plate6: { image: "/e47b2892c7db8a8323976f8ebd349c7f4a286f44.png", caption: "CSK-006 • ISLAND SEATING" },
+      },
+    },
+    {
+      id: 22,
+      slug: "open-plan-kitchen",
+      categories: ["KITCHEN"],
+      title: "Open Plan Kitchen",
+      titleRoman: "Open Plan",
+      titleItalic: "Kitchen",
+      subtitle:
+        "An open-plan kitchen under a richly detailed wood coffered ceiling and brass chandelier — glossy beige cabinetry, a dark granite counter and a layout that flows into the home.",
+      image: "/e603a5f4aa22f2567f1d7164eb61c73cfc618e23.png",
+      location: "DELHI",
+      specs: {
+        projectName: "OPEN PLAN KITCHEN",
+        type: "OPEN KITCHEN & DINING",
+        location: "DELHI",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "A kitchen that flows with the home.",
+        description:
+          "Set beneath a coffered walnut ceiling with a statement brass chandelier, this open kitchen keeps glossy beige cabinetry and a black granite counter visible from the living areas — designed to host as much as to cook.",
+      },
+      keyElements: {
+        material: {
+          image: "/e603a5f4aa22f2567f1d7164eb61c73cfc618e23.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Walnut & Gloss",
+          description:
+            "A coffered walnut ceiling, high-gloss beige shutters, black granite counters, and polished tile flooring.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Walnut & Cream",
+          swatches: [
+            { name: "WALNUT BROWN", hex: "#5C3F2B", bg: "#5C3F2B" },
+            { name: "GLOSSY CREAM", hex: "#E9E2D6", bg: "#E9E2D6" },
+            { name: "GRANITE BLACK", hex: "#1A1A1A", bg: "#1A1A1A" },
+          ],
+          bottomTag: "OPEN KITCHEN PALETTE",
+        },
+        lighting: {
+          image: "/e603a5f4aa22f2567f1d7164eb61c73cfc618e23.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Brass Chandelier",
+          description:
+            "A tiered brass and crystal chandelier anchoring the ceiling, supported by recessed spots and cove lines.",
+        },
+        furniture: {
+          image: "/e603a5f4aa22f2567f1d7164eb61c73cfc618e23.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Gloss Handleless Units",
+          description:
+            "Handleless glossy base and overhead units with a tall unit run housing appliances and storage.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Coffered Ceiling", description: "A walnut grid ceiling with integrated spots that defines the kitchen zone in the open plan." },
+        { number: "02.", title: "Statement Chandelier", description: "A brass chandelier centred over the circulation space, adding warmth and occasion." },
+        { number: "03.", title: "L-Shaped Counter", description: "Granite counters running along two walls with the hob and sink placed for an easy triangle." },
+        { number: "04.", title: "Gloss Overhead Run", description: "Handleless glossy cabinets with lift-up shutters above the counter." },
+        { number: "05.", title: "Tall Storage Column", description: "A full-height unit run at the edge of the kitchen for pantry and appliance storage." },
+        { number: "06.", title: "Open Connection", description: "No partition walls — clear sightlines from kitchen to passage and living areas." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/e603a5f4aa22f2567f1d7164eb61c73cfc618e23.png", caption: "OPK-001 • COFFERED CEILING" },
+        plate2: { image: "/e603a5f4aa22f2567f1d7164eb61c73cfc618e23.png", caption: "OPK-002 • CHANDELIER DETAIL" },
+        plate3: { image: "/e603a5f4aa22f2567f1d7164eb61c73cfc618e23.png", caption: "OPK-003 • L-SHAPED COUNTER" },
+        plate4: { image: "/e603a5f4aa22f2567f1d7164eb61c73cfc618e23.png", caption: "OPK-004 • GLOSS OVERHEADS" },
+        plate5: { image: "/e603a5f4aa22f2567f1d7164eb61c73cfc618e23.png", caption: "OPK-005 • TALL STORAGE" },
+        plate6: { image: "/e603a5f4aa22f2567f1d7164eb61c73cfc618e23.png", caption: "OPK-006 • OPEN CONNECTION" },
+      },
+    },
+    {
+      id: 23,
+      slug: "cove-lit-interior",
+      categories: ["LIVING ROOM"],
+      title: "Cove Lit Interior",
+      titleRoman: "Cove Lit",
+      titleItalic: "Interior",
+      subtitle:
+        "A warm residential interior where a tray ceiling with concealed cove lighting floats over handleless gloss cabinetry and a dramatic dark stone counter — calm, luminous and easy to live with.",
+      image: "/l1.png",
+      location: "DELHI",
+      specs: {
+        projectName: "COVE LIT INTERIOR",
+        type: "RESIDENTIAL INTERIOR",
+        location: "DELHI",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "Light that shapes the room.",
+        description:
+          "A layered ceiling cove washes the space in warm light, while handleless gloss shutters, a dark veined backsplash and a continuous counter line keep the interior composed and uncluttered.",
+      },
+      keyElements: {
+        material: {
+          image: "/l1.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Gloss & Dark Stone",
+          description:
+            "High-gloss beige shutters, dark veined stone across the counter and backsplash, and polished tile flooring.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Warm Ivory",
+          swatches: [
+            { name: "GLOSSY BEIGE", hex: "#E7DFD2", bg: "#E7DFD2" },
+            { name: "DARK STONE", hex: "#1C1A18", bg: "#1C1A18" },
+            { name: "WARM WHITE", hex: "#F5F2EC", bg: "#F5F2EC" },
+          ],
+          bottomTag: "RESIDENTIAL PALETTE",
+        },
+        lighting: {
+          image: "/l1.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Tray Cove Ceiling",
+          description:
+            "A recessed tray ceiling with warm concealed LED cove lines and spot lights for even, glare-free illumination.",
+        },
+        furniture: {
+          image: "/l1.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Handleless Run",
+          description:
+            "Push-to-open shutters, soft-close drawers, and a full-height unit run keeping everyday clutter out of sight.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Floating Ceiling Tray", description: "A recessed ceiling plane with warm cove light that defines and lifts the whole room." },
+        { number: "02.", title: "Gloss Unit Run", description: "Seamless handleless cabinetry offering generous storage along the full wall." },
+        { number: "03.", title: "Dark Stone Counter", description: "A durable dark counter and backsplash that contrast the pale cabinetry." },
+        { number: "04.", title: "Window Nook", description: "A naturally lit corner beside the window, ideal for a small breakfast ledge." },
+        { number: "05.", title: "Ventilation Core", description: "Concealed chimney and exhaust routing that keeps the ceiling lines clean." },
+        { number: "06.", title: "Polished Floor", description: "Large-format polished tiles that reflect the cove glow and extend the sense of space." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/l1.png", caption: "CLI-001 • TRAY CEILING" },
+        plate2: { image: "/l1.png", caption: "CLI-002 • GLOSS UNIT RUN" },
+        plate3: { image: "/l1.png", caption: "CLI-003 • DARK STONE COUNTER" },
+        plate4: { image: "/l1.png", caption: "CLI-004 • WINDOW NOOK" },
+        plate5: { image: "/l1.png", caption: "CLI-005 • COVE LIGHT DETAIL" },
+        plate6: { image: "/l1.png", caption: "CLI-006 • FLOOR & FINISH" },
+      },
+    },
+    {
+      id: 24,
+      slug: "banquette-dining-interior",
+      categories: ["LIVING ROOM"],
+      title: "Banquette Dining Interior",
+      titleRoman: "Banquette Dining",
+      titleItalic: "Interior",
+      subtitle:
+        "Grey shaker joinery, gold-veined marble and a curved olive banquette gather around a round table — a refined dining corner designed for long, unhurried meals.",
+      image: "/l2.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "BANQUETTE DINING INTERIOR",
+        type: "DINING & LIVING INTERIOR",
+        location: "GURUGRAM",
+        scope: "INTERIOR DESIGN & MILLWORK",
+      },
+      concept: {
+        title: "A dining corner that invites you to stay.",
+        description:
+          "A curved ribbed banquette wraps a round marble table beneath a sculptural woven pendant. Grey shaker cabinetry and a gold-veined marble slab form a composed backdrop, with open black shelves for everyday display.",
+      },
+      keyElements: {
+        material: {
+          image: "/l2.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Marble & Painted Timber",
+          description:
+            "Gold-veined marble across table and counters, painted grey shaker joinery, and dark timber flooring.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Grey & Olive",
+          swatches: [
+            { name: "SHAKER GREY", hex: "#B7BAB6", bg: "#B7BAB6" },
+            { name: "OLIVE MOSS", hex: "#8A8A4F", bg: "#8A8A4F" },
+            { name: "MARBLE IVORY", hex: "#F2EFE8", bg: "#F2EFE8" },
+          ],
+          bottomTag: "DINING PALETTE",
+        },
+        lighting: {
+          image: "/l2.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Woven Pendant",
+          description:
+            "A large black woven pendant casting patterned shadow over the table, supported by discreet ceiling spots.",
+        },
+        furniture: {
+          image: "/l2.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Curved Banquette",
+          description:
+            "A channel-tufted olive bench following the curve of the round table, paired with a cane-back chair.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Banquette Seating", description: "A curved upholstered bench that seats four to five comfortably and saves floor space." },
+        { number: "02.", title: "Marble Slab Wall", description: "A full-height veined marble panel behind open shelves as the room's feature wall." },
+        { number: "03.", title: "Open Display Shelves", description: "Black floating shelves styling ceramics, coffee ware and plants within easy reach." },
+        { number: "04.", title: "Shaker Cabinetry", description: "Floor-to-ceiling grey shaker units with brass pulls for pantry and tableware storage." },
+        { number: "05.", title: "Island Counter", description: "A marble-topped counter connecting dining to the working side of the room." },
+        { number: "06.", title: "Timber Flooring", description: "Warm dark timber boards that ground the light cabinetry and soft upholstery." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/l2.png", caption: "BDI-001 • BANQUETTE TABLE" },
+        plate2: { image: "/l2.png", caption: "BDI-002 • MARBLE SLAB WALL" },
+        plate3: { image: "/l2.png", caption: "BDI-003 • OPEN SHELVING" },
+        plate4: { image: "/l2.png", caption: "BDI-004 • SHAKER JOINERY" },
+        plate5: { image: "/l2.png", caption: "BDI-005 • WOVEN PENDANT" },
+        plate6: { image: "/l2.png", caption: "BDI-006 • ISLAND COUNTER" },
+      },
+    },
+    {
+      id: 25,
+      slug: "fluted-stone-interior",
+      categories: ["LIVING ROOM"],
+      title: "Fluted Stone Interior",
+      titleRoman: "Fluted Stone",
+      titleItalic: "Interior",
+      subtitle:
+        "Fluted marble-look panels, a deep black backsplash and warm under-cove lighting define this compact interior — tactile, bright and meticulously finished.",
+      image: "/l3.png",
+      location: "DELHI",
+      specs: {
+        projectName: "FLUTED STONE INTERIOR",
+        type: "RESIDENTIAL INTERIOR",
+        location: "DELHI",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "Texture as the main event.",
+        description:
+          "Fluted stone-finish panels run across the overheads, lit from beneath by a warm cove that grazes every ridge. Against a glossy black backsplash and pale base units, the texture becomes the room's centrepiece.",
+      },
+      keyElements: {
+        material: {
+          image: "/l3.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Fluted Stone & Grain",
+          description:
+            "Fluted marble-patterned panels, a deep black glossy backsplash, matte beige base units and warm wood-plank flooring.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Ivory & Charcoal",
+          swatches: [
+            { name: "FLUTED IVORY", hex: "#EFEAE1", bg: "#EFEAE1" },
+            { name: "GLOSS BLACK", hex: "#131313", bg: "#131313" },
+            { name: "OAK FLOOR", hex: "#A98A67", bg: "#A98A67" },
+          ],
+          bottomTag: "TEXTURED INTERIOR PALETTE",
+        },
+        lighting: {
+          image: "/l3.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Grazing Cove Light",
+          description:
+            "A concealed warm LED cove beneath the overheads that grazes down the fluted ridges and lights the counter.",
+        },
+        furniture: {
+          image: "/l3.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Slim Base Units",
+          description:
+            "Handleless base drawers with aluminium profile grips and a deep stainless sink set into the stone counter.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Fluted Panel Wall", description: "Floor-run overheads faced in fluted stone-finish panels that catch light along every ridge." },
+        { number: "02.", title: "Black Backsplash", description: "A glossy black backsplash that hides marks, reflects light and sharpens the pale joinery." },
+        { number: "03.", title: "Window Wash", description: "A side window bringing daylight across the counter and opening the compact volume." },
+        { number: "04.", title: "Sink & Utility Zone", description: "A deep sink with practical counter space for daily utility routines." },
+        { number: "05.", title: "Warm Timber Floor", description: "Wood-plank flooring that keeps the space warm and soft underfoot." },
+        { number: "06.", title: "Under-Cove Glow", description: "Warm concealed lighting that turns the panelled band into a glowing feature after dark." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/l3.png", caption: "FSI-001 • FLUTED PANEL WALL" },
+        plate2: { image: "/l3.png", caption: "FSI-002 • BLACK BACKSPLASH" },
+        plate3: { image: "/l3.png", caption: "FSI-003 • SINK ZONE" },
+        plate4: { image: "/l3.png", caption: "FSI-004 • BASE UNITS" },
+        plate5: { image: "/l3.png", caption: "FSI-005 • COVE LIGHTING" },
+        plate6: { image: "/l3.png", caption: "FSI-006 • TIMBER FLOOR" },
+      },
+    },
+    {
+      id: 26,
+      slug: "creative-office-lounge",
+      categories: ["COMMERCIAL & OFFICE"],
+      title: "Creative Office Lounge",
+      titleRoman: "Creative Office",
+      titleItalic: "Lounge",
+      subtitle:
+        "A playful office lounge where terracotta and moss-green display modules, soft poufs and a neon statement wall turn a breakout corner into the loudest idea in the room.",
+      image: "/office.png",
+      location: "DELHI",
+      specs: {
+        projectName: "CREATIVE OFFICE LOUNGE",
+        type: "COMMERCIAL OFFICE",
+        location: "DELHI",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "A breakout space that thinks out of the box.",
+        description:
+          "Designed as the creative heart of the office, this lounge pairs a modular terracotta-and-green display wall with soft cylindrical poufs and a glowing statement graphic — a space built for informal chats, quick brainstorms and recharging between meetings.",
+      },
+      keyElements: {
+        material: {
+          image: "/office.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Terra Modules & Felt",
+          description:
+            "Powder-coated terracotta framing, moss-green felt inserts, micro-cement walls, and a natural jute area rug.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Terracotta & Moss",
+          swatches: [
+            { name: "SOFT TERRACOTTA", hex: "#C97B5A", bg: "#C97B5A" },
+            { name: "MOSS GREEN", hex: "#6E7B52", bg: "#6E7B52" },
+            { name: "WARM SAND", hex: "#E7DED0", bg: "#E7DED0" },
+          ],
+          bottomTag: "WORKPLACE LOUNGE PALETTE",
+        },
+        lighting: {
+          image: "/office.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Statement Glow",
+          description:
+            "Backlit lettering on the feature wall balanced by soft daylight falling through the skylight above.",
+        },
+        furniture: {
+          image: "/office.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Soft Poufs & Ottomans",
+          description:
+            "Cylindrical terracotta poufs, a low bouclé bench, and moss-green cube seats arranged for flexible, informal seating.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Modular Display Wall", description: "A floor-to-ceiling grid of terracotta frames holding green felt cylinders, discs and storage cubes." },
+        { number: "02.", title: "Neon Statement Wall", description: "A glowing lettered graphic that gives the lounge its identity and doubles as a photo moment." },
+        { number: "03.", title: "Flexible Seating Cluster", description: "Lightweight poufs and ottomans that can be rearranged for quick team huddles." },
+        { number: "04.", title: "Skylit Daylight", description: "Overhead daylight washing the rug and seating, keeping the room bright through the day." },
+        { number: "05.", title: "Round Rug Zone", description: "A large woven rug that anchors the seating and softens the acoustics of the lounge." },
+        { number: "06.", title: "Colour-Blocked Corners", description: "Painted ceiling and wall planes in deep green that frame the warm terracotta elements." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/office.png", caption: "COL-001 • DISPLAY WALL" },
+        plate2: { image: "/office.png", caption: "COL-002 • STATEMENT GRAPHIC" },
+        plate3: { image: "/office.png", caption: "COL-003 • SEATING CLUSTER" },
+        plate4: { image: "/office.png", caption: "COL-004 • SKYLIGHT WASH" },
+        plate5: { image: "/office.png", caption: "COL-005 • RUG & FLOOR" },
+        plate6: { image: "/office.png", caption: "COL-006 • COLOUR-BLOCK DETAIL" },
+      },
+    },
+    {
+      id: 27,
+      slug: "fluted-utility-interior",
+      categories: ["BATHROOM & SPA"],
+      title: "Fluted Utility Interior",
+      titleRoman: "Fluted Utility",
+      titleItalic: "Interior",
+      subtitle:
+        "A compact utility interior with fluted marble-look overheads, a deep black backsplash and warm cove lighting — practical work routines wrapped in tactile finishes.",
+      image: "/b1.png",
+      location: "DELHI",
+      specs: {
+        projectName: "FLUTED UTILITY INTERIOR",
+        type: "UTILITY & WASH AREA",
+        location: "DELHI",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "Utility that doesn't look utilitarian.",
+        description:
+          "Everyday wash and storage routines happen against fluted stone-finish panels lit by a warm concealed cove. A glossy black backsplash and warm timber-look floor keep the space durable and easy to maintain.",
+      },
+      keyElements: {
+        material: {
+          image: "/b1.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Fluted Stone & Timber",
+          description:
+            "Fluted marble-patterned shutters, a glossy black backsplash, matte base units and warm plank flooring.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Ivory & Ink",
+          swatches: [
+            { name: "FLUTED IVORY", hex: "#EFEAE1", bg: "#EFEAE1" },
+            { name: "INK BLACK", hex: "#141414", bg: "#141414" },
+            { name: "OAK FLOOR", hex: "#A98A67", bg: "#A98A67" },
+          ],
+          bottomTag: "UTILITY INTERIOR PALETTE",
+        },
+        lighting: {
+          image: "/b1.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Cove Underglow",
+          description:
+            "A concealed warm LED cove beneath the overheads grazing down the fluted ridges and lighting the work counter.",
+        },
+        furniture: {
+          image: "/b1.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Deep Base Storage",
+          description:
+            "Handleless base drawers with profile grips and a deep sink cabinet keeping detergents and tools out of sight.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Fluted Overhead Band", description: "Overhead storage faced in fluted stone panels that turn storage into a textured feature." },
+        { number: "02.", title: "Wash Counter", description: "A practical counter with deep sink and clearance for daily wash routines." },
+        { number: "03.", title: "Black Backsplash", description: "A glossy dark backsplash that hides splashes and wipes clean in seconds." },
+        { number: "04.", title: "Window Daylight", description: "Side daylight washing the counter and keeping the compact volume bright." },
+        { number: "05.", title: "Plank Flooring", description: "Warm wood-look planks chosen for grip and comfort during long standing sessions." },
+        { number: "06.", title: "Open Utility Shelf", description: "A slim shelf and rail system for daily-use items within arm's reach." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/b1.png", caption: "FUI-001 • FLUTED OVERHEAD BAND" },
+        plate2: { image: "/b1.png", caption: "FUI-002 • WASH COUNTER" },
+        plate3: { image: "/b1.png", caption: "FUI-003 • BLACK BACKSPLASH" },
+        plate4: { image: "/b1.png", caption: "FUI-004 • BASE STORAGE" },
+        plate5: { image: "/b1.png", caption: "FUI-005 • COVE UNDERGLOW" },
+        plate6: { image: "/b1.png", caption: "FUI-006 • PLANK FLOORING" },
+      },
+    },
+    {
+      id: 28,
+      slug: "terracotta-lounge-wall",
+      categories: ["BATHROOM & SPA"],
+      title: "Terracotta Lounge Wall",
+      titleRoman: "Terracotta Lounge",
+      titleItalic: "Wall",
+      subtitle:
+        "A quiet lounge corner where a backlit typographic wall meets a terracotta and moss display grid — soft cylindrical poufs invite a pause between meetings.",
+      image: "/b2.png",
+      location: "DELHI",
+      specs: {
+        projectName: "TERRACOTTA LOUNGE WALL",
+        type: "LOUNGE & BREAKOUT",
+        location: "DELHI",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "A corner built for thinking.",
+        description:
+          "A modular grid of terracotta frames and moss felt discs forms the backdrop to soft cylindrical seating. Warm lettered light on the plaster wall gives the corner its identity and glow.",
+      },
+      keyElements: {
+        material: {
+          image: "/b2.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Felt & Micro-Cement",
+          description:
+            "Pressed felt inserts in moss and terracotta, micro-cement plaster walls, and bouclé upholstery on the poufs.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Terracotta & Moss",
+          swatches: [
+            { name: "SOFT TERRACOTTA", hex: "#C97B5A", bg: "#C97B5A" },
+            { name: "MOSS GREEN", hex: "#6E7B52", bg: "#6E7B52" },
+            { name: "WARM SAND", hex: "#E7DED0", bg: "#E7DED0" },
+          ],
+          bottomTag: "LOUNGE PALETTE",
+        },
+        lighting: {
+          image: "/b2.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Backlit Lettering",
+          description:
+            "Warm channel letters glowing on the plaster wall, balanced by soft daylight from the side.",
+        },
+        furniture: {
+          image: "/b2.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Cylindrical Poufs",
+          description:
+            "Lightweight drum poufs in terracotta and bouclé that can be rearranged for any conversation.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Typographic Feature Wall", description: "Backlit lettering that gives the corner a memorable, brandable identity." },
+        { number: "02.", title: "Modular Display Grid", description: "A floor-to-ceiling grid of frames holding felt discs and storage cubes." },
+        { number: "03.", title: "Soft Seating Cluster", description: "Drum poufs and low seats arranged for informal, flexible gatherings." },
+        { number: "04.", title: "Colour-Blocked Ceiling", description: "A deep-toned ceiling plane that frames the warm walls below." },
+        { number: "05.", title: "Curved Floor Graphic", description: "A sweeping floor curve that guides movement past the lounge." },
+        { number: "06.", title: "Raking Daylight", description: "Side light grazing the felt grid, shifting its texture through the day." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/b2.png", caption: "TLW-001 • FEATURE WALL" },
+        plate2: { image: "/b2.png", caption: "TLW-002 • DISPLAY GRID" },
+        plate3: { image: "/b2.png", caption: "TLW-003 • SEATING CLUSTER" },
+        plate4: { image: "/b2.png", caption: "TLW-004 • LETTERING GLOW" },
+        plate5: { image: "/b2.png", caption: "TLW-005 • FLOOR GRAPHIC" },
+        plate6: { image: "/b2.png", caption: "TLW-006 • DAYLIGHT STUDY" },
+      },
+    },
+    {
+      id: 29,
+      slug: "tray-cove-interior",
+      categories: ["BATHROOM & SPA"],
+      title: "Tray Cove Interior",
+      titleRoman: "Tray Cove",
+      titleItalic: "Interior",
+      subtitle:
+        "A glossy beige interior wrapped beneath a cove-lit tray ceiling — handleless shutters, a black stone counter and even warm light give the room a calm, finished glow.",
+      image: "/b3.png",
+      location: "DELHI",
+      specs: {
+        projectName: "TRAY COVE INTERIOR",
+        type: "RESIDENTIAL INTERIOR",
+        location: "DELHI",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "A ceiling that sets the mood.",
+        description:
+          "A recessed tray ceiling with warm concealed cove lines defines the room from above, while glossy handleless shutters and a dark counter keep the composition simple and serene below.",
+      },
+      keyElements: {
+        material: {
+          image: "/b3.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Gloss & Stone",
+          description:
+            "High-gloss beige shutters, dark granite counter with matching backsplash, and large polished floor tiles.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Champagne & Charcoal",
+          swatches: [
+            { name: "GLOSSY CREAM", hex: "#E9E2D6", bg: "#E9E2D6" },
+            { name: "CHARCOAL", hex: "#1A1A1A", bg: "#1A1A1A" },
+            { name: "WARM WHITE", hex: "#F5F2EC", bg: "#F5F2EC" },
+          ],
+          bottomTag: "RESIDENTIAL PALETTE",
+        },
+        lighting: {
+          image: "/b3.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Perimeter Tray Cove",
+          description:
+            "Warm LED cove lines tracing the recessed ceiling tray, plus downlights for even task illumination.",
+        },
+        furniture: {
+          image: "/b3.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Handleless Gloss Units",
+          description:
+            "Push-to-open shutters, lift-up overheads and soft-close drawers in a seamless gloss finish.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Recessed Ceiling Tray", description: "A floating ceiling plane with warm cove light that lifts the whole room." },
+        { number: "02.", title: "Continuous Counter", description: "A long uninterrupted counter with integrated sink and prep space." },
+        { number: "03.", title: "Glossy Unit Bank", description: "Floor-line glossy shutters offering deep, clutter-free storage." },
+        { number: "04.", title: "Dark Counter & Splash", description: "A dark stone counter and backsplash grounding the pale joinery." },
+        { number: "05.", title: "Polished Tile Floor", description: "Large-format tiles reflecting the cove glow and extending the space." },
+        { number: "06.", title: "Even Downlight Wash", description: "Recessed spots placed to eliminate shadows across the working surfaces." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/b3.png", caption: "TCI-001 • CEILING TRAY" },
+        plate2: { image: "/b3.png", caption: "TCI-002 • COUNTER RUN" },
+        plate3: { image: "/b3.png", caption: "TCI-003 • GLOSS UNITS" },
+        plate4: { image: "/b3.png", caption: "TCI-004 • STONE COUNTER" },
+        plate5: { image: "/b3.png", caption: "TCI-005 • COVE LIGHT DETAIL" },
+        plate6: { image: "/b3.png", caption: "TCI-006 • FLOOR REFLECTION" },
+      },
+    },
+    {
+      id: 30,
+      slug: "marble-backsplash-interior",
+      categories: ["BATHROOM & SPA"],
+      title: "Marble Backsplash Interior",
+      titleRoman: "Marble Backsplash",
+      titleItalic: "Interior",
+      subtitle:
+        "A single-wall interior where dramatic grey-veined marble runs the full backsplash against taupe lacquer fronts, black-framed glass cabinetry and a slim linear pendant.",
+      image: "/b4.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "MARBLE BACKSPLASH INTERIOR",
+        type: "RESIDENTIAL INTERIOR",
+        location: "GURUGRAM",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "One wall, one strong statement.",
+        description:
+          "Book-veined grey marble sweeps across the backsplash as the single feature, answered by quiet taupe lacquer fronts and smoked-glass display cabinets under a precise black track-light system.",
+      },
+      keyElements: {
+        material: {
+          image: "/b4.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Veined Marble & Lacquer",
+          description:
+            "Grey-veined marble slab, matte taupe lacquer shutters, smoked glass cabinet fronts and pale porcelain floor.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Taupe & Smoke",
+          swatches: [
+            { name: "TAUPE GREY", hex: "#B6AC9E", bg: "#B6AC9E" },
+            { name: "VEINED CHARCOAL", hex: "#3A3A38", bg: "#3A3A38" },
+            { name: "PALE MIST", hex: "#EDEBE6", bg: "#EDEBE6" },
+          ],
+          bottomTag: "STONE FEATURE PALETTE",
+        },
+        lighting: {
+          image: "/b4.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Track & Linear Pendant",
+          description:
+            "A black magnetic track with adjustable spots paired with a slim linear pendant floating over the island.",
+        },
+        furniture: {
+          image: "/b4.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Smoked Glass Displays",
+          description:
+            "Black-framed smoked glass cabinets with internal lighting, and handleless lacquer base units below.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Marble Backsplash Slab", description: "A continuous veined slab behind the counter — the room's single loud gesture." },
+        { number: "02.", title: "Smoked Glass Cabinets", description: "Dark glass wall units that display glassware while keeping visual noise low." },
+        { number: "03.", title: "Linear Island", description: "A dark stone island with a floating linear pendant for tasks and gathering." },
+        { number: "04.", title: "Track Light Grid", description: "A ceiling track system aiming light exactly where work happens." },
+        { number: "05.", title: "Taupe Lacquer Run", description: "Matte handleless fronts with clean reveals and soft-close internals." },
+        { number: "06.", title: "Pale Floor Plane", description: "Large pale tiles balancing the dark stone and keeping the room airy." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/b4.png", caption: "MBI-001 • BACKSPLASH SLAB" },
+        plate2: { image: "/b4.png", caption: "MBI-002 • GLASS CABINETS" },
+        plate3: { image: "/b4.png", caption: "MBI-003 • LINEAR ISLAND" },
+        plate4: { image: "/b4.png", caption: "MBI-004 • TRACK LIGHTING" },
+        plate5: { image: "/b4.png", caption: "MBI-005 • LACQUER FRONTS" },
+        plate6: { image: "/b4.png", caption: "MBI-006 • FLOOR PLANE" },
+      },
+    },
+    {
+      id: 31,
+      slug: "moss-terracotta-nook",
+      categories: ["BATHROOM & SPA"],
+      title: "Moss & Terracotta Nook",
+      titleRoman: "Moss & Terracotta",
+      titleItalic: "Nook",
+      subtitle:
+        "A breakout nook wrapped in warm plaster, backlit lettering and a gridded wall of moss and terracotta modules — small footprint, big personality.",
+      image: "/b5.png",
+      location: "DELHI",
+      specs: {
+        projectName: "MOSS & TERRACOTTA NOOK",
+        type: "BREAKOUT NOOK",
+        location: "DELHI",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "A small room with a loud idea.",
+        description:
+          "Colour, texture and light are packed into a compact nook: a modular wall of green felt and terracotta cylinders, glowing lettering on plaster, and soft drum seats on a curved ochre rug.",
+      },
+      keyElements: {
+        material: {
+          image: "/b5.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Felt, Cane & Plaster",
+          description:
+            "Moss felt discs, woven cane inserts, terracotta frames and hand-finished lime plaster walls.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Moss & Clay",
+          swatches: [
+            { name: "CLAY TERRACOTTA", hex: "#C4643C", bg: "#C4643C" },
+            { name: "DEEP MOSS", hex: "#5F6B4A", bg: "#5F6B4A" },
+            { name: "LIME PLASTER", hex: "#EFE7DB", bg: "#EFE7DB" },
+          ],
+          bottomTag: "BREAKOUT PALETTE",
+        },
+        lighting: {
+          image: "/b5.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Glow Lettering",
+          description:
+            "Warm channel letters lighting the plaster wall as the nook's ambient source after daylight fades.",
+        },
+        furniture: {
+          image: "/b5.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Drum Seats & Cube Stools",
+          description:
+            "Compact cylindrical and cubic seats in bouclé and moss fabric, light enough to move in seconds.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Gridded Feature Wall", description: "A square module grid mixing felt discs, caned panels and open cubes." },
+        { number: "02.", title: "Letter Light", description: "A glowing typographic composition that anchors the opposite wall." },
+        { number: "03.", title: "Curved Ochre Rug", description: "A sweeping floor curve that softens acoustics and gathers the seating." },
+        { number: "04.", title: "Flexible Poufs", description: "Lightweight drum seats repositioned effortlessly for two or twelve." },
+        { number: "05.", title: "Green Ceiling Frame", description: "A colour-blocked ceiling edge that frames the nook like a picture." },
+        { number: "06.", title: "Daylight Gradient", description: "Natural light raking across the modules, revealing texture hour by hour." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/b5.png", caption: "MTN-001 • FEATURE WALL" },
+        plate2: { image: "/b5.png", caption: "MTN-002 • LETTER LIGHT" },
+        plate3: { image: "/b5.png", caption: "MTN-003 • SEATING" },
+        plate4: { image: "/b5.png", caption: "MTN-004 • OCHRE RUG" },
+        plate5: { image: "/b5.png", caption: "MTN-005 • CEILING FRAME" },
+        plate6: { image: "/b5.png", caption: "MTN-006 • TEXTURE STUDY" },
+      },
+    },
+    {
+      id: 32,
+      slug: "perimeter-cove-interior",
+      categories: ["BATHROOM & SPA"],
+      title: "Perimeter Cove Interior",
+      titleRoman: "Perimeter Cove",
+      titleItalic: "Interior",
+      subtitle:
+        "A U-shaped interior where a continuous perimeter cove floats above glossy shutters and a black counter — even light, clean lines and generous storage on three sides.",
+      image: "/b6.png",
+      location: "DELHI",
+      specs: {
+        projectName: "PERIMETER COVE INTERIOR",
+        type: "RESIDENTIAL INTERIOR",
+        location: "DELHI",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "Light on every side.",
+        description:
+          "A recessed ceiling cove traces the full U of the room, washing the glossy shutter runs in warm, shadowless light. Dark counters and a compact chimney core complete a layout designed for efficient movement.",
+      },
+      keyElements: {
+        material: {
+          image: "/b6.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Gloss Acrylic & Granite",
+          description:
+            "Acrylic gloss shutters in warm beige, black granite counters, and marble-look floor tiles.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Beige & Black",
+          swatches: [
+            { name: "WARM BEIGE", hex: "#E4DCCF", bg: "#E4DCCF" },
+            { name: "GRANITE BLACK", hex: "#161616", bg: "#161616" },
+            { name: "SOFT WHITE", hex: "#F7F5F0", bg: "#F7F5F0" },
+          ],
+          bottomTag: "U-LAYOUT PALETTE",
+        },
+        lighting: {
+          image: "/b6.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Floating Perimeter Cove",
+          description:
+            "A continuous recessed cove circling the ceiling, plus round downlights over the circulation zone.",
+        },
+        furniture: {
+          image: "/b6.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Three-Side Storage",
+          description:
+            "Overhead and base units on all three walls with glass-front display pockets for daily glassware.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Perimeter Ceiling Cove", description: "A floating light line circling the room and lifting the ceiling plane." },
+        { number: "02.", title: "U-Shape Run", description: "Counters and storage wrapping three walls for an efficient work triangle." },
+        { number: "03.", title: "Glass-Front Displays", description: "Backlit glass pockets breaking the gloss run with a display moment." },
+        { number: "04.", title: "Chimney Core", description: "A sleek black chimney centred on the cooking wall with storage flanking it." },
+        { number: "05.", title: "Sink At The Window", description: "Wash zone positioned for daylight and ventilation at the far wall." },
+        { number: "06.", title: "Reflective Floor", description: "Polished marble-look tiles doubling the cove light across the floor." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/b6.png", caption: "PCI-001 • PERIMETER COVE" },
+        plate2: { image: "/b6.png", caption: "PCI-002 • U-SHAPE RUN" },
+        plate3: { image: "/b6.png", caption: "PCI-003 • GLASS DISPLAYS" },
+        plate4: { image: "/b6.png", caption: "PCI-004 • CHIMNEY CORE" },
+        plate5: { image: "/b6.png", caption: "PCI-005 • SINK WINDOW" },
+        plate6: { image: "/b6.png", caption: "PCI-006 • FLOOR REFLECTION" },
+      },
+    },
+    {
+      id: 33,
+      slug: "island-track-interior",
+      categories: ["BATHROOM & SPA"],
+      title: "Island Track Interior",
+      titleRoman: "Island Track",
+      titleItalic: "Interior",
+      subtitle:
+        "A minimal island-led interior with a black track-light ceiling, veined stone island and a single clean counter wall — precise, quiet and architectural.",
+      image: "/b7.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "ISLAND TRACK INTERIOR",
+        type: "RESIDENTIAL INTERIOR",
+        location: "GURUGRAM",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "Everything aligned, nothing extra.",
+        description:
+          "A single counter wall of taupe lacquer and veined stone faces a monolithic island, while a black magnetic track glides across the ceiling — a study in line, plane and controlled light.",
+      },
+      keyElements: {
+        material: {
+          image: "/b7.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Stone & Matte Lacquer",
+          description:
+            "Dramatic veined stone across island and backsplash, matte taupe lacquer fronts and pale porcelain floor.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Ink & Oat",
+          swatches: [
+            { name: "INK STONE", hex: "#26241F", bg: "#26241F" },
+            { name: "OAT TAUPE", hex: "#CFC5B5", bg: "#CFC5B5" },
+            { name: "MIST WHITE", hex: "#EFEDE8", bg: "#EFEDE8" },
+          ],
+          bottomTag: "MINIMAL ISLAND PALETTE",
+        },
+        lighting: {
+          image: "/b7.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Magnetic Track",
+          description:
+            "A slim black ceiling track with adjustable heads washing the counter and island, plus a linear pendant drop.",
+        },
+        furniture: {
+          image: "/b7.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Monolithic Island",
+          description:
+            "A stone-wrapped island with waterfall ends, housing storage on the inner face and seating on the outer.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Stone Island", description: "A waterfall-ends island reading as a single carved block in the room's centre." },
+        { number: "02.", title: "Counter Wall", description: "One clean run of counter, sink and storage against the wall." },
+        { number: "03.", title: "Track Ceiling", description: "A black magnetic track drawing a precise line across the white ceiling." },
+        { number: "04.", title: "Linear Pendant", description: "A slim horizontal light floating over the island for task and mood." },
+        { number: "05.", title: "Glass Display Bay", description: "A smoked glass cabinet section breaking the lacquer run with a lit display." },
+        { number: "06.", title: "Pale Floor Plane", description: "Quiet pale tiles keeping the focus on stone and line." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/b7.png", caption: "ITI-001 • STONE ISLAND" },
+        plate2: { image: "/b7.png", caption: "ITI-002 • COUNTER WALL" },
+        plate3: { image: "/b7.png", caption: "ITI-003 • TRACK CEILING" },
+        plate4: { image: "/b7.png", caption: "ITI-004 • LINEAR PENDANT" },
+        plate5: { image: "/b7.png", caption: "ITI-005 • GLASS DISPLAY" },
+        plate6: { image: "/b7.png", caption: "ITI-006 • FLOOR PLANE" },
+      },
+    },
+    {
+      id: 34,
+      slug: "relief-wall-detail",
+      categories: ["BATHROOM & SPA"],
+      title: "Relief Wall Detail",
+      titleRoman: "Relief Wall",
+      titleItalic: "Detail",
+      subtitle:
+        "A close-up of calm: a hand-sculpted relief wall in warm ivory, bronze pendant light and herringbone timber — texture, art and light composed in one quiet corner.",
+      image: "/b8.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "RELIEF WALL DETAIL",
+        type: "RESIDENTIAL INTERIOR",
+        location: "GURUGRAM",
+        scope: "INTERIOR DESIGN & DETAILING",
+      },
+      concept: {
+        title: "Texture does the talking.",
+        description:
+          "An undulating relief panel in warm ivory meets fluted timber, a floating bronze-art canvas and a single pendant — proving that one tactile wall can carry an entire room.",
+      },
+      keyElements: {
+        material: {
+          image: "/b8.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Carved Plaster & Oak",
+          description:
+            "Hand-finished relief plaster in warm ivory, fluted oak panelling, honed stone ledge and herringbone timber floor.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Ivory & Bronze",
+          swatches: [
+            { name: "WARM IVORY", hex: "#EAE3D6", bg: "#EAE3D6" },
+            { name: "BRONZE OCHRE", hex: "#A97B4F", bg: "#A97B4F" },
+            { name: "SMOKED OAK", hex: "#6E573F", bg: "#6E573F" },
+          ],
+          bottomTag: "TEXTURED DETAIL PALETTE",
+        },
+        lighting: {
+          image: "/b8.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Grazing Pendant & Cove",
+          description:
+            "A shallow dome pendant over the ledge with cove light grazing the relief's ridges for soft shadow play.",
+        },
+        furniture: {
+          image: "/b8.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Floating Ledge",
+          description:
+            "A honed stone ledge carrying sculptural side boxes, with concealed switches set flush into the plaster.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Relief Panel", description: "A flowing sculpted wall whose ridges catch light and shift through the day." },
+        { number: "02.", title: "Bronze Art Canvas", description: "A framed tonal artwork bridging the ivory wall and timber panels." },
+        { number: "03.", title: "Fluted Timber Panels", description: "Full-height fluted oak adding vertical rhythm beside the relief." },
+        { number: "04.", title: "Stone Ledge", description: "A floating honed ledge with sculptural boxes acting as a display plinth." },
+        { number: "05.", title: "Bronze Pendant", description: "A single shallow-dome pendant dropping warm light at the ledge." },
+        { number: "06.", title: "Herringbone Floor", description: "Dark herringbone timber grounding the pale, textured composition." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/b8.png", caption: "RWD-001 • RELIEF PANEL" },
+        plate2: { image: "/b8.png", caption: "RWD-002 • ART CANVAS" },
+        plate3: { image: "/b8.png", caption: "RWD-003 • FLUTED PANELS" },
+        plate4: { image: "/b8.png", caption: "RWD-004 • STONE LEDGE" },
+        plate5: { image: "/b8.png", caption: "RWD-005 • BRONZE PENDANT" },
+        plate6: { image: "/b8.png", caption: "RWD-006 • HERRINGBONE FLOOR" },
+      },
+    },
+    {
+      id: 35,
+      slug: "stone-line-interior",
+      categories: ["FECADE"],
+      title: "Stone Line Interior",
+      titleRoman: "Stone Line",
+      titleItalic: "Interior",
+      subtitle:
+        "A single-wall composition where veined stone runs the full backsplash against cream lacquer fronts, smoked glass cabinets and a black track line overhead.",
+      image: "/fe2.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "STONE LINE INTERIOR",
+        type: "RESIDENTIAL INTERIOR",
+        location: "GURUGRAM",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "One strong line, everything else quiet.",
+        description:
+          "A dramatic grey-veined slab draws a horizontal line across the entire wall, while cream handleless fronts and smoked-glass display units stay deliberately calm around it. A magnetic track and slim linear pendant finish the composition.",
+      },
+      keyElements: {
+        material: {
+          image: "/fe2.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Veined Stone & Lacquer",
+          description:
+            "Grey-veined stone slab, cream lacquer fronts, smoked glass cabinet panels and large pale floor tiles.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Cream & Storm",
+          swatches: [
+            { name: "CREAM LACQUER", hex: "#E6DCCB", bg: "#E6DCCB" },
+            { name: "STORM STONE", hex: "#4A4A48", bg: "#4A4A48" },
+            { name: "PALE MIST", hex: "#EFEDE8", bg: "#EFEDE8" },
+          ],
+          bottomTag: "STONE FEATURE PALETTE",
+        },
+        lighting: {
+          image: "/fe2.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Track & Linear Drop",
+          description:
+            "A black magnetic track with adjustable heads and a slim linear pendant floating over the island.",
+        },
+        furniture: {
+          image: "/fe2.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Stone-Clad Island",
+          description:
+            "A waterfall island wrapped in the same veined stone, with concealed storage on the inner face.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Full-Width Slab", description: "One continuous stone slab behind the counter acting as the room's horizon line." },
+        { number: "02.", title: "Smoked Glass Bay", description: "Dark-framed glass cabinets with internal light breaking the lacquer run." },
+        { number: "03.", title: "Linear Island", description: "A stone-clad island for prep, serving and casual conversation." },
+        { number: "04.", title: "Black Track Line", description: "A ceiling track tracing the room's length with precisely aimed spots." },
+        { number: "05.", title: "Handleless Fronts", description: "Push-to-open cream lacquer shutters with soft-close drawer stacks." },
+        { number: "06.", title: "Pale Tile Floor", description: "Quiet large-format tiles reflecting daylight across the plan." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/fe2.png", caption: "SLI-001 • STONE SLAB WALL" },
+        plate2: { image: "/fe2.png", caption: "SLI-002 • GLASS BAY" },
+        plate3: { image: "/fe2.png", caption: "SLI-003 • LINEAR ISLAND" },
+        plate4: { image: "/fe2.png", caption: "SLI-004 • TRACK LINE" },
+        plate5: { image: "/fe2.png", caption: "SLI-005 • LACQUER FRONTS" },
+        plate6: { image: "/fe2.png", caption: "SLI-006 • FLOOR PLANE" },
+      },
+    },
+    {
+      id: 36,
+      slug: "bedside-ledge-detail",
+      categories: ["FECADE"],
+      title: "Bedside Ledge Detail",
+      titleRoman: "Bedside Ledge",
+      titleItalic: "Detail",
+      subtitle:
+        "A tranquil bedside moment — honed stone ledge, walnut boxes, sculptural pendant and a beaded relief wall composed in soft, earthy light.",
+      image: "/fe3.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "BEDSIDE LEDGE DETAIL",
+        type: "RESIDENTIAL INTERIOR",
+        location: "GURUGRAM",
+        scope: "INTERIOR DESIGN & DETAILING",
+      },
+      concept: {
+        title: "Materials in quiet conversation.",
+        description:
+          "A floating honed-stone ledge carries two walnut boxes beneath a shallow disc pendant. Behind, fluted timber, a marble reveal and a beaded relief panel layer texture without noise — a restful corner built from five materials and one light.",
+      },
+      keyElements: {
+        material: {
+          image: "/fe3.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Stone, Walnut & Relief",
+          description:
+            "Honed travertine ledge, walnut box side tables, beaded ivory relief plaster and herringbone timber floor.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Earth & Ember",
+          swatches: [
+            { name: "TRAVERTINE", hex: "#D8C7A8", bg: "#D8C7A8" },
+            { name: "WALNUT", hex: "#6B4A32", bg: "#6B4A32" },
+            { name: "WARM GREIGE", hex: "#C9BFB2", bg: "#C9BFB2" },
+          ],
+          bottomTag: "BEDSIDE DETAIL PALETTE",
+        },
+        lighting: {
+          image: "/fe3.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Shallow Disc Pendant",
+          description:
+            "A slim disc pendant dropping warm light onto the ledge, grazing the relief wall behind.",
+        },
+        furniture: {
+          image: "/fe3.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Floating Ledge & Boxes",
+          description:
+            "A stone ledge spanning the bed edge with two lid-top walnut boxes for books and bedside essentials.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Travertine Ledge", description: "A continuous stone plinth floating above the floor, tying bed and side zone together." },
+        { number: "02.", title: "Walnut Boxes", description: "Two simple lidded boxes acting as adaptable bedside tables." },
+        { number: "03.", title: "Beaded Relief Wall", description: "A hand-finished panel of flowing beaded lines catching the pendant glow." },
+        { number: "04.", title: "Fluted Timber Reveal", description: "Vertical timber channels and a slim marble reveal framing the bed head." },
+        { number: "05.", title: "Disc Pendant", description: "A shallow metal disc pendant hanging low for intimate night light." },
+        { number: "06.", title: "Herringbone Floor", description: "Deep-toned herringbone boards grounding the earthy palette." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/fe3.png", caption: "BLD-001 • STONE LEDGE" },
+        plate2: { image: "/fe3.png", caption: "BLD-002 • WALNUT BOXES" },
+        plate3: { image: "/fe3.png", caption: "BLD-003 • RELIEF WALL" },
+        plate4: { image: "/fe3.png", caption: "BLD-004 • DISC PENDANT" },
+        plate5: { image: "/fe3.png", caption: "BLD-005 • TIMBER REVEAL" },
+        plate6: { image: "/fe3.png", caption: "BLD-006 • HERRINGBONE FLOOR" },
+      },
+    },
+    {
+      id: 37,
+      slug: "jali-stone-facade",
+      categories: ["FECADE"],
+      title: "Jali Stone Facade",
+      titleRoman: "Jali Stone",
+      titleItalic: "Facade",
+      subtitle:
+        "A contemporary street facade built from grey stone, perforated jali screens and black steel — privacy, greenery and a strong address presence on one elevation.",
+      image: "/fe4.png",
+      location: "GURUGRAM",
+      specs: {
+        projectName: "JALI STONE FACADE",
+        type: "ARCHITECTURAL EXTERIOR",
+        location: "GURUGRAM",
+        scope: "FACADE DESIGN & EXECUTION",
+      },
+      concept: {
+        title: "Privacy screen as architecture.",
+        description:
+          "Stacked stone volumes are punched with square jali screens that filter light and views while giving the building its graphic identity. A landscaped boundary wall with the house number completes the street presence.",
+      },
+      keyElements: {
+        material: {
+          image: "/fe4.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Stone, Jali & Steel",
+          description:
+            "Split-face grey stone cladding, cast perforated jali panels, black steel frames and warm timber accents.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Granite & Green",
+          swatches: [
+            { name: "GRANITE GREY", hex: "#8B8880", bg: "#8B8880" },
+            { name: "JALI CREAM", hex: "#E4DED2", bg: "#E4DED2" },
+            { name: "DEEP CHARDON", hex: "#1D1F1E", bg: "#1D1F1E" },
+          ],
+          bottomTag: "FACADE PALETTE",
+        },
+        lighting: {
+          image: "/fe4.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Grazing Wall Wash",
+          description:
+            "Concealed grazers washing the stone texture and uplighting the planting along the boundary wall.",
+        },
+        furniture: {
+          image: "/fe4.png",
+          subtitle: "04 // ARCHITECTURAL DETAILING",
+          title: "Jali Screens & Gate",
+          description:
+            "Perforated screen panels for balcony privacy and a matching black steel pedestrian gate with house number.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Stone Elevation", description: "A stacked composition of stone-clad boxes with deep window reveals." },
+        { number: "02.", title: "Perforated Jali", description: "Cast screens filtering sun and sightlines on the upper floors." },
+        { number: "03.", title: "Green Terrace Edge", description: "Planting along the podium edge softening the stone mass." },
+        { number: "04.", title: "Boundary Wall", description: "A textured compound wall carrying jali inserts, sconces and the house number." },
+        { number: "05.", title: "Steel Gate", description: "A black steel gate aligned with the facade's grid and materials." },
+        { number: "06.", title: "Deep Reveals", description: "Recessed openings throwing shadow lines that shift through the day." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/fe4.png", caption: "JSF-001 • STREET VIEW" },
+        plate2: { image: "/fe4.png", caption: "JSF-002 • JALI SCREENS" },
+        plate3: { image: "/fe4.png", caption: "JSF-003 • BOUNDARY WALL" },
+        plate4: { image: "/fe4.png", caption: "JSF-004 • STONE CLADDING" },
+        plate5: { image: "/fe4.png", caption: "JSF-005 • GREEN TERRACE" },
+        plate6: { image: "/fe4.png", caption: "JSF-006 • GATE & NUMBER" },
+      },
+    },
+    {
+      id: 38,
+      slug: "classic-villa-facade",
+      categories: ["FECADE"],
+      title: "Classic Villa Facade",
+      titleRoman: "Classic Villa",
+      titleItalic: "Facade",
+      subtitle:
+        "A stately villa elevation in warm ivory — pilasters, arched glazing, iron balconies and lantern lighting composed in perfect symmetry at dusk.",
+      image: "/fec.png",
+      location: "RAJASTHAN",
+      specs: {
+        projectName: "CLASSIC VILLA FACADE",
+        type: "ARCHITECTURAL EXTERIOR",
+        location: "RAJASTHAN",
+        scope: "FACADE DESIGN & EXECUTION",
+      },
+      concept: {
+        title: "Symmetry, light and arrival.",
+        description:
+          "Classical proportions frame a two-storey villa: fluted pilasters, a grand arched window, colonnaded balcony and a hipped roof. Warm lantern light and a lit stair reveal turn the elevation into a glowing landmark after sunset.",
+      },
+      keyElements: {
+        material: {
+          image: "/fec.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Ivory Render & Iron",
+          description:
+            "Smooth ivory render, cast mouldings and cornices, black wrought-iron railings and dark timber door.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "Ivory & Amber",
+          swatches: [
+            { name: "IVORY RENDER", hex: "#E8DFCE", bg: "#E8DFCE" },
+            { name: "AMBER GLOW", hex: "#D9A75F", bg: "#D9A75F" },
+            { name: "SLATE ROOF", hex: "#2E2C29", bg: "#2E2C29" },
+          ],
+          bottomTag: "CLASSIC FACADE PALETTE",
+        },
+        lighting: {
+          image: "/fec.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Lantern & Wall Light",
+          description:
+            "Pair wall lanterns flanking openings, a glowing arched window and a lit stair reveal for dusk drama.",
+        },
+        furniture: {
+          image: "/fec.png",
+          subtitle: "04 // ARCHITECTURAL DETAILING",
+          title: "Pilasters & Balustrade",
+          description:
+            "Fluted pilasters, a colonnaded balcony with iron balustrade, and a carved cartouche over the arch.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Arched Feature Window", description: "A tall arched glazed opening glowing amber through sheers at dusk." },
+        { number: "02.", title: "Colonnaded Balcony", description: "A first-floor balcony carried on fluted columns with iron balustrade." },
+        { number: "03.", title: "Grand Entrance", description: "A dark timber door framed by pilasters and approached by wide steps." },
+        { number: "04.", title: "Lantern Pairing", description: "Symmetric wall lanterns marking openings and lighting the approach." },
+        { number: "05.", title: "Lit Stair Reveal", description: "A narrow illuminated slot stair slicing the elevation vertically." },
+        { number: "06.", title: "Dusk Landscape", description: "Trimmed hedges, flowering beds and a paved drive framing the villa." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/fec.png", caption: "CVF-001 • DUSK ELEVATION" },
+        plate2: { image: "/fec.png", caption: "CVF-002 • ARCHED WINDOW" },
+        plate3: { image: "/fec.png", caption: "CVF-003 • BALCONY COLONNADE" },
+        plate4: { image: "/fec.png", caption: "CVF-004 • ENTRANCE DOOR" },
+        plate5: { image: "/fec.png", caption: "CVF-005 • LANTERN DETAIL" },
+        plate6: { image: "/fec.png", caption: "CVF-006 • GARDEN APPROACH" },
+      },
+    },
+    {
+      id: 39,
+      slug: "marble-vanity-bathroom",
+      categories: ["BATHROOM & SPA"],
+      title: "Marble Vanity Bathroom",
+      titleRoman: "Marble Vanity",
+      titleItalic: "Bathroom",
+      subtitle:
+        "A bright marble bathroom where a floating walnut vanity, brass fittings and a glass walk-in shower compose a calm, hotel-like daily ritual.",
+      image: "/0d380b5ba19b71024d9a24b393f9ee0fa425c02e.png",
+      location: "DELHI",
+      specs: {
+        projectName: "MARBLE VANITY BATHROOM",
+        type: "BATHROOM & SPA",
+        location: "DELHI",
+        scope: "INTERIOR DESIGN & FIT-OUT",
+      },
+      concept: {
+        title: "Warm wood against cool stone.",
+        description:
+          "Book-veined white marble wraps the walls and floor, while a floating walnut vanity with brass pulls warms the room. A frameless glass shower with brushed-brass shower column keeps the volume open and light.",
+      },
+      keyElements: {
+        material: {
+          image: "/0d380b5ba19b71024d9a24b393f9ee0fa425c02e.png",
+          subtitle: "01 // MATERIAL & TEXTURE",
+          title: "Marble & Walnut",
+          description:
+            "Veined white marble across walls and floor, a walnut-veneer floating vanity with honed dark counter, and brushed brass hardware.",
+        },
+        palette: {
+          subtitle: "02 // COLOUR PALETTE",
+          title: "White Marble & Walnut",
+          swatches: [
+            { name: "MARBLE WHITE", hex: "#F2F0EB", bg: "#F2F0EB" },
+            { name: "WALNUT BROWN", hex: "#6B4A32", bg: "#6B4A32" },
+            { name: "BRASS GOLD", hex: "#C9A96E", bg: "#C9A96E" },
+          ],
+          bottomTag: "BATHROOM PALETTE",
+        },
+        lighting: {
+          image: "/0d380b5ba19b71024d9a24b393f9ee0fa425c02e.png",
+          subtitle: "03 // LIGHTING DESIGN",
+          title: "Soft Daylight & Spots",
+          description:
+            "Natural daylight from the side window supported by ceiling spots that keep the vanity mirror evenly lit.",
+        },
+        furniture: {
+          image: "/0d380b5ba19b71024d9a24b393f9ee0fa425c02e.png",
+          subtitle: "04 // FURNITURE & DETAILING",
+          title: "Floating Vanity",
+          description:
+            "A wall-hung walnut vanity with open towel niches, brass bar pulls and an inset stone counter under a brass-framed mirror.",
+        },
+      },
+      spatialExperience: [
+        { number: "01.", title: "Floating Vanity", description: "A wall-hung walnut unit with open niches keeping towels handy and the floor clear." },
+        { number: "02.", title: "Brass-Framed Mirror", description: "A soft-cornered mirror with slim brass frame echoing the fittings." },
+        { number: "03.", title: "Walk-In Shower", description: "A glass partition separating the wet zone with a brushed-brass shower column." },
+        { number: "04.", title: "Veined Marble Shell", description: "Floor-to-ceiling marble with flowing grey veins as the room's backdrop." },
+        { number: "05.", title: "Vessel Basin", description: "A matte rectangular vessel basin paired with a tall brass mixer tap." },
+        { number: "06.", title: "Warm Styling", description: "Greenery, stone-effect vessels and folded towels adding softness to the stone room." },
+      ],
+      galleryPlates: {
+        plate1: { image: "/0d380b5ba19b71024d9a24b393f9ee0fa425c02e.png", caption: "MVB-001 • VANITY VIEW" },
+        plate2: { image: "/0d380b5ba19b71024d9a24b393f9ee0fa425c02e.png", caption: "MVB-002 • MIRROR & BRASS" },
+        plate3: { image: "/0d380b5ba19b71024d9a24b393f9ee0fa425c02e.png", caption: "MVB-003 • SHOWER COLUMN" },
+        plate4: { image: "/0d380b5ba19b71024d9a24b393f9ee0fa425c02e.png", caption: "MVB-004 • MARBLE WALLS" },
+        plate5: { image: "/0d380b5ba19b71024d9a24b393f9ee0fa425c02e.png", caption: "MVB-005 • WALNUT DRAWERS" },
+        plate6: { image: "/0d380b5ba19b71024d9a24b393f9ee0fa425c02e.png", caption: "MVB-006 • WET ZONE" },
       },
     },
   ],

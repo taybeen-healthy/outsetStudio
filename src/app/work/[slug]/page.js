@@ -38,7 +38,21 @@ export default async function ProjectDetailPage({ params }) {
   if (projectIndex === -1) notFound();
 
   const project = projects[projectIndex];
-  const nextProject = projects[(projectIndex + 1) % projects.length];
+  const currentCategories = (project.categories ?? []).map((c) => String(c).toUpperCase());
+  const sameCategory = projects.filter(
+    (p) =>
+      p.slug !== project.slug &&
+      (p.categories ?? []).some((c) => currentCategories.includes(String(c).toUpperCase()))
+  );
+  let nextProject;
+  if (sameCategory.length > 0) {
+    const afterCurrent = projects
+      .slice(projectIndex + 1)
+      .find((p) => sameCategory.some((s) => s.slug === p.slug));
+    nextProject = afterCurrent ?? sameCategory[0];
+  } else {
+    nextProject = projects[(projectIndex + 1) % projects.length];
+  }
 
   return (
     <div className="relative w-full bg-[#FAF7F2] text-[#1a1a1a] min-h-screen font-sans select-none overflow-x-hidden">

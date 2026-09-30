@@ -22,14 +22,14 @@ export default function Footer() {
         <Link
           key={link.name}
           href={link.href}
-          className="font-sans text-[13px] text-neutral-400 hover:text-white transition-colors font-light cursor-pointer"
+          className="font-sans text-[13px] text-neutral-400 hover:text-[#B84E29] transition-colors font-light cursor-pointer"
         >
           {link.name}
         </Link>
       ))}
       <button
         onClick={() => setShowVendor(true)}
-        className="font-sans text-[13px] text-neutral-400 hover:text-white transition-colors font-light cursor-pointer text-left"
+        className="font-sans text-[13px] text-neutral-400 hover:text-[#B84E29] transition-colors font-light cursor-pointer text-left"
       >
         Register Vendor
       </button>
@@ -42,14 +42,14 @@ export default function Footer() {
         <Link
           key={link.name}
           href={link.href}
-          className="font-sans text-xs sm:text-sm text-neutral-300 hover:text-white transition-colors font-light cursor-pointer"
+          className="font-sans text-xs sm:text-sm text-neutral-300 hover:text-[#B84E29] transition-colors font-light cursor-pointer"
         >
           {link.name}
         </Link>
       ))}
       <button
         onClick={() => setShowVendor(true)}
-        className="font-sans text-xs sm:text-sm text-neutral-300 hover:text-white transition-colors font-light cursor-pointer text-left"
+        className="font-sans text-xs sm:text-sm text-neutral-300 hover:text-[#B84E29] transition-colors font-light cursor-pointer text-left"
       >
         Register Vendor
       </button>
@@ -80,8 +80,8 @@ export default function Footer() {
               Spatial design and architecture practice engaging permanence, volume, and material truth.
             </p>
             <div className="flex flex-col gap-3 mt-8 font-sans text-[13px] text-neutral-300 font-light">
-              <a href="tel:9958544930" className="hover:text-white transition-colors">Tel: 9958544930</a>
-              <a href="mailto:info@outsetstudio.in" className="hover:text-white transition-colors">Email: info@outsetstudio.in</a>
+              <a href="tel:9958544930" className="hover:text-[#B84E29] transition-colors">Tel: 9958544930</a>
+              <a href="mailto:info@outsetstudio.in" className="hover:text-[#B84E29] transition-colors">Email: info@outsetstudio.in</a>
             </div>
             <div className="grid grid-cols-2 gap-8 mt-10">
               <div>
@@ -112,11 +112,11 @@ export default function Footer() {
               &copy; 2026 OUTSET STUDIO. ALL RIGHTS RESERVED.
             </p>
             <div className="flex items-center gap-2.5 mt-4">
-              <Link href="/terms" className="font-sans text-[10px] tracking-[0.12em] uppercase text-neutral-500 hover:text-neutral-300 transition-colors cursor-pointer">
+              <Link href="/terms" className="font-sans text-[10px] tracking-[0.12em] uppercase text-neutral-500 hover:text-[#B84E29] transition-colors cursor-pointer">
                 TERMS AND CONDITIONS
               </Link>
               <span className="text-neutral-600">&middot;</span>
-              <Link href="/privacy" className="font-sans text-[10px] tracking-[0.12em] uppercase text-neutral-500 hover:text-neutral-300 transition-colors cursor-pointer">
+              <Link href="/privacy" className="font-sans text-[10px] tracking-[0.12em] uppercase text-neutral-500 hover:text-[#B84E29] transition-colors cursor-pointer">
                 PRIVACY POLICY
               </Link>
             </div>
@@ -147,7 +147,7 @@ export default function Footer() {
                 <div className="flex flex-col gap-3 mt-6">
                   <a
                     href="mailto:info@outsetstudio.in"
-                    className="font-sans text-xs sm:text-sm text-neutral-300 hover:text-white transition-colors font-light flex items-center gap-3"
+                    className="font-sans text-xs sm:text-sm text-neutral-300 hover:text-[#B84E29] transition-colors font-light flex items-center gap-3"
                   >
                     <svg
                       className="w-4 h-4 text-[#B84E29] flex-shrink-0"
@@ -167,7 +167,7 @@ export default function Footer() {
 
                   <a
                     href="tel:9958544930"
-                    className="font-sans text-xs sm:text-sm text-neutral-300 hover:text-white transition-colors font-light flex items-center gap-3"
+                    className="font-sans text-xs sm:text-sm text-neutral-300 hover:text-[#B84E29] transition-colors font-light flex items-center gap-3"
                   >
                     <svg
                       className="w-4 h-4 text-[#B84E29] flex-shrink-0"
@@ -204,7 +204,7 @@ export default function Footer() {
                   {services.map((service) => (
                     <li
                       key={service}
-                      className="font-sans text-xs sm:text-sm text-neutral-300 font-light hover:text-white transition-colors cursor-pointer"
+                      className="font-sans text-xs sm:text-sm text-neutral-300 font-light hover:text-[#B84E29] transition-colors cursor-pointer"
                     >
                       {service}
                     </li>
@@ -218,11 +218,11 @@ export default function Footer() {
                 &copy; 2026 Outset Studio. All rights reserved.
               </p>
               <div className="flex items-center gap-2.5 text-xs text-neutral-500 font-light">
-                <Link href="/terms" className="hover:text-neutral-300 transition-colors cursor-pointer">
+                <Link href="/terms" className="hover:text-[#B84E29] transition-colors cursor-pointer">
                   Terms and conditions
                 </Link>
                 <span>&middot;</span>
-                <Link href="/privacy" className="hover:text-neutral-300 transition-colors cursor-pointer">
+                <Link href="/privacy" className="hover:text-[#B84E29] transition-colors cursor-pointer">
                   Privacy Policy
                 </Link>
               </div>

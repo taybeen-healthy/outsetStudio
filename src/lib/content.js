@@ -18,7 +18,26 @@ function isImageSrc(value) {
 }
 
 export async function getPortfolioProjects() {
-  return fetchList("/api/projects", ourWorkData.projects);
+  const local = ourWorkData.projects;
+  let remote = null;
+  try {
+    const res = await fetch(`${BACKEND}/api/projects`, { next: { revalidate: 60 } });
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data) && data.length > 0) remote = data;
+    }
+  } catch {
+    remote = null;
+  }
+  if (!remote) return local;
+
+  const remoteBySlug = new Map(remote.map((p) => [p.slug, p]));
+  const localSlugs = new Set(local.map((p) => p.slug));
+  const merged = local.map((p) =>
+    remoteBySlug.has(p.slug) ? { ...p, ...remoteBySlug.get(p.slug) } : p
+  );
+  const remoteOnly = remote.filter((p) => !localSlugs.has(p.slug));
+  return [...merged, ...remoteOnly];
 }
 
 export async function getApprovedTestimonials() {
