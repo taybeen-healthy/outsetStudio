@@ -11,10 +11,7 @@ export default function Hero({ data, stats }) {
   const [showContact, setShowContact] = useState(false);
 
   const headline = data?.headline ?? {
-    prefix: "We Transform",
-    highlight: "Empty Spaces",
-    middle: "Into",
-    suffix: "Business-Driving Experiences.",
+    text: "“We Design and Build Cafes, QSRs, & Salons That Perform From Day One.”",
   };
   const subtitle = data?.subtitle ?? "";
   const actions = data?.actions ?? [];
@@ -24,13 +21,9 @@ export default function Hero({ data, stats }) {
     <>
       <main className="relative z-10 flex-1 flex flex-col items-start lg:items-center justify-center px-5 sm:px-10 lg:px-14 pt-8 pb-12 sm:py-24 lg:py-28 text-left lg:text-center overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col items-start lg:items-center w-full overflow-hidden">
-          <h1 className="font-serif text-[#1a1a1a] lg:text-white text-[26px] xs:text-[30px] sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[78px] leading-[1.18] font-normal tracking-tight max-w-5xl">
-            {headline.prefix}{" "}
-            <span className="italic text-[#C0532C] font-normal font-serif">
-              {headline.highlight}
-            </span>
-            <br />
-            {headline.middle} {headline.suffix}
+          <h1 className="font-serif text-[#1a1a1a] lg:text-white text-[26px] xs:text-[30px] sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[78px] leading-[1.18] font-normal tracking-tight max-w-[1320px]">
+            {headline.text ??
+              `${headline.prefix} ${headline.highlight} ${headline.middle} ${headline.suffix}`}
           </h1>
 
           <p className="mt-4 sm:mt-8 text-[13px] sm:text-[15px] md:text-base text-neutral-500 lg:text-neutral-400 font-normal lg:font-light max-w-2xl leading-[1.7] tracking-normal font-sans">

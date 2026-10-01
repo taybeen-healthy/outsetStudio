@@ -5,10 +5,7 @@
 
 export const heroData = {
   headline: {
-    prefix: "We Transform",
-    highlight: "Empty Spaces",
-    middle: "Into",
-    suffix: "Business-Driving Experiences.",
+    text: "“We Design and Build Cafes, QSRs, & Salons That Perform From Day One.”",
   },
   subtitle:
     "Outset Studio brings strategy, design, execution, digital presence, and growth together to transform empty spaces into distinctive outlets that attract customers, strengthen brands, and drive growth.",
@@ -2073,7 +2070,7 @@ export const ourWorkData = {
       titleItalic: "Interior",
       subtitle:
         "A warm residential interior where a tray ceiling with concealed cove lighting floats over handleless gloss cabinetry and a dramatic dark stone counter — calm, luminous and easy to live with.",
-      image: "/l1.png",
+      image: "/l.png",
       location: "DELHI",
       specs: {
         projectName: "COVE LIT INTERIOR",
@@ -2088,7 +2085,7 @@ export const ourWorkData = {
       },
       keyElements: {
         material: {
-          image: "/l1.png",
+          image: "/l.png",
           subtitle: "01 // MATERIAL & TEXTURE",
           title: "Gloss & Dark Stone",
           description:
@@ -2105,14 +2102,14 @@ export const ourWorkData = {
           bottomTag: "RESIDENTIAL PALETTE",
         },
         lighting: {
-          image: "/l1.png",
+          image: "/l.png",
           subtitle: "03 // LIGHTING DESIGN",
           title: "Tray Cove Ceiling",
           description:
             "A recessed tray ceiling with warm concealed LED cove lines and spot lights for even, glare-free illumination.",
         },
         furniture: {
-          image: "/l1.png",
+          image: "/l.png",
           subtitle: "04 // FURNITURE & DETAILING",
           title: "Handleless Run",
           description:
@@ -2128,12 +2125,12 @@ export const ourWorkData = {
         { number: "06.", title: "Polished Floor", description: "Large-format polished tiles that reflect the cove glow and extend the sense of space." },
       ],
       galleryPlates: {
-        plate1: { image: "/l1.png", caption: "CLI-001 • TRAY CEILING" },
-        plate2: { image: "/l1.png", caption: "CLI-002 • GLOSS UNIT RUN" },
-        plate3: { image: "/l1.png", caption: "CLI-003 • DARK STONE COUNTER" },
-        plate4: { image: "/l1.png", caption: "CLI-004 • WINDOW NOOK" },
-        plate5: { image: "/l1.png", caption: "CLI-005 • COVE LIGHT DETAIL" },
-        plate6: { image: "/l1.png", caption: "CLI-006 • FLOOR & FINISH" },
+        plate1: { image: "/l.png", caption: "CLI-001 • TRAY CEILING" },
+        plate2: { image: "/l.png", caption: "CLI-002 • GLOSS UNIT RUN" },
+        plate3: { image: "/l.png", caption: "CLI-003 • DARK STONE COUNTER" },
+        plate4: { image: "/l.png", caption: "CLI-004 • WINDOW NOOK" },
+        plate5: { image: "/l.png", caption: "CLI-005 • COVE LIGHT DETAIL" },
+        plate6: { image: "/l.png", caption: "CLI-006 • FLOOR & FINISH" },
       },
     },
     {
@@ -2145,7 +2142,7 @@ export const ourWorkData = {
       titleItalic: "Interior",
       subtitle:
         "Grey shaker joinery, gold-veined marble and a curved olive banquette gather around a round table — a refined dining corner designed for long, unhurried meals.",
-      image: "/l2.png",
+      image: "/lv2.png",
       location: "GURUGRAM",
       specs: {
         projectName: "BANQUETTE DINING INTERIOR",
@@ -2160,7 +2157,7 @@ export const ourWorkData = {
       },
       keyElements: {
         material: {
-          image: "/l2.png",
+          image: "/lv2.png",
           subtitle: "01 // MATERIAL & TEXTURE",
           title: "Marble & Painted Timber",
           description:
@@ -2177,14 +2174,14 @@ export const ourWorkData = {
           bottomTag: "DINING PALETTE",
         },
         lighting: {
-          image: "/l2.png",
+          image: "/lv2.png",
           subtitle: "03 // LIGHTING DESIGN",
           title: "Woven Pendant",
           description:
             "A large black woven pendant casting patterned shadow over the table, supported by discreet ceiling spots.",
         },
         furniture: {
-          image: "/l2.png",
+          image: "/lv2.png",
           subtitle: "04 // FURNITURE & DETAILING",
           title: "Curved Banquette",
           description:
@@ -2200,12 +2197,12 @@ export const ourWorkData = {
         { number: "06.", title: "Timber Flooring", description: "Warm dark timber boards that ground the light cabinetry and soft upholstery." },
       ],
       galleryPlates: {
-        plate1: { image: "/l2.png", caption: "BDI-001 • BANQUETTE TABLE" },
-        plate2: { image: "/l2.png", caption: "BDI-002 • MARBLE SLAB WALL" },
-        plate3: { image: "/l2.png", caption: "BDI-003 • OPEN SHELVING" },
-        plate4: { image: "/l2.png", caption: "BDI-004 • SHAKER JOINERY" },
-        plate5: { image: "/l2.png", caption: "BDI-005 • WOVEN PENDANT" },
-        plate6: { image: "/l2.png", caption: "BDI-006 • ISLAND COUNTER" },
+        plate1: { image: "/lv2.png", caption: "BDI-001 • BANQUETTE TABLE" },
+        plate2: { image: "/lv2.png", caption: "BDI-002 • MARBLE SLAB WALL" },
+        plate3: { image: "/lv2.png", caption: "BDI-003 • OPEN SHELVING" },
+        plate4: { image: "/lv2.png", caption: "BDI-004 • SHAKER JOINERY" },
+        plate5: { image: "/lv2.png", caption: "BDI-005 • WOVEN PENDANT" },
+        plate6: { image: "/lv2.png", caption: "BDI-006 • ISLAND COUNTER" },
       },
     },
     {
@@ -2217,12 +2214,12 @@ export const ourWorkData = {
       titleItalic: "Interior",
       subtitle:
         "Fluted marble-look panels, a deep black backsplash and warm under-cove lighting define this compact interior — tactile, bright and meticulously finished.",
-      image: "/l3.png",
-      location: "DELHI",
+      image: "/lv3.png",
+      location: "GURUGRAM",
       specs: {
         projectName: "FLUTED STONE INTERIOR",
         type: "RESIDENTIAL INTERIOR",
-        location: "DELHI",
+        location: "GURUGRAM",
         scope: "INTERIOR DESIGN & FIT-OUT",
       },
       concept: {
@@ -2232,7 +2229,7 @@ export const ourWorkData = {
       },
       keyElements: {
         material: {
-          image: "/l3.png",
+          image: "/lv3.png",
           subtitle: "01 // MATERIAL & TEXTURE",
           title: "Fluted Stone & Grain",
           description:
@@ -2249,14 +2246,14 @@ export const ourWorkData = {
           bottomTag: "TEXTURED INTERIOR PALETTE",
         },
         lighting: {
-          image: "/l3.png",
+          image: "/lv3.png",
           subtitle: "03 // LIGHTING DESIGN",
           title: "Grazing Cove Light",
           description:
             "A concealed warm LED cove beneath the overheads that grazes down the fluted ridges and lights the counter.",
         },
         furniture: {
-          image: "/l3.png",
+          image: "/lv3.png",
           subtitle: "04 // FURNITURE & DETAILING",
           title: "Slim Base Units",
           description:
@@ -2272,12 +2269,12 @@ export const ourWorkData = {
         { number: "06.", title: "Under-Cove Glow", description: "Warm concealed lighting that turns the panelled band into a glowing feature after dark." },
       ],
       galleryPlates: {
-        plate1: { image: "/l3.png", caption: "FSI-001 • FLUTED PANEL WALL" },
-        plate2: { image: "/l3.png", caption: "FSI-002 • BLACK BACKSPLASH" },
-        plate3: { image: "/l3.png", caption: "FSI-003 • SINK ZONE" },
-        plate4: { image: "/l3.png", caption: "FSI-004 • BASE UNITS" },
-        plate5: { image: "/l3.png", caption: "FSI-005 • COVE LIGHTING" },
-        plate6: { image: "/l3.png", caption: "FSI-006 • TIMBER FLOOR" },
+        plate1: { image: "/lv3.png", caption: "FSI-001 • FLUTED PANEL WALL" },
+        plate2: { image: "/lv3.png", caption: "FSI-002 • BLACK BACKSPLASH" },
+        plate3: { image: "/lv3.png", caption: "FSI-003 • SINK ZONE" },
+        plate4: { image: "/lv3.png", caption: "FSI-004 • BASE UNITS" },
+        plate5: { image: "/lv3.png", caption: "FSI-005 • COVE LIGHTING" },
+        plate6: { image: "/lv3.png", caption: "FSI-006 • TIMBER FLOOR" },
       },
     },
     {
