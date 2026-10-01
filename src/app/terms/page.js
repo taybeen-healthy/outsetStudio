@@ -63,7 +63,7 @@ export default function TermsPage() {
               PRIVACY ENQUIRIES
             </span>
             <span className="font-sans text-[13px] text-[#1a1a1a] font-semibold">
-              9898844855
+              9958544930
             </span>
           </div>
         </div>
@@ -263,7 +263,7 @@ export default function TermsPage() {
                     STUDIO TELEPHONE
                   </span>
                   <span className="font-sans text-[14px] text-[#1a1a1a] font-semibold">
-                    9898844855
+                    9958544930
                   </span>
                 </div>
               </div>

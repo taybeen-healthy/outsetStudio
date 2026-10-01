@@ -311,7 +311,7 @@ export default function PrivacyPage() {
                     STUDIO TELEPHONE
                   </span>
                   <span className="font-sans text-[14px] text-[#1a1a1a] font-semibold">
-                    9898844855
+                    9958544930
                   </span>
                 </div>
               </div>
