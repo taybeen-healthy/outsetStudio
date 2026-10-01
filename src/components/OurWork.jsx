@@ -51,18 +51,26 @@ export default function OurWork({ data }) {
       >
         <Link
           href={projectUrl}
-          className="relative block w-full aspect-[2/3] overflow-hidden bg-neutral-100"
+          className="relative block w-full aspect-[2/3] overflow-hidden bg-neutral-100 shadow-sm group-hover:shadow-2xl transition-all duration-500 cursor-pointer"
         >
-          <span className="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 z-10 bg-black/90 text-white font-sans text-[9px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.2em] uppercase px-2.5 sm:px-3 py-1 font-medium rounded-none">
+          {/* Location Badge */}
+          <span className="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 z-20 bg-black/90 text-white font-sans text-[9px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.2em] uppercase px-2.5 sm:px-3 py-1 font-medium rounded-none backdrop-blur-sm group-hover:bg-[#C0532C] transition-colors duration-300">
             {project.location}
           </span>
+
           <Image
             src={project.image}
             alt={project.title}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
-            className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            className="object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
           />
+
+          {/* Cinematic Scrim */}
+          <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
+
+          {/* Architectural Inset Frame */}
+          <div className="absolute inset-3 sm:inset-4 border border-white/40 scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500 ease-out z-20 pointer-events-none" />
         </Link>
       </div>
     );
