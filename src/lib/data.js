@@ -2352,7 +2352,7 @@ export const ourWorkData = {
     {
       id: 27,
       slug: "fluted-utility-interior",
-      categories: ["BATHROOM & SPA"],
+      categories: [],
       title: "Fluted Utility Interior",
       titleRoman: "Fluted Utility",
       titleItalic: "Interior",
@@ -2424,7 +2424,7 @@ export const ourWorkData = {
     {
       id: 28,
       slug: "terracotta-lounge-wall",
-      categories: ["BATHROOM & SPA"],
+      categories: [],
       title: "Terracotta Lounge Wall",
       titleRoman: "Terracotta Lounge",
       titleItalic: "Wall",
@@ -2496,7 +2496,7 @@ export const ourWorkData = {
     {
       id: 29,
       slug: "tray-cove-interior",
-      categories: ["BATHROOM & SPA"],
+      categories: [],
       title: "Tray Cove Interior",
       titleRoman: "Tray Cove",
       titleItalic: "Interior",
@@ -2568,7 +2568,7 @@ export const ourWorkData = {
     {
       id: 30,
       slug: "marble-backsplash-interior",
-      categories: ["BATHROOM & SPA"],
+      categories: [],
       title: "Marble Backsplash Interior",
       titleRoman: "Marble Backsplash",
       titleItalic: "Interior",
@@ -2640,7 +2640,7 @@ export const ourWorkData = {
     {
       id: 31,
       slug: "moss-terracotta-nook",
-      categories: ["BATHROOM & SPA"],
+      categories: [],
       title: "Moss & Terracotta Nook",
       titleRoman: "Moss & Terracotta",
       titleItalic: "Nook",
@@ -2712,7 +2712,7 @@ export const ourWorkData = {
     {
       id: 32,
       slug: "perimeter-cove-interior",
-      categories: ["BATHROOM & SPA"],
+      categories: [],
       title: "Perimeter Cove Interior",
       titleRoman: "Perimeter Cove",
       titleItalic: "Interior",
@@ -2784,7 +2784,7 @@ export const ourWorkData = {
     {
       id: 33,
       slug: "island-track-interior",
-      categories: ["BATHROOM & SPA"],
+      categories: [],
       title: "Island Track Interior",
       titleRoman: "Island Track",
       titleItalic: "Interior",
@@ -2856,7 +2856,7 @@ export const ourWorkData = {
     {
       id: 34,
       slug: "relief-wall-detail",
-      categories: ["BATHROOM & SPA"],
+      categories: [],
       title: "Relief Wall Detail",
       titleRoman: "Relief Wall",
       titleItalic: "Detail",
