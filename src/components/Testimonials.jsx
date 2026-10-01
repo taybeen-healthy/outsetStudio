@@ -20,6 +20,7 @@ function Avatar({ testimonial }) {
         alt={testimonial.name}
         fill
         sizes="48px"
+        loading="lazy"
         className="object-cover"
       />
     );

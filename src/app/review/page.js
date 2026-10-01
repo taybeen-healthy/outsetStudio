@@ -517,6 +517,7 @@ export default function ReviewPage() {
                         alt={t.name}
                         width={40}
                         height={40}
+                        loading="lazy"
                         className="w-full h-full object-cover"
                       />
                     </div>

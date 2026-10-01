@@ -189,8 +189,8 @@ export default function VendorModal({ onClose }) {
               </p>
               <p className="font-sans text-xs sm:text-sm tracking-[0.05em] text-neutral-500">
                 NEED URGENT HELP?{" "}
-                <a href="tel:9898844855" className="text-[#C0532C] font-medium hover:underline cursor-pointer">
-                  CALL 9898844855
+                <a href="tel:9958544930" className="text-[#C0532C] font-medium hover:underline cursor-pointer">
+                  CALL 9958544930
                 </a>
               </p>
             </div>
