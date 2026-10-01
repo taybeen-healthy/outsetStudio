@@ -21,7 +21,7 @@ const testimonials = [
     role: "Co-Founder, Blue Tokai Partner Outlet",
     rating: 4.5,
     text: "Outset Studio understood both our brand vision and high customer traffic requirements. From the custom bar seating to lighting temperature, they finished two weeks ahead of schedule. Footfall expanded by 40% in month one.",
-    image: "/image39.png",
+    image: "/avatars/avatar-1.jpg",
     location: "Gurugram",
   },
   {
@@ -29,7 +29,7 @@ const testimonials = [
     role: "Creative Director, Vayu Concept Boutique",
     rating: 4.0,
     text: "Their mastery over material textures, raw terracotta finishes, and sharp architectural display fixtures created the exact serene retail atmosphere our clientele demanded.",
-    image: "/image32.png",
+    image: "/avatars/avatar-2.jpg",
     location: "Khan Market, New Delhi",
   },
 ];
@@ -511,7 +511,7 @@ export default function ReviewPage() {
               {testimonials.map((t, i) => (
                 <div key={i} className="bg-white border border-neutral-200 p-5 sm:p-6">
                   <div className="flex items-start gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full overflow-hidden bg-neutral-200 flex-shrink-0">
+                    <div className="w-10 h-10 overflow-hidden bg-neutral-200 flex-shrink-0">
                       <Image
                         src={t.image}
                         alt={t.name}

@@ -3298,7 +3298,7 @@ export const testimonialsData = {
       rating: 5,
       quote:
         "Outset Studio delivers thoughtful design, seamless execution, and strategic growth solutions that transform spaces into memorable, customer-focused experiences.",
-      avatar: "/image1.jpg",
+      avatar: "/avatars/avatar-1.jpg",
       image: "/image38.png",
     },
     {
@@ -3308,7 +3308,7 @@ export const testimonialsData = {
       rating: 4,
       quote:
         "Working with Outset Studio was a game changer for our outlet launch. Their attention to detail and commercial focus set them apart from traditional studios.",
-      avatar: "/image2.jpg",
+      avatar: "/avatars/avatar-2.jpg",
       image: "/image38.png",
     },
     {
@@ -3318,7 +3318,7 @@ export const testimonialsData = {
       rating: 4,
       quote:
         "Good team to work with. They understood our vision and delivered a café space that our customers genuinely love. Minor delays but overall satisfied.",
-      avatar: "/image3.jpg",
+      avatar: "/avatars/avatar-3.jpg",
       image: "/image38.png",
     },
     {
@@ -3328,7 +3328,7 @@ export const testimonialsData = {
       rating: 5,
       quote:
         "Outset Studio transformed our jewellery showroom into a luxury experience. The display design and lighting work was exceptional. Highly recommend them.",
-      avatar: "/image4.jpg",
+      avatar: "/avatars/avatar-4.jpg",
       image: "/image38.png",
     },
     {
@@ -3338,7 +3338,7 @@ export const testimonialsData = {
       rating: 3,
       quote:
         "Decent work on our restaurant interiors. The design was good but execution took longer than expected. Communication could be better during the project.",
-      avatar: "/image5.jpg",
+      avatar: "/avatars/avatar-5.jpg",
       image: "/image38.png",
     },
     {
@@ -3348,7 +3348,7 @@ export const testimonialsData = {
       rating: 4,
       quote:
         "Our salon looks absolutely stunning now. The team was professional and creative. Only feedback would be faster turnaround on revision requests.",
-      avatar: "/image6.jpg",
+      avatar: "/avatars/avatar-6.jpg",
       image: "/image38.png",
     },
     {
@@ -3358,7 +3358,7 @@ export const testimonialsData = {
       rating: 5,
       quote:
         "Exceptional workspace design. Our team productivity and client impressions have improved significantly since moving into the new office designed by Outset Studio.",
-      avatar: "/image7.jpg",
+      avatar: "/avatars/avatar-7.jpg",
       image: "/image38.png",
     },
     {
@@ -3368,7 +3368,7 @@ export const testimonialsData = {
       rating: 4,
       quote:
         "Beautiful restaurant design that perfectly captures our brand essence. The team was responsive and delivered quality work within budget.",
-      avatar: "/image8.jpg",
+      avatar: "/avatars/avatar-8.jpg",
       image: "/image38.png",
     },
     {
@@ -3378,7 +3378,7 @@ export const testimonialsData = {
       rating: 3,
       quote:
         "The gym design is functional and looks good. However, some equipment placement decisions could have been better discussed beforehand. Acceptable overall.",
-      avatar: "/image9.jpg",
+      avatar: "/avatars/avatar-9.jpg",
       image: "/image38.png",
     },
     {
@@ -3388,7 +3388,7 @@ export const testimonialsData = {
       rating: 5,
       quote:
         "Our book café has become the most Instagrammed spot in the city thanks to Outset Studio. Their understanding of ambiance and customer flow is unmatched.",
-      avatar: "/image10.jpg",
+      avatar: "/avatars/avatar-10.jpg",
       image: "/image38.png",
     },
     {
@@ -3398,7 +3398,7 @@ export const testimonialsData = {
       rating: 4,
       quote:
         "Clean, professional pharmacy design. The storage solutions and customer flow were well planned. Good experience working with the team.",
-      avatar: "/image11.jpg",
+      avatar: "/avatars/avatar-11.jpg",
       image: "/image38.png",
     },
     {
@@ -3408,7 +3408,7 @@ export const testimonialsData = {
       rating: 4,
       quote:
         "The spa interior design perfectly balances luxury and tranquility. Our clients constantly compliment the space. Slightly over budget but worth it.",
-      avatar: "/image12.jpg",
+      avatar: "/avatars/avatar-12.jpg",
       image: "/image38.png",
     },
     {
@@ -3418,7 +3418,7 @@ export const testimonialsData = {
       rating: 3,
       quote:
         "Standard QSR design, nothing extraordinary but gets the job done. The team was easy to work with though. Would consider for basic projects.",
-      avatar: "/image13.jpg",
+      avatar: "/avatars/avatar-13.jpg",
       image: "/image38.png",
     },
     {
@@ -3428,7 +3428,7 @@ export const testimonialsData = {
       rating: 5,
       quote:
         "Outset Studio understood our high-end retail vision from day one. The boutique design is sophisticated and our sales have increased since the redesign.",
-      avatar: "/image14.jpg",
+      avatar: "/avatars/avatar-14.jpg",
       image: "/image38.png",
     },
     {
@@ -3438,7 +3438,7 @@ export const testimonialsData = {
       rating: 4,
       quote:
         "Professional office interiors with great attention to detail. The project management was solid. Minor scheduling issues but handled well.",
-      avatar: "/image15.png",
+      avatar: "/avatars/avatar-15.jpg",
       image: "/image38.png",
     },
     {
@@ -3448,7 +3448,7 @@ export const testimonialsData = {
       rating: 4,
       quote:
         "Love how our café turned out. The natural materials and warm lighting create exactly the vibe we wanted. Great team to collaborate with.",
-      avatar: "/image16.png",
+      avatar: "/avatars/avatar-16.jpg",
       image: "/image38.png",
     },
     {
@@ -3458,7 +3458,7 @@ export const testimonialsData = {
       rating: 3,
       quote:
         "Functional design for our pizza outlet. The kitchen layout works well but the dining area could have been more creative. Acceptable for the price point.",
-      avatar: "/image17.png",
+      avatar: "/avatars/avatar-17.jpg",
       image: "/image38.png",
     },
     {
@@ -3468,7 +3468,7 @@ export const testimonialsData = {
       rating: 5,
       quote:
         "Our hair studio looks absolutely fantastic. The lighting design for the styling stations was genius. Clients love the modern yet cozy atmosphere.",
-      avatar: "/image18.png",
+      avatar: "/avatars/avatar-18.jpg",
       image: "/image38.png",
     },
     {
@@ -3478,7 +3478,7 @@ export const testimonialsData = {
       rating: 4,
       quote:
         "Clean, functional medical center design. The patient flow and waiting area design were well thought out. Professional team with good execution.",
-      avatar: "/image19.png",
+      avatar: "/avatars/avatar-19.jpg",
       image: "/image38.png",
     },
     {
@@ -3488,7 +3488,7 @@ export const testimonialsData = {
       rating: 4,
       quote:
         "Beautiful co-working space design. The team captured our brand's modern aesthetic perfectly. Some minor finish issues but overall very happy.",
-      avatar: "/image20.png",
+      avatar: "/avatars/avatar-20.jpg",
       image: "/image38.png",
     },
     {
@@ -3498,7 +3498,7 @@ export const testimonialsData = {
       rating: 3,
       quote:
         "Good restaurant design with nice ambiance. The bar area turned out great. Dining section could use more character but overall a decent project.",
-      avatar: "/image21.png",
+      avatar: "/avatars/avatar-21.jpg",
       image: "/image38.png",
     },
     {
@@ -3508,7 +3508,7 @@ export const testimonialsData = {
       rating: 5,
       quote:
         "Outset Studio created a serene, beautiful yoga studio that perfectly embodies our philosophy. The natural light and material choices are spot on.",
-      avatar: "/image22.png",
+      avatar: "/avatars/avatar-22.jpg",
       image: "/image38.png",
     },
   ],

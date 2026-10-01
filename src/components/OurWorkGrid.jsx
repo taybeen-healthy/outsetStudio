@@ -101,7 +101,7 @@ export default function OurWorkGrid({ data }) {
               return (
                 <div key={`${project.id ?? i}-${i}`} className="group">
                   <Link href={projectUrl} className="relative w-full aspect-[2/3] overflow-hidden bg-neutral-100 block">
-                    <span className="absolute top-3 left-3 z-10 bg-black/90 text-white font-sans text-[9px] tracking-[0.2em] uppercase px-2.5 py-1 font-medium">
+                    <span className="absolute top-3 left-3 sm:top-3.5 sm:left-3.5 z-10 bg-black/90 text-white font-sans text-[9px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.2em] uppercase px-2.5 sm:px-3 py-1 font-medium rounded-none">
                       {project.location}
                     </span>
                     <Image

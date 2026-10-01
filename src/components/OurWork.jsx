@@ -47,7 +47,7 @@ export default function OurWork({ data }) {
     return (
       <div
         key={`${project.id ?? i}-${i}`}
-        className={`group flex-shrink-0 ${wrapperClass}`}
+        className={`group ${wrapperClass}`}
       >
         <Link
           href={projectUrl}
@@ -60,7 +60,7 @@ export default function OurWork({ data }) {
             src={project.image}
             alt={project.title}
             fill
-            sizes="(max-width: 640px) 70vw, 420px"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 420px"
             className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
           />
         </Link>
@@ -126,11 +126,11 @@ export default function OurWork({ data }) {
             No projects found for this filter.
           </p>
         </div>
-      ) : (!isMobile && filteredProjects.length < 3) || (isMobile && filteredProjects.length < 2) ? (
+      ) : filteredProjects.length <= 3 ? (
         <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14">
-          <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {filteredProjects.map((project, i) =>
-              renderCard(project, i, "w-[70vw] sm:w-[360px] lg:w-[420px] flex-shrink-0")
+              renderCard(project, i, "w-full")
             )}
           </div>
         </div>
@@ -147,7 +147,7 @@ export default function OurWork({ data }) {
             }}
           >
             {marqueeProjects.map((project, i) =>
-              renderCard(project, i, "w-[70vw] sm:w-[360px] lg:w-[420px] pr-3 sm:pr-6 lg:pr-8")
+              renderCard(project, i, "flex-shrink-0 w-[70vw] sm:w-[360px] lg:w-[420px] pr-3 sm:pr-6 lg:pr-8")
             )}
           </div>
         </div>

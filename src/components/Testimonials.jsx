@@ -85,11 +85,16 @@ export default function Testimonials({ testimonials: propTestimonials }) {
               &ldquo;{t.quote}&rdquo;
             </p>
             <div className="mt-6 pt-4 border-t border-neutral-100 flex items-end justify-between gap-3">
-              <div>
-                <p className="font-serif text-[20px] text-[#C0532C] leading-tight">{t.name}</p>
-                <p className="font-sans text-[10px] uppercase tracking-[0.16em] text-neutral-400 font-medium mt-1.5">
-                  {t.company}
-                </p>
+              <div className="flex items-center gap-3">
+                <div className="relative w-11 h-11 bg-neutral-100 overflow-hidden flex-shrink-0 shadow-sm border border-neutral-200">
+                  <Avatar testimonial={t} />
+                </div>
+                <div>
+                  <p className="font-serif text-[20px] text-[#C0532C] leading-tight">{t.name}</p>
+                  <p className="font-sans text-[10px] uppercase tracking-[0.16em] text-neutral-400 font-medium mt-1.5">
+                    {t.company}
+                  </p>
+                </div>
               </div>
               <div className="flex items-center gap-2 flex-shrink-0">
                 <button
@@ -129,7 +134,7 @@ export default function Testimonials({ testimonials: propTestimonials }) {
             <div>
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3.5">
-                  <div className="relative w-12 h-12 bg-neutral-100 overflow-hidden flex-shrink-0 shadow-sm">
+                  <div className="relative w-12 h-12 bg-neutral-100 overflow-hidden flex-shrink-0 shadow-sm border border-neutral-200">
                     <Avatar testimonial={t} />
                   </div>
                   <div>
